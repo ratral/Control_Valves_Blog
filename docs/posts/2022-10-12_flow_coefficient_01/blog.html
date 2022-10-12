@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.342">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr.&nbsp;Raúl Trujillo Álvarez">
+<meta name="dcterms.date" content="2022-10-12">
+
+<title>Control Valves Blog. - Flow coefficient and Loss Coefficient of control valves</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Control Valves Blog.</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="dropdown-header">
+ about.qmd</li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ratral"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/Dr_Raul"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#flow-coefficient-k_v-and-loss-coefficient-zeta_v" id="toc-flow-coefficient-k_v-and-loss-coefficient-zeta_v" class="nav-link active" data-scroll-target="#flow-coefficient-k_v-and-loss-coefficient-zeta_v"><em>Flow coefficient</em> <span class="math inline">\(k_{v}\)</span> and <em>Loss Coefficient</em> <span class="math inline">\(\zeta_{v}\)</span></a></li>
+  <li><a href="#the-flow-basic-characteristic-curve-inherent-flow-characteristic." id="toc-the-flow-basic-characteristic-curve-inherent-flow-characteristic." class="nav-link" data-scroll-target="#the-flow-basic-characteristic-curve-inherent-flow-characteristic.">The flow basic characteristic curve (inherent flow characteristic).</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Flow coefficient and Loss Coefficient of control valves</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">news</div>
+    <div class="quarto-category">code</div>
+    <div class="quarto-category">analysis</div>
+  </div>
+  </div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr.&nbsp;Raúl Trujillo Álvarez </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 12, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="flow-coefficient-k_v-and-loss-coefficient-zeta_v" class="level1">
+<h1><em>Flow coefficient</em> <span class="math inline">\(k_{v}\)</span> and <em>Loss Coefficient</em> <span class="math inline">\(\zeta_{v}\)</span></h1>
+<p>Flow factor <span class="math inline">\(k_{v}\)</span> combines the effects of all flow restrictions in the valve into a single number. <span class="math inline">\(k_{v}\)</span> represents the flow of water with temperature ranging between <span class="math inline">\(5°C\)</span> and <span class="math inline">\(30°C\)</span> through a valve in cubic meters per hour with a pressure drop of <span class="math inline">\(1 bar\)</span>.</p>
+<p>Do you need for the calculation of the valve flow factor (<span class="math inline">\(k_{v}\)</span>) :</p>
+<ul>
+<li>operating pressure differential;</li>
+<li>flow rate for your application;</li>
+<li>Density of the fluid;</li>
+<li>and in some circumstances, temperature.</li>
+</ul>
+<p>The valve flow coefficient <span class="math inline">\(k_v\)</span> is defined as the number of cubic meters per hour of water that will flow through a control valve at a specified position of the control valve travel <span class="math inline">\(vp\)</span> (Valve position) with a differential pressure (<span class="math inline">\(\Delta p=p_1-p_2\)</span>) of <span class="math inline">\(105 \, Pa = 1\,bar\)</span> across it.</p>
+<p>The standard conditions referred to in definitions of flow coefficients (<span class="math inline">\(K_v\)</span>) are the following:</p>
+<ul>
+<li>flow in turbulent condition;</li>
+<li>no cavitation and vaporization phenomena;</li>
+<li>valve diameter equal to pipe diameter;</li>
+<li>static pressure drop measured between upstream and downstream pressure taps;</li>
+<li>straight pipe lengths upstream and downstream the valve;</li>
+<li>Newtonian fluid.</li>
+</ul>
+<p>According to this European Standard, the flow rate characteristic parameter of a valve is the flow coefficient, <span class="math inline">\(K_v\)</span>. The equation, the quantity subject to measurement and input quantities are the following <span class="citation" data-cites="wagner2008">[@wagner2008]</span>.</p>
+<span class="math display">\[\begin{equation}
+  K_v = q \cdot \sqrt{\frac {(\rho / \rho_{0})}{\Delta P}}
+\end{equation}\]</span>
+<ul>
+<li><span class="math inline">\(\Delta P\)</span> : operating pressure differential (upstream minus downstream pressure);</li>
+<li><span class="math inline">\(q\)</span> : flow rate for your application in <span class="math inline">\(m^3/hour\)</span>;</li>
+<li><span class="math inline">\(\rho / \rho_{0}\)</span> : Relative Density of Liquids;</li>
+<li><span class="math inline">\(d\)</span> : Valve Nominal size in millimeter</li>
+<li><span class="math inline">\(K_v\)</span> : is the flow in <span class="math inline">\(m^3/hour\)</span> for a <span class="math inline">\(\Delta P = 1 \, bar\)</span></li>
+</ul>
+<!-- -->
+<ul>
+<li>The <em>Loss Coefficient or zeta value</em> <span class="math inline">\(\zeta_v\)</span> of the valve is :</li>
+</ul>
+<span class="math display">\[\begin{equation}
+  \zeta_{v} = {\frac{1}{626.3} \cdot  \bigg( {\frac{d^2}{{K_v}}}} \bigg)^2
+\end{equation}\]</span>
+<ul>
+<li>And the <span class="math inline">\(K_{v}\)</span> in function of the <em>Loss Coefficient or Zeta Value</em> <span class="math inline">\(\zeta_{v}\)</span> is:</li>
+</ul>
+<span class="math display">\[\begin{equation}
+  K_v = \frac{d^2}{\sqrt{626.3}} \cdot \frac{1}{\sqrt{\zeta_v}}
+\end{equation}\]</span>
+</section>
+<section id="the-flow-basic-characteristic-curve-inherent-flow-characteristic." class="level1">
+<h1>The flow basic characteristic curve (inherent flow characteristic).</h1>
+<p>The characteristic of a control valve is defined as the flow rate depending on the valve’s position. The control valve generates a change in the flow by changing the active area of control piston <span class="math inline">\(A\)</span>, assuming a constant differential pressure <span class="math inline">\(\Delta p\)</span> and a constant density <span class="math inline">\(\rho\)</span>.</p>
+<p>The valve characteristic curve is a function of the valve position (degree of opening or valve position) <span class="math inline">\(vp\)</span> relative to the flow coefficient at valve position <span class="math inline">\(K_v\)</span> divided by the maximum flow coefficient of the valve (<span class="math inline">\(100\%\)</span> open) <span class="math inline">\(K_{vs}\)</span>.</p>
+<p>The valve characteristic of the control valves (<span class="math inline">\(K_v/K_{vs}\)</span>) depend of the position of the valve (<span class="math inline">\(vp\)</span>).</p>
+<p><span class="math display">\[
+  K_v/K_{vs} = f(vp)
+\]</span></p>
+<p>The flow coefficient measurement is strictly positive and the curves are S-shaped and they may be increasing, symmetric or non-symmetric around the inflection point. Therefore, using a function defined for non-positive numbers may seem unrealistic. Consequently, using a function where the independent variable <span class="math inline">\(X\)</span> (valve position <span class="math inline">\(vp\)</span>) is constrained to be positive is preferable. Therefore, a positive <a href="https://en.wikipedia.org/wiki/Sigmoid_function">sigmoidal function</a> is the most appropriate. The logistic curve (a sigmoidal curve) derives from the cumulative logistic distribution function; the curve is symmetric around the inflection point and it may be parameterised as:</p>
+<span class="math display">\[\begin{equation}
+  K_v/K_{vs} = f(vp, (b, c, d, e)) =  c + \frac{d-c}{1 + \exp( b \cdot (\log{(vp)} - \log{(e)}))}
+\end{equation}\]</span>
+<p>where <span class="math inline">\(d\)</span> is the higher asymptote, <span class="math inline">\(c\)</span> is the lower asymptote, <span class="math inline">\(e\)</span> is <span class="math inline">\(vp\)</span> value at the inflection point, while <span class="math inline">\(b\)</span> is the slope at the inflection point. As the curve is symmetric, <span class="math inline">\(e\)</span> represents also the <span class="math inline">\(vp\)</span> value producing a response half-way between <span class="math inline">\(d\)</span> and <span class="math inline">\(c\)</span>. The parameter <span class="math inline">\(b\)</span> can be positive or negative and, consequently, <span class="math inline">\(K_v/K_{vs}\)</span> may increase or decrease as <span class="math inline">\(vp\)</span> increases.</p>
+<p>The above function is known as the four-parameter logistic. If necessary, constraints can be put on parameter values, i.e.&nbsp;<span class="math inline">\(c\)</span> can be constrained to <span class="math inline">\(0\)</span> (three-parameter logistic) and, additionally, <span class="math inline">\(d\)</span> can be constrained to 1 (two-parameter logistic).</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ul>
+<li>Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.</li>
+<li>ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.</li>
+<li>International Society of Automation, and American National Standards Institute. ANSI/ISA-75.01.01-2012 (60534-2-1 MOD) Industrial-Process Control Valves. Part 2-1: Flow Capacity - Sizing Equations for Fluid Flow under Installed Conditions. ISA, 2012.</li>
+<li>British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="ratral/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

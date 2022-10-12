@@ -1,0 +1,101 @@
+---
+title: "Flow coefficient and Loss Coefficient of control valves"
+date: "2022-10-12"
+categories: [news, code, analysis]
+description: ''
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+# *Flow coefficient* $k_{v}$ and *Loss Coefficient* $\zeta_{v}$
+
+Flow factor $k_{v}$ combines the effects of all flow restrictions in the valve into a single number. $k_{v}$ represents the flow of water with temperature ranging between $5°C$ and $30°C$ through a valve in cubic meters per hour with a pressure drop of $1 bar$.
+
+Do you need for the calculation of the valve flow factor ($k_{v}$) :
+
+-   operating pressure differential;
+-   flow rate for your application;
+-   Density of the fluid;
+-   and in some circumstances, temperature.
+
+The valve flow coefficient $k_v$ is defined as the number of cubic meters per hour of water that will flow through a control valve at a specified position of the control valve travel $vp$ (Valve position) with a differential pressure ($\Delta p=p_1-p_2$) of $105 \, Pa = 1\,bar$ across it.
+
+The standard conditions referred to in definitions of flow coefficients ($K_v$) are the following:
+
+-   flow in turbulent condition;
+-   no cavitation and vaporization phenomena;
+-   valve diameter equal to pipe diameter;
+-   static pressure drop measured between upstream and downstream pressure taps;
+-   straight pipe lengths upstream and downstream the valve;
+-   Newtonian fluid.
+
+According to this European Standard, the flow rate characteristic parameter of a valve is the flow coefficient, $K_v$. The equation, the quantity subject to measurement and input quantities are the following [@wagner2008].
+
+```{=tex}
+\begin{equation} 
+  K_v = q \cdot \sqrt{\frac {(\rho / \rho_{0})}{\Delta P}} 
+\end{equation}
+```
+-   $\Delta P$ : operating pressure differential (upstream minus downstream pressure);
+-   $q$ : flow rate for your application in $m^3/hour$;
+-   $\rho / \rho_{0}$ : Relative Density of Liquids;
+-   $d$ : Valve Nominal size in millimeter
+-   $K_v$ : is the flow in $m^3/hour$ for a $\Delta P = 1 \, bar$
+
+```{=html}
+<!-- -->
+```
+-   The *Loss Coefficient or zeta value* $\zeta_v$ of the valve is :
+
+```{=tex}
+\begin{equation}
+  \zeta_{v} = {\frac{1}{626.3} \cdot  \bigg( {\frac{d^2}{{K_v}}}} \bigg)^2
+\end{equation}
+```
+-   And the $K_{v}$ in function of the *Loss Coefficient or Zeta Value* $\zeta_{v}$ is:
+
+```{=tex}
+\begin{equation}
+  K_v = \frac{d^2}{\sqrt{626.3}} \cdot \frac{1}{\sqrt{\zeta_v}}
+\end{equation}
+```
+
+# The flow basic characteristic curve (inherent flow characteristic).
+
+The characteristic of a control valve is defined as the flow rate depending on the valve's position. The control valve generates a change in the flow by changing the active area of control piston $A$, assuming a constant differential pressure $\Delta p$ and a constant density $\rho$.
+
+The valve characteristic curve is a function of the valve position (degree of opening or valve position) $vp$ relative to the flow coefficient at valve position $K_v$ divided by the maximum flow coefficient of the valve ($100\%$ open) $K_{vs}$.
+
+The valve characteristic of the control valves ($K_v/K_{vs}$) depend of the position of the valve ($vp$).
+
+$$
+  K_v/K_{vs} = f(vp)
+$$
+
+The flow coefficient measurement is strictly positive and the curves are S-shaped and they may be increasing, symmetric or non-symmetric around the inflection point. Therefore, using a function defined for non-positive numbers may seem unrealistic. Consequently, using a function where the independent variable $X$ (valve position $vp$) is constrained to be positive is preferable. Therefore, a positive [sigmoidal function](https://en.wikipedia.org/wiki/Sigmoid_function) is the most appropriate. The logistic curve (a sigmoidal curve) derives from the cumulative logistic distribution function; the curve is symmetric around the inflection point and it may be parameterised as:
+
+```{=tex}
+\begin{equation}
+  K_v/K_{vs} = f(vp, (b, c, d, e)) =  c + \frac{d-c}{1 + \exp( b \cdot (\log{(vp)} - \log{(e)}))}
+\end{equation}
+```
+
+where $d$ is the higher asymptote, $c$ is the lower asymptote, $e$ is $vp$ value at the inflection point, while $b$ is the slope at the inflection point. As the curve is symmetric, $e$ represents also the $vp$ value producing a response half-way between $d$ and $c$. The parameter $b$ can be positive or negative and, consequently, $K_v/K_{vs}$ may increase or decrease as $vp$ increases.
+
+The above function is known as the four-parameter logistic. If necessary, constraints can be put on parameter values, i.e. $c$ can be constrained to $0$ (three-parameter logistic) and, additionally, $d$ can be constrained to 1 (two-parameter logistic).
+
+
+# References
+
+  - Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.
+  - ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.
+  - International Society of Automation, and American National Standards Institute. ANSI/ISA-75.01.01-2012 (60534-2-1 MOD) Industrial-Process Control Valves. Part 2-1: Flow Capacity - Sizing Equations for Fluid Flow under Installed Conditions. ISA, 2012.
+  - British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.
+
+
+
+
+

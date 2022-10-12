@@ -1,30 +1,30 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Control_Valves_Blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 24, 2022\n\n\n4 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "About",
     "section": "",
     "text": "About this blog"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Control_Valves_Blog",
+    "objectID": "posts/2022-08-24_remarks_riko/blog.html",
+    "href": "posts/2022-08-24_remarks_riko/blog.html",
+    "title": "Remarks about RIKO plunger valves",
     "section": "",
-    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nOct 11, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nOct 8, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Riko Plunger valves are mainly used where volume flows, or pressure has to be reduced and regulated without vibrations, noises, or significant changes in the pipeline system. RIKO valves are control devices that cause pressure loss in pipeline systems by throttling to modify the flow or pressure so that the desired values are obtained, depending on the degree of opening adjustment.\nThe following advantages are obtained from the plunger valves :\n\nuniversal use wide controllable range;\nlow cavitation coefficient, stable flow, low noise;\nflow block is variable: optimum flow for every operating condition;\nlow drive forces with pressure-relieving fix and mobile cylinder (pistons).\n\nTo size a control valve, the following points must be considered :\n\nThe control valve must permit the maximum flow (1.3 times the maximum flow required for the application ) under the lowest-possible differential pressure.\nThe flow range (maximum, median, and minimum) relative to the degree of opening of the control valve must be such that the regulation circuit is stable.\nIn the entire control range (maximum, median, and minimum), there should be no occurrence of cavitation.\nThe pipeline systems are planned and installed, bearing in mind future requirements. It is often forgotten that control valves designed for these end capacities are over-sized at the start of the operation but not for future needs. Reducing the size of the control valve means generating additional problems and costs in the future of system operation.\n\nOne of the most uncomfortable things that can a hydraulic design to happen is a valve chosen six months or a year ago deteriorating. The most common causes of premature valve failure are:\n\nCavitation damage.\nCavitation and flashing of water (shock flow).\nErosion of the valve.\nVibration (irregular flow pattern with liquids).\nCorrosion.\nLeakages.\n\nTo avoid in any way, the following design criteria must be met [@baumann2009]:\n\nCriteria for valve selection : - Is the valve appropriately sized? - Does the valve have a low dead band, sometimes confused with hysteresis? - Will it be able to operate without a positioner (also a cost factor)? - Does it have adequate rangeability? - Is the flow characteristic acceptable (installed characteristic)? - How is its dynamic performance (frequency response, time constant)?\nInstallation and effects on the environment: - Is face-to-face such that it can be replaced with another make? - How heavy is it? - Are supports needed? - Is it too tall? - Is it going to be noisy under the given flow conditions? - Is there an energy supply (in the case of electric actuators)? - Can it withstand the corrosive effects of fluid and the environment? - Would the valve be cavitating under the given flow conditions? - If outdoors, can the valve and actuator stand extreme weather conditions?\nMaintainability and long-term cost: - Is it easy to repair? - What are the prices of spare parts? - Can the actuator tolerate a vibrating environment? - How is the actuator protected from corrosion? - Is the packing field replaceable? - Is the control cylinders (fixed and mobile) field-replaceable? - Is the actuator able to diagnose the valve?\n\nAnother essential point to consider is the information available. Sizing the flow to the fifth place after the decimal point is all well and good, but only if you know the proper process conditions :\n\nFirst, the valve should be sized to control the maximum flow rate under the lowest-possible differential pressure. But what is maximum flow exactly?\nHow about emergency conditions?\nOn the other hand, should the valve fail open, would the resultant flow be more than the downstream pipe or valve could handle?\nWhat are the correct inlet pressures?\nWhat are the variations in inlet pressures?\nCan you use the head pressure of the pump from the manufacturers published curve? (If you do, use the head pressure corresponding to the maximum flow the valve has to pass, and don’t ignore the static head at the pumps location.)\nHow about line losses?\n\nMy experience is that all these questions will be answered in a vague form from the design people. They don’t know either and have to rely on the input from other departments. The result is usually guesswork with ample safety factors thrown in.\nOnly after reviewing these criteria and deciding on the proper valve type should the subject of cost be considered.\n\n\nBaumann, Hans D. Control Valve Primer: A User’s Guide. 4th ed, ISA, 2009."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/2022-10-12_flow_coefficient_01/blog.html",
+    "href": "posts/2022-10-12_flow_coefficient_01/blog.html",
+    "title": "Flow coefficient and Loss Coefficient of control valves",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "The flow basic characteristic curve (inherent flow characteristic).\nThe characteristic of a control valve is defined as the flow rate depending on the valve’s position. The control valve generates a change in the flow by changing the active area of control piston \\(A\\), assuming a constant differential pressure \\(\\Delta p\\) and a constant density \\(\\rho\\).\nThe valve characteristic curve is a function of the valve position (degree of opening or valve position) \\(vp\\) relative to the flow coefficient at valve position \\(K_v\\) divided by the maximum flow coefficient of the valve (\\(100\\%\\) open) \\(K_{vs}\\).\nThe valve characteristic of the control valves (\\(K_v/K_{vs}\\)) depend of the position of the valve (\\(vp\\)).\n\\[\n  K_v/K_{vs} = f(vp)\n\\]\nThe flow coefficient measurement is strictly positive and the curves are S-shaped and they may be increasing, symmetric or non-symmetric around the inflection point. Therefore, using a function defined for non-positive numbers may seem unrealistic. Consequently, using a function where the independent variable \\(X\\) (valve position \\(vp\\)) is constrained to be positive is preferable. Therefore, a positive sigmoidal function is the most appropriate. The logistic curve (a sigmoidal curve) derives from the cumulative logistic distribution function; the curve is symmetric around the inflection point and it may be parameterised as:\n\\[\\begin{equation}\n  K_v/K_{vs} = f(vp, (b, c, d, e)) =  c + \\frac{d-c}{1 + \\exp( b \\cdot (\\log{(vp)} - \\log{(e)}))}\n\\end{equation}\\]\nwhere \\(d\\) is the higher asymptote, \\(c\\) is the lower asymptote, \\(e\\) is \\(vp\\) value at the inflection point, while \\(b\\) is the slope at the inflection point. As the curve is symmetric, \\(e\\) represents also the \\(vp\\) value producing a response half-way between \\(d\\) and \\(c\\). The parameter \\(b\\) can be positive or negative and, consequently, \\(K_v/K_{vs}\\) may increase or decrease as \\(vp\\) increases.\nThe above function is known as the four-parameter logistic. If necessary, constraints can be put on parameter values, i.e. \\(c\\) can be constrained to \\(0\\) (three-parameter logistic) and, additionally, \\(d\\) can be constrained to 1 (two-parameter logistic).\n\n\nReferences\n\nWagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.\nANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.\nInternational Society of Automation, and American National Standards Institute. ANSI/ISA-75.01.01-2012 (60534-2-1 MOD) Industrial-Process Control Valves. Part 2-1: Flow Capacity - Sizing Equations for Fluid Flow under Installed Conditions. ISA, 2012.\nBritish Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005."
   }
 ]

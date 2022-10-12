@@ -3,14 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "Control_Valves_Blog"
+  title: "Control Valves Blog."
+  description: "This is Dr. Raúl Trujillo personal Blog."
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/ratral
       - icon: twitter
-        href: https://twitter.com
+        href: https://twitter.com/Dr_Raul
 format:
   html:
     theme: cosmo
