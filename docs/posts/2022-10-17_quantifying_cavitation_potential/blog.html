@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.342">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr.&nbsp;Raúl Trujillo Álvarez">
+<meta name="dcterms.date" content="2022-10-17">
+
+<title>Control Valves Blog. - Quantifying the Cavitation Potential of the control valve</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Control Valves Blog.</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="dropdown-header">
+ about.qmd</li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ratral"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/Dr_Raul"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#quantifying-the-cavitation-potential-of-the-valve" id="toc-quantifying-the-cavitation-potential-of-the-valve" class="nav-link active" data-scroll-target="#quantifying-the-cavitation-potential-of-the-valve">Quantifying the Cavitation Potential of the valve</a>
+  <ul class="collapse">
+  <li><a href="#cavitation" id="toc-cavitation" class="nav-link" data-scroll-target="#cavitation">Cavitation</a></li>
+  <li><a href="#evaluating-the-cavitation-limits-of-the-valve" id="toc-evaluating-the-cavitation-limits-of-the-valve" class="nav-link" data-scroll-target="#evaluating-the-cavitation-limits-of-the-valve">Evaluating the Cavitation Limits of the valve</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quantifying the Cavitation Potential of the control valve</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">news</div>
+    <div class="quarto-category">code</div>
+    <div class="quarto-category">analysis</div>
+  </div>
+  </div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr.&nbsp;Raúl Trujillo Álvarez </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 17, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="quantifying-the-cavitation-potential-of-the-valve" class="level1">
+<h1>Quantifying the Cavitation Potential of the valve</h1>
+<section id="cavitation" class="level2">
+<h2 class="anchored" data-anchor-id="cavitation">Cavitation</h2>
+<p>In its simplest terms, cavitation is the two-stage vaporization process simply boiling a liquid, also known as flashing. In a control valve, this vaporization occurs because the pressure of the liquid is reduced, instead of the more common occurrence where the temperature is increased. As fluid passes through a valve just downstream of the orifice area, there is an increase in velocity or kind of energy accompanied by a substantial decrease in pressure or potential energy. This occurs in a place called the <a href="https://en.wikipedia.org/wiki/Vena_contracta">vena contracta</a>. If the pressure in this area falls below the vapor pressure of the following fluid, vaporization (boiling) occurs. Vapor bubbles then continue downstream, where the velocity of the liquid begins to slow, and the pressure in the fluid recovers. The vapor bubbles then collapse or implode. Cavitation in control valves occurs only with liquid flows. [ISA S75.05 Control Valve Terminology].</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="stellventil.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Typical pressure curve in a control valve; [Wagner, Walter. Control and safety fittings]</figcaption><p></p>
+</figure>
+</div>
+<p>Its effect on the system’s cavitation varies with valve type, size, operating pressure, and installation details. To include cavitation in the design process is necessary to determine if cavitation will evaluate its intensity, characterize the flow conditions, and estimate its effect on the system and environment. Possible consequences include noise, vibration, erosion damage, and a decrease in performance.</p>
+<p>In the case of control valves, it is conventional to describe the application in terms of a single parameter and then compare this parameter to different limits of operation for a given control element.</p>
+<p>Characterizing the flow conditions corresponding to a selected cavitation level requires defining a cavitation index derived from dimensional analysis. The process involves determining the fluid properties, geometric characteristics, and parameters influencing the cavitation process. The main variables affecting the cavitation process are:</p>
+<ol type="1">
+<li>the geometric configuration of the device,</li>
+<li>absolute pressure in the cavitating region,</li>
+<li>the critical pressure, generally assumed to be the liquid-vapor pressure and velocity or pressure drop</li>
+</ol>
+<p>The cavitation index sigma <span class="math inline">\((\sigma)\)</span> is a form of another dimensionless parameter. Sigma <span class="math inline">\((\sigma)\)</span> is constant for either <em>SI</em> or <em>US</em> Customary units as long as the same pressure units are used throughout the equations for the parameter. This index <span class="math inline">\((\sigma)\)</span> is the ratio of fluid forces trying to prevent cavitation (the system or service pressure) to the forces trying to cause cavitation (the pressure drop). The smaller the value of the cavitation index for a flow system, the more likely or, the more severe cavitation will be.</p>
+<p>The force suppressing cavitation is proportional to the magnitude of the average pressure relative to absolute vapor pressure i.e.&nbsp;<span class="math inline">\((P-P_r)\)</span>. The force causing cavitation is proportional to the velocity head <span class="math inline">\(V^2/2g\)</span> or to the pressure drop across the valve <span class="math inline">\(\Delta P\)</span>. The resulting cavitation parameter sigma can be expressed as <span class="citation" data-cites="tullis1993">[@tullis1993]</span>:</p>
+<p><span class="math display">\[
+  \sigma_1 = \frac{P_1-P_v}{\Delta P_{net}}
+\]</span></p>
+<p>in which:</p>
+<ul>
+<li><span class="math inline">\(P_1\)</span> is <em>the <a href="https://en.wikipedia.org/wiki/Pressure_measurement">absolute pressure</a> just upstream from the valve</em> <span class="math inline">\((P_l = P_u + P_b)\)</span>,</li>
+<li><span class="math inline">\(P_u\)</span> is <em>the <a href="https://en.wikipedia.org/wiki/Pressure_measurement">gauge pressure</a> just upstream from the valve</em>,</li>
+<li><span class="math inline">\(P_b\)</span> is <em>the <a href="https://en.wikipedia.org/wiki/Atmospheric_pressure">atmospheric or barometric pressure</a></em>,</li>
+<li><span class="math inline">\(P_v\)</span> is <em>the</em> <a href="https://en.wikipedia.org/wiki/Vapour_pressure_of_water">absolute vapor pressure of water</a> and</li>
+<li><span class="math inline">\(\Delta P_{net}\)</span> <em>the net pressure drop across the valve</em> <span class="math inline">\((P_1 - P_2)\)</span>.</li>
+<li>The minimum value of sigma (<span class="math inline">\(\sigma_1\)</span>) is <span class="math inline">\(1.0\)</span> since the maximum <span class="math inline">\(\Delta P_{net}\)</span> across the valve is <span class="math inline">\((P_1 - P_v)\)</span>.</li>
+</ul>
+<p>For cavitation caused by surface roughness, an isolated roughness, an offset in the boundary, or by any device for which it is not possible or convenient to evaluate a pressure differential, for the calculation of the cavitation can be used the velocity head in place of <span class="math inline">\(\Delta{P}\)</span> in the Equation of <span class="math inline">\(\sigma\)</span>. The resulting Equation is:</p>
+<p><span class="math display">\[
+  \sigma_{1_{roug}} = \frac{P_1-P_v}{(V^2/2g)}
+\]</span></p>
+<p>For valves and other devices that create a pressure drop, the cavitation parameter can be defined in several ways. The reference pressure in the numerator of the equation of sigma <span class="math inline">\((\sigma_1)\)</span> equation can be either the upstream or the downstream pressure. Both have been used, and there are valid reasons supporting either choice.Using the downstream pressure <span class="math inline">\(P_2\)</span>, the equation becomes:</p>
+<p><span class="math display">\[
+  \sigma_{2} = \frac{P_2-P_v}{\Delta P_{net}}
+\]</span></p>
+<p>In which <span class="math inline">\(P_2\)</span> is the absolute downstream pressure (<span class="math inline">\(P_2 = P_d + P_b\)</span>), where <span class="math inline">\(P_d = P_u - \Delta P_{net}\)</span> and <span class="math inline">\(P_b\)</span> is the barometric pressure.</p>
+<p>This form is preferred because the <em>downstream pressure is the pressure closer to the zone where the cavitation occurs</em>. Therefore, the downstream pressure more directly influences the cavitation. However, it is more convenient to use the upstream pressure for most applications, and the two sigma values differ by a constant value of <span class="math inline">\(1.0\)</span>. The following simple equation directly relates to the equation:</p>
+<p><span class="math display">\[
+  \sigma_2 = \sigma_{1} + 1
+\]</span></p>
+<p>Some publications use the reciprocal of Equation for <span class="math inline">\(\sigma_1\)</span> and define the cavitation index as <span class="math inline">\(K_c\)</span> instead of <span class="math inline">\(\sigma_1\)</span>. The equation that defines <span class="math inline">\(K_c\)</span> is:</p>
+<p><span class="math display">\[
+  K_c = \frac{1}{\sigma_{1}} = \frac{\Delta P_{net}}{(P_1-P_v)}
+\]</span></p>
+<p>Using use the reciprocal of Equation for <span class="math inline">\(\sigma_1\)</span>. Some publications, authors, and valve manufacturers also add a safety factor to the cavitation parameter <span class="math inline">\(\sigma_1\)</span> to account for possible cavitation caused by any device for which it is not possible or convenient to assess a pressure differential near the control valve, so:</p>
+<p><span class="math display">\[
+  \frac{1}{\sigma_{3}}  = \frac{1}{\sigma_{1}} + \frac{1}{\sigma_{1_{roug}}}=  \frac{\Delta P_{net}}{(P_1-P_v)} + \frac{(V^2/2g)}{(P_1-P_v)}
+\]</span> <span class="math display">\[
+\frac{1}{\sigma_{3}}  = \frac{\Delta P_{net} + (V^2/2g)}{(P_1-P_v)}
+\]</span> So:</p>
+<p><span class="math display">\[
+\sigma_{3} = = \frac{(P_1-P_v)}{\Delta P_{net} + (V^2/2g)}
+\]</span></p>
+</section>
+<section id="evaluating-the-cavitation-limits-of-the-valve" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-the-cavitation-limits-of-the-valve">Evaluating the Cavitation Limits of the valve</h2>
+<p>Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage and can reduce the valve’s capacity in advanced stages. The acceptable cavitation level for a valve in a given system varies with valve type, valve function, details of the piping layout, and operation duration.It is necessary to identify and provide experimental data for several cavitation intensity levels to have adequate information for analysis and design. There are defined six different cavitation design limits. The methods used to determine each limit experimentally are defined, and suggestions when each limit might be appropriate. These limits are [<span class="citation" data-cites="tullis1993">@tullis1993</span> and ISA-RP75.23-1995]:</p>
+<ol type="1">
+<li><p>Incipient cavitation <span class="math inline">\(\sigma_{i}\)</span></p>
+<ul>
+<li>Onset of cavitation</li>
+<li>Detect using high-frequency vibration measurement</li>
+<li>Very local phenomenon</li>
+<li>Transient: random “ticks” sound</li>
+<li>Low-level cavitation: usually not damaging</li>
+<li>Occurs before the loss of flow capacity</li>
+</ul></li>
+<li><p>Critical (or constant) cavitation <span class="math inline">\(\sigma_{c}\)</span></p>
+<ul>
+<li>More regular cavitation events</li>
+<li>Lower frequency sound and vibration sensed: “rumbling” sound</li>
+<li>Some surface damage may occur: dependent upon valve and trim styles and materials.</li>
+</ul></li>
+<li><p>Maximum noise and vibration level <span class="math inline">\(\sigma_{mv}\)</span></p>
+<ul>
+<li>Highest vibration amplitude: sounds like “marbles” or “gravel.”</li>
+<li>Vigorous, large-scale cavitation</li>
+<li>Very high damage potential</li>
+</ul></li>
+<li><p>Choked flow <span class="math inline">\(\sigma_{ch}\)</span></p>
+<ul>
+<li>Choking” cavitation is a most severe level of cavitation.</li>
+<li>The maximum noise, vibration, and material damage levels occur at or just before this condition.</li>
+<li>Under “fully choked” flow conditions, an additional decrease in the downstream pressure will not increase the flow rate through the valve at a given inlet pressure. In other words, it is a limiting flow condition in which vapor formation is enough to limit the valve’s flow rate to some maximum value.</li>
+<li>The choking “process” occurs over a range of pressure drops due to the compressibility changes accompanying vapor formation.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cavitation_regime.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Cavitation parameter plot: using an accelerometer values.</figcaption><p></p>
+</figure>
+</div>
+</li></ol></section></section></main></div>
+
+<p>Other critical cavitation limits are:</p>
+<ul>
+<li><p>Incipient damage <span class="math inline">\(\sigma_{id}\)</span>: A cavitation level sufficient to begin minor, observable indications of pitting damage.</p></li>
+<li><p>Manufacturer’s recommended cavitation limit <span class="math inline">\(\sigma_{mr}\)</span>: is an operational limit supplied by the manufacturer for a given valve type, size, opening, and reference upstream pressure. Application of the limit may require scale effect and influence factors if the service conditions and valve size are different than the reference pressure and altitude.</p></li>
+</ul>
+
+
+<section id="references" class="level1">
+<h1>References</h1>
+<ul>
+<li>Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr.&nbsp;1993, https://doi.org/10.2172/10155405.</li>
+<li>ISA-RP75.23-1995 Considerations for Evaluating Control Valve Cavitation</li>
+<li>ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.</li>
+<li>ANSI/ISA-75.01-1985 (R1995), Flow Equations for Sizing Control Valves. 1985.</li>
+<li>ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.</li>
+<li>ANSI/ISA–RP75.23–1995, Considerations for Evaluating Control Valve Cavitation. Instrument Society of America, 1995.</li>
+<li>ANSI/ISA-S75.02, Control Valve Capacity Test Procedures. Instrument Society of America, 1996.</li>
+<li>ANSI/ISA-S75.05, Control Valve Terminology. 1983.</li>
+<li>International Society of Automation, and American National Standards Institute. ANSI/ISA–75.02.01–2008 (IEC 60534-2-3 Mod) Control Valve Capacity Test Procedures. 2008.</li>
+</ul>
+
+
+</section>
+
+ <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="ratral/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+ <!-- /content -->
+
+
+
+</body></html>
