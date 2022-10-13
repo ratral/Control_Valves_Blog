@@ -113,8 +113,6 @@ Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage a
 
     ![Cavitation parameter plot: using an accelerometer values.](cavitation_regime.png)
 
-    </div>
-
 Other critical cavitation limits are:
 
   - Incipient damage $\sigma_{id}$: A cavitation level sufficient to begin minor, observable indications of pitting damage.
@@ -134,7 +132,6 @@ Other critical cavitation limits are:
   - International Society of Automation, and American National Standards Institute. ANSI/ISA–75.02.01–2008 (IEC 60534-2-3 Mod) Control Valve Capacity Test Procedures. 2008.
 
 
-  
 
 
 
