@@ -3,9 +3,12 @@ project:
   output-dir: docs
 
 website:
-  title: "Control Valves Blog."
+  title: "Water Control Valves Blog."
   description: "This is Dr. Raúl Trujillo personal Blog."
   navbar:
+    background: "green"
+    left: 
+      - "Dr. Raúl Trujillo Álvarez"
     right:
       - about.qmd
       - icon: github
@@ -14,8 +17,8 @@ website:
         href: https://twitter.com/Dr_Raul
 format:
   html:
-    theme: cosmo
+    theme: 
+      ligth: litera
+      dark: darkly
+    highlight-style: eiffel
     css: styles.css
-
-
-

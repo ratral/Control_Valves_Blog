@@ -1,0 +1,13 @@
+---
+title: "Considerations for Evaluating Control Valve Cavitation"
+author: "Dr. Raúl Trujillo Álvarez"
+date: "2022-10-20"
+categories: [hydraulics, theory, valves, analysis]
+description: ''
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+

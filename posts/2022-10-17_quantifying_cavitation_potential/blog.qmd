@@ -1,7 +1,7 @@
 ---
-title: " Quantifying the Cavitation Potential of the control valve"
+title: "Quantifying the Cavitation Potential of the control valve"
 date: "2022-10-17"
-categories: [news, code, analysis]
+categories: [hydraulics, theory, valves, analysis]
 description: ''
 execute: 
   message: false
@@ -71,79 +71,76 @@ $$
   K_c = \frac{1}{\sigma_{1}} = \frac{\Delta P_{net}}{(P_1-P_v)} 
 $$
 
-Using use the reciprocal of Equation for $\sigma_1$. Some publications, authors, and valve manufacturers also add a safety factor to the cavitation parameter $\sigma_1$ to account for possible cavitation caused by any device for which it is not possible or convenient to assess a pressure differential near the control valve, so:
+Using use the reciprocal of Equation for $\sigma_1$. Some publications, authors, and valve manufacturers also add a safety factor to the cavitation parameter $\sigma_1$ to ensure possible cavitation caused by any device for which it is not possible or convenient to assess a pressure differential near the control valve, so:
 
 $$
   \frac{1}{\sigma_{3}}  = \frac{1}{\sigma_{1}} + \frac{1}{\sigma_{1_{roug}}}=  \frac{\Delta P_{net}}{(P_1-P_v)} + \frac{(V^2/2g)}{(P_1-P_v)}
-$$
-$$
+$$ $$
 \frac{1}{\sigma_{3}}  = \frac{\Delta P_{net} + (V^2/2g)}{(P_1-P_v)}
-$$ So:
+$$ 
 
+Then:
 
 $$
 \sigma_{3} = \frac{(P_1-P_v)}{\Delta P_{net} + (V^2/2g)}
 $$
 
-In the same way that cavitation $\sigma$, as defined above in the function  of $P_1$ or $P_2$, can be expressed now it's using the downstream pressure $P_2$; the equation becomes:
-
+In the same way that cavitation $\sigma$, as defined above in the function of $P_1$ or $P_2$, can be expressed now it's using the downstream pressure $P_2$; the equation becomes:
 
 $$
 \sigma_{4} = \frac{(P_2-P_v)}{\Delta P_{net} + (V^2/2g)}
 $$
-Which of the functions the hydraulic designer should use is at his discretion.
 
+*Which of the functions the hydraulic designer should use is at his discretion.*
 
 ## Evaluating the Cavitation Limits of the valve
 
 Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage and can reduce the valve's capacity in advanced stages. The acceptable cavitation level for a valve in a given system varies with valve type, valve function, details of the piping layout, and operation duration.It is necessary to identify and provide experimental data for several cavitation intensity levels to have adequate information for analysis and design. There are defined six different cavitation design limits. The methods used to determine each limit experimentally are defined, and suggestions when each limit might be appropriate. These limits are \[@tullis1993 and ISA-RP75.23-1995\]:
 
-1. Incipient cavitation $\sigma_{i}$
-    - Onset of cavitation
-    - Detect using high-frequency vibration measurement
-    - Very local phenomenon
-    - Transient: random “ticks” sound
-    - Low-level cavitation: usually not damaging
-    - Occurs before the loss of flow capacity
+1.  Incipient cavitation $\sigma_{i}$
+
+    -   Onset of cavitation
+    -   Detect using high-frequency vibration measurement
+    -   Very local phenomenon
+    -   Transient: random "ticks" sound
+    -   Low-level cavitation: usually not damaging
+    -   Occurs before the loss of flow capacity
 
 2.  Critical (or constant) cavitation $\sigma_{c}$
-    - More regular cavitation events
-    - Lower frequency sound and vibration sensed: “rumbling” sound
-    - Some surface damage may occur: dependent upon valve and trim styles and materials.
+
+    -   More regular cavitation events
+    -   Lower frequency sound and vibration sensed: "rumbling" sound
+    -   Some surface damage may occur: dependent upon valve and trim styles and materials.
 
 3.  Maximum noise and vibration level $\sigma_{mv}$
-    - Highest vibration amplitude: sounds like “marbles” or “gravel.”
-    - Vigorous, large-scale cavitation
-    - Very high damage potential
+
+    -   Highest vibration amplitude: sounds like "marbles" or "gravel."
+    -   Vigorous, large-scale cavitation
+    -   Very high damage potential
 
 4.  Choked flow $\sigma_{ch}$
-    - Choking" cavitation is a most severe level of cavitation.
-    - The maximum noise, vibration, and material damage levels occur at or just before this condition.
-    - Under "fully choked" flow conditions, an additional decrease in the downstream pressure will not increase the flow rate through the valve at a given inlet pressure. In other words, it is a limiting flow condition in which vapor formation is enough to limit the valve's flow rate to some maximum value. 
-    - The choking "process" occurs over a range of pressure drops due to the compressibility changes accompanying vapor formation.
+
+    -   Choking" cavitation is a most severe level of cavitation.
+    -   The maximum noise, vibration, and material damage levels occur at or just before this condition.
+    -   Under "fully choked" flow conditions, an additional decrease in the downstream pressure will not increase the flow rate through the valve at a given inlet pressure. In other words, it is a limiting flow condition in which vapor formation is enough to limit the valve's flow rate to some maximum value.
+    -   The choking "process" occurs over a range of pressure drops due to the compressibility changes accompanying vapor formation.
 
     ![Cavitation parameter plot: using an accelerometer values.](cavitation_regime.png)
 
 Other critical cavitation limits are:
 
-  - Incipient damage $\sigma_{id}$: A cavitation level sufficient to begin minor, observable indications of pitting damage.
-  
-  - Manufacturer's recommended cavitation limit $\sigma_{mr}$: is an operational limit supplied by the manufacturer for a given valve type, size, opening, and reference upstream pressure. Application of the limit may require scale effect and influence factors if the service conditions and valve size are different than the reference pressure and altitude.
-  
+-   Incipient damage $\sigma_{id}$: A cavitation level sufficient to begin minor, observable indications of pitting damage.
+
+-   Manufacturer's recommended cavitation limit $\sigma_{mr}$: is an operational limit supplied by the manufacturer for a given valve type, size, opening, and reference upstream pressure. Application of the limit may require scale effect and influence factors if the service conditions and valve size are different than the reference pressure and altitude.
+
 # References
 
-  -   Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr. 1993, https://doi.org/10.2172/10155405.
-  - ISA-RP75.23-1995 Considerations for Evaluating Control Valve Cavitation
-  - ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.
-  - ANSI/ISA-75.01-1985 (R1995), Flow Equations for Sizing Control Valves. 1985.
-  - ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.
-  - ANSI/ISA–RP75.23–1995, Considerations for Evaluating Control Valve Cavitation. Instrument Society of America, 1995.
-  - ANSI/ISA-S75.02, Control Valve Capacity Test Procedures. Instrument Society of America, 1996.
-  - ANSI/ISA-S75.05, Control Valve Terminology. 1983.
-  - International Society of Automation, and American National Standards Institute. ANSI/ISA–75.02.01–2008 (IEC 60534-2-3 Mod) Control Valve Capacity Test Procedures. 2008.
-
-
-
-
-
-
+-   Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr. 1993, https://doi.org/10.2172/10155405.
+-   ISA-RP75.23-1995 Considerations for Evaluating Control Valve Cavitation
+-   ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.
+-   ANSI/ISA-75.01-1985 (R1995), Flow Equations for Sizing Control Valves. 1985.
+-   ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.
+-   ANSI/ISA--RP75.23--1995, Considerations for Evaluating Control Valve Cavitation. Instrument Society of America, 1995.
+-   ANSI/ISA-S75.02, Control Valve Capacity Test Procedures. Instrument Society of America, 1996.
+-   ANSI/ISA-S75.05, Control Valve Terminology. 1983.
+-   International Society of Automation, and American National Standards Institute. ANSI/ISA--75.02.01--2008 (IEC 60534-2-3 Mod) Control Valve Capacity Test Procedures. 2008.

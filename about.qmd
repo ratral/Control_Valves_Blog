@@ -1,18 +1,18 @@
 ---
-title: "About"
+title: "Dr. Raúl Trujillo Álvarez"
 image: profile.jpg
 about:
-  template: jolla
+  template: marquee
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com
+      href: https://twitter.com/Dr_Raul
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/dr-raul-trujillo/
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/ratral
 
 ---
 

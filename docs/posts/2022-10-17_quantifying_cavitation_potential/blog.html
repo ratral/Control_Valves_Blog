@@ -9,7 +9,7 @@
 <meta name="author" content="Dr.&nbsp;Raúl Trujillo Álvarez">
 <meta name="dcterms.date" content="2022-10-17">
 
-<title>Control Valves Blog. - Quantifying the Cavitation Potential of the control valve</title>
+<title>Water Control Valves Blog. - Quantifying the Cavitation Potential of the control valve</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,10 +31,10 @@ ul.task-list{list-style: none;}
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link class="quarto-color-scheme" href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="../../site_libs/bootstrap/bootstrap-dark.min.css">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,15 +67,20 @@ ul.task-list{list-style: none;}
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Control Valves Blog.</span>
+    <span class="navbar-title">Water Control Valves Blog.</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="dropdown-header">
- about.qmd</li>
+ Dr. Raúl Trujillo Álvarez</li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Dr.&nbsp;Raúl Trujillo Álvarez</a>
+  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/ratral"><i class="bi bi-github" role="img">
 </i> 
@@ -87,6 +92,9 @@ ul.task-list{list-style: none;}
  </a>
   </li>  
 </ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -117,8 +125,9 @@ ul.task-list{list-style: none;}
 <div class="quarto-title">
 <h1 class="title">Quantifying the Cavitation Potential of the control valve</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">news</div>
-    <div class="quarto-category">code</div>
+    <div class="quarto-category">hydraulics</div>
+    <div class="quarto-category">theory</div>
+    <div class="quarto-category">valves</div>
     <div class="quarto-category">analysis</div>
   </div>
   </div>
@@ -185,7 +194,7 @@ ul.task-list{list-style: none;}
 <p><span class="math display">\[
   \sigma_{1_{roug}} = \frac{P_1-P_v}{(V^2/2g)}
 \]</span></p>
-<p>For valves and other devices that create a pressure drop, the cavitation parameter can be defined in several ways. The reference pressure in the numerator of the equation of sigma <span class="math inline">\((\sigma_1)\)</span> equation can be either the upstream or the downstream pressure. Both have been used, and there are valid reasons supporting either choice.Using the downstream pressure <span class="math inline">\(P_2\)</span>, the equation becomes:</p>
+<p>The cavitation parameter can be defined in various ways for valves and other devices that create a pressure drop. The reference pressure in the numerator of the sigma equation <span class="math inline">\((\sigma_1)\)</span> can be the upstream or downstream pressure. Both have been used, and there are valid reasons to support either option. So using the downstream pressure <span class="math inline">\(P_2\)</span>, the equation becomes:</p>
 <p><span class="math display">\[
   \sigma_{2} = \frac{P_2-P_v}{\Delta P_{net}}
 \]</span></p>
@@ -198,21 +207,27 @@ ul.task-list{list-style: none;}
 <p><span class="math display">\[
   K_c = \frac{1}{\sigma_{1}} = \frac{\Delta P_{net}}{(P_1-P_v)}
 \]</span></p>
-<p>Using use the reciprocal of Equation for <span class="math inline">\(\sigma_1\)</span>. Some publications, authors, and valve manufacturers also add a safety factor to the cavitation parameter <span class="math inline">\(\sigma_1\)</span> to account for possible cavitation caused by any device for which it is not possible or convenient to assess a pressure differential near the control valve, so:</p>
+<p>Using use the reciprocal of Equation for <span class="math inline">\(\sigma_1\)</span>. Some publications, authors, and valve manufacturers also add a safety factor to the cavitation parameter <span class="math inline">\(\sigma_1\)</span> to ensure possible cavitation caused by any device for which it is not possible or convenient to assess a pressure differential near the control valve, so:</p>
 <p><span class="math display">\[
   \frac{1}{\sigma_{3}}  = \frac{1}{\sigma_{1}} + \frac{1}{\sigma_{1_{roug}}}=  \frac{\Delta P_{net}}{(P_1-P_v)} + \frac{(V^2/2g)}{(P_1-P_v)}
 \]</span> <span class="math display">\[
 \frac{1}{\sigma_{3}}  = \frac{\Delta P_{net} + (V^2/2g)}{(P_1-P_v)}
-\]</span> So:</p>
-<p><span class="math display">\[
-\sigma_{3} = = \frac{(P_1-P_v)}{\Delta P_{net} + (V^2/2g)}
 \]</span></p>
+<p>Then:</p>
+<p><span class="math display">\[
+\sigma_{3} = \frac{(P_1-P_v)}{\Delta P_{net} + (V^2/2g)}
+\]</span></p>
+<p>In the same way that cavitation <span class="math inline">\(\sigma\)</span>, as defined above in the function of <span class="math inline">\(P_1\)</span> or <span class="math inline">\(P_2\)</span>, can be expressed now it’s using the downstream pressure <span class="math inline">\(P_2\)</span>; the equation becomes:</p>
+<p><span class="math display">\[
+\sigma_{4} = \frac{(P_2-P_v)}{\Delta P_{net} + (V^2/2g)}
+\]</span></p>
+<p><em>Which of the functions the hydraulic designer should use is at his discretion.</em></p>
 </section>
 <section id="evaluating-the-cavitation-limits-of-the-valve" class="level2">
 <h2 class="anchored" data-anchor-id="evaluating-the-cavitation-limits-of-the-valve">Evaluating the Cavitation Limits of the valve</h2>
 <p>Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage and can reduce the valve’s capacity in advanced stages. The acceptable cavitation level for a valve in a given system varies with valve type, valve function, details of the piping layout, and operation duration.It is necessary to identify and provide experimental data for several cavitation intensity levels to have adequate information for analysis and design. There are defined six different cavitation design limits. The methods used to determine each limit experimentally are defined, and suggestions when each limit might be appropriate. These limits are [<span class="citation" data-cites="tullis1993">@tullis1993</span> and ISA-RP75.23-1995]:</p>
 <ol type="1">
-<li>Incipient cavitation <span class="math inline">\(\sigma_{i}\)</span>
+<li><p>Incipient cavitation <span class="math inline">\(\sigma_{i}\)</span></p>
 <ul>
 <li>Onset of cavitation</li>
 <li>Detect using high-frequency vibration measurement</li>
@@ -221,26 +236,31 @@ ul.task-list{list-style: none;}
 <li>Low-level cavitation: usually not damaging</li>
 <li>Occurs before the loss of flow capacity</li>
 </ul></li>
-<li>Critical (or constant) cavitation <span class="math inline">\(\sigma_{c}\)</span>
+<li><p>Critical (or constant) cavitation <span class="math inline">\(\sigma_{c}\)</span></p>
 <ul>
 <li>More regular cavitation events</li>
 <li>Lower frequency sound and vibration sensed: “rumbling” sound</li>
 <li>Some surface damage may occur: dependent upon valve and trim styles and materials.</li>
 </ul></li>
-<li>Maximum noise and vibration level <span class="math inline">\(\sigma_{mv}\)</span>
+<li><p>Maximum noise and vibration level <span class="math inline">\(\sigma_{mv}\)</span></p>
 <ul>
 <li>Highest vibration amplitude: sounds like “marbles” or “gravel.”</li>
 <li>Vigorous, large-scale cavitation</li>
 <li>Very high damage potential</li>
 </ul></li>
-<li>Choked flow <span class="math inline">\(\sigma_{ch}\)</span>
+<li><p>Choked flow <span class="math inline">\(\sigma_{ch}\)</span></p>
 <ul>
 <li>Choking” cavitation is a most severe level of cavitation.</li>
 <li>The maximum noise, vibration, and material damage levels occur at or just before this condition.</li>
 <li>Under “fully choked” flow conditions, an additional decrease in the downstream pressure will not increase the flow rate through the valve at a given inlet pressure. In other words, it is a limiting flow condition in which vapor formation is enough to limit the valve’s flow rate to some maximum value.</li>
 <li>The choking “process” occurs over a range of pressure drops due to the compressibility changes accompanying vapor formation.</li>
 </ul>
-<img src="cavitation_regime.png" title="fig:" class="img-fluid" alt="Cavitation parameter plot: using an accelerometer values."></li>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cavitation_regime.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Cavitation parameter plot: using an accelerometer values.</figcaption><p></p>
+</figure>
+</div></li>
 </ol>
 <p>Other critical cavitation limits are:</p>
 <ul>
@@ -269,6 +289,103 @@ ul.task-list{list-style: none;}
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
