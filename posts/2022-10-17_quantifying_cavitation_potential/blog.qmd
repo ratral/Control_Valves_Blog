@@ -51,7 +51,7 @@ $$
   \sigma_{1_{roug}} = \frac{P_1-P_v}{(V^2/2g)}
 $$
 
-For valves and other devices that create a pressure drop, the cavitation parameter can be defined in several ways. The reference pressure in the numerator of the equation of sigma $(\sigma_1)$ equation can be either the upstream or the downstream pressure. Both have been used, and there are valid reasons supporting either choice.Using the downstream pressure $P_2$, the equation becomes:
+The cavitation parameter can be defined in various ways for valves and other devices that create a pressure drop. The reference pressure in the numerator of the sigma equation $(\sigma_1)$ can be the upstream or downstream pressure. Both have been used, and there are valid reasons to support either option. So using the downstream pressure $P_2$, the equation becomes:
 
 $$
   \sigma_{2} = \frac{P_2-P_v}{\Delta P_{net}}
@@ -75,13 +75,24 @@ Using use the reciprocal of Equation for $\sigma_1$. Some publications, authors,
 
 $$
   \frac{1}{\sigma_{3}}  = \frac{1}{\sigma_{1}} + \frac{1}{\sigma_{1_{roug}}}=  \frac{\Delta P_{net}}{(P_1-P_v)} + \frac{(V^2/2g)}{(P_1-P_v)}
-$$ $$
+$$
+$$
 \frac{1}{\sigma_{3}}  = \frac{\Delta P_{net} + (V^2/2g)}{(P_1-P_v)}
 $$ So:
 
+
 $$
-\sigma_{3} = = \frac{(P_1-P_v)}{\Delta P_{net} + (V^2/2g)}
+\sigma_{3} = \frac{(P_1-P_v)}{\Delta P_{net} + (V^2/2g)}
 $$
+
+In the same way that cavitation $\sigma$, as defined above in the function  of $P_1$ or $P_2$, can be expressed now it's using the downstream pressure $P_2$; the equation becomes:
+
+
+$$
+\sigma_{4} = \frac{(P_2-P_v)}{\Delta P_{net} + (V^2/2g)}
+$$
+Which of the functions the hydraulic designer should use is at his discretion.
+
 
 ## Evaluating the Cavitation Limits of the valve
 
