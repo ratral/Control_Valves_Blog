@@ -91,7 +91,12 @@ $$
 \sigma_{4} = \frac{(P_2-P_v)}{\Delta P_{net} + (V^2/2g)}
 $$
 
-*Which of the functions the hydraulic designer should use is at his discretion.*
+
+:::{.callout-note}
+Which of the functions the hydraulic designer should use is at his discretion.
+:::
+
+
 
 ## Evaluating the Cavitation Limits of the valve
 
@@ -127,11 +132,13 @@ Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage a
 
     ![Cavitation parameter plot: using an accelerometer values.](cavitation_regime.png)
 
-Other critical cavitation limits are:
+:::{.callout-tip}
+## Other important cavitation limits are:
 
--   Incipient damage $\sigma_{id}$: A cavitation level sufficient to begin minor, observable indications of pitting damage.
+  - Incipient damage $\sigma_{id}$: A cavitation level sufficient to begin minor, observable indications of pitting damage.
 
--   Manufacturer's recommended cavitation limit $\sigma_{mr}$: is an operational limit supplied by the manufacturer for a given valve type, size, opening, and reference upstream pressure. Application of the limit may require scale effect and influence factors if the service conditions and valve size are different than the reference pressure and altitude.
+  - Manufacturer's recommended cavitation limit $\sigma_{mr}$: is an operational limit supplied by the manufacturer for a given valve type, size, opening, and reference upstream pressure. Application of the limit may require scale effect and influence factors if the service conditions and valve size are different than the reference pressure and altitude.
+:::
 
 # References
 
