@@ -1,0 +1,167 @@
+---
+title: "Example: Flow coefficient and cavitation value"
+subtitle: "(Draft!!!!)"
+author: "Dr. Raúl Trujillo Álvarez"
+date: "2022-10-24"
+categories: [hydraulics, theory, valves, analysis, example]
+description: ''
+execute: 
+  message: false
+  warning: false
+  echo: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+library(hyd4gpv)
+
+# IMPUT DATA
+## Parameters of the Project
+data <- list(
+  medium        = "Raw Water",
+  temp          = 15,      # Water temperature in °C
+  masl          = 1780,    # meters above sea level
+  dn            = 200,     # Diameter of the RIKO valve en mm
+  d1            = 200,     # Diameter of the Pipe Upstream in mm
+  d2            = 200,     # Diameter of the Pipe Downstream in mm
+  add_factor    = 1.3      # The factor of safety for the Kv, this must be >= 1 
+)
+
+
+## base_data 
+###  - Pressures in bar
+###  - Flow in m3/h
+
+data$operation <- tribble(
+    ~condition,  ~p1,   ~p2,  ~flow,
+    "15.max",	 4.439,	2.615,	396.0,
+    "16.max",	18.263,	5.241,	396.0,
+    "18.max",	 9.455,	2.615,	396.0,
+    "23.max",	20.215,	2.190,	396.0,
+    "24.max",	19.903,	2.190,	396.0,
+    "25.max",	19.132,	2.190,	396.0,
+    "26.max",	18.534,	2.347,	396.0,
+    "27.max",	17.439,	2.347,	396.0,
+    "28.max",	17.148,	2.347,	396.0,
+    "34.max",	18.314,	2.718,	396.0,
+    "15.min",	 4.368,	2.249,	252.0,
+    "16.min",	18.193,	5.077,	252.0,
+    "18.min",	 9.337,	2.249,	252.0,
+    "23.min",	20.185,	2.081,	252.0,
+    "24.min",	19.873,	2.081,	252.0,
+    "25.min",	19.100,	2.081,	252.0,
+    "26.min",	18.470,	2.148,	252.0,
+    "27.min",	17.372,	2.148,	252.0,
+    "28.min",	17.081,	2.148,	252.0,
+    "34.min",	18.299,	2.291,	252.0
+    
+  ) 
+
+# Calculation input data characteristics
+base_data <- data$operation |>  
+  hyd4gpv::points_cloud_param(data$dn, data$masl, data$temp) 
+```
+
+# Sizing sample
+
+These blog notes provide a simplified procedure for sizing control valves at standard service conditions. The data required to size a valve, such as nominal size, gauge pressures, and flow rates, are actual values of a project.
+
+![Operating data (Source: Wagner, Walter. Regel- und Sicherheitsarmaturen.)](control_valve_01.png)
+
+## First step: Collection of the operations data for the control valve.
+
+-   Medium: `r data$medium`.
+
+-   Medium Temperature: `r data$temp` $°C$.
+
+-   Localization of the valve: `r data$masl` meters above sea level.
+
+-   Valve Diameter: `r data$dn` $mm$
+
+-   Diameter Upstream Pipe `r data$d1` $mm$
+
+-   Diameter Downstream Pipe `r data$d2` $mm$
+
+-   Relative density `r round(water_density(data$temp)/1000,2)`
+
+```{r}
+#| label: tbl-base_data
+#| tbl-cap: "Operations Data"
+#| include: true
+#| echo: false
+#| 
+base_data |> 
+  select(
+    condition, p1, p2, dp, flow, kv, 
+    velocity, zeta, sig_1, sig_2
+  ) |> 
+  mutate(across(where(is.numeric), round, 2)) |>
+  
+  gt(rowname_col = "condition") |> 
+  
+  tab_row_group(
+    label = "Min.Condition",
+    rows = matches(".min")
+  ) |> 
+  
+  tab_row_group(
+    label = "Max.Condition",
+    rows = matches(".max")
+  ) |> 
+  
+  tab_header(
+    title = md("**Operations Data**"),
+    subtitle = md("Plus Calculated Data")
+  ) |> 
+  
+  tab_spanner(
+    label = "Supplied data",
+    columns = c(p1,	p2,	dp,	flow)
+  ) |> 
+  tab_spanner(
+    label = "Calculated Data",
+    columns = c(kv,	velocity,	zeta,	sig_1,	sig_2)
+  ) |> 
+  
+  
+  cols_label(
+    p1    = html("P1<br>(bar)"),
+    p2    = html("P2<br>(bar)"),
+    dp    = html("DP<br>(bar)"),
+    flow  = html("Flow<br>(m<sup>3</sup>/h)"),
+    kv       = html("Kv<br>(m<sup>3</sup>/h)"),
+    zeta     = html("Zeta<br>(-)"),
+    velocity = html("velocity<br>(m/s)"),
+    sig_1    = html("Sigma_1<br>(-)"),
+    sig_2    = html("Sigma_2<br>(-)")
+  ) |> 
+  
+  tab_source_note(
+    source_note = "Source: Data of the hydraulic analysis of the system"
+  ) 
+
+```
+
+**Columns definitions:**
+
+-   $P_1$: Upstream static (gauge) pressure in $(bar)$;
+-   $P_2$: Downstream static (gauge) pressure in $(bar)$;
+-   $Flow$: Volumetric flow rate in $(m^3/h)$;
+-   DP $(\Delta{P})$: Differential pressure between upstream and downstream pressure taps in $bar$;
+-   $K_v$: Flow coefficient $(m^3/h)$; $K_v = q \cdot \sqrt{\frac {(\rho / \rho_{0})}{\Delta P}}$
+-   $velocity$ : Velocity in $m/s$
+-   Zeta Value $(\zeta)$: Required Velocity head loss coefficient;
+-   $\sigma_1$ (Sigma_1): Cavitation index equal to $(P_2 - P_v)/\Delta{P} = (\sigma - 1)$ at service conditions;
+-   $\sigma_2$ (Sigma_2): Cavitation index equal to $(P_2 - P_v)/(\Delta{P}+v^2/2g)$ at service conditions.
+
+## Second step: select the minimum $K_v$ required.
+
+  - The maximum flow coefficient $K_v$ required for operation of the control valve is: `r round(max(base_data$kv),2)` $m^3/h$.
+  - The control valve to be selected must meet at least $1.3$ times the maximum flow coefficient required. 
+  - Therefore the minimum $K_{vs}$ (full open flow coefficient) of the selected valve must be: `r round(max(base_data$kv*1.3),2)` $m^3/h$.
+  
+  
+

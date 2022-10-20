@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.342">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr.&nbsp;Raúl Trujillo Álvarez">
+<meta name="dcterms.date" content="2022-10-24">
+
+<title>Water Control Valves Blog. - Example: Flow coefficient and cavitation value</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link class="quarto-color-scheme" href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="../../site_libs/bootstrap/bootstrap-dark.min.css">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Water Control Valves Blog.</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Dr.&nbsp;Raúl Trujillo Álvarez</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ratral"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/Dr_Raul"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sizing-sample" id="toc-sizing-sample" class="nav-link active" data-scroll-target="#sizing-sample">Sizing sample</a>
+  <ul class="collapse">
+  <li><a href="#first-step-collection-of-the-operations-data-for-the-control-valve." id="toc-first-step-collection-of-the-operations-data-for-the-control-valve." class="nav-link" data-scroll-target="#first-step-collection-of-the-operations-data-for-the-control-valve.">First step: Collection of the operations data for the control valve.</a></li>
+  <li><a href="#second-step-select-the-minimum-k_v-required." id="toc-second-step-select-the-minimum-k_v-required." class="nav-link" data-scroll-target="#second-step-select-the-minimum-k_v-required.">Second step: select the minimum <span class="math inline">\(K_v\)</span> required.</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Example Flow coefficient and cavitation value (<em>Draft!!!</em>)</h1>
+<p class="subtitle lead">(Draft!!!!)</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">hydraulics</div>
+    <div class="quarto-category">theory</div>
+    <div class="quarto-category">valves</div>
+    <div class="quarto-category">analysis</div>
+  </div>
+  </div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr.&nbsp;Raúl Trujillo Álvarez </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 24, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+
+</div>
+<section id="sizing-sample" class="level1">
+<h1>Sizing sample</h1>
+<p>These blog notes provide a simplified procedure for sizing control valves at standard service conditions. The data required to size a valve, such as nominal size, gauge pressures, and flow rates, are actual values of a project.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="control_valve_01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Operating data (Source: Wagner, Walter. Regel- und Sicherheitsarmaturen.)</figcaption><p></p>
+</figure>
+</div>
+<section id="first-step-collection-of-the-operations-data-for-the-control-valve." class="level2">
+<h2 class="anchored" data-anchor-id="first-step-collection-of-the-operations-data-for-the-control-valve.">First step: Collection of the operations data for the control valve.</h2>
+<ul>
+<li><p>Medium: Raw Water.</p></li>
+<li><p>Medium Temperature: 15 <span class="math inline">\(°C\)</span>.</p></li>
+<li><p>Localization of the valve: 1780 meters above sea level.</p></li>
+<li><p>Valve Diameter: 200 <span class="math inline">\(mm\)</span></p></li>
+<li><p>Diameter Upstream Pipe 200 <span class="math inline">\(mm\)</span></p></li>
+<li><p>Diameter Downstream Pipe 200 <span class="math inline">\(mm\)</span></p></li>
+<li><p>Relative density 1.01</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-base_data" class="anchored">
+<div id="ugncpeivtd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#ugncpeivtd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ugncpeivtd .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ugncpeivtd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ugncpeivtd .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ugncpeivtd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ugncpeivtd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ugncpeivtd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ugncpeivtd .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ugncpeivtd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ugncpeivtd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ugncpeivtd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ugncpeivtd .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ugncpeivtd .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ugncpeivtd .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ugncpeivtd .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ugncpeivtd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ugncpeivtd .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ugncpeivtd .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ugncpeivtd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ugncpeivtd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ugncpeivtd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ugncpeivtd .gt_left {
+  text-align: left;
+}
+
+#ugncpeivtd .gt_center {
+  text-align: center;
+}
+
+#ugncpeivtd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ugncpeivtd .gt_font_normal {
+  font-weight: normal;
+}
+
+#ugncpeivtd .gt_font_bold {
+  font-weight: bold;
+}
+
+#ugncpeivtd .gt_font_italic {
+  font-style: italic;
+}
+
+#ugncpeivtd .gt_super {
+  font-size: 65%;
+}
+
+#ugncpeivtd .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#ugncpeivtd .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ugncpeivtd .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ugncpeivtd .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ugncpeivtd .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ugncpeivtd .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ugncpeivtd .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table"><caption>Table 1:  Operations Data </caption>
+  <thead class="gt_header">
+    <tr>
+      <td colspan="10" class="gt_heading gt_title gt_font_normal" style=""><strong>Operations Data</strong></td>
+    </tr>
+    <tr>
+      <td colspan="10" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="">Plus Calculated Data</td>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col"></th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4" scope="colgroup">
+        <span class="gt_column_spanner">Supplied data</span>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="5" scope="colgroup">
+        <span class="gt_column_spanner">Calculated Data</span>
+      </th>
+    </tr>
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">P1<br>(bar)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">P2<br>(bar)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">DP<br>(bar)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Flow<br>(m<sup>3</sup>/h)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Kv<br>(m<sup>3</sup>/h)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">velocity<br>(m/s)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Zeta<br>(-)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Sigma_1<br>(-)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Sigma_2<br>(-)</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <td colspan="10" class="gt_group_heading">Max.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">15.max</th>
+<td class="gt_row gt_right">4.44</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">1.82</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">293.97</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">29.56</td>
+<td class="gt_row gt_right">1.87</td>
+<td class="gt_row gt_right">1.81</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">16.max</th>
+<td class="gt_row gt_right">18.26</td>
+<td class="gt_row gt_right">5.24</td>
+<td class="gt_row gt_right">13.02</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">110.02</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">211.04</td>
+<td class="gt_row gt_right">0.46</td>
+<td class="gt_row gt_right">0.46</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">18.max</th>
+<td class="gt_row gt_right">9.46</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">6.84</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">151.81</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">110.85</td>
+<td class="gt_row gt_right">0.50</td>
+<td class="gt_row gt_right">0.49</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">23.max</th>
+<td class="gt_row gt_right">20.22</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">18.02</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">93.52</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">292.13</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_right">0.17</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">24.max</th>
+<td class="gt_row gt_right">19.90</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">17.71</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">94.34</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">287.07</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_right">0.17</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">25.max</th>
+<td class="gt_row gt_right">19.13</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">16.94</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">96.46</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">274.57</td>
+<td class="gt_row gt_right">0.18</td>
+<td class="gt_row gt_right">0.18</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">26.max</th>
+<td class="gt_row gt_right">18.53</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">16.19</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">98.68</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">262.34</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_right">0.19</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">27.max</th>
+<td class="gt_row gt_right">17.44</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">15.09</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">102.20</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">244.59</td>
+<td class="gt_row gt_right">0.21</td>
+<td class="gt_row gt_right">0.21</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">28.max</th>
+<td class="gt_row gt_right">17.15</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">14.80</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">103.20</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">239.88</td>
+<td class="gt_row gt_right">0.21</td>
+<td class="gt_row gt_right">0.21</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">34.max</th>
+<td class="gt_row gt_right">18.31</td>
+<td class="gt_row gt_right">2.72</td>
+<td class="gt_row gt_right">15.60</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">100.53</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">252.76</td>
+<td class="gt_row gt_right">0.23</td>
+<td class="gt_row gt_right">0.22</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="10" class="gt_group_heading">Min.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">15.min</th>
+<td class="gt_row gt_right">4.37</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">2.12</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">173.56</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">84.80</td>
+<td class="gt_row gt_right">1.44</td>
+<td class="gt_row gt_right">1.42</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">16.min</th>
+<td class="gt_row gt_right">18.19</td>
+<td class="gt_row gt_right">5.08</td>
+<td class="gt_row gt_right">13.12</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">69.76</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">524.91</td>
+<td class="gt_row gt_right">0.45</td>
+<td class="gt_row gt_right">0.45</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">18.min</th>
+<td class="gt_row gt_right">9.34</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">7.09</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">94.90</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">283.67</td>
+<td class="gt_row gt_right">0.43</td>
+<td class="gt_row gt_right">0.43</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">23.min</th>
+<td class="gt_row gt_right">20.18</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">18.10</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">59.38</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">724.53</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_right">0.16</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">24.min</th>
+<td class="gt_row gt_right">19.87</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">17.79</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">59.90</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">712.05</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_right">0.16</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">25.min</th>
+<td class="gt_row gt_right">19.10</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">17.02</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">61.24</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">681.11</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_right">0.17</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">26.min</th>
+<td class="gt_row gt_right">18.47</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">16.32</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">62.54</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">653.22</td>
+<td class="gt_row gt_right">0.18</td>
+<td class="gt_row gt_right">0.18</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">27.min</th>
+<td class="gt_row gt_right">17.37</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">15.22</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">64.75</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">609.27</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_right">0.19</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">28.min</th>
+<td class="gt_row gt_right">17.08</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">14.93</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">65.38</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">597.63</td>
+<td class="gt_row gt_right">0.20</td>
+<td class="gt_row gt_right">0.20</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">34.min</th>
+<td class="gt_row gt_right">18.30</td>
+<td class="gt_row gt_right">2.29</td>
+<td class="gt_row gt_right">16.01</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">63.15</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">640.65</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_right">0.19</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="10">Source: Data of the hydraulic analysis of the system</td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Columns definitions:</strong></p>
+<ul>
+<li><span class="math inline">\(P_1\)</span>: Upstream static (gauge) pressure in <span class="math inline">\((bar)\)</span>;</li>
+<li><span class="math inline">\(P_2\)</span>: Downstream static (gauge) pressure in <span class="math inline">\((bar)\)</span>;</li>
+<li><span class="math inline">\(Flow\)</span>: Volumetric flow rate in <span class="math inline">\((m^3/h)\)</span>;</li>
+<li>DP <span class="math inline">\((\Delta{P})\)</span>: Differential pressure between upstream and downstream pressure taps in <span class="math inline">\(bar\)</span>;</li>
+<li><span class="math inline">\(K_v\)</span>: Flow coefficient <span class="math inline">\((m^3/h)\)</span>; <span class="math inline">\(K_v = q \cdot \sqrt{\frac {(\rho / \rho_{0})}{\Delta P}}\)</span></li>
+<li><span class="math inline">\(velocity\)</span> : Velocity in <span class="math inline">\(m/s\)</span></li>
+<li>Zeta Value <span class="math inline">\((\zeta)\)</span>: Required Velocity head loss coefficient;</li>
+<li><span class="math inline">\(\sigma_1\)</span> (Sigma_1): Cavitation index equal to <span class="math inline">\((P_2 - P_v)/\Delta{P} = (\sigma - 1)\)</span> at service conditions;</li>
+<li><span class="math inline">\(\sigma_2\)</span> (Sigma_2): Cavitation index equal to <span class="math inline">\((P_2 - P_v)/(\Delta{P}+v^2/2g)\)</span> at service conditions.</li>
+</ul>
+</section>
+<section id="second-step-select-the-minimum-k_v-required." class="level2">
+<h2 class="anchored" data-anchor-id="second-step-select-the-minimum-k_v-required.">Second step: select the minimum <span class="math inline">\(K_v\)</span> required.</h2>
+<ul>
+<li>The maximum flow coefficient <span class="math inline">\(K_v\)</span> required for operation of the control valve is: 293.97 <span class="math inline">\(m^3/h\)</span>.</li>
+<li>The control valve to be selected must meet at least <span class="math inline">\(1.3\)</span> times the maximum flow coefficient required.</li>
+<li>Therefore the minimum <span class="math inline">\(K_{vs}\)</span> (full open flow coefficient) of the selected valve must be: 382.17 <span class="math inline">\(m^3/h\)</span>.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="ratral/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -2,7 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/2022-10-20_considerations_evaluating_cavitation/blog.html",
+      "/posts/2022-10-26_considerations_evaluating_cavitation/blog.html",
+      "/posts/2022-10-24_practical_example_001/blog.html",
       "/posts/2022-10-17_quantifying_cavitation_potential/blog.html",
       "/posts/2022-10-12_flow_coefficient_01/blog.html",
       "/posts/2022-08-24_remarks_riko/blog.html"
@@ -11,7 +12,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/2022-10-20_considerations_evaluating_cavitation/blog.html",
+      "/posts/2022-10-26_considerations_evaluating_cavitation/blog.html",
+      "/posts/2022-10-24_practical_example_001/blog.html",
       "/posts/2022-10-17_quantifying_cavitation_potential/blog.html",
       "/posts/2022-10-12_flow_coefficient_01/blog.html",
       "/posts/2022-08-24_remarks_riko/blog.html"

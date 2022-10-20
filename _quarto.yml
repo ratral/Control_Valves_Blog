@@ -1,14 +1,12 @@
 project:
   type: website
   output-dir: docs
-
 website:
   title: "Water Control Valves Blog."
-  description: "This is Dr. Raúl Trujillo personal Blog."
+  site-url: https://ratral.github.io/Control_Valves_Blog/
+  description: "My Notes-Blog"
   navbar:
     background: "green"
-    left: 
-      - "Dr. Raúl Trujillo Álvarez"
     right:
       - about.qmd
       - icon: github

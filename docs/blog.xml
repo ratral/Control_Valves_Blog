@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Water Control Valves Blog.</title>
+<link>https://ratral.github.io/Control_Valves_Blog//blog.html</link>
+<atom:link href="https://ratral.github.io/Control_Valves_Blog//blog.xml" rel="self" type="application/rss+xml"/>
+<description>My Notes-Blog</description>
+<generator>quarto-0.9.342</generator>
+<lastBuildDate>Tue, 25 Oct 2022 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Considerations for Evaluating Control Valve Cavitation</title>
+  <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
+  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-26_considerations_evaluating_cavitation/blog.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="essential-features-of-the-k_v-value-calculation" class="level1">
+<h1>Essential features of the <img src="https://latex.codecogs.com/png.latex?K_v"> value calculation</h1>
+<p>In many applications, the flow through the control valve is determined by reducers or other accessories (orifice plates) attached to the control valve. When cavitation occurs in a valve, the flow is further limited by the evaporation of the liquid in the valve. Therefore, to determine the flow through the control valve, the following should be analyzed:</p>
+<ul>
+<li>Flow without flow restriction, turbulent flow and no cavitation.</li>
+<li>Flow with flow restriction but without fittings</li>
+<li>Flow with flow restriction and with fittings</li>
+</ul>
+<section id="flow-without-flow-restriction-turbulent-flow-and-no-cavitation." class="level2">
+<h2 class="anchored" data-anchor-id="flow-without-flow-restriction-turbulent-flow-and-no-cavitation.">Flow without flow restriction, turbulent flow and no cavitation.</h2>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<p>Where:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?Q"> is the flow; Unit: <img src="https://latex.codecogs.com/png.latex?m%5E3/s"></li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Crho_%7B1%7D/%5Crho_%7B0%7D"> Relative density (<img src="https://latex.codecogs.com/png.latex?%5Crho_%7B1%7D/%5Crho_%7B0%7D%20=%201.0"> for water at <img src="https://latex.codecogs.com/png.latex?15%C2%B0C">); Unit: Dimensionless</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20P"> Differential pressure between upstream and downstream pressure taps <img src="https://latex.codecogs.com/png.latex?(P_1-P_2)">; Unit: bar</li>
+</ul>
+</section>
+<section id="flow-with-flow-restriction-cavitation-but-without-fittings" class="level2">
+<h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-but-without-fittings">Flow with flow restriction (Cavitation) but without fittings</h2>
+<p>The vapor pressure of liquids depends on the temperature. If the static pressure on the fluid falls below this vapor pressure, evaporation occurs. The lowest pressure occurs when throttling in the valve occurs in the so-called “vena contracta.” Depending on the design of the throttle point, there is a greater or lesser pressure recovery. Under certain circumstances, evaporation must also be considered when the outflow pressure <img src="https://latex.codecogs.com/png.latex?p_2"> is greater than the vapor pressure of the liquid. Local evaporation, in the vena contracta, initially increases in volume. The cross-section of the choke becomes slimmer, and the calculated flow rate may not be reached if evaporation was not taken into account in the calculation. <span class="citation" data-cites="wagner2008">[@wagner2008]</span>.</p>
+<p>Cavitation occurs if the evaporation is reversed again by an immediately subsequent increase in pressure. When the evaporation is reversed (condensation) and reaches a particular energy potential, it can quickly damage the throttle body and seat of the valve.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(L)%7D%20=%20K_v%20%5Ccdot%20F_L%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> The maximum allowable differential pressure for the calculation of control valves without fittings can be calculated as follows: <img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(L)%7D=F%5E%7B2%7D_%7BL%7D%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
+<p>Where:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?Q"> is the flow; Unit: <img src="https://latex.codecogs.com/png.latex?m%5E3/s"></li>
+<li><img src="https://latex.codecogs.com/png.latex?F_L"> Liquid pressure recovery factor of a control valve without attached fittings; Unit: Dimensionless</li>
+<li><img src="https://latex.codecogs.com/png.latex?F_R"> Reynolds number factor; Unit: Dimensionless</li>
+<li><img src="https://latex.codecogs.com/png.latex?F_F"> Liquid critical pressure ratio factor; Unit: Dimensionless</li>
+<li><img src="https://latex.codecogs.com/png.latex?P_v"> Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Crho_%7B1%7D/%5Crho_%7B0%7D"> Relative density (<img src="https://latex.codecogs.com/png.latex?%5Crho_%7B1%7D/%5Crho_%7B0%7D%20=%201.0"> for water at <img src="https://latex.codecogs.com/png.latex?15%C2%B0C">); Unit: Dimensionless</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20P"> Differential pressure between upstream and downstream pressure taps; Unit: bar</li>
+</ul>
+</section>
+<section id="flow-with-flow-restriction-cavitation-and-with-fittings" class="level2">
+<h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction (cavitation) and with fittings</h2>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20F_p%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(LP)%7D%20=%20K_v%20%5Ccdot%20F_%7BLP%7D%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<p>The maximum allowable differential pressure for the calculation of control valves with fittings can be calculated as follows:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(LP)%7D=%20%5Cleft(%20%5Cfrac%7BF_%7BLP%7D%7D%7BF_P%7D%5Cright)%5E2%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-26_considerations_evaluating_cavitation\Flow_with_restriction.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>hydraulics</category>
+  <category>theory</category>
+  <category>valves</category>
+  <category>analysis</category>
+  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-26_considerations_evaluating_cavitation/blog.html</guid>
+  <pubDate>Tue, 25 Oct 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-26_considerations_evaluating_cavitation/Flow_with_restriction.png" medium="image" type="image/png" height="111" width="144"/>
+</item>
+<item>
+  <title>Example Flow coefficient and cavitation value (Draft!!!)</title>
+  <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
+  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-24_practical_example_001/blog.html</link>
+  <description><![CDATA[ 
+
+
+
+<div class="cell">
+
+</div>
+<section id="sizing-sample" class="level1">
+<h1>Sizing sample</h1>
+<p>These blog notes provide a simplified procedure for sizing control valves at standard service conditions. The data required to size a valve, such as nominal size, gauge pressures, and flow rates, are actual values of a project.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-24_practical_example_001\control_valve_01.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+<section id="first-step-collection-of-the-operations-data-for-the-control-valve." class="level2">
+<h2 class="anchored" data-anchor-id="first-step-collection-of-the-operations-data-for-the-control-valve.">First step: Collection of the operations data for the control valve.</h2>
+<ul>
+<li><p>Medium: Raw Water.</p></li>
+<li><p>Medium Temperature: 15 <img src="https://latex.codecogs.com/png.latex?%C2%B0C">.</p></li>
+<li><p>Localization of the valve: 1780 meters above sea level.</p></li>
+<li><p>Valve Diameter: 200 <img src="https://latex.codecogs.com/png.latex?mm"></p></li>
+<li><p>Diameter Upstream Pipe 200 <img src="https://latex.codecogs.com/png.latex?mm"></p></li>
+<li><p>Diameter Downstream Pipe 200 <img src="https://latex.codecogs.com/png.latex?mm"></p></li>
+<li><p>Relative density 1.01</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-base_data" class="anchored">
+<div id="ugncpeivtd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#ugncpeivtd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ugncpeivtd .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ugncpeivtd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ugncpeivtd .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ugncpeivtd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ugncpeivtd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ugncpeivtd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ugncpeivtd .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ugncpeivtd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ugncpeivtd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ugncpeivtd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ugncpeivtd .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ugncpeivtd .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ugncpeivtd .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ugncpeivtd .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ugncpeivtd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ugncpeivtd .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ugncpeivtd .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ugncpeivtd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ugncpeivtd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ugncpeivtd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ugncpeivtd .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ugncpeivtd .gt_left {
+  text-align: left;
+}
+
+#ugncpeivtd .gt_center {
+  text-align: center;
+}
+
+#ugncpeivtd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ugncpeivtd .gt_font_normal {
+  font-weight: normal;
+}
+
+#ugncpeivtd .gt_font_bold {
+  font-weight: bold;
+}
+
+#ugncpeivtd .gt_font_italic {
+  font-style: italic;
+}
+
+#ugncpeivtd .gt_super {
+  font-size: 65%;
+}
+
+#ugncpeivtd .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#ugncpeivtd .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ugncpeivtd .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ugncpeivtd .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ugncpeivtd .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ugncpeivtd .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ugncpeivtd .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table"><caption>Table 1:  Operations Data </caption>
+  <thead class="gt_header">
+    <tr>
+      <td colspan="10" class="gt_heading gt_title gt_font_normal" style=""><strong>Operations Data</strong></td>
+    </tr>
+    <tr>
+      <td colspan="10" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="">Plus Calculated Data</td>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col"></th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="4" scope="colgroup">
+        <span class="gt_column_spanner">Supplied data</span>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="5" scope="colgroup">
+        <span class="gt_column_spanner">Calculated Data</span>
+      </th>
+    </tr>
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">P1<br>(bar)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">P2<br>(bar)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">DP<br>(bar)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Flow<br>(m<sup>3</sup>/h)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Kv<br>(m<sup>3</sup>/h)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">velocity<br>(m/s)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Zeta<br>(-)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Sigma_1<br>(-)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Sigma_2<br>(-)</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <td colspan="10" class="gt_group_heading">Max.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">15.max</th>
+<td class="gt_row gt_right">4.44</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">1.82</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">293.97</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">29.56</td>
+<td class="gt_row gt_right">1.87</td>
+<td class="gt_row gt_right">1.81</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">16.max</th>
+<td class="gt_row gt_right">18.26</td>
+<td class="gt_row gt_right">5.24</td>
+<td class="gt_row gt_right">13.02</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">110.02</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">211.04</td>
+<td class="gt_row gt_right">0.46</td>
+<td class="gt_row gt_right">0.46</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">18.max</th>
+<td class="gt_row gt_right">9.46</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">6.84</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">151.81</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">110.85</td>
+<td class="gt_row gt_right">0.50</td>
+<td class="gt_row gt_right">0.49</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">23.max</th>
+<td class="gt_row gt_right">20.22</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">18.02</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">93.52</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">292.13</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_right">0.17</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">24.max</th>
+<td class="gt_row gt_right">19.90</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">17.71</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">94.34</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">287.07</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_right">0.17</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">25.max</th>
+<td class="gt_row gt_right">19.13</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">16.94</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">96.46</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">274.57</td>
+<td class="gt_row gt_right">0.18</td>
+<td class="gt_row gt_right">0.18</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">26.max</th>
+<td class="gt_row gt_right">18.53</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">16.19</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">98.68</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">262.34</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_right">0.19</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">27.max</th>
+<td class="gt_row gt_right">17.44</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">15.09</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">102.20</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">244.59</td>
+<td class="gt_row gt_right">0.21</td>
+<td class="gt_row gt_right">0.21</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">28.max</th>
+<td class="gt_row gt_right">17.15</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">14.80</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">103.20</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">239.88</td>
+<td class="gt_row gt_right">0.21</td>
+<td class="gt_row gt_right">0.21</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">34.max</th>
+<td class="gt_row gt_right">18.31</td>
+<td class="gt_row gt_right">2.72</td>
+<td class="gt_row gt_right">15.60</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">100.53</td>
+<td class="gt_row gt_right">3.50</td>
+<td class="gt_row gt_right">252.76</td>
+<td class="gt_row gt_right">0.23</td>
+<td class="gt_row gt_right">0.22</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="10" class="gt_group_heading">Min.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">15.min</th>
+<td class="gt_row gt_right">4.37</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">2.12</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">173.56</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">84.80</td>
+<td class="gt_row gt_right">1.44</td>
+<td class="gt_row gt_right">1.42</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">16.min</th>
+<td class="gt_row gt_right">18.19</td>
+<td class="gt_row gt_right">5.08</td>
+<td class="gt_row gt_right">13.12</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">69.76</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">524.91</td>
+<td class="gt_row gt_right">0.45</td>
+<td class="gt_row gt_right">0.45</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">18.min</th>
+<td class="gt_row gt_right">9.34</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">7.09</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">94.90</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">283.67</td>
+<td class="gt_row gt_right">0.43</td>
+<td class="gt_row gt_right">0.43</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">23.min</th>
+<td class="gt_row gt_right">20.18</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">18.10</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">59.38</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">724.53</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_right">0.16</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">24.min</th>
+<td class="gt_row gt_right">19.87</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">17.79</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">59.90</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">712.05</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_right">0.16</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">25.min</th>
+<td class="gt_row gt_right">19.10</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">17.02</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">61.24</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">681.11</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_right">0.17</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">26.min</th>
+<td class="gt_row gt_right">18.47</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">16.32</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">62.54</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">653.22</td>
+<td class="gt_row gt_right">0.18</td>
+<td class="gt_row gt_right">0.18</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">27.min</th>
+<td class="gt_row gt_right">17.37</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">15.22</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">64.75</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">609.27</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_right">0.19</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">28.min</th>
+<td class="gt_row gt_right">17.08</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">14.93</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">65.38</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">597.63</td>
+<td class="gt_row gt_right">0.20</td>
+<td class="gt_row gt_right">0.20</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">34.min</th>
+<td class="gt_row gt_right">18.30</td>
+<td class="gt_row gt_right">2.29</td>
+<td class="gt_row gt_right">16.01</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">63.15</td>
+<td class="gt_row gt_right">2.23</td>
+<td class="gt_row gt_right">640.65</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_right">0.19</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="10">Source: Data of the hydraulic analysis of the system</td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Columns definitions:</strong></p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?P_1">: Upstream static (gauge) pressure in <img src="https://latex.codecogs.com/png.latex?(bar)">;</li>
+<li><img src="https://latex.codecogs.com/png.latex?P_2">: Downstream static (gauge) pressure in <img src="https://latex.codecogs.com/png.latex?(bar)">;</li>
+<li><img src="https://latex.codecogs.com/png.latex?Flow">: Volumetric flow rate in <img src="https://latex.codecogs.com/png.latex?(m%5E3/h)">;</li>
+<li>DP <img src="https://latex.codecogs.com/png.latex?(%5CDelta%7BP%7D)">: Differential pressure between upstream and downstream pressure taps in <img src="https://latex.codecogs.com/png.latex?bar">;</li>
+<li><img src="https://latex.codecogs.com/png.latex?K_v">: Flow coefficient <img src="https://latex.codecogs.com/png.latex?(m%5E3/h)">; <img src="https://latex.codecogs.com/png.latex?K_v%20=%20q%20%5Ccdot%20%5Csqrt%7B%5Cfrac%20%7B(%5Crho%20/%20%5Crho_%7B0%7D)%7D%7B%5CDelta%20P%7D%7D"></li>
+<li><img src="https://latex.codecogs.com/png.latex?velocity"> : Velocity in <img src="https://latex.codecogs.com/png.latex?m/s"></li>
+<li>Zeta Value <img src="https://latex.codecogs.com/png.latex?(%5Czeta)">: Required Velocity head loss coefficient;</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Csigma_1"> (Sigma_1): Cavitation index equal to <img src="https://latex.codecogs.com/png.latex?(P_2%20-%20P_v)/%5CDelta%7BP%7D%20=%20(%5Csigma%20-%201)"> at service conditions;</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Csigma_2"> (Sigma_2): Cavitation index equal to <img src="https://latex.codecogs.com/png.latex?(P_2%20-%20P_v)/(%5CDelta%7BP%7D+v%5E2/2g)"> at service conditions.</li>
+</ul>
+</section>
+<section id="second-step-select-the-minimum-k_v-required." class="level2">
+<h2 class="anchored" data-anchor-id="second-step-select-the-minimum-k_v-required.">Second step: select the minimum <img src="https://latex.codecogs.com/png.latex?K_v"> required.</h2>
+<ul>
+<li>The maximum flow coefficient <img src="https://latex.codecogs.com/png.latex?K_v"> required for operation of the control valve is: 293.97 <img src="https://latex.codecogs.com/png.latex?m%5E3/h">.</li>
+<li>The control valve to be selected must meet at least <img src="https://latex.codecogs.com/png.latex?1.3"> times the maximum flow coefficient required.</li>
+<li>Therefore the minimum <img src="https://latex.codecogs.com/png.latex?K_%7Bvs%7D"> (full open flow coefficient) of the selected valve must be: 382.17 <img src="https://latex.codecogs.com/png.latex?m%5E3/h">.</li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>hydraulics</category>
+  <category>theory</category>
+  <category>valves</category>
+  <category>analysis</category>
+  <category>example</category>
+  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-24_practical_example_001/blog.html</guid>
+  <pubDate>Sun, 23 Oct 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-24_practical_example_001/control_valve_01.png" medium="image" type="image/png" height="101" width="144"/>
+</item>
+<item>
+  <title>Quantifying the Cavitation Potential of the control valve</title>
+  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-17_quantifying_cavitation_potential/blog.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="quantifying-the-cavitation-potential-of-the-valve" class="level1">
+<h1>Quantifying the Cavitation Potential of the valve</h1>
+<section id="cavitation" class="level2">
+<h2 class="anchored" data-anchor-id="cavitation">Cavitation</h2>
+<p>In its simplest terms, cavitation is the two-stage vaporization process simply boiling a liquid, also known as flashing. In a control valve, this vaporization occurs because the pressure of the liquid is reduced, instead of the more common occurrence where the temperature is increased. As fluid passes through a valve just downstream of the orifice area, there is an increase in velocity or kind of energy accompanied by a substantial decrease in pressure or potential energy. This occurs in a place called the <a href="https://en.wikipedia.org/wiki/Vena_contracta">vena contracta</a>. If the pressure in this area falls below the vapor pressure of the following fluid, vaporization (boiling) occurs. Vapor bubbles then continue downstream, where the velocity of the liquid begins to slow, and the pressure in the fluid recovers. The vapor bubbles then collapse or implode. Cavitation in control valves occurs only with liquid flows. [ISA S75.05 Control Valve Terminology].</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-17_quantifying_cavitation_potential\stellventil.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+<p>Its effect on the system’s cavitation varies with valve type, size, operating pressure, and installation details. To include cavitation in the design process is necessary to determine if cavitation will evaluate its intensity, characterize the flow conditions, and estimate its effect on the system and environment. Possible consequences include noise, vibration, erosion damage, and a decrease in performance.</p>
+<p>In the case of control valves, it is conventional to describe the application in terms of a single parameter and then compare this parameter to different limits of operation for a given control element.</p>
+<p>Characterizing the flow conditions corresponding to a selected cavitation level requires defining a cavitation index derived from dimensional analysis. The process involves determining the fluid properties, geometric characteristics, and parameters influencing the cavitation process. The main variables affecting the cavitation process are:</p>
+<ol type="1">
+<li>the geometric configuration of the device,</li>
+<li>absolute pressure in the cavitating region,</li>
+<li>the critical pressure, generally assumed to be the liquid-vapor pressure and velocity or pressure drop</li>
+</ol>
+<p>The cavitation index sigma <img src="https://latex.codecogs.com/png.latex?(%5Csigma)"> is a form of another dimensionless parameter. Sigma <img src="https://latex.codecogs.com/png.latex?(%5Csigma)"> is constant for either <em>SI</em> or <em>US</em> Customary units as long as the same pressure units are used throughout the equations for the parameter. This index <img src="https://latex.codecogs.com/png.latex?(%5Csigma)"> is the ratio of fluid forces trying to prevent cavitation (the system or service pressure) to the forces trying to cause cavitation (the pressure drop). The smaller the value of the cavitation index for a flow system, the more likely or, the more severe cavitation will be.</p>
+<p>The force suppressing cavitation is proportional to the magnitude of the average pressure relative to absolute vapor pressure i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?(P-P_r)">. The force causing cavitation is proportional to the velocity head <img src="https://latex.codecogs.com/png.latex?V%5E2/2g"> or to the pressure drop across the valve <img src="https://latex.codecogs.com/png.latex?%5CDelta%20P">. The resulting cavitation parameter sigma can be expressed as <span class="citation" data-cites="tullis1993">[@tullis1993]</span>:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20%5Csigma_1%20=%20%5Cfrac%7BP_1-P_v%7D%7B%5CDelta%20P_%7Bnet%7D%7D%0A"></p>
+<p>in which:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?P_1"> is <em>the <a href="https://en.wikipedia.org/wiki/Pressure_measurement">absolute pressure</a> just upstream from the valve</em> <img src="https://latex.codecogs.com/png.latex?(P_l%20=%20P_u%20+%20P_b)">,</li>
+<li><img src="https://latex.codecogs.com/png.latex?P_u"> is <em>the <a href="https://en.wikipedia.org/wiki/Pressure_measurement">gauge pressure</a> just upstream from the valve</em>,</li>
+<li><img src="https://latex.codecogs.com/png.latex?P_b"> is <em>the <a href="https://en.wikipedia.org/wiki/Atmospheric_pressure">atmospheric or barometric pressure</a></em>,</li>
+<li><img src="https://latex.codecogs.com/png.latex?P_v"> is <em>the</em> <a href="https://en.wikipedia.org/wiki/Vapour_pressure_of_water">absolute vapor pressure of water</a> and</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20P_%7Bnet%7D"> <em>the net pressure drop across the valve</em> <img src="https://latex.codecogs.com/png.latex?(P_1%20-%20P_2)">.</li>
+<li>The minimum value of sigma (<img src="https://latex.codecogs.com/png.latex?%5Csigma_1">) is <img src="https://latex.codecogs.com/png.latex?1.0"> since the maximum <img src="https://latex.codecogs.com/png.latex?%5CDelta%20P_%7Bnet%7D"> across the valve is <img src="https://latex.codecogs.com/png.latex?(P_1%20-%20P_v)">.</li>
+</ul>
+<p>For cavitation caused by surface roughness, an isolated roughness, an offset in the boundary, or by any device for which it is not possible or convenient to evaluate a pressure differential, for the calculation of the cavitation can be used the velocity head in place of <img src="https://latex.codecogs.com/png.latex?%5CDelta%7BP%7D"> in the Equation of <img src="https://latex.codecogs.com/png.latex?%5Csigma">. The resulting Equation is:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20%5Csigma_%7B1_%7Broug%7D%7D%20=%20%5Cfrac%7BP_1-P_v%7D%7B(V%5E2/2g)%7D%0A"></p>
+<p>The cavitation parameter can be defined in various ways for valves and other devices that create a pressure drop. The reference pressure in the numerator of the sigma equation <img src="https://latex.codecogs.com/png.latex?(%5Csigma_1)"> can be the upstream or downstream pressure. Both have been used, and there are valid reasons to support either option. So using the downstream pressure <img src="https://latex.codecogs.com/png.latex?P_2">, the equation becomes:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20%5Csigma_%7B2%7D%20=%20%5Cfrac%7BP_2-P_v%7D%7B%5CDelta%20P_%7Bnet%7D%7D%0A"></p>
+<p>In which <img src="https://latex.codecogs.com/png.latex?P_2"> is the absolute downstream pressure (<img src="https://latex.codecogs.com/png.latex?P_2%20=%20P_d%20+%20P_b">), where <img src="https://latex.codecogs.com/png.latex?P_d%20=%20P_u%20-%20%5CDelta%20P_%7Bnet%7D"> and <img src="https://latex.codecogs.com/png.latex?P_b"> is the barometric pressure.</p>
+<p>This form is preferred because the <em>downstream pressure is the pressure closer to the zone where the cavitation occurs</em>. Therefore, the downstream pressure more directly influences the cavitation. However, it is more convenient to use the upstream pressure for most applications, and the two sigma values differ by a constant value of <img src="https://latex.codecogs.com/png.latex?1.0">. The following simple equation directly relates to the equation:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20%5Csigma_2%20=%20%5Csigma_%7B1%7D%20+%201%0A"></p>
+<p>Some publications use the reciprocal of Equation for <img src="https://latex.codecogs.com/png.latex?%5Csigma_1"> and define the cavitation index as <img src="https://latex.codecogs.com/png.latex?K_c"> instead of <img src="https://latex.codecogs.com/png.latex?%5Csigma_1">. The equation that defines <img src="https://latex.codecogs.com/png.latex?K_c"> is:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20K_c%20=%20%5Cfrac%7B1%7D%7B%5Csigma_%7B1%7D%7D%20=%20%5Cfrac%7B%5CDelta%20P_%7Bnet%7D%7D%7B(P_1-P_v)%7D%0A"></p>
+<p>Using use the reciprocal of Equation for <img src="https://latex.codecogs.com/png.latex?%5Csigma_1">. Some publications, authors, and valve manufacturers also add a safety factor to the cavitation parameter <img src="https://latex.codecogs.com/png.latex?%5Csigma_1"> to ensure possible cavitation caused by any device for which it is not possible or convenient to assess a pressure differential near the control valve, so:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20%5Cfrac%7B1%7D%7B%5Csigma_%7B3%7D%7D%20%20=%20%5Cfrac%7B1%7D%7B%5Csigma_%7B1%7D%7D%20+%20%5Cfrac%7B1%7D%7B%5Csigma_%7B1_%7Broug%7D%7D%7D=%20%20%5Cfrac%7B%5CDelta%20P_%7Bnet%7D%7D%7B(P_1-P_v)%7D%20+%20%5Cfrac%7B(V%5E2/2g)%7D%7B(P_1-P_v)%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B1%7D%7B%5Csigma_%7B3%7D%7D%20%20=%20%5Cfrac%7B%5CDelta%20P_%7Bnet%7D%20+%20(V%5E2/2g)%7D%7B(P_1-P_v)%7D%0A"></p>
+<p>Then:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_%7B3%7D%20=%20%5Cfrac%7B(P_1-P_v)%7D%7B%5CDelta%20P_%7Bnet%7D%20+%20(V%5E2/2g)%7D%0A"></p>
+<p>In the same way that cavitation <img src="https://latex.codecogs.com/png.latex?%5Csigma">, as defined above in the function of <img src="https://latex.codecogs.com/png.latex?P_1"> or <img src="https://latex.codecogs.com/png.latex?P_2">, can be expressed now it’s using the downstream pressure <img src="https://latex.codecogs.com/png.latex?P_2">; the equation becomes:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_%7B4%7D%20=%20%5Cfrac%7B(P_2-P_v)%7D%7B%5CDelta%20P_%7Bnet%7D%20+%20(V%5E2/2g)%7D%0A"></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Which of the functions the hydraulic designer should use is at his discretion.</p>
+</div>
+</div>
+</section>
+<section id="evaluating-the-cavitation-limits-of-the-valve" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-the-cavitation-limits-of-the-valve">Evaluating the Cavitation Limits of the valve</h2>
+<p>Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage and can reduce the valve’s capacity in advanced stages. The acceptable cavitation level for a valve in a given system varies with valve type, valve function, details of the piping layout, and operation duration.It is necessary to identify and provide experimental data for several cavitation intensity levels to have adequate information for analysis and design. There are defined six different cavitation design limits. The methods used to determine each limit experimentally are defined, and suggestions when each limit might be appropriate. These limits are [<span class="citation" data-cites="tullis1993">@tullis1993</span> and ISA-RP75.23-1995]:</p>
+<ol type="1">
+<li><p>Incipient cavitation <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bi%7D"></p>
+<ul>
+<li>Onset of cavitation</li>
+<li>Detect using high-frequency vibration measurement</li>
+<li>Very local phenomenon</li>
+<li>Transient: random “ticks” sound</li>
+<li>Low-level cavitation: usually not damaging</li>
+<li>Occurs before the loss of flow capacity</li>
+</ul></li>
+<li><p>Critical (or constant) cavitation <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bc%7D"></p>
+<ul>
+<li>More regular cavitation events</li>
+<li>Lower frequency sound and vibration sensed: “rumbling” sound</li>
+<li>Some surface damage may occur: dependent upon valve and trim styles and materials.</li>
+</ul></li>
+<li><p>Maximum noise and vibration level <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmv%7D"></p>
+<ul>
+<li>Highest vibration amplitude: sounds like “marbles” or “gravel.”</li>
+<li>Vigorous, large-scale cavitation</li>
+<li>Very high damage potential</li>
+</ul></li>
+<li><p>Choked flow <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bch%7D"></p>
+<ul>
+<li>Choking” cavitation is a most severe level of cavitation.</li>
+<li>The maximum noise, vibration, and material damage levels occur at or just before this condition.</li>
+<li>Under “fully choked” flow conditions, an additional decrease in the downstream pressure will not increase the flow rate through the valve at a given inlet pressure. In other words, it is a limiting flow condition in which vapor formation is enough to limit the valve’s flow rate to some maximum value.</li>
+<li>The choking “process” occurs over a range of pressure drops due to the compressibility changes accompanying vapor formation.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-17_quantifying_cavitation_potential\cavitation_regime.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div></li>
+</ol>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Other important cavitation limits are:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Incipient damage <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bid%7D">: A cavitation level sufficient to begin minor, observable indications of pitting damage.</p></li>
+<li><p>Manufacturer’s recommended cavitation limit <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmr%7D">: is an operational limit supplied by the manufacturer for a given valve type, size, opening, and reference upstream pressure. Application of the limit may require scale effect and influence factors if the service conditions and valve size are different than the reference pressure and altitude.</p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ul>
+<li>Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr.&nbsp;1993, https://doi.org/10.2172/10155405.</li>
+<li>ISA-RP75.23-1995 Considerations for Evaluating Control Valve Cavitation</li>
+<li>ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.</li>
+<li>ANSI/ISA-75.01-1985 (R1995), Flow Equations for Sizing Control Valves. 1985.</li>
+<li>ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.</li>
+<li>ANSI/ISA–RP75.23–1995, Considerations for Evaluating Control Valve Cavitation. Instrument Society of America, 1995.</li>
+<li>ANSI/ISA-S75.02, Control Valve Capacity Test Procedures. Instrument Society of America, 1996.</li>
+<li>ANSI/ISA-S75.05, Control Valve Terminology. 1983.</li>
+<li>International Society of Automation, and American National Standards Institute. ANSI/ISA–75.02.01–2008 (IEC 60534-2-3 Mod) Control Valve Capacity Test Procedures. 2008.</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>hydraulics</category>
+  <category>theory</category>
+  <category>valves</category>
+  <category>analysis</category>
+  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-17_quantifying_cavitation_potential/blog.html</guid>
+  <pubDate>Sun, 16 Oct 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-17_quantifying_cavitation_potential/cavitation_regime.png" medium="image" type="image/png" height="140" width="144"/>
+</item>
+<item>
+  <title>Flow coefficient and Loss Coefficient of control valves</title>
+  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-12_flow_coefficient_01/blog.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="flow-coefficient-k_v-and-loss-coefficient-zeta_v" class="level1">
+<h1><em>Flow coefficient</em> <img src="https://latex.codecogs.com/png.latex?k_%7Bv%7D"> and <em>Loss Coefficient</em> <img src="https://latex.codecogs.com/png.latex?%5Czeta_%7Bv%7D"></h1>
+<p>Flow factor <img src="https://latex.codecogs.com/png.latex?k_%7Bv%7D"> combines the effects of all flow restrictions in the valve into a single number. <img src="https://latex.codecogs.com/png.latex?k_%7Bv%7D"> represents the flow of water with temperature ranging between <img src="https://latex.codecogs.com/png.latex?5%C2%B0C"> and <img src="https://latex.codecogs.com/png.latex?30%C2%B0C"> through a valve in cubic meters per hour with a pressure drop of <img src="https://latex.codecogs.com/png.latex?1%20bar">.</p>
+<p>Do you need for the calculation of the valve flow factor (<img src="https://latex.codecogs.com/png.latex?k_%7Bv%7D">) :</p>
+<ul>
+<li>operating pressure differential;</li>
+<li>flow rate for your application;</li>
+<li>Density of the fluid;</li>
+<li>and in some circumstances, temperature.</li>
+</ul>
+<p>The valve flow coefficient <img src="https://latex.codecogs.com/png.latex?k_v"> is defined as the number of cubic meters per hour of water that will flow through a control valve at a specified position of the control valve travel <img src="https://latex.codecogs.com/png.latex?vp"> (Valve position) with a differential pressure (<img src="https://latex.codecogs.com/png.latex?%5CDelta%20p=p_1-p_2">) of <img src="https://latex.codecogs.com/png.latex?105%20%5C,%20Pa%20=%201%5C,bar"> across it.</p>
+<p>The standard conditions referred to in definitions of flow coefficients (<img src="https://latex.codecogs.com/png.latex?K_v">) are the following:</p>
+<ul>
+<li>flow in turbulent condition;</li>
+<li>no cavitation and vaporization phenomena;</li>
+<li>valve diameter equal to pipe diameter;</li>
+<li>static pressure drop measured between upstream and downstream pressure taps;</li>
+<li>straight pipe lengths upstream and downstream the valve;</li>
+<li>Newtonian fluid.</li>
+</ul>
+<p>According to this European Standard, the flow rate characteristic parameter of a valve is the flow coefficient, <img src="https://latex.codecogs.com/png.latex?K_v">. The equation, the quantity subject to measurement and input quantities are the following <span class="citation" data-cites="wagner2008">[@wagner2008]</span>.</p>
+<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%20%20K_v%20=%20q%20%5Ccdot%20%5Csqrt%7B%5Cfrac%20%7B(%5Crho%20/%20%5Crho_%7B0%7D)%7D%7B%5CDelta%20P%7D%7D%0A%5Cend%7Bequation%7D">
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20P"> : operating pressure differential (upstream minus downstream pressure);</li>
+<li><img src="https://latex.codecogs.com/png.latex?q"> : flow rate for your application in <img src="https://latex.codecogs.com/png.latex?m%5E3/hour">;</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Crho%20/%20%5Crho_%7B0%7D"> : Relative Density of Liquids;</li>
+<li><img src="https://latex.codecogs.com/png.latex?d"> : Valve Nominal size in millimeter</li>
+<li><img src="https://latex.codecogs.com/png.latex?K_v"> : is the flow in <img src="https://latex.codecogs.com/png.latex?m%5E3/hour"> for a <img src="https://latex.codecogs.com/png.latex?%5CDelta%20P%20=%201%20%5C,%20bar"></li>
+</ul>
+<!-- -->
+<ul>
+<li>The <em>Loss Coefficient or zeta value</em> <img src="https://latex.codecogs.com/png.latex?%5Czeta_v"> of the valve is :</li>
+</ul>
+<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%20%20%5Czeta_%7Bv%7D%20=%20%7B%5Cfrac%7B1%7D%7B626.3%7D%20%5Ccdot%20%20%5Cbigg(%20%7B%5Cfrac%7Bd%5E2%7D%7B%7BK_v%7D%7D%7D%7D%20%5Cbigg)%5E2%0A%5Cend%7Bequation%7D">
+<ul>
+<li>And the <img src="https://latex.codecogs.com/png.latex?K_%7Bv%7D"> in function of the <em>Loss Coefficient or Zeta Value</em> <img src="https://latex.codecogs.com/png.latex?%5Czeta_%7Bv%7D"> is:</li>
+</ul>
+<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%20%20K_v%20=%20%5Cfrac%7Bd%5E2%7D%7B%5Csqrt%7B626.3%7D%7D%20%5Ccdot%20%5Cfrac%7B1%7D%7B%5Csqrt%7B%5Czeta_v%7D%7D%0A%5Cend%7Bequation%7D">
+</section>
+<section id="the-flow-basic-characteristic-curve-inherent-flow-characteristic." class="level1">
+<h1>The flow basic characteristic curve (inherent flow characteristic).</h1>
+<p>The characteristic of a control valve is defined as the flow rate depending on the valve’s position. The control valve generates a change in the flow by changing the active area of control piston <img src="https://latex.codecogs.com/png.latex?A">, assuming a constant differential pressure <img src="https://latex.codecogs.com/png.latex?%5CDelta%20p"> and a constant density <img src="https://latex.codecogs.com/png.latex?%5Crho">.</p>
+<p>The valve characteristic curve is a function of the valve position (degree of opening or valve position) <img src="https://latex.codecogs.com/png.latex?vp"> relative to the flow coefficient at valve position <img src="https://latex.codecogs.com/png.latex?K_v"> divided by the maximum flow coefficient of the valve (<img src="https://latex.codecogs.com/png.latex?100%5C%25"> open) <img src="https://latex.codecogs.com/png.latex?K_%7Bvs%7D">.</p>
+<p>The valve characteristic of the control valves (<img src="https://latex.codecogs.com/png.latex?K_v/K_%7Bvs%7D">) depend of the position of the valve (<img src="https://latex.codecogs.com/png.latex?vp">).</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20K_v/K_%7Bvs%7D%20=%20f(vp)%0A"></p>
+<p>The flow coefficient measurement is strictly positive and the curves are S-shaped and they may be increasing, symmetric or non-symmetric around the inflection point. Therefore, using a function defined for non-positive numbers may seem unrealistic. Consequently, using a function where the independent variable <img src="https://latex.codecogs.com/png.latex?X"> (valve position <img src="https://latex.codecogs.com/png.latex?vp">) is constrained to be positive is preferable. Therefore, a positive <a href="https://en.wikipedia.org/wiki/Sigmoid_function">sigmoidal function</a> is the most appropriate. The logistic curve (a sigmoidal curve) derives from the cumulative logistic distribution function; the curve is symmetric around the inflection point and it may be parameterised as:</p>
+<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%20%20K_v/K_%7Bvs%7D%20=%20f(vp,%20(b,%20c,%20d,%20e))%20=%20%20c%20+%20%5Cfrac%7Bd-c%7D%7B1%20+%20%5Cexp(%20b%20%5Ccdot%20(%5Clog%7B(vp)%7D%20-%20%5Clog%7B(e)%7D))%7D%0A%5Cend%7Bequation%7D">
+<p>where <img src="https://latex.codecogs.com/png.latex?d"> is the higher asymptote, <img src="https://latex.codecogs.com/png.latex?c"> is the lower asymptote, <img src="https://latex.codecogs.com/png.latex?e"> is <img src="https://latex.codecogs.com/png.latex?vp"> value at the inflection point, while <img src="https://latex.codecogs.com/png.latex?b"> is the slope at the inflection point. As the curve is symmetric, <img src="https://latex.codecogs.com/png.latex?e"> represents also the <img src="https://latex.codecogs.com/png.latex?vp"> value producing a response half-way between <img src="https://latex.codecogs.com/png.latex?d"> and <img src="https://latex.codecogs.com/png.latex?c">. The parameter <img src="https://latex.codecogs.com/png.latex?b"> can be positive or negative and, consequently, <img src="https://latex.codecogs.com/png.latex?K_v/K_%7Bvs%7D"> may increase or decrease as <img src="https://latex.codecogs.com/png.latex?vp"> increases.</p>
+<p>The above function is known as the four-parameter logistic. If necessary, constraints can be put on parameter values, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?c"> can be constrained to <img src="https://latex.codecogs.com/png.latex?0"> (three-parameter logistic) and, additionally, <img src="https://latex.codecogs.com/png.latex?d"> can be constrained to 1 (two-parameter logistic).</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ul>
+<li>Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.</li>
+<li>ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.</li>
+<li>International Society of Automation, and American National Standards Institute. ANSI/ISA-75.01.01-2012 (60534-2-1 MOD) Industrial-Process Control Valves. Part 2-1: Flow Capacity - Sizing Equations for Fluid Flow under Installed Conditions. ISA, 2012.</li>
+<li>British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>hydraulics</category>
+  <category>theory</category>
+  <category>valves</category>
+  <category>analysis</category>
+  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-12_flow_coefficient_01/blog.html</guid>
+  <pubDate>Tue, 11 Oct 2022 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Remarks about RIKO plunger valves</title>
+  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-08-24_remarks_riko/blog.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="remarks-about-riko-plunger-valves" class="level1">
+<h1>Remarks about RIKO plunger valves</h1>
+<p>Riko Plunger valves are mainly used where volume flows, or pressure has to be reduced and regulated without vibrations, noises, or significant changes in the pipeline system. RIKO valves are control devices that cause pressure loss in pipeline systems by throttling to modify the flow or pressure so that the desired values are obtained, depending on the degree of opening adjustment.</p>
+<p>The following advantages are obtained from the plunger valves :</p>
+<ul>
+<li>universal use wide controllable range;</li>
+<li>low cavitation coefficient, stable flow, low noise;</li>
+<li>flow block is variable: optimum flow for every operating condition;</li>
+<li>low drive forces with pressure-relieving fix and mobile cylinder (pistons).</li>
+</ul>
+<p>To size a control valve, the following points must be considered :</p>
+<ul>
+<li>The control valve must permit the maximum flow (1.3 times the maximum flow required for the application ) under the lowest-possible differential pressure.</li>
+<li>The flow range (maximum, median, and minimum) relative to the degree of opening of the control valve must be such that the regulation circuit is stable.</li>
+<li>In the entire control range (maximum, median, and minimum), there should be no occurrence of cavitation.</li>
+<li>The pipeline systems are planned and installed, bearing in mind future requirements. It is often forgotten that control valves designed for these end capacities are over-sized at the start of the operation but not for future needs. Reducing the size of the control valve means generating additional problems and costs in the future of system operation.</li>
+</ul>
+<p>One of the most uncomfortable things that can a hydraulic design to happen is a valve chosen six months or a year ago deteriorating. The most common causes of premature valve failure are:</p>
+<ul>
+<li>Cavitation damage.</li>
+<li>Cavitation and flashing of water (shock flow).</li>
+<li>Erosion of the valve.</li>
+<li>Vibration (irregular flow pattern with liquids).</li>
+<li>Corrosion.</li>
+<li>Leakages.</li>
+</ul>
+<p>To avoid in any way, the following design criteria must be met <span class="citation" data-cites="baumann2009">[@baumann2009]</span>:</p>
+<ol type="1">
+<li><p>Criteria for valve selection : - Is the valve appropriately sized? - Does the valve have a low dead band, sometimes confused with hysteresis? - Will it be able to operate without a positioner (also a cost factor)? - Does it have adequate rangeability? - Is the flow characteristic acceptable (installed characteristic)? - How is its dynamic performance (frequency response, time constant)?</p></li>
+<li><p>Installation and effects on the environment: - Is face-to-face such that it can be replaced with another make? - How heavy is it? - Are supports needed? - Is it too tall? - Is it going to be noisy under the given flow conditions? - Is there an energy supply (in the case of electric actuators)? - Can it withstand the corrosive effects of fluid and the environment? - Would the valve be cavitating under the given flow conditions? - If outdoors, can the valve and actuator stand extreme weather conditions?</p></li>
+<li><p>Maintainability and long-term cost: - Is it easy to repair? - What are the prices of spare parts? - Can the actuator tolerate a vibrating environment? - How is the actuator protected from corrosion? - Is the packing field replaceable? - Is the control cylinders (fixed and mobile) field-replaceable? - Is the actuator able to diagnose the valve?</p></li>
+</ol>
+<p>Another essential point to consider is the information available. Sizing the flow to the fifth place after the decimal point is all well and good, but only if you know the proper process conditions :</p>
+<ul>
+<li>First, the valve should be sized to control the maximum flow rate under the lowest-possible differential pressure. But what is maximum flow exactly?</li>
+<li>How about emergency conditions?</li>
+<li>On the other hand, should the valve fail open, would the resultant flow be more than the downstream pipe or valve could handle?</li>
+<li>What are the correct inlet pressures?</li>
+<li>What are the variations in inlet pressures?</li>
+<li>Can you use the head pressure of the pump from the manufacturers published curve? (If you do, use the head pressure corresponding to the maximum flow the valve has to pass, and don’t ignore the static head at the pumps location.)</li>
+<li>How about line losses?</li>
+</ul>
+<p>My experience is that all these questions will be answered in a vague form from the design people. They don’t know either and have to rely on the input from other departments. The result is usually guesswork with ample safety factors thrown in.</p>
+<p><strong>Only after reviewing these criteria and deciding on the proper valve type should the subject of cost be considered.</strong></p>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References:</h2>
+<p>Baumann, Hans D. Control Valve Primer: A User’s Guide. 4th ed, ISA, 2009.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>backgrounds</category>
+  <category>knowledge</category>
+  <category>valves</category>
+  <category>RIKO_valves</category>
+  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-08-24_remarks_riko/blog.html</guid>
+  <pubDate>Tue, 23 Aug 2022 22:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
