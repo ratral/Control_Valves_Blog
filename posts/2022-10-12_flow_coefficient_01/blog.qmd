@@ -77,11 +77,9 @@ $$
 
 The flow coefficient measurement is strictly positive and the curves are S-shaped and they may be increasing, symmetric or non-symmetric around the inflection point. Therefore, using a function defined for non-positive numbers may seem unrealistic. Consequently, using a function where the independent variable $X$ (valve position $vp$) is constrained to be positive is preferable. Therefore, a positive [sigmoidal function](https://en.wikipedia.org/wiki/Sigmoid_function) is the most appropriate. The logistic curve (a sigmoidal curve) derives from the cumulative logistic distribution function; the curve is symmetric around the inflection point and it may be parameterised as:
 
-```{=tex}
-\begin{equation}
+$$
   K_v/K_{vs} = f(vp, (b, c, d, e)) =  c + \frac{d-c}{1 + \exp( b \cdot (\log{(vp)} - \log{(e)}))}
-\end{equation}
-```
+$$
 
 where $d$ is the higher asymptote, $c$ is the lower asymptote, $e$ is $vp$ value at the inflection point, while $b$ is the slope at the inflection point. As the curve is symmetric, $e$ represents also the $vp$ value producing a response half-way between $d$ and $c$. The parameter $b$ can be positive or negative and, consequently, $K_v/K_{vs}$ may increase or decrease as $vp$ increases.
 

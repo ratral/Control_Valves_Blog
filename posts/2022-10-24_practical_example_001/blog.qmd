@@ -37,32 +37,33 @@ data <- list(
 
 data$operation <- tribble(
     ~condition,  ~p1,   ~p2,  ~flow,
-    "15.max",	 4.439,	2.615,	396.0,
-    "16.max",	18.263,	5.241,	396.0,
-    "18.max",	 9.455,	2.615,	396.0,
-    "23.max",	20.215,	2.190,	396.0,
-    "24.max",	19.903,	2.190,	396.0,
-    "25.max",	19.132,	2.190,	396.0,
-    "26.max",	18.534,	2.347,	396.0,
-    "27.max",	17.439,	2.347,	396.0,
-    "28.max",	17.148,	2.347,	396.0,
-    "34.max",	18.314,	2.718,	396.0,
-    "15.min",	 4.368,	2.249,	252.0,
-    "16.min",	18.193,	5.077,	252.0,
-    "18.min",	 9.337,	2.249,	252.0,
-    "23.min",	20.185,	2.081,	252.0,
-    "24.min",	19.873,	2.081,	252.0,
-    "25.min",	19.100,	2.081,	252.0,
-    "26.min",	18.470,	2.148,	252.0,
-    "27.min",	17.372,	2.148,	252.0,
-    "28.min",	17.081,	2.148,	252.0,
-    "34.min",	18.299,	2.291,	252.0
+    "01.max",	 4.439,	2.615,	396.0,
+    "02.max",	18.263,	5.241,	396.0,
+    "03.max",	 9.455,	2.615,	396.0,
+    "04.max",	20.215,	2.190,	396.0,
+    "05.max",	19.903,	2.190,	396.0,
+    "06.max",	19.132,	2.190,	396.0,
+    "07.max",	18.534,	2.347,	396.0,
+    "08.max",	17.439,	2.347,	396.0,
+    "09.max",	17.148,	2.347,	396.0,
+    "10.max",	18.314,	2.718,	396.0,
+    "01.min",	 4.368,	2.249,	252.0,
+    "02.min",	18.193,	5.077,	252.0,
+    "03.min",	 9.337,	2.249,	252.0,
+    "04.min",	20.185,	2.081,	252.0,
+    "05.min",	19.873,	2.081,	252.0,
+    "06.min",	19.100,	2.081,	252.0,
+    "07.min",	18.470,	2.148,	252.0,
+    "08.min",	17.372,	2.148,	252.0,
+    "09.min",	17.081,	2.148,	252.0,
+    "10.min",	18.299,	2.291,	252.0
     
   ) 
 
 # Calculation input data characteristics
 base_data <- data$operation |>  
-  hyd4gpv::points_cloud_param(data$dn, data$masl, data$temp) 
+  hyd4gpv::points_cloud_param(data$dn, data$masl, data$temp) |> 
+  arrange(condition, flow)
 ```
 
 # Sizing sample
@@ -123,25 +124,26 @@ base_data |>
   ) |> 
   tab_spanner(
     label = "Calculated Data",
-    columns = c(kv,	velocity,	zeta,	sig_1,	sig_2)
+    columns = c(kv,	zeta,	 velocity,	sig_1,	sig_2)
   ) |> 
   
-  
   cols_label(
-    p1    = html("P1<br>(bar)"),
-    p2    = html("P2<br>(bar)"),
-    dp    = html("DP<br>(bar)"),
-    flow  = html("Flow<br>(m<sup>3</sup>/h)"),
-    kv       = html("Kv<br>(m<sup>3</sup>/h)"),
-    zeta     = html("Zeta<br>(-)"),
-    velocity = html("velocity<br>(m/s)"),
-    sig_1    = html("Sigma_1<br>(-)"),
-    sig_2    = html("Sigma_2<br>(-)")
+    p1    = html("<i>P<sub>1</sub><br>(bar)</i>"),
+    p2    = html("<i>P<sub>2</sub><br>(bar)</i>"),
+    dp    = html("<i>&Delta;P<br>(bar)</i>"),
+    flow  = html("<i>Flow<br>(m<sup>3</sup>/h)</i>"),
+    kv       = html("<i>K<sub>v</sub><br>(m<sup>3</sup>/h)</i>"),
+    zeta     = html("<i>&zeta;<br>(-)</i>"),
+    velocity = html("<i>Vel.<br>(m/s)</i>"),
+    sig_1    = html("<i>&sigma;<sub>1</sub><br>(-)</i>"),
+    sig_2    = html("<i>&sigma;<sub>2</sub><br>(-)</i>")
   ) |> 
   
   tab_source_note(
     source_note = "Source: Data of the hydraulic analysis of the system"
-  ) 
+  ) |> 
+  
+  opt_stylize(style = 6, color = "green")
 
 ```
 
@@ -150,12 +152,12 @@ base_data |>
 -   $P_1$: Upstream static (gauge) pressure in $(bar)$;
 -   $P_2$: Downstream static (gauge) pressure in $(bar)$;
 -   $Flow$: Volumetric flow rate in $(m^3/h)$;
--   DP $(\Delta{P})$: Differential pressure between upstream and downstream pressure taps in $bar$;
+-   $(\Delta{P})$: Differential pressure between upstream and downstream pressure taps in $bar$;
 -   $K_v$: Flow coefficient $(m^3/h)$; $K_v = q \cdot \sqrt{\frac {(\rho / \rho_{0})}{\Delta P}}$
--   $velocity$ : Velocity in $m/s$
--   Zeta Value $(\zeta)$: Required Velocity head loss coefficient;
--   $\sigma_1$ (Sigma_1): Cavitation index equal to $(P_2 - P_v)/\Delta{P} = (\sigma - 1)$ at service conditions;
--   $\sigma_2$ (Sigma_2): Cavitation index equal to $(P_2 - P_v)/(\Delta{P}+v^2/2g)$ at service conditions.
+-   $Vel.$ : Velocity in $m/s$
+-   $\zeta$: Zeta Value; Required Velocity head loss coefficient;
+-   $\sigma_1$: Cavitation index equal to $(P_2 - P_v)/\Delta{P} = (\sigma - 1)$ at service conditions;
+-   $\sigma_2$: Cavitation index equal to $(P_2 - P_v)/(\Delta{P}+v^2/2g)$ at service conditions.
 
 ## Second step: select the minimum $K_v$ required.
 
@@ -163,5 +165,67 @@ base_data |>
   - The control valve to be selected must meet at least $1.3$ times the maximum flow coefficient required. 
   - Therefore the minimum $K_{vs}$ (full open flow coefficient) of the selected valve must be: `r round(max(base_data$kv*1.3),2)` $m^3/h$.
   
-  
 
+## Third step: Select the valves plus dissipation element that meet the minimum required flow coefficient.
+
+For this exercise, we will assume the following:
+
+  1. We only have three valves from 3 different suppliers. Brands "A", "B" and "C" 
+  2. that the required valves should not have anti-cavitation cylinders.
+  3. The parameters for the curve $K_v/K_{vs}$, the Zeta value $\zeta_{vs}$ and the Liquid pressure recovery factor $F_{Ls}$[^1] are available.[^2]
+  4. $K_v/K_{vs} = \frac{d}{1 +\exp(b\cdot(\log{(vp)}-\log{(e)}))}$
+
+The parameters corresponding to the valves are the following:[^3]
+
+```{r}
+#| label: tbl-parameter
+#| tbl-cap: "Valve's Parameter"
+#| include: true
+#| echo: false
+#| 
+
+param_valves <- tribble(
+  ~brand,  ~kv_b, ~kv_d,  ~kv_e, ~zvs,  ~fls,
+     "A", -2.976, 1.409, 74.073, 3.39, 0.667,
+     "B", -3.299, 1.561, 83.924, 7.60, 0.832,
+     "C", -2.926, 1.527, 80.354, 1.90, 0.617
+)
+
+param_valves <- param_valves |> 
+  mutate(kvs = kv_value(data$dn, zvs))
+
+param_valves |>
+  gt() |>
+    cols_label(
+      brand = html("Brand"),
+      kv_b = html("<i>b</i>"),
+      kv_d = html("<i>d</i>"),
+      kv_e = html("<i>e</i>"),
+      zvs  = html("<i>&zeta;<sub>vs</sub></i>"),
+      fls  = html("<i>F<sub>Ls</sub></i>"),
+      kvs  = html("<i>K<sub>vs</sub><br>(m<sup>3</sup>/h)</i>")
+    )|> 
+
+  tab_header(
+    title = md("**For Valves DN-200 Millimeter and PN-25**"),
+  ) |> 
+  
+  tab_spanner(
+    label = html("<i>Parameter for ( K<sub>v</sub> / K<sub>vs</sub> )"),
+    columns = c(kv_b, kv_d, kv_e)
+  ) |> 
+  
+  fmt_number(
+    columns = kvs,
+    decimals = 1,
+    suffixing = FALSE
+  ) |> 
+
+  opt_stylize(style = 6, color = "green")
+
+```
+
+
+[^1]: Liquid pressure recovery factor of a control valve without attached fittings (ISA-75.01.01-2007: Flow Equations for Sizing Control Valves).
+[^2]: In the next blogs we will see how these values can be calculated from the documents supplied by the suppliers.
+[^3]: These parameters are similar to those in reality but adjusted for this Example.

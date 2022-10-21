@@ -204,9 +204,9 @@ ul.task-list{list-style: none;}
   K_v/K_{vs} = f(vp)
 \]</span></p>
 <p>The flow coefficient measurement is strictly positive and the curves are S-shaped and they may be increasing, symmetric or non-symmetric around the inflection point. Therefore, using a function defined for non-positive numbers may seem unrealistic. Consequently, using a function where the independent variable <span class="math inline">\(X\)</span> (valve position <span class="math inline">\(vp\)</span>) is constrained to be positive is preferable. Therefore, a positive <a href="https://en.wikipedia.org/wiki/Sigmoid_function">sigmoidal function</a> is the most appropriate. The logistic curve (a sigmoidal curve) derives from the cumulative logistic distribution function; the curve is symmetric around the inflection point and it may be parameterised as:</p>
-<span class="math display">\[\begin{equation}
+<p><span class="math display">\[
   K_v/K_{vs} = f(vp, (b, c, d, e)) =  c + \frac{d-c}{1 + \exp( b \cdot (\log{(vp)} - \log{(e)}))}
-\end{equation}\]</span>
+\]</span></p>
 <p>where <span class="math inline">\(d\)</span> is the higher asymptote, <span class="math inline">\(c\)</span> is the lower asymptote, <span class="math inline">\(e\)</span> is <span class="math inline">\(vp\)</span> value at the inflection point, while <span class="math inline">\(b\)</span> is the slope at the inflection point. As the curve is symmetric, <span class="math inline">\(e\)</span> represents also the <span class="math inline">\(vp\)</span> value producing a response half-way between <span class="math inline">\(d\)</span> and <span class="math inline">\(c\)</span>. The parameter <span class="math inline">\(b\)</span> can be positive or negative and, consequently, <span class="math inline">\(K_v/K_{vs}\)</span> may increase or decrease as <span class="math inline">\(vp\)</span> increases.</p>
 <p>The above function is known as the four-parameter logistic. If necessary, constraints can be put on parameter values, i.e.&nbsp;<span class="math inline">\(c\)</span> can be constrained to <span class="math inline">\(0\)</span> (three-parameter logistic) and, additionally, <span class="math inline">\(d\)</span> can be constrained to 1 (two-parameter logistic).</p>
 </section>
