@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Water Control Valves Blog.</title>
-<link>https://ratral.github.io/Control_Valves_Blog//index.html</link>
-<atom:link href="https://ratral.github.io/Control_Valves_Blog//index.xml" rel="self" type="application/rss+xml"/>
-<description>My Notes-Blog</description>
-<generator>quarto-0.9.342</generator>
+<link>https://ratral.github.io/Control_Valves_Blog/index.html</link>
+<atom:link href="https://ratral.github.io/Control_Valves_Blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>This blog is a compilation of my notes on the selection of control valves.</description>
+<generator>quarto-1.1.84</generator>
 <lastBuildDate>Tue, 25 Oct 2022 22:00:00 GMT</lastBuildDate>
 <item>
   <title>Considerations for Evaluating Control Valve Cavitation</title>
   <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
-  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-26_considerations_evaluating_cavitation/blog.html</link>
+  <link>https://ratral.github.io/Control_Valves_Blog/posts/2022-10-26_considerations_evaluating_cavitation/blog.html</link>
   <description><![CDATA[ 
 
 
@@ -41,7 +41,9 @@
 <h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-but-without-fittings">Flow with flow restriction (Cavitation) but without fittings</h2>
 <p>The vapor pressure of liquids depends on the temperature. If the static pressure on the fluid falls below this vapor pressure, evaporation occurs. The lowest pressure occurs when throttling in the valve occurs in the so-called “vena contracta.” Depending on the design of the throttle point, there is a greater or lesser pressure recovery. Under certain circumstances, evaporation must also be considered when the outflow pressure <img src="https://latex.codecogs.com/png.latex?p_2"> is greater than the vapor pressure of the liquid. Local evaporation, in the vena contracta, initially increases in volume. The cross-section of the choke becomes slimmer, and the calculated flow rate may not be reached if evaporation was not taken into account in the calculation. <span class="citation" data-cites="wagner2008">[@wagner2008]</span>.</p>
 <p>Cavitation occurs if the evaporation is reversed again by an immediately subsequent increase in pressure. When the evaporation is reversed (condensation) and reaches a particular energy potential, it can quickly damage the throttle body and seat of the valve.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(L)%7D%20=%20K_v%20%5Ccdot%20F_L%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> The maximum allowable differential pressure for the calculation of control valves without fittings can be calculated as follows: <img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(L)%7D=F%5E%7B2%7D_%7BL%7D%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(L)%7D%20=%20K_v%20%5Ccdot%20F_L%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> The maximum allowable differential pressure for the calculation of control valves without fittings can be calculated as follows:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(L)%7D=F%5E%7B2%7D_%7BL%7D%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
 <p>Where:</p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?Q"> is the flow; Unit: <img src="https://latex.codecogs.com/png.latex?m%5E3/s"></li>
@@ -55,13 +57,14 @@
 </section>
 <section id="flow-with-flow-restriction-cavitation-and-with-fittings" class="level2">
 <h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction (cavitation) and with fittings</h2>
-<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20F_p%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(LP)%7D%20=%20K_v%20%5Ccdot%20F_%7BLP%7D%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20F_p%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(LP)%7D%20=%20K_v%20%5Ccdot%20F_%7BLP%7D%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
 <p>The maximum allowable differential pressure for the calculation of control valves with fittings can be calculated as follows:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(LP)%7D=%20%5Cleft(%20%5Cfrac%7BF_%7BLP%7D%7D%7BF_P%7D%5Cright)%5E2%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-26_considerations_evaluating_cavitation\Flow_with_restriction.png" class="img-fluid figure-img"></p>
-<p></p><p></p>
+<p><img src="https://ratral.github.io/Control_Valves_Blog/posts/2022-10-26_considerations_evaluating_cavitation/Flow_with_restriction.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Flow with flow restriction (Cavitation) <span class="citation" data-cites="wagner2008">@wagner2008</span></figcaption><p></p>
 </figure>
 </div>
 
@@ -74,14 +77,14 @@
   <category>theory</category>
   <category>valves</category>
   <category>analysis</category>
-  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-26_considerations_evaluating_cavitation/blog.html</guid>
+  <guid>https://ratral.github.io/Control_Valves_Blog/posts/2022-10-26_considerations_evaluating_cavitation/blog.html</guid>
   <pubDate>Tue, 25 Oct 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-26_considerations_evaluating_cavitation/Flow_with_restriction.png" medium="image" type="image/png" height="111" width="144"/>
+  <media:content url="https://ratral.github.io/Control_Valves_Blog/posts/2022-10-26_considerations_evaluating_cavitation/Flow_with_restriction.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
   <title>Example: Flow coefficient and cavitation value</title>
   <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
-  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-24_practical_example_001/blog.html</link>
+  <link>https://ratral.github.io/Control_Valves_Blog/posts/2022-10-24_practical_example_001/blog.html</link>
   <description><![CDATA[ 
 
 
@@ -92,12 +95,60 @@
 <section id="sizing-sample" class="level1">
 <h1>Sizing sample</h1>
 <p>These blog notes provide a simplified procedure for sizing control valves at standard service conditions. The data required to size a valve, such as nominal size, gauge pressures, and flow rates, are actual values of a project.</p>
+<p>Initially, I would like to make a first approximation to the selection process of the control valve. Later, in other blogs, I will analyze the different cases.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-24_practical_example_001\control_valve_01.png" class="img-fluid figure-img"></p>
-<p></p><p></p>
+<p><img src="https://ratral.github.io/Control_Valves_Blog/posts/2022-10-24_practical_example_001/control_valve_01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Operating data (Source: Wagner, Walter. Regel- und Sicherheitsarmaturen.)</figcaption><p></p>
 </figure>
 </div>
+<section id="flowchart-of-the-valve-selection-process." class="level2">
+<h2 class="anchored" data-anchor-id="flowchart-of-the-valve-selection-process.">Flowchart of the valve selection process.</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">flowchart TD
+  A[Hydraulic Model] --&gt; B(1. CV \n data operation)
+  A --&gt; E
+  B --&gt; C(2. Select min. Kv \n that the CV must supply)
+  C--&gt; H
+  
+  E[Valve DN, PN] --&gt; F[(DB Parameters \n of Control Valves)]
+  F --&gt; H{3. Select CVs with \n Kvs &gt; 1.3* Min.Kvs}
+  
+  H-. NO .-&gt; A
+  
+  H-- YES --&gt; I(4. Calc. Kv/Kvs and \n valve position for all \n data operation and Types of valves.)
+  
+  I --&gt; J(Select valve.)
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>CV: Control Valve</li>
+<li>Kv: Flow coefficient</li>
+<li>Kvs: Maximum flow coefficient</li>
+<li>Kv/Kvs : relative flow coefficient</li>
+</ul>
+</div>
+</div>
+</section>
 <section id="first-step-collection-of-the-operations-data-for-the-control-valve." class="level2">
 <h2 class="anchored" data-anchor-id="first-step-collection-of-the-operations-data-for-the-control-valve.">First step: Collection of the operations data for the control valve.</h2>
 <ul>
@@ -112,12 +163,13 @@
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-base_data" class="anchored">
-<div id="wgwbhtoklp" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+
+<div id="eqttjhqsnp" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#wgwbhtoklp .gt_table {
+:where(#eqttjhqsnp) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -142,7 +194,7 @@
   border-left-color: #D3D3D3;
 }
 
-#wgwbhtoklp .gt_heading {
+:where(#eqttjhqsnp) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -154,7 +206,7 @@
   border-right-color: #D3D3D3;
 }
 
-#wgwbhtoklp .gt_title {
+:where(#eqttjhqsnp) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -166,7 +218,7 @@
   border-bottom-width: 0;
 }
 
-#wgwbhtoklp .gt_subtitle {
+:where(#eqttjhqsnp) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -178,13 +230,13 @@
   border-top-width: 0;
 }
 
-#wgwbhtoklp .gt_bottom_border {
+:where(#eqttjhqsnp) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
 }
 
-#wgwbhtoklp .gt_col_headings {
+:where(#eqttjhqsnp) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -199,9 +251,9 @@
   border-right-color: #D3D3D3;
 }
 
-#wgwbhtoklp .gt_col_heading {
+:where(#eqttjhqsnp) .gt_col_heading {
   color: #FFFFFF;
-  background-color: #038901;
+  background-color: #5F5F5F;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -219,9 +271,9 @@
   overflow-x: hidden;
 }
 
-#wgwbhtoklp .gt_column_spanner_outer {
+:where(#eqttjhqsnp) .gt_column_spanner_outer {
   color: #FFFFFF;
-  background-color: #038901;
+  background-color: #5F5F5F;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -231,15 +283,15 @@
   padding-right: 4px;
 }
 
-#wgwbhtoklp .gt_column_spanner_outer:first-child {
+:where(#eqttjhqsnp) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wgwbhtoklp .gt_column_spanner_outer:last-child {
+:where(#eqttjhqsnp) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wgwbhtoklp .gt_column_spanner {
+:where(#eqttjhqsnp) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
@@ -251,7 +303,7 @@
   width: 100%;
 }
 
-#wgwbhtoklp .gt_group_heading {
+:where(#eqttjhqsnp) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -276,7 +328,7 @@
   vertical-align: middle;
 }
 
-#wgwbhtoklp .gt_empty_group_heading {
+:where(#eqttjhqsnp) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -291,15 +343,15 @@
   vertical-align: middle;
 }
 
-#wgwbhtoklp .gt_from_md > :first-child {
+:where(#eqttjhqsnp) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wgwbhtoklp .gt_from_md > :last-child {
+:where(#eqttjhqsnp) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wgwbhtoklp .gt_row {
+:where(#eqttjhqsnp) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -318,9 +370,9 @@
   overflow-x: hidden;
 }
 
-#wgwbhtoklp .gt_stub {
+:where(#eqttjhqsnp) .gt_stub {
   color: #333333;
-  background-color: #CAFFAF;
+  background-color: #D5D5D5;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -331,7 +383,7 @@
   padding-right: 5px;
 }
 
-#wgwbhtoklp .gt_stub_row_group {
+:where(#eqttjhqsnp) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -345,11 +397,11 @@
   vertical-align: top;
 }
 
-#wgwbhtoklp .gt_row_group_first td {
+:where(#eqttjhqsnp) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wgwbhtoklp .gt_summary_row {
+:where(#eqttjhqsnp) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -359,16 +411,16 @@
   padding-right: 5px;
 }
 
-#wgwbhtoklp .gt_first_summary_row {
+:where(#eqttjhqsnp) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #5F5F5F;
 }
 
-#wgwbhtoklp .gt_first_summary_row.thick {
+:where(#eqttjhqsnp) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wgwbhtoklp .gt_last_summary_row {
+:where(#eqttjhqsnp) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -378,7 +430,7 @@
   border-bottom-color: #5F5F5F;
 }
 
-#wgwbhtoklp .gt_grand_summary_row {
+:where(#eqttjhqsnp) .gt_grand_summary_row {
   color: #333333;
   background-color: #D5D5D5;
   text-transform: inherit;
@@ -388,7 +440,7 @@
   padding-right: 5px;
 }
 
-#wgwbhtoklp .gt_first_grand_summary_row {
+:where(#eqttjhqsnp) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -398,11 +450,11 @@
   border-top-color: #5F5F5F;
 }
 
-#wgwbhtoklp .gt_striped {
-  background-color: #EDF6E8;
+:where(#eqttjhqsnp) .gt_striped {
+  background-color: #F4F4F4;
 }
 
-#wgwbhtoklp .gt_table_body {
+:where(#eqttjhqsnp) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -411,7 +463,7 @@
   border-bottom-color: #5F5F5F;
 }
 
-#wgwbhtoklp .gt_footnotes {
+:where(#eqttjhqsnp) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -425,7 +477,7 @@
   border-right-color: #D3D3D3;
 }
 
-#wgwbhtoklp .gt_footnote {
+:where(#eqttjhqsnp) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -434,7 +486,7 @@
   padding-right: 5px;
 }
 
-#wgwbhtoklp .gt_sourcenotes {
+:where(#eqttjhqsnp) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -448,7 +500,7 @@
   border-right-color: #D3D3D3;
 }
 
-#wgwbhtoklp .gt_sourcenote {
+:where(#eqttjhqsnp) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -456,68 +508,68 @@
   padding-right: 5px;
 }
 
-#wgwbhtoklp .gt_left {
+:where(#eqttjhqsnp) .gt_left {
   text-align: left;
 }
 
-#wgwbhtoklp .gt_center {
+:where(#eqttjhqsnp) .gt_center {
   text-align: center;
 }
 
-#wgwbhtoklp .gt_right {
+:where(#eqttjhqsnp) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wgwbhtoklp .gt_font_normal {
+:where(#eqttjhqsnp) .gt_font_normal {
   font-weight: normal;
 }
 
-#wgwbhtoklp .gt_font_bold {
+:where(#eqttjhqsnp) .gt_font_bold {
   font-weight: bold;
 }
 
-#wgwbhtoklp .gt_font_italic {
+:where(#eqttjhqsnp) .gt_font_italic {
   font-style: italic;
 }
 
-#wgwbhtoklp .gt_super {
+:where(#eqttjhqsnp) .gt_super {
   font-size: 65%;
 }
 
-#wgwbhtoklp .gt_footnote_marks {
+:where(#eqttjhqsnp) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#wgwbhtoklp .gt_asterisk {
+:where(#eqttjhqsnp) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wgwbhtoklp .gt_indent_1 {
+:where(#eqttjhqsnp) .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wgwbhtoklp .gt_indent_2 {
+:where(#eqttjhqsnp) .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wgwbhtoklp .gt_indent_3 {
+:where(#eqttjhqsnp) .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wgwbhtoklp .gt_indent_4 {
+:where(#eqttjhqsnp) .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wgwbhtoklp .gt_indent_5 {
+:where(#eqttjhqsnp) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table"><caption>Table 1:  Operations Data </caption>
+<table class="gt_table"><caption>Table&nbsp;1:  Operations Data </caption>
   <thead class="gt_header">
     <tr>
       <td colspan="10" class="gt_heading gt_title gt_font_normal" style=""><strong>Operations Data</strong></td>
@@ -557,68 +609,68 @@
 <td class="gt_row gt_right">2.62</td>
 <td class="gt_row gt_right">1.82</td>
 <td class="gt_row gt_right">396</td>
-<td class="gt_row gt_right">293.97</td>
-<td class="gt_row gt_right">29.56</td>
+<td class="gt_row gt_right"><sup class="gt_footnote_marks">1</sup> 293.21</td>
+<td class="gt_row gt_right">29.71</td>
 <td class="gt_row gt_right">3.50</td>
 <td class="gt_row gt_right">1.87</td>
-<td class="gt_row gt_right">1.81</td></tr>
+<td class="gt_row gt_right">1.39</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">02.max</th>
 <td class="gt_row gt_right gt_striped">18.26</td>
 <td class="gt_row gt_right gt_striped">5.24</td>
 <td class="gt_row gt_right gt_striped">13.02</td>
 <td class="gt_row gt_right gt_striped">396</td>
-<td class="gt_row gt_right gt_striped">110.02</td>
-<td class="gt_row gt_right gt_striped">211.04</td>
+<td class="gt_row gt_right gt_striped">109.74</td>
+<td class="gt_row gt_right gt_striped">212.14</td>
 <td class="gt_row gt_right gt_striped">3.50</td>
 <td class="gt_row gt_right gt_striped">0.46</td>
-<td class="gt_row gt_right gt_striped">0.46</td></tr>
+<td class="gt_row gt_right gt_striped">0.44</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">03.max</th>
 <td class="gt_row gt_right">9.46</td>
 <td class="gt_row gt_right">2.62</td>
 <td class="gt_row gt_right">6.84</td>
 <td class="gt_row gt_right">396</td>
-<td class="gt_row gt_right">151.81</td>
-<td class="gt_row gt_right">110.85</td>
+<td class="gt_row gt_right">151.41</td>
+<td class="gt_row gt_right">111.43</td>
 <td class="gt_row gt_right">3.50</td>
 <td class="gt_row gt_right">0.50</td>
-<td class="gt_row gt_right">0.49</td></tr>
+<td class="gt_row gt_right">0.46</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">04.max</th>
 <td class="gt_row gt_right gt_striped">20.22</td>
 <td class="gt_row gt_right gt_striped">2.19</td>
 <td class="gt_row gt_right gt_striped">18.02</td>
 <td class="gt_row gt_right gt_striped">396</td>
-<td class="gt_row gt_right gt_striped">93.52</td>
-<td class="gt_row gt_right gt_striped">292.13</td>
+<td class="gt_row gt_right gt_striped">93.27</td>
+<td class="gt_row gt_right gt_striped">293.64</td>
 <td class="gt_row gt_right gt_striped">3.50</td>
 <td class="gt_row gt_right gt_striped">0.17</td>
-<td class="gt_row gt_right gt_striped">0.17</td></tr>
+<td class="gt_row gt_right gt_striped">0.16</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">05.max</th>
 <td class="gt_row gt_right">19.90</td>
 <td class="gt_row gt_right">2.19</td>
 <td class="gt_row gt_right">17.71</td>
 <td class="gt_row gt_right">396</td>
-<td class="gt_row gt_right">94.34</td>
-<td class="gt_row gt_right">287.07</td>
+<td class="gt_row gt_right">94.09</td>
+<td class="gt_row gt_right">288.56</td>
 <td class="gt_row gt_right">3.50</td>
 <td class="gt_row gt_right">0.17</td>
-<td class="gt_row gt_right">0.17</td></tr>
+<td class="gt_row gt_right">0.16</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">06.max</th>
 <td class="gt_row gt_right gt_striped">19.13</td>
 <td class="gt_row gt_right gt_striped">2.19</td>
 <td class="gt_row gt_right gt_striped">16.94</td>
 <td class="gt_row gt_right gt_striped">396</td>
-<td class="gt_row gt_right gt_striped">96.46</td>
-<td class="gt_row gt_right gt_striped">274.57</td>
+<td class="gt_row gt_right gt_striped">96.21</td>
+<td class="gt_row gt_right gt_striped">276.00</td>
 <td class="gt_row gt_right gt_striped">3.50</td>
 <td class="gt_row gt_right gt_striped">0.18</td>
-<td class="gt_row gt_right gt_striped">0.18</td></tr>
+<td class="gt_row gt_right gt_striped">0.17</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">07.max</th>
 <td class="gt_row gt_right">18.53</td>
 <td class="gt_row gt_right">2.35</td>
 <td class="gt_row gt_right">16.19</td>
 <td class="gt_row gt_right">396</td>
-<td class="gt_row gt_right">98.68</td>
-<td class="gt_row gt_right">262.34</td>
+<td class="gt_row gt_right">98.43</td>
+<td class="gt_row gt_right">263.70</td>
 <td class="gt_row gt_right">3.50</td>
 <td class="gt_row gt_right">0.19</td>
 <td class="gt_row gt_right">0.19</td></tr>
@@ -627,28 +679,28 @@
 <td class="gt_row gt_right gt_striped">2.35</td>
 <td class="gt_row gt_right gt_striped">15.09</td>
 <td class="gt_row gt_right gt_striped">396</td>
-<td class="gt_row gt_right gt_striped">102.20</td>
-<td class="gt_row gt_right gt_striped">244.59</td>
+<td class="gt_row gt_right gt_striped">101.93</td>
+<td class="gt_row gt_right gt_striped">245.86</td>
 <td class="gt_row gt_right gt_striped">3.50</td>
 <td class="gt_row gt_right gt_striped">0.21</td>
-<td class="gt_row gt_right gt_striped">0.21</td></tr>
+<td class="gt_row gt_right gt_striped">0.20</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">09.max</th>
 <td class="gt_row gt_right">17.15</td>
 <td class="gt_row gt_right">2.35</td>
 <td class="gt_row gt_right">14.80</td>
 <td class="gt_row gt_right">396</td>
-<td class="gt_row gt_right">103.20</td>
-<td class="gt_row gt_right">239.88</td>
+<td class="gt_row gt_right">102.93</td>
+<td class="gt_row gt_right">241.12</td>
 <td class="gt_row gt_right">3.50</td>
 <td class="gt_row gt_right">0.21</td>
-<td class="gt_row gt_right">0.21</td></tr>
+<td class="gt_row gt_right">0.20</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">10.max</th>
 <td class="gt_row gt_right gt_striped">18.31</td>
 <td class="gt_row gt_right gt_striped">2.72</td>
 <td class="gt_row gt_right gt_striped">15.60</td>
 <td class="gt_row gt_right gt_striped">396</td>
-<td class="gt_row gt_right gt_striped">100.53</td>
-<td class="gt_row gt_right gt_striped">252.76</td>
+<td class="gt_row gt_right gt_striped">100.27</td>
+<td class="gt_row gt_right gt_striped">254.07</td>
 <td class="gt_row gt_right gt_striped">3.50</td>
 <td class="gt_row gt_right gt_striped">0.23</td>
 <td class="gt_row gt_right gt_striped">0.22</td></tr>
@@ -660,38 +712,38 @@
 <td class="gt_row gt_right">2.25</td>
 <td class="gt_row gt_right">2.12</td>
 <td class="gt_row gt_right">252</td>
-<td class="gt_row gt_right">173.56</td>
-<td class="gt_row gt_right">84.80</td>
+<td class="gt_row gt_right">173.12</td>
+<td class="gt_row gt_right">85.24</td>
 <td class="gt_row gt_right">2.23</td>
 <td class="gt_row gt_right">1.44</td>
-<td class="gt_row gt_right">1.42</td></tr>
+<td class="gt_row gt_right">1.29</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">02.min</th>
 <td class="gt_row gt_right gt_striped">18.19</td>
 <td class="gt_row gt_right gt_striped">5.08</td>
 <td class="gt_row gt_right gt_striped">13.12</td>
 <td class="gt_row gt_right gt_striped">252</td>
-<td class="gt_row gt_right gt_striped">69.76</td>
-<td class="gt_row gt_right gt_striped">524.91</td>
+<td class="gt_row gt_right gt_striped">69.58</td>
+<td class="gt_row gt_right gt_striped">527.64</td>
 <td class="gt_row gt_right gt_striped">2.23</td>
 <td class="gt_row gt_right gt_striped">0.45</td>
-<td class="gt_row gt_right gt_striped">0.45</td></tr>
+<td class="gt_row gt_right gt_striped">0.44</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">03.min</th>
 <td class="gt_row gt_right">9.34</td>
 <td class="gt_row gt_right">2.25</td>
 <td class="gt_row gt_right">7.09</td>
 <td class="gt_row gt_right">252</td>
-<td class="gt_row gt_right">94.90</td>
-<td class="gt_row gt_right">283.67</td>
+<td class="gt_row gt_right">94.65</td>
+<td class="gt_row gt_right">285.14</td>
 <td class="gt_row gt_right">2.23</td>
 <td class="gt_row gt_right">0.43</td>
-<td class="gt_row gt_right">0.43</td></tr>
+<td class="gt_row gt_right">0.42</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">04.min</th>
 <td class="gt_row gt_right gt_striped">20.18</td>
 <td class="gt_row gt_right gt_striped">2.08</td>
 <td class="gt_row gt_right gt_striped">18.10</td>
 <td class="gt_row gt_right gt_striped">252</td>
-<td class="gt_row gt_right gt_striped">59.38</td>
-<td class="gt_row gt_right gt_striped">724.53</td>
+<td class="gt_row gt_right gt_striped">59.23</td>
+<td class="gt_row gt_right gt_striped">728.30</td>
 <td class="gt_row gt_right gt_striped">2.23</td>
 <td class="gt_row gt_right gt_striped">0.16</td>
 <td class="gt_row gt_right gt_striped">0.16</td></tr>
@@ -700,8 +752,8 @@
 <td class="gt_row gt_right">2.08</td>
 <td class="gt_row gt_right">17.79</td>
 <td class="gt_row gt_right">252</td>
-<td class="gt_row gt_right">59.90</td>
-<td class="gt_row gt_right">712.05</td>
+<td class="gt_row gt_right">59.74</td>
+<td class="gt_row gt_right">715.75</td>
 <td class="gt_row gt_right">2.23</td>
 <td class="gt_row gt_right">0.16</td>
 <td class="gt_row gt_right">0.16</td></tr>
@@ -710,8 +762,8 @@
 <td class="gt_row gt_right gt_striped">2.08</td>
 <td class="gt_row gt_right gt_striped">17.02</td>
 <td class="gt_row gt_right gt_striped">252</td>
-<td class="gt_row gt_right gt_striped">61.24</td>
-<td class="gt_row gt_right gt_striped">681.11</td>
+<td class="gt_row gt_right gt_striped">61.08</td>
+<td class="gt_row gt_right gt_striped">684.65</td>
 <td class="gt_row gt_right gt_striped">2.23</td>
 <td class="gt_row gt_right gt_striped">0.17</td>
 <td class="gt_row gt_right gt_striped">0.17</td></tr>
@@ -720,8 +772,8 @@
 <td class="gt_row gt_right">2.15</td>
 <td class="gt_row gt_right">16.32</td>
 <td class="gt_row gt_right">252</td>
-<td class="gt_row gt_right">62.54</td>
-<td class="gt_row gt_right">653.22</td>
+<td class="gt_row gt_right">62.38</td>
+<td class="gt_row gt_right">656.61</td>
 <td class="gt_row gt_right">2.23</td>
 <td class="gt_row gt_right">0.18</td>
 <td class="gt_row gt_right">0.18</td></tr>
@@ -730,8 +782,8 @@
 <td class="gt_row gt_right gt_striped">2.15</td>
 <td class="gt_row gt_right gt_striped">15.22</td>
 <td class="gt_row gt_right gt_striped">252</td>
-<td class="gt_row gt_right gt_striped">64.75</td>
-<td class="gt_row gt_right gt_striped">609.27</td>
+<td class="gt_row gt_right gt_striped">64.59</td>
+<td class="gt_row gt_right gt_striped">612.44</td>
 <td class="gt_row gt_right gt_striped">2.23</td>
 <td class="gt_row gt_right gt_striped">0.19</td>
 <td class="gt_row gt_right gt_striped">0.19</td></tr>
@@ -740,18 +792,18 @@
 <td class="gt_row gt_right">2.15</td>
 <td class="gt_row gt_right">14.93</td>
 <td class="gt_row gt_right">252</td>
-<td class="gt_row gt_right">65.38</td>
-<td class="gt_row gt_right">597.63</td>
+<td class="gt_row gt_right">65.21</td>
+<td class="gt_row gt_right">600.74</td>
 <td class="gt_row gt_right">2.23</td>
 <td class="gt_row gt_right">0.20</td>
-<td class="gt_row gt_right">0.20</td></tr>
+<td class="gt_row gt_right">0.19</td></tr>
     <tr><th scope="row" class="gt_row gt_left gt_stub">10.min</th>
 <td class="gt_row gt_right gt_striped">18.30</td>
 <td class="gt_row gt_right gt_striped">2.29</td>
 <td class="gt_row gt_right gt_striped">16.01</td>
 <td class="gt_row gt_right gt_striped">252</td>
-<td class="gt_row gt_right gt_striped">63.15</td>
-<td class="gt_row gt_right gt_striped">640.65</td>
+<td class="gt_row gt_right gt_striped">62.98</td>
+<td class="gt_row gt_right gt_striped">643.98</td>
 <td class="gt_row gt_right gt_striped">2.23</td>
 <td class="gt_row gt_right gt_striped">0.19</td>
 <td class="gt_row gt_right gt_striped">0.19</td></tr>
@@ -761,7 +813,11 @@
       <td class="gt_sourcenote" colspan="10">Source: Data of the hydraulic analysis of the system</td>
     </tr>
   </tfoot>
-  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="10"><sup class="gt_footnote_marks">1</sup> The <strong>maximum</strong> flow coefficient.</td>
+    </tr>
+  </tfoot>
 </table>
 </div>
 </div>
@@ -783,9 +839,9 @@
 <section id="second-step-select-the-minimum-k_v-required." class="level2">
 <h2 class="anchored" data-anchor-id="second-step-select-the-minimum-k_v-required.">Second step: select the minimum <img src="https://latex.codecogs.com/png.latex?K_v"> required.</h2>
 <ul>
-<li>The maximum flow coefficient <img src="https://latex.codecogs.com/png.latex?K_v"> required for operation of the control valve is: 293.97 <img src="https://latex.codecogs.com/png.latex?m%5E3/h">.</li>
+<li>The maximum flow coefficient <img src="https://latex.codecogs.com/png.latex?K_v"> required for operation of the control valve is: 293.21 <img src="https://latex.codecogs.com/png.latex?m%5E3/h">.</li>
 <li>The control valve to be selected must meet at least <img src="https://latex.codecogs.com/png.latex?1.3"> times the maximum flow coefficient required.</li>
-<li>Therefore the minimum <img src="https://latex.codecogs.com/png.latex?K_%7Bvs%7D"> (full open flow coefficient) of the selected valve must be: 382.17 <img src="https://latex.codecogs.com/png.latex?m%5E3/h">.</li>
+<li>Therefore the minimum <img src="https://latex.codecogs.com/png.latex?K_%7Bvs%7D"> (full open flow coefficient) of the selected valve must be: 381.18 <img src="https://latex.codecogs.com/png.latex?m%5E3/h">.</li>
 </ul>
 </section>
 <section id="third-step-select-the-valves-plus-dissipation-element-that-meet-the-minimum-required-flow-coefficient." class="level2">
@@ -801,12 +857,13 @@
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-parameter" class="anchored">
-<div id="vkskaxsggs" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+
+<div id="egbledmnfy" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vkskaxsggs .gt_table {
+:where(#egbledmnfy) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -831,7 +888,7 @@
   border-left-color: #D3D3D3;
 }
 
-#vkskaxsggs .gt_heading {
+:where(#egbledmnfy) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -843,7 +900,7 @@
   border-right-color: #D3D3D3;
 }
 
-#vkskaxsggs .gt_title {
+:where(#egbledmnfy) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -855,7 +912,7 @@
   border-bottom-width: 0;
 }
 
-#vkskaxsggs .gt_subtitle {
+:where(#egbledmnfy) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -867,13 +924,13 @@
   border-top-width: 0;
 }
 
-#vkskaxsggs .gt_bottom_border {
+:where(#egbledmnfy) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
 }
 
-#vkskaxsggs .gt_col_headings {
+:where(#egbledmnfy) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -888,9 +945,9 @@
   border-right-color: #D3D3D3;
 }
 
-#vkskaxsggs .gt_col_heading {
+:where(#egbledmnfy) .gt_col_heading {
   color: #FFFFFF;
-  background-color: #038901;
+  background-color: #5F5F5F;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -908,9 +965,9 @@
   overflow-x: hidden;
 }
 
-#vkskaxsggs .gt_column_spanner_outer {
+:where(#egbledmnfy) .gt_column_spanner_outer {
   color: #FFFFFF;
-  background-color: #038901;
+  background-color: #5F5F5F;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -920,15 +977,15 @@
   padding-right: 4px;
 }
 
-#vkskaxsggs .gt_column_spanner_outer:first-child {
+:where(#egbledmnfy) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vkskaxsggs .gt_column_spanner_outer:last-child {
+:where(#egbledmnfy) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vkskaxsggs .gt_column_spanner {
+:where(#egbledmnfy) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
@@ -940,7 +997,7 @@
   width: 100%;
 }
 
-#vkskaxsggs .gt_group_heading {
+:where(#egbledmnfy) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -965,7 +1022,7 @@
   vertical-align: middle;
 }
 
-#vkskaxsggs .gt_empty_group_heading {
+:where(#egbledmnfy) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -980,15 +1037,15 @@
   vertical-align: middle;
 }
 
-#vkskaxsggs .gt_from_md > :first-child {
+:where(#egbledmnfy) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vkskaxsggs .gt_from_md > :last-child {
+:where(#egbledmnfy) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vkskaxsggs .gt_row {
+:where(#egbledmnfy) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1007,9 +1064,9 @@
   overflow-x: hidden;
 }
 
-#vkskaxsggs .gt_stub {
+:where(#egbledmnfy) .gt_stub {
   color: #333333;
-  background-color: #CAFFAF;
+  background-color: #D5D5D5;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -1020,7 +1077,7 @@
   padding-right: 5px;
 }
 
-#vkskaxsggs .gt_stub_row_group {
+:where(#egbledmnfy) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1034,11 +1091,11 @@
   vertical-align: top;
 }
 
-#vkskaxsggs .gt_row_group_first td {
+:where(#egbledmnfy) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vkskaxsggs .gt_summary_row {
+:where(#egbledmnfy) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1048,16 +1105,16 @@
   padding-right: 5px;
 }
 
-#vkskaxsggs .gt_first_summary_row {
+:where(#egbledmnfy) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #5F5F5F;
 }
 
-#vkskaxsggs .gt_first_summary_row.thick {
+:where(#egbledmnfy) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vkskaxsggs .gt_last_summary_row {
+:where(#egbledmnfy) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1067,7 +1124,7 @@
   border-bottom-color: #5F5F5F;
 }
 
-#vkskaxsggs .gt_grand_summary_row {
+:where(#egbledmnfy) .gt_grand_summary_row {
   color: #333333;
   background-color: #D5D5D5;
   text-transform: inherit;
@@ -1077,7 +1134,7 @@
   padding-right: 5px;
 }
 
-#vkskaxsggs .gt_first_grand_summary_row {
+:where(#egbledmnfy) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1087,11 +1144,11 @@
   border-top-color: #5F5F5F;
 }
 
-#vkskaxsggs .gt_striped {
-  background-color: #EDF6E8;
+:where(#egbledmnfy) .gt_striped {
+  background-color: #F4F4F4;
 }
 
-#vkskaxsggs .gt_table_body {
+:where(#egbledmnfy) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -1100,7 +1157,7 @@
   border-bottom-color: #5F5F5F;
 }
 
-#vkskaxsggs .gt_footnotes {
+:where(#egbledmnfy) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1114,7 +1171,7 @@
   border-right-color: #D3D3D3;
 }
 
-#vkskaxsggs .gt_footnote {
+:where(#egbledmnfy) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1123,7 +1180,7 @@
   padding-right: 5px;
 }
 
-#vkskaxsggs .gt_sourcenotes {
+:where(#egbledmnfy) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1137,7 +1194,7 @@
   border-right-color: #D3D3D3;
 }
 
-#vkskaxsggs .gt_sourcenote {
+:where(#egbledmnfy) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1145,68 +1202,68 @@
   padding-right: 5px;
 }
 
-#vkskaxsggs .gt_left {
+:where(#egbledmnfy) .gt_left {
   text-align: left;
 }
 
-#vkskaxsggs .gt_center {
+:where(#egbledmnfy) .gt_center {
   text-align: center;
 }
 
-#vkskaxsggs .gt_right {
+:where(#egbledmnfy) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vkskaxsggs .gt_font_normal {
+:where(#egbledmnfy) .gt_font_normal {
   font-weight: normal;
 }
 
-#vkskaxsggs .gt_font_bold {
+:where(#egbledmnfy) .gt_font_bold {
   font-weight: bold;
 }
 
-#vkskaxsggs .gt_font_italic {
+:where(#egbledmnfy) .gt_font_italic {
   font-style: italic;
 }
 
-#vkskaxsggs .gt_super {
+:where(#egbledmnfy) .gt_super {
   font-size: 65%;
 }
 
-#vkskaxsggs .gt_footnote_marks {
+:where(#egbledmnfy) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#vkskaxsggs .gt_asterisk {
+:where(#egbledmnfy) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vkskaxsggs .gt_indent_1 {
+:where(#egbledmnfy) .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vkskaxsggs .gt_indent_2 {
+:where(#egbledmnfy) .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vkskaxsggs .gt_indent_3 {
+:where(#egbledmnfy) .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vkskaxsggs .gt_indent_4 {
+:where(#egbledmnfy) .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vkskaxsggs .gt_indent_5 {
+:where(#egbledmnfy) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table"><caption>Table 2:  Valve’s Parameter </caption>
+<table class="gt_table"><caption>Table&nbsp;2:  Valve’s Parameter </caption>
   <thead class="gt_header">
     <tr>
       <td colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><strong>For Valves DN-200 Millimeter and PN-25</strong></td>
@@ -1259,13 +1316,661 @@
 </div>
 </div>
 </div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As can be seen in table 2, all the selected valves (Brand A, B, and C) comply with a flow coefficient of a <img src="https://latex.codecogs.com/png.latex?K_%7Bvs%7D%20%5Cgeq"> 293.21 <img src="https://latex.codecogs.com/png.latex?m%5E3/h"> required for the operation.</p>
+</div>
+</div>
+</section>
+<section id="fourth-step-position-valves-for-the-different-operation-scenarios-and-valve-brands." class="level2">
+<h2 class="anchored" data-anchor-id="fourth-step-position-valves-for-the-different-operation-scenarios-and-valve-brands.">Fourth step: Position valves for the different operation scenarios and valve brands.</h2>
+<div class="cell">
+
+</div>
+<section id="brand-a" class="level3">
+<h3 class="anchored" data-anchor-id="brand-a">Brand A:</h3>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="jnjvewxxmm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#jnjvewxxmm) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#jnjvewxxmm) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#jnjvewxxmm) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#jnjvewxxmm) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#jnjvewxxmm) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#jnjvewxxmm) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#jnjvewxxmm) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#jnjvewxxmm) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#jnjvewxxmm) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#jnjvewxxmm) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#jnjvewxxmm) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#jnjvewxxmm) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#jnjvewxxmm) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#jnjvewxxmm) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#jnjvewxxmm) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#jnjvewxxmm) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#jnjvewxxmm) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#jnjvewxxmm) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#jnjvewxxmm) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#jnjvewxxmm) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#jnjvewxxmm) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#jnjvewxxmm) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#jnjvewxxmm) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#jnjvewxxmm) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#jnjvewxxmm) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#jnjvewxxmm) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#jnjvewxxmm) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#jnjvewxxmm) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#jnjvewxxmm) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#jnjvewxxmm) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#jnjvewxxmm) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#jnjvewxxmm) .gt_left {
+  text-align: left;
+}
+
+:where(#jnjvewxxmm) .gt_center {
+  text-align: center;
+}
+
+:where(#jnjvewxxmm) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#jnjvewxxmm) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#jnjvewxxmm) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#jnjvewxxmm) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#jnjvewxxmm) .gt_super {
+  font-size: 65%;
+}
+
+:where(#jnjvewxxmm) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#jnjvewxxmm) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#jnjvewxxmm) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#jnjvewxxmm) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#jnjvewxxmm) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#jnjvewxxmm) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#jnjvewxxmm) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table"><caption>Valves position for the different operations scenarios.</caption>
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>P<sub>1</sub><br>(bar)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>P<sub>2</sub><br>(bar)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>Flow<br>(m<sup>3</sup>/h)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>K<sub>v</sub><br>(m<sup>3</sup>/h)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>K<sub>v</sub> / K<sub>vs</sub><br>(%)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>Position<br>(%)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>σ<sub>2</sub><br>(-)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"><i>Cavitation<br>Regime</i></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <td colspan="9" class="gt_group_heading">Max.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">01.max</th>
+<td class="gt_row gt_right">4.44</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">293.21</td>
+<td class="gt_row gt_right">33.78</td>
+<td class="gt_row gt_right">50.26</td>
+<td class="gt_row gt_right">1.39</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">02.max</th>
+<td class="gt_row gt_right">18.26</td>
+<td class="gt_row gt_right">5.24</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">109.74</td>
+<td class="gt_row gt_right">12.64</td>
+<td class="gt_row gt_right">34.00</td>
+<td class="gt_row gt_right">0.44</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">03.max</th>
+<td class="gt_row gt_right">9.46</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">151.41</td>
+<td class="gt_row gt_right">17.44</td>
+<td class="gt_row gt_right">38.38</td>
+<td class="gt_row gt_right">0.46</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">04.max</th>
+<td class="gt_row gt_right">20.22</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">93.27</td>
+<td class="gt_row gt_right">10.74</td>
+<td class="gt_row gt_right">32.04</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_left">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">05.max</th>
+<td class="gt_row gt_right">19.90</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">94.09</td>
+<td class="gt_row gt_right">10.84</td>
+<td class="gt_row gt_right">32.14</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_left">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">06.max</th>
+<td class="gt_row gt_right">19.13</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">96.21</td>
+<td class="gt_row gt_right">11.08</td>
+<td class="gt_row gt_right">32.40</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_left">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">07.max</th>
+<td class="gt_row gt_right">18.53</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">98.43</td>
+<td class="gt_row gt_right">11.34</td>
+<td class="gt_row gt_right">32.67</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_left">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">08.max</th>
+<td class="gt_row gt_right">17.44</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">101.93</td>
+<td class="gt_row gt_right">11.74</td>
+<td class="gt_row gt_right">33.09</td>
+<td class="gt_row gt_right">0.20</td>
+<td class="gt_row gt_left">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">09.max</th>
+<td class="gt_row gt_right">17.15</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">102.93</td>
+<td class="gt_row gt_right">11.86</td>
+<td class="gt_row gt_right">33.21</td>
+<td class="gt_row gt_right">0.20</td>
+<td class="gt_row gt_left">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">10.max</th>
+<td class="gt_row gt_right">18.31</td>
+<td class="gt_row gt_right">2.72</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">100.27</td>
+<td class="gt_row gt_right">11.55</td>
+<td class="gt_row gt_right">32.89</td>
+<td class="gt_row gt_right">0.22</td>
+<td class="gt_row gt_left">Regime 2: Incipient cavitation.</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="9" class="gt_group_heading">Min.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">01.min</th>
+<td class="gt_row gt_right">4.37</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">173.12</td>
+<td class="gt_row gt_right">19.94</td>
+<td class="gt_row gt_right">40.42</td>
+<td class="gt_row gt_right">1.29</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">02.min</th>
+<td class="gt_row gt_right">18.19</td>
+<td class="gt_row gt_right">5.08</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">69.58</td>
+<td class="gt_row gt_right">8.02</td>
+<td class="gt_row gt_right">28.83</td>
+<td class="gt_row gt_right">0.44</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">03.min</th>
+<td class="gt_row gt_right">9.34</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">94.65</td>
+<td class="gt_row gt_right">10.90</td>
+<td class="gt_row gt_right">32.21</td>
+<td class="gt_row gt_right">0.42</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">04.min</th>
+<td class="gt_row gt_right">20.18</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">59.23</td>
+<td class="gt_row gt_right">6.82</td>
+<td class="gt_row gt_right">27.23</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">05.min</th>
+<td class="gt_row gt_right">19.87</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">59.74</td>
+<td class="gt_row gt_right">6.88</td>
+<td class="gt_row gt_right">27.31</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">06.min</th>
+<td class="gt_row gt_right">19.10</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">61.08</td>
+<td class="gt_row gt_right">7.04</td>
+<td class="gt_row gt_right">27.53</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">07.min</th>
+<td class="gt_row gt_right">18.47</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">62.38</td>
+<td class="gt_row gt_right">7.19</td>
+<td class="gt_row gt_right">27.73</td>
+<td class="gt_row gt_right">0.18</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">08.min</th>
+<td class="gt_row gt_right">17.37</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">64.59</td>
+<td class="gt_row gt_right">7.44</td>
+<td class="gt_row gt_right">28.08</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">09.min</th>
+<td class="gt_row gt_right">17.08</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">65.21</td>
+<td class="gt_row gt_right">7.51</td>
+<td class="gt_row gt_right">28.17</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">10.min</th>
+<td class="gt_row gt_right">18.30</td>
+<td class="gt_row gt_right">2.29</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">62.98</td>
+<td class="gt_row gt_right">7.26</td>
+<td class="gt_row gt_right">27.83</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li>Cavitation and non-cavitation regime</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="references" class="level1">
+
+
 
 
 </section>
-</section>
 
 
-<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs">
+
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>Liquid pressure recovery factor of a control valve without attached fittings (ISA-75.01.01-2007: Flow Equations for Sizing Control Valves).↩︎</p></li>
@@ -1278,13 +1983,14 @@
   <category>valves</category>
   <category>analysis</category>
   <category>example</category>
-  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-24_practical_example_001/blog.html</guid>
+  <guid>https://ratral.github.io/Control_Valves_Blog/posts/2022-10-24_practical_example_001/blog.html</guid>
   <pubDate>Sun, 23 Oct 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-24_practical_example_001/control_valve_01.png" medium="image" type="image/png" height="101" width="144"/>
+  <media:content url="https://ratral.github.io/Control_Valves_Blog/posts/2022-10-24_practical_example_001/control_valve_01.png" medium="image" type="image/png" height="101" width="144"/>
 </item>
 <item>
   <title>Quantifying the Cavitation Potential of the control valve</title>
-  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-17_quantifying_cavitation_potential/blog.html</link>
+  <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
+  <link>https://ratral.github.io/Control_Valves_Blog/posts/2022-10-17_quantifying_cavitation_potential/blog.html</link>
   <description><![CDATA[ 
 
 
@@ -1296,8 +2002,8 @@
 <p>In its simplest terms, cavitation is the two-stage vaporization process simply boiling a liquid, also known as flashing. In a control valve, this vaporization occurs because the pressure of the liquid is reduced, instead of the more common occurrence where the temperature is increased. As fluid passes through a valve just downstream of the orifice area, there is an increase in velocity or kind of energy accompanied by a substantial decrease in pressure or potential energy. This occurs in a place called the <a href="https://en.wikipedia.org/wiki/Vena_contracta">vena contracta</a>. If the pressure in this area falls below the vapor pressure of the following fluid, vaporization (boiling) occurs. Vapor bubbles then continue downstream, where the velocity of the liquid begins to slow, and the pressure in the fluid recovers. The vapor bubbles then collapse or implode. Cavitation in control valves occurs only with liquid flows. [ISA S75.05 Control Valve Terminology].</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-17_quantifying_cavitation_potential\stellventil.png" class="img-fluid figure-img"></p>
-<p></p><p></p>
+<p><img src="https://ratral.github.io/Control_Valves_Blog/posts/2022-10-17_quantifying_cavitation_potential/stellventil.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Typical pressure curve in a control valve; [Wagner, Walter. Control and safety fittings]</figcaption><p></p>
 </figure>
 </div>
 <p>Its effect on the system’s cavitation varies with valve type, size, operating pressure, and installation details. To include cavitation in the design process is necessary to determine if cavitation will evaluate its intensity, characterize the flow conditions, and estimate its effect on the system and environment. Possible consequences include noise, vibration, erosion damage, and a decrease in performance.</p>
@@ -1383,8 +2089,8 @@ Note
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-17_quantifying_cavitation_potential\cavitation_regime.png" class="img-fluid figure-img"></p>
-<p></p><p></p>
+<p><img src="https://ratral.github.io/Control_Valves_Blog/posts/2022-10-17_quantifying_cavitation_potential/cavitation_regime.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Cavitation parameter plot: using an accelerometer values.</figcaption><p></p>
 </figure>
 </div></li>
 </ol>
@@ -1428,13 +2134,14 @@ Other important cavitation limits are:
   <category>theory</category>
   <category>valves</category>
   <category>analysis</category>
-  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-17_quantifying_cavitation_potential/blog.html</guid>
+  <guid>https://ratral.github.io/Control_Valves_Blog/posts/2022-10-17_quantifying_cavitation_potential/blog.html</guid>
   <pubDate>Sun, 16 Oct 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-17_quantifying_cavitation_potential/cavitation_regime.png" medium="image" type="image/png" height="140" width="144"/>
+  <media:content url="https://ratral.github.io/Control_Valves_Blog/posts/2022-10-17_quantifying_cavitation_potential/cavitation_regime.png" medium="image" type="image/png" height="140" width="144"/>
 </item>
 <item>
   <title>Flow coefficient and Loss Coefficient of control valves</title>
-  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-12_flow_coefficient_01/blog.html</link>
+  <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
+  <link>https://ratral.github.io/Control_Valves_Blog/posts/2022-10-12_flow_coefficient_01/blog.html</link>
   <description><![CDATA[ 
 
 
@@ -1506,12 +2213,13 @@ Other important cavitation limits are:
   <category>theory</category>
   <category>valves</category>
   <category>analysis</category>
-  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-12_flow_coefficient_01/blog.html</guid>
+  <guid>https://ratral.github.io/Control_Valves_Blog/posts/2022-10-12_flow_coefficient_01/blog.html</guid>
   <pubDate>Tue, 11 Oct 2022 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Remarks about RIKO plunger valves</title>
-  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-08-24_remarks_riko/blog.html</link>
+  <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
+  <link>https://ratral.github.io/Control_Valves_Blog/posts/2022-08-24_remarks_riko/blog.html</link>
   <description><![CDATA[ 
 
 
@@ -1573,7 +2281,7 @@ Other important cavitation limits are:
   <category>knowledge</category>
   <category>valves</category>
   <category>RIKO_valves</category>
-  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-08-24_remarks_riko/blog.html</guid>
+  <guid>https://ratral.github.io/Control_Valves_Blog/posts/2022-08-24_remarks_riko/blog.html</guid>
   <pubDate>Tue, 23 Aug 2022 22:00:00 GMT</pubDate>
 </item>
 </channel>
