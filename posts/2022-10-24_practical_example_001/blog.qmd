@@ -70,9 +70,41 @@ base_data <- data$operation |>
 
 These blog notes provide a simplified procedure for sizing control valves at standard service conditions. The data required to size a valve, such as nominal size, gauge pressures, and flow rates, are actual values of a project.
 
+Initially, I would like to make a first approximation to the selection process of the control valve. Later, in other blogs, I will analyze the different cases.
+
 ![Operating data (Source: Wagner, Walter. Regel- und Sicherheitsarmaturen.)](control_valve_01.png)
 
-## First step: Collection of the operations data for the control valve.
+# Flowchart of the valve selection process.
+
+```{mermaid}
+flowchart TD
+  A[Hydraulic Model] --> B(1. CV \n data operation)
+  A --> E
+  B --> C(2. Select min. Kv \n that the CV must supply)
+  C--> H
+  
+  E[Valve DN, PN] --> F[(DB Parameters \n of Control Valves)]
+  F --> H{3. Select CVs with \n Kvs > 1.3* Min.Kvs}
+  
+  H-. NO .-> A
+  
+  H-- YES --> I(4. Calc. Kv/Kvs and \n valve position for all \n data operation and Types of valves.)
+  
+  I --> J(5. Calculate the Cavitation and non-cavitation \n regime for every Operation condition)
+  
+  J --> K(6. Define criteria for valve selection: \n A. General Criteria \n B. System or project-dependent criteria )
+  
+  K --> L(Select valve.)
+```
+
+::: callout-note
+-   CV: Control Valve
+-   Kv: Flow coefficient
+-   Kvs: Maximum flow coefficient
+-   Kv/Kvs : relative flow coefficient
+:::
+
+# First step: Collection of the operations data for the control valve.
 
 -   Medium: `r data$medium`.
 
@@ -93,7 +125,8 @@ These blog notes provide a simplified procedure for sizing control valves at sta
 #| tbl-cap: "Operations Data"
 #| include: true
 #| echo: false
-#| 
+
+# Print Table base_data
 base_data |> 
   select(
     condition, p1, p2, dp, flow, kv, 
@@ -143,7 +176,16 @@ base_data |>
     source_note = "Source: Data of the hydraulic analysis of the system"
   ) |> 
   
-  opt_stylize(style = 6, color = "green")
+   tab_footnote(
+    footnote = md("The **maximum** flow coefficient."),
+    locations = cells_body(
+      columns = kv,
+      rows = kv == max(kv)
+    )
+  ) |> 
+  
+  
+  opt_stylize(style = 6, color = "gray")
 
 ```
 
@@ -156,26 +198,34 @@ base_data |>
 -   $K_v$: Flow coefficient $(m^3/h)$; $K_v = q \cdot \sqrt{\frac {(\rho / \rho_{0})}{\Delta P}}$
 -   $Vel.$ : Velocity in $m/s$
 -   $\zeta$: Zeta Value; Required Velocity head loss coefficient;
--   $\sigma_1$: Cavitation index equal to $(P_2 - P_v)/\Delta{P} = (\sigma - 1)$ at service conditions;
+-   $\sigma_1$: Cavitation index equal to $(P_2 - P_v)/\Delta{P}$ at service conditions;
 -   $\sigma_2$: Cavitation index equal to $(P_2 - P_v)/(\Delta{P}+v^2/2g)$ at service conditions.
 
-## Second step: select the minimum $K_v$ required.
+# Second step: select the minimum $K_v$ required.
 
-  - The maximum flow coefficient $K_v$ required for operation of the control valve is: `r round(max(base_data$kv),2)` $m^3/h$.
-  - The control valve to be selected must meet at least $1.3$ times the maximum flow coefficient required. 
-  - Therefore the minimum $K_{vs}$ (full open flow coefficient) of the selected valve must be: `r round(max(base_data$kv*1.3),2)` $m^3/h$.
-  
+-   The maximum flow coefficient $K_v$ required for operation of the control valve is: `r round(max(base_data$kv),2)` $m^3/h$.
+-   The control valve to be selected must meet at least $1.3$ times the maximum flow coefficient required.
+-   Therefore the minimum $K_{vs}$ (full open flow coefficient) of the selected valve must be: `r round(max(base_data$kv*1.3),2)` $m^3/h$.
 
-## Third step: Select the valves plus dissipation element that meet the minimum required flow coefficient.
+# Third step: Select the valves plus dissipation element that meet the minimum required flow coefficient.
 
 For this exercise, we will assume the following:
 
-  1. We only have three valves from 3 different suppliers. Brands "A", "B" and "C" 
-  2. that the required valves should not have anti-cavitation cylinders.
-  3. The parameters for the curve $K_v/K_{vs}$, the Zeta value $\zeta_{vs}$ and the Liquid pressure recovery factor $F_{Ls}$[^1] are available.[^2]
-  4. $K_v/K_{vs} = \frac{d}{1 +\exp(b\cdot(\log{(vp)}-\log{(e)}))}$
+1.  We only have three valves from 3 different suppliers. Brands "A", "B" and "C"
+2.  that the required valves should not have anti-cavitation cylinders.
+3.  The parameters for the curve $K_v/K_{vs}$, the Zeta value $\zeta_{vs}$ and the Liquid pressure recovery factor $F_{Ls}$[^1] are available.[^2]
+4.  $K_v/K_{vs} = \frac{d}{1 +\exp(b\cdot(\log{(vp)}-\log{(e)}))}$
+5.  The cavitation values are established based on the degree of opening, whose function is defined based on the factors of $K_v/K_{vs}$ and $F_L$.[^3]
 
-The parameters corresponding to the valves are the following:[^3]
+[^1]: Liquid pressure recovery factor of a control valve without attached fittings (ISA-75.01.01-2007: Flow Equations for Sizing Control Valves).
+
+[^2]: In the next blogs we will see how these values can be calculated from the documents supplied by the suppliers.
+
+[^3]: This function will be clarified in a future blog.
+
+The parameters corresponding to the valves are the following:[^4]
+
+[^4]: These parameters are similar to those in reality but adjusted for this Example.
 
 ```{r}
 #| label: tbl-parameter
@@ -194,6 +244,7 @@ param_valves <- tribble(
 param_valves <- param_valves |> 
   mutate(kvs = kv_value(data$dn, zvs))
 
+# Print Table with the parameter of the Valves (Brands A, B and C)
 param_valves |>
   gt() |>
     cols_label(
@@ -221,11 +272,271 @@ param_valves |>
     suffixing = FALSE
   ) |> 
 
-  opt_stylize(style = 6, color = "green")
+  opt_stylize(style = 6, color = "gray")
+
+```
+
+::: callout-note
+As can be seen in table 2, all the selected valves (Brand A, B, and C) comply with a flow coefficient of a $K_{vs} \geq$ `r round(max(base_data$kv),2)` $m^3/h$ required for the operation.
+:::
+
+# Fourth and five steps: Calculate the position and cavitation regime for the selected valves for the different operation scenarios.
+
+```{r}
+#| label: calculation_tbl-full_data
+#| include: true
+#| echo: false
+#| 
+
+full_data <- tidyr::crossing(param_valves, base_data) |> 
+  mutate(kv_kvs = .data$kv/.data$kvs,
+         position = pmap_dbl(list(.data$kv_kvs, .data$kv_b, .data$kv_d, .data$kv_e), ~inv_LL3(..1, ..2, ..3, ..4))) |> 
+  mutate(sig_i     = sigma_i( .data$position, .data$kv_b, .data$kv_d, .data$kv_e, .data$fls),
+         Sig_c     = sigma_c( .data$position, .data$kv_b, .data$kv_d, .data$kv_e, .data$fls),
+         Sig_mv    = sigma_mv(.data$position, .data$kv_b, .data$kv_d, .data$kv_e, .data$fls),
+         cav_index = cavtation_index(.data$position, .data$kv_b, .data$kv_d, .data$kv_e, .data$fls, .data$sig_2),
+         regime    = cavtation_regime(.data$position, .data$kv_b, .data$kv_d, .data$kv_e, .data$fls, .data$sig_2)) |> 
+  select(brand,	condition, kv_b,	kv_d,	kv_e,	zvs,	fls,	kvs,	p1,	p2,	flow,	
+         dp,	velocity,	kv, kv_kvs,	position, zeta,	sig_0,	sig_1,	sig_2, 
+         sig_i, Sig_c, Sig_mv, cav_index, regime)
+
+# Def function for the generation of the results table
+get_table_results <- function(df, typ_valve){
+  df |> 
+    filter(brand == typ_valve) |> 
+    select(condition, p1,	p2,	flow, kv, kv_kvs, position, sig_2, regime) |> 
+    mutate(kv_kvs = kv_kvs*100) |> 
+    mutate(across(where(is.numeric), round, 2)) |>
+  
+  gt(rowname_col = "condition") |> 
+  tab_row_group(
+    label = "Min.Condition",
+    rows = matches("*.min")
+  ) |> 
+  
+  tab_row_group(
+    label = "Max.Condition",
+    rows = matches("*.max")
+  ) |> 
+  
+  cols_label(
+    p1    = html("<i>P<sub>1</sub><br>(bar)</i>"),
+    p2    = html("<i>P<sub>2</sub><br>(bar)</i>"),
+    flow  = html("<i>Flow<br>(m<sup>3</sup>/h)</i>"),
+    kv       = html("<i>K<sub>v</sub><br>(m<sup>3</sup>/h)</i>"),
+    kv_kvs   = html("<i>K<sub>v</sub> / K<sub>vs</sub><br>(%)</i>"),
+    position = html("<i>Position<br>(%)</i>"),
+    sig_2    = html("<i>&sigma;<sub>2</sub><br>(-)</i>"),
+    regime   = html("<i>Cavitation<br>Regime</i>")
+  ) |> 
+  
+    opt_stylize(style = 6, color = "gray")
+}
+
+# Plot Kv
+plot_kv <- function(valve_typ, df, b, d, e, zvs, dn){
+
+  df <- df |> 
+    filter(brand == valve_typ) |> 
+    select(position, kv) 
+    
+  x     <- data.frame(x = 0:100)
+  kvs   <- kv_value(dn, zvs)
+  y.max <- ceiling(kvs/1000)*1000 # Round kvs up to the nearest 50
+
+  Max.Kv <- format(kvs, digits = 2, nsmall = 0, big.mark = ',')
+
+  ggplot2::ggplot(data = x, mapping = aes(x = x)) +
+    stat_function( fun = function(x) {drm_LL3( x, b, d, e)*kvs}, size = 1, color = "blue") +
+    geom_point(data = df, aes(x = position, y = kv), colour="red", size = 2) +
+    scale_x_continuous(breaks = seq(0, 100, 10)) +
+    scale_y_continuous(breaks = seq(0, y.max, ceiling(y.max/10))) +
+    labs( title    = latex2exp::TeX(glue::glue("Flow Coefficient $K_v$ in $(m^3/h)$ for Plunger Valve brand <<valve_typ>>, and DN-<<dn>>",
+                                    .open = "<<", .close = ">>")),
+          subtitle = latex2exp::TeX(glue::glue("For a DN-<<dn>> $mm$ with a $K_{v_{100\\%}}=$ <<Max.Kv>> $m^3/h$",
+                                               .open = "<<", .close = ">>")),
+          x        = "Opening degree (%)",
+          y        = latex2exp::TeX('$k_{v} \\; (m^3/h)$')) +
+    theme_bw()
+}
+
+# Plot Sigma
+plot_sigma <- function(valve_typ, df, b, d, e, fls, dn){
+  
+    df <- df |> 
+    filter(brand == valve_typ) |> 
+    select(position, sig_2) 
+
+  Max.fls <- format(fls,digits = 3, nsmall = 0, big.mark = ',')
+
+  x <- data.frame(x = 1:100)
+  ggplot2::ggplot( data = x, mapping = aes(x = x)) +
+    stat_function( fun = function(x) {sigma_mv(x, b, d, e, fls)}, size = 1, aes(colour = "3.-Maximum")) +
+    stat_function( fun = function(x) {sigma_c(x, b, d, e, fls)},  size = 1,  aes(colour = "2.-Constant")) +
+    stat_function( fun = function(x) {sigma_i(x, b, d, e, fls)},  size = 1,  aes(colour = "1.-Incipient")) +
+    geom_point(data = df, aes(x = position, y = sig_2), colour="black", size = 2) +
+    scale_colour_manual("Borders of the cavitation: ", values = c("green", "orange", "red")) +
+    scale_x_continuous( breaks = seq(0, 100, 10)) +
+    labs( title    = latex2exp::TeX(glue::glue("Sigma values $(\\sigma)$ for Plunger Valve <<valve_typ>>, and DN-<<dn>>",
+                                               .open = "<<", .close = ">>")),
+          subtitle = latex2exp::TeX(glue::glue("$F_{L_{100\\%}}=$ <<Max.fls>>", .open = "<<", .close = ">>")),
+          x        = "Opening degree (%)",
+          y        = latex2exp::TeX('Sigma value ($\\sigma$)')) +
+    theme_bw() + theme(legend.position = "bottom")
+}
+
+
+```
+
+## Results for Brand A Valve
+
+```{r}
+#| label: results_valve_operation_Band_A
+#| tbl-cap: "Results for the different operations scenarios."
+#| include: true
+#| echo: false
+#| 
+
+get_table_results(full_data, "A")
+
+```
+
+```{r}
+i <- 1
+
+plot_kv(param_valves$brand[i],
+        full_data,
+        param_valves$kv_b[i],
+        param_valves$kv_d[i],
+        param_valves$kv_e[i],
+        param_valves$zvs[i],
+        data$dn)
+
+plot_sigma(param_valves$brand[i],
+           full_data,
+           param_valves$kv_b[i],
+           param_valves$kv_d[i],
+           param_valves$kv_e[i],
+           param_valves$fls[i],
+           data$dn)
+
+```
+
+## Results for Brand B Valve
+
+```{r}
+#| label: results_valve_operation_Band_B
+#| tbl-cap: "Results for the different operations scenarios."
+#| include: true
+#| echo: false
+#| 
+
+get_table_results(full_data, "B")
+
+```
+
+```{r}
+i <- 2
+
+plot_kv(param_valves$brand[i],
+        full_data,
+        param_valves$kv_b[i],
+        param_valves$kv_d[i],
+        param_valves$kv_e[i],
+        param_valves$zvs[i],
+        data$dn)
+
+plot_sigma(param_valves$brand[i],
+           full_data,
+           param_valves$kv_b[i],
+           param_valves$kv_d[i],
+           param_valves$kv_e[i],
+           param_valves$fls[i],
+           data$dn)
+
+```
+
+## Results for Brand C Valve
+
+```{r}
+#| label: results_valve_operation_Band_C
+#| tbl-cap: "Results for the different operations scenarios."
+#| include: true
+#| echo: false
+#| 
+
+get_table_results(full_data, "C")
+
+```
+
+```{r}
+i <- 3
+
+plot_kv(param_valves$brand[i],
+        full_data,
+        param_valves$kv_b[i],
+        param_valves$kv_d[i],
+        param_valves$kv_e[i],
+        param_valves$zvs[i],
+        data$dn)
+
+plot_sigma(param_valves$brand[i],
+           full_data,
+           param_valves$kv_b[i],
+           param_valves$kv_d[i],
+           param_valves$kv_e[i],
+           param_valves$fls[i],
+           data$dn)
+
+```
+
+# Sixth step: Define criteria for valve selection:
+
+1.  General Criteria for the inherent characteristic of valve:
+    - **Flow Coefficient Range:** Operative Range it is the ratio between the normal maximum operative flow coefficient and the minimum controllable operative flow coefficient $k_{v_{min.}} \iff k_{v_{max.}}$
+    - **Controllability Range:** The Controllability Range is the range between the maximum and minimum position of the valve $PV_{min.} \iff PV_{max.}$
+    - **Operation Ratio:** The Operating Ratio is the ratio of the Flow Coefficient Range to the Operation Ratio minus one. The optimal value is Zero. An Operating Ratio of Zero means that a 1% opening of the valve will increase the flow coefficient by 1%.  
+    $$Ratio =\left| \frac{(k_{v_{max.}} -  k_{v_{min.}})}{(PV_{max.}- PV_{min.})} - 1 \right|$$
+    
+    
+2.  System (installed characteristic) and project-dependent criteria:
+  - Frequency and time with which the valve is in any of the cavitation states.
+  - ...
+  
+```{r}
+#| label: summary_brand_valves
+#| tbl-cap: "Summary Brand Valves"
+#| include: true
+#| echo: false
+#| 
+
+
+summary_brand_valves <- full_data |> 
+  select(brand,	kv, kv_kvs,	position, cav_index) |> 
+  group_by(brand) |> 
+  summarise(min.kv = min(kv),
+            max.kv = max(kv),
+            min.pv = min(position),
+            max.pv = max(position),
+            min.cav = min(cav_index),
+            max.cav = max(cav_index),
+            mean.cav = mean(cav_index)) |> 
+  mutate(op.ratio = (max.kv-min.kv)/(max.pv-min.pv)-1,
+         kv.range = (max.kv-min.kv),
+         pv.range = (max.pv-min.pv))
+
+summary_brand_valves |> 
+  select(brand,	min.kv,	max.kv, kv.range,	min.pv, max.pv,	pv.range, op.ratio, min.cav,	max.cav,	mean.cav) |> 
+  mutate(across(where(is.numeric), round, 2)) |> 
+  gt()
+
 
 ```
 
 
-[^1]: Liquid pressure recovery factor of a control valve without attached fittings (ISA-75.01.01-2007: Flow Equations for Sizing Control Valves).
-[^2]: In the next blogs we will see how these values can be calculated from the documents supplied by the suppliers.
-[^3]: These parameters are similar to those in reality but adjusted for this Example.
+
+
+# References
+
+::: {#refs}
+:::

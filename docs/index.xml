@@ -8,7 +8,7 @@
 <title>Water Control Valves Blog.</title>
 <link>https://ratral.github.io/Control_Valves_Blog//index.html</link>
 <atom:link href="https://ratral.github.io/Control_Valves_Blog//index.xml" rel="self" type="application/rss+xml"/>
-<description>My Notes-Blog</description>
+<description>This blog is a compilation of my notes on the selection of control valves.</description>
 <generator>quarto-0.9.342</generator>
 <lastBuildDate>Tue, 25 Oct 2022 22:00:00 GMT</lastBuildDate>
 <item>
@@ -41,7 +41,9 @@
 <h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-but-without-fittings">Flow with flow restriction (Cavitation) but without fittings</h2>
 <p>The vapor pressure of liquids depends on the temperature. If the static pressure on the fluid falls below this vapor pressure, evaporation occurs. The lowest pressure occurs when throttling in the valve occurs in the so-called “vena contracta.” Depending on the design of the throttle point, there is a greater or lesser pressure recovery. Under certain circumstances, evaporation must also be considered when the outflow pressure <img src="https://latex.codecogs.com/png.latex?p_2"> is greater than the vapor pressure of the liquid. Local evaporation, in the vena contracta, initially increases in volume. The cross-section of the choke becomes slimmer, and the calculated flow rate may not be reached if evaporation was not taken into account in the calculation. <span class="citation" data-cites="wagner2008">[@wagner2008]</span>.</p>
 <p>Cavitation occurs if the evaporation is reversed again by an immediately subsequent increase in pressure. When the evaporation is reversed (condensation) and reaches a particular energy potential, it can quickly damage the throttle body and seat of the valve.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(L)%7D%20=%20K_v%20%5Ccdot%20F_L%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> The maximum allowable differential pressure for the calculation of control valves without fittings can be calculated as follows: <img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(L)%7D=F%5E%7B2%7D_%7BL%7D%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(L)%7D%20=%20K_v%20%5Ccdot%20F_L%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> The maximum allowable differential pressure for the calculation of control valves without fittings can be calculated as follows:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(L)%7D=F%5E%7B2%7D_%7BL%7D%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
 <p>Where:</p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?Q"> is the flow; Unit: <img src="https://latex.codecogs.com/png.latex?m%5E3/s"></li>
@@ -55,13 +57,14 @@
 </section>
 <section id="flow-with-flow-restriction-cavitation-and-with-fittings" class="level2">
 <h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction (cavitation) and with fittings</h2>
-<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20F_p%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(LP)%7D%20=%20K_v%20%5Ccdot%20F_%7BLP%7D%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20F_p%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(LP)%7D%20=%20K_v%20%5Ccdot%20F_%7BLP%7D%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
 <p>The maximum allowable differential pressure for the calculation of control valves with fittings can be calculated as follows:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(LP)%7D=%20%5Cleft(%20%5Cfrac%7BF_%7BLP%7D%7D%7BF_P%7D%5Cright)%5E2%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-26_considerations_evaluating_cavitation\Flow_with_restriction.png" class="img-fluid figure-img"></p>
-<p></p><p></p>
+<p></p><figcaption class="figure-caption">Flow with flow restriction (Cavitation) <span class="citation" data-cites="wagner2008">@wagner2008</span></figcaption><p></p>
 </figure>
 </div>
 
@@ -92,14 +95,60 @@
 <section id="sizing-sample" class="level1">
 <h1>Sizing sample</h1>
 <p>These blog notes provide a simplified procedure for sizing control valves at standard service conditions. The data required to size a valve, such as nominal size, gauge pressures, and flow rates, are actual values of a project.</p>
+<p>Initially, I would like to make a first approximation to the selection process of the control valve. Later, in other blogs, I will analyze the different cases.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-24_practical_example_001\control_valve_01.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
-<section id="first-step-collection-of-the-operations-data-for-the-control-valve." class="level2">
-<h2 class="anchored" data-anchor-id="first-step-collection-of-the-operations-data-for-the-control-valve.">First step: Collection of the operations data for the control valve.</h2>
+</section>
+<section id="flowchart-of-the-valve-selection-process." class="level1">
+<h1>Flowchart of the valve selection process.</h1>
+<figure class="cell figure">
+<div class="cell-output-display" data-code-fold="false">
+<pre class="mermaid">flowchart TD
+  A[Hydraulic Model] --&gt; B(1. CV \n data operation)
+  A --&gt; E
+  B --&gt; C(2. Select min. Kv \n that the CV must supply)
+  C--&gt; H
+  
+  E[Valve DN, PN] --&gt; F[(DB Parameters \n of Control Valves)]
+  F --&gt; H{3. Select CVs with \n Kvs &gt; 1.3* Min.Kvs}
+  
+  H-. NO .-&gt; A
+  
+  H-- YES --&gt; I(4. Calc. Kv/Kvs and \n valve position for all \n data operation and Types of valves.)
+  
+  I --&gt; J(5. Calculate the Cavitation and non-cavitation \n regime for every Operation condition)
+  
+  J --&gt; K(6. Define criteria for valve selection: \n A. General Criteria \n B. System or project-dependent criteria )
+  
+  K --&gt; L(Select valve.)
+</pre>
+</div>
+</figure>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>CV: Control Valve</li>
+<li>Kv: Flow coefficient</li>
+<li>Kvs: Maximum flow coefficient</li>
+<li>Kv/Kvs : relative flow coefficient</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="first-step-collection-of-the-operations-data-for-the-control-valve." class="level1">
+<h1>First step: Collection of the operations data for the control valve.</h1>
 <ul>
 <li><p>Medium: Raw Water.</p></li>
 <li><p>Medium Temperature: 15 <img src="https://latex.codecogs.com/png.latex?%C2%B0C">.</p></li>
@@ -112,12 +161,12 @@
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-base_data" class="anchored">
-<div id="wgwbhtoklp" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="vhqargrula" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#wgwbhtoklp .gt_table {
+#vhqargrula .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -142,7 +191,7 @@
   border-left-color: #D3D3D3;
 }
 
-#wgwbhtoklp .gt_heading {
+#vhqargrula .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -154,7 +203,7 @@
   border-right-color: #D3D3D3;
 }
 
-#wgwbhtoklp .gt_title {
+#vhqargrula .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -166,7 +215,7 @@
   border-bottom-width: 0;
 }
 
-#wgwbhtoklp .gt_subtitle {
+#vhqargrula .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -178,13 +227,13 @@
   border-top-width: 0;
 }
 
-#wgwbhtoklp .gt_bottom_border {
+#vhqargrula .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
 }
 
-#wgwbhtoklp .gt_col_headings {
+#vhqargrula .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -199,9 +248,9 @@
   border-right-color: #D3D3D3;
 }
 
-#wgwbhtoklp .gt_col_heading {
+#vhqargrula .gt_col_heading {
   color: #FFFFFF;
-  background-color: #038901;
+  background-color: #5F5F5F;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -219,9 +268,9 @@
   overflow-x: hidden;
 }
 
-#wgwbhtoklp .gt_column_spanner_outer {
+#vhqargrula .gt_column_spanner_outer {
   color: #FFFFFF;
-  background-color: #038901;
+  background-color: #5F5F5F;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -231,15 +280,15 @@
   padding-right: 4px;
 }
 
-#wgwbhtoklp .gt_column_spanner_outer:first-child {
+#vhqargrula .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wgwbhtoklp .gt_column_spanner_outer:last-child {
+#vhqargrula .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wgwbhtoklp .gt_column_spanner {
+#vhqargrula .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
@@ -251,7 +300,7 @@
   width: 100%;
 }
 
-#wgwbhtoklp .gt_group_heading {
+#vhqargrula .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -276,7 +325,7 @@
   vertical-align: middle;
 }
 
-#wgwbhtoklp .gt_empty_group_heading {
+#vhqargrula .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -291,15 +340,15 @@
   vertical-align: middle;
 }
 
-#wgwbhtoklp .gt_from_md > :first-child {
+#vhqargrula .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wgwbhtoklp .gt_from_md > :last-child {
+#vhqargrula .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wgwbhtoklp .gt_row {
+#vhqargrula .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -318,9 +367,9 @@
   overflow-x: hidden;
 }
 
-#wgwbhtoklp .gt_stub {
+#vhqargrula .gt_stub {
   color: #333333;
-  background-color: #CAFFAF;
+  background-color: #D5D5D5;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -331,7 +380,7 @@
   padding-right: 5px;
 }
 
-#wgwbhtoklp .gt_stub_row_group {
+#vhqargrula .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -345,11 +394,11 @@
   vertical-align: top;
 }
 
-#wgwbhtoklp .gt_row_group_first td {
+#vhqargrula .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wgwbhtoklp .gt_summary_row {
+#vhqargrula .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -359,16 +408,16 @@
   padding-right: 5px;
 }
 
-#wgwbhtoklp .gt_first_summary_row {
+#vhqargrula .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #5F5F5F;
 }
 
-#wgwbhtoklp .gt_first_summary_row.thick {
+#vhqargrula .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wgwbhtoklp .gt_last_summary_row {
+#vhqargrula .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -378,7 +427,7 @@
   border-bottom-color: #5F5F5F;
 }
 
-#wgwbhtoklp .gt_grand_summary_row {
+#vhqargrula .gt_grand_summary_row {
   color: #333333;
   background-color: #D5D5D5;
   text-transform: inherit;
@@ -388,7 +437,7 @@
   padding-right: 5px;
 }
 
-#wgwbhtoklp .gt_first_grand_summary_row {
+#vhqargrula .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -398,11 +447,11 @@
   border-top-color: #5F5F5F;
 }
 
-#wgwbhtoklp .gt_striped {
-  background-color: #EDF6E8;
+#vhqargrula .gt_striped {
+  background-color: #F4F4F4;
 }
 
-#wgwbhtoklp .gt_table_body {
+#vhqargrula .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -411,7 +460,7 @@
   border-bottom-color: #5F5F5F;
 }
 
-#wgwbhtoklp .gt_footnotes {
+#vhqargrula .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -425,7 +474,7 @@
   border-right-color: #D3D3D3;
 }
 
-#wgwbhtoklp .gt_footnote {
+#vhqargrula .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -434,7 +483,7 @@
   padding-right: 5px;
 }
 
-#wgwbhtoklp .gt_sourcenotes {
+#vhqargrula .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -448,7 +497,7 @@
   border-right-color: #D3D3D3;
 }
 
-#wgwbhtoklp .gt_sourcenote {
+#vhqargrula .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -456,64 +505,64 @@
   padding-right: 5px;
 }
 
-#wgwbhtoklp .gt_left {
+#vhqargrula .gt_left {
   text-align: left;
 }
 
-#wgwbhtoklp .gt_center {
+#vhqargrula .gt_center {
   text-align: center;
 }
 
-#wgwbhtoklp .gt_right {
+#vhqargrula .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wgwbhtoklp .gt_font_normal {
+#vhqargrula .gt_font_normal {
   font-weight: normal;
 }
 
-#wgwbhtoklp .gt_font_bold {
+#vhqargrula .gt_font_bold {
   font-weight: bold;
 }
 
-#wgwbhtoklp .gt_font_italic {
+#vhqargrula .gt_font_italic {
   font-style: italic;
 }
 
-#wgwbhtoklp .gt_super {
+#vhqargrula .gt_super {
   font-size: 65%;
 }
 
-#wgwbhtoklp .gt_footnote_marks {
+#vhqargrula .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#wgwbhtoklp .gt_asterisk {
+#vhqargrula .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wgwbhtoklp .gt_indent_1 {
+#vhqargrula .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wgwbhtoklp .gt_indent_2 {
+#vhqargrula .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wgwbhtoklp .gt_indent_3 {
+#vhqargrula .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wgwbhtoklp .gt_indent_4 {
+#vhqargrula .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wgwbhtoklp .gt_indent_5 {
+#vhqargrula .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -557,7 +606,7 @@
 <td class="gt_row gt_right">2.62</td>
 <td class="gt_row gt_right">1.82</td>
 <td class="gt_row gt_right">396</td>
-<td class="gt_row gt_right">293.97</td>
+<td class="gt_row gt_right"><sup class="gt_footnote_marks">1</sup> 293.97</td>
 <td class="gt_row gt_right">29.56</td>
 <td class="gt_row gt_right">3.50</td>
 <td class="gt_row gt_right">1.87</td>
@@ -761,7 +810,11 @@
       <td class="gt_sourcenote" colspan="10">Source: Data of the hydraulic analysis of the system</td>
     </tr>
   </tfoot>
-  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="10"><sup class="gt_footnote_marks">1</sup> The <strong>maximum</strong> flow coefficient.</td>
+    </tr>
+  </tfoot>
 </table>
 </div>
 </div>
@@ -776,37 +829,38 @@
 <li><img src="https://latex.codecogs.com/png.latex?K_v">: Flow coefficient <img src="https://latex.codecogs.com/png.latex?(m%5E3/h)">; <img src="https://latex.codecogs.com/png.latex?K_v%20=%20q%20%5Ccdot%20%5Csqrt%7B%5Cfrac%20%7B(%5Crho%20/%20%5Crho_%7B0%7D)%7D%7B%5CDelta%20P%7D%7D"></li>
 <li><img src="https://latex.codecogs.com/png.latex?Vel."> : Velocity in <img src="https://latex.codecogs.com/png.latex?m/s"></li>
 <li><img src="https://latex.codecogs.com/png.latex?%5Czeta">: Zeta Value; Required Velocity head loss coefficient;</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Csigma_1">: Cavitation index equal to <img src="https://latex.codecogs.com/png.latex?(P_2%20-%20P_v)/%5CDelta%7BP%7D%20=%20(%5Csigma%20-%201)"> at service conditions;</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Csigma_1">: Cavitation index equal to <img src="https://latex.codecogs.com/png.latex?(P_2%20-%20P_v)/%5CDelta%7BP%7D"> at service conditions;</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5Csigma_2">: Cavitation index equal to <img src="https://latex.codecogs.com/png.latex?(P_2%20-%20P_v)/(%5CDelta%7BP%7D+v%5E2/2g)"> at service conditions.</li>
 </ul>
 </section>
-<section id="second-step-select-the-minimum-k_v-required." class="level2">
-<h2 class="anchored" data-anchor-id="second-step-select-the-minimum-k_v-required.">Second step: select the minimum <img src="https://latex.codecogs.com/png.latex?K_v"> required.</h2>
+<section id="second-step-select-the-minimum-k_v-required." class="level1">
+<h1>Second step: select the minimum <img src="https://latex.codecogs.com/png.latex?K_v"> required.</h1>
 <ul>
 <li>The maximum flow coefficient <img src="https://latex.codecogs.com/png.latex?K_v"> required for operation of the control valve is: 293.97 <img src="https://latex.codecogs.com/png.latex?m%5E3/h">.</li>
 <li>The control valve to be selected must meet at least <img src="https://latex.codecogs.com/png.latex?1.3"> times the maximum flow coefficient required.</li>
 <li>Therefore the minimum <img src="https://latex.codecogs.com/png.latex?K_%7Bvs%7D"> (full open flow coefficient) of the selected valve must be: 382.17 <img src="https://latex.codecogs.com/png.latex?m%5E3/h">.</li>
 </ul>
 </section>
-<section id="third-step-select-the-valves-plus-dissipation-element-that-meet-the-minimum-required-flow-coefficient." class="level2">
-<h2 class="anchored" data-anchor-id="third-step-select-the-valves-plus-dissipation-element-that-meet-the-minimum-required-flow-coefficient.">Third step: Select the valves plus dissipation element that meet the minimum required flow coefficient.</h2>
+<section id="third-step-select-the-valves-plus-dissipation-element-that-meet-the-minimum-required-flow-coefficient." class="level1">
+<h1>Third step: Select the valves plus dissipation element that meet the minimum required flow coefficient.</h1>
 <p>For this exercise, we will assume the following:</p>
 <ol type="1">
 <li>We only have three valves from 3 different suppliers. Brands “A”, “B” and “C”</li>
 <li>that the required valves should not have anti-cavitation cylinders.</li>
 <li>The parameters for the curve <img src="https://latex.codecogs.com/png.latex?K_v/K_%7Bvs%7D">, the Zeta value <img src="https://latex.codecogs.com/png.latex?%5Czeta_%7Bvs%7D"> and the Liquid pressure recovery factor <img src="https://latex.codecogs.com/png.latex?F_%7BLs%7D"><sup>1</sup> are available.<sup>2</sup></li>
 <li><img src="https://latex.codecogs.com/png.latex?K_v/K_%7Bvs%7D%20=%20%5Cfrac%7Bd%7D%7B1%20+%5Cexp(b%5Ccdot(%5Clog%7B(vp)%7D-%5Clog%7B(e)%7D))%7D"></li>
+<li>The cavitation values are established based on the degree of opening, whose function is defined based on the factors of <img src="https://latex.codecogs.com/png.latex?K_v/K_%7Bvs%7D"> and <img src="https://latex.codecogs.com/png.latex?F_L">.<sup>3</sup></li>
 </ol>
-<p>The parameters corresponding to the valves are the following:<sup>3</sup></p>
+<p>The parameters corresponding to the valves are the following:<sup>4</sup></p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-parameter" class="anchored">
-<div id="vkskaxsggs" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="zmpepflspe" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vkskaxsggs .gt_table {
+#zmpepflspe .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -831,7 +885,7 @@
   border-left-color: #D3D3D3;
 }
 
-#vkskaxsggs .gt_heading {
+#zmpepflspe .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -843,7 +897,7 @@
   border-right-color: #D3D3D3;
 }
 
-#vkskaxsggs .gt_title {
+#zmpepflspe .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -855,7 +909,7 @@
   border-bottom-width: 0;
 }
 
-#vkskaxsggs .gt_subtitle {
+#zmpepflspe .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -867,13 +921,13 @@
   border-top-width: 0;
 }
 
-#vkskaxsggs .gt_bottom_border {
+#zmpepflspe .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
 }
 
-#vkskaxsggs .gt_col_headings {
+#zmpepflspe .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -888,9 +942,9 @@
   border-right-color: #D3D3D3;
 }
 
-#vkskaxsggs .gt_col_heading {
+#zmpepflspe .gt_col_heading {
   color: #FFFFFF;
-  background-color: #038901;
+  background-color: #5F5F5F;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -908,9 +962,9 @@
   overflow-x: hidden;
 }
 
-#vkskaxsggs .gt_column_spanner_outer {
+#zmpepflspe .gt_column_spanner_outer {
   color: #FFFFFF;
-  background-color: #038901;
+  background-color: #5F5F5F;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -920,15 +974,15 @@
   padding-right: 4px;
 }
 
-#vkskaxsggs .gt_column_spanner_outer:first-child {
+#zmpepflspe .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vkskaxsggs .gt_column_spanner_outer:last-child {
+#zmpepflspe .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vkskaxsggs .gt_column_spanner {
+#zmpepflspe .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
@@ -940,7 +994,7 @@
   width: 100%;
 }
 
-#vkskaxsggs .gt_group_heading {
+#zmpepflspe .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -965,7 +1019,7 @@
   vertical-align: middle;
 }
 
-#vkskaxsggs .gt_empty_group_heading {
+#zmpepflspe .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -980,15 +1034,15 @@
   vertical-align: middle;
 }
 
-#vkskaxsggs .gt_from_md > :first-child {
+#zmpepflspe .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vkskaxsggs .gt_from_md > :last-child {
+#zmpepflspe .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vkskaxsggs .gt_row {
+#zmpepflspe .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1007,9 +1061,9 @@
   overflow-x: hidden;
 }
 
-#vkskaxsggs .gt_stub {
+#zmpepflspe .gt_stub {
   color: #333333;
-  background-color: #CAFFAF;
+  background-color: #D5D5D5;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -1020,7 +1074,7 @@
   padding-right: 5px;
 }
 
-#vkskaxsggs .gt_stub_row_group {
+#zmpepflspe .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1034,11 +1088,11 @@
   vertical-align: top;
 }
 
-#vkskaxsggs .gt_row_group_first td {
+#zmpepflspe .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vkskaxsggs .gt_summary_row {
+#zmpepflspe .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1048,16 +1102,16 @@
   padding-right: 5px;
 }
 
-#vkskaxsggs .gt_first_summary_row {
+#zmpepflspe .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #5F5F5F;
 }
 
-#vkskaxsggs .gt_first_summary_row.thick {
+#zmpepflspe .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vkskaxsggs .gt_last_summary_row {
+#zmpepflspe .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1067,7 +1121,7 @@
   border-bottom-color: #5F5F5F;
 }
 
-#vkskaxsggs .gt_grand_summary_row {
+#zmpepflspe .gt_grand_summary_row {
   color: #333333;
   background-color: #D5D5D5;
   text-transform: inherit;
@@ -1077,7 +1131,7 @@
   padding-right: 5px;
 }
 
-#vkskaxsggs .gt_first_grand_summary_row {
+#zmpepflspe .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1087,11 +1141,11 @@
   border-top-color: #5F5F5F;
 }
 
-#vkskaxsggs .gt_striped {
-  background-color: #EDF6E8;
+#zmpepflspe .gt_striped {
+  background-color: #F4F4F4;
 }
 
-#vkskaxsggs .gt_table_body {
+#zmpepflspe .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -1100,7 +1154,7 @@
   border-bottom-color: #5F5F5F;
 }
 
-#vkskaxsggs .gt_footnotes {
+#zmpepflspe .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1114,7 +1168,7 @@
   border-right-color: #D3D3D3;
 }
 
-#vkskaxsggs .gt_footnote {
+#zmpepflspe .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1123,7 +1177,7 @@
   padding-right: 5px;
 }
 
-#vkskaxsggs .gt_sourcenotes {
+#zmpepflspe .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1137,7 +1191,7 @@
   border-right-color: #D3D3D3;
 }
 
-#vkskaxsggs .gt_sourcenote {
+#zmpepflspe .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1145,64 +1199,64 @@
   padding-right: 5px;
 }
 
-#vkskaxsggs .gt_left {
+#zmpepflspe .gt_left {
   text-align: left;
 }
 
-#vkskaxsggs .gt_center {
+#zmpepflspe .gt_center {
   text-align: center;
 }
 
-#vkskaxsggs .gt_right {
+#zmpepflspe .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vkskaxsggs .gt_font_normal {
+#zmpepflspe .gt_font_normal {
   font-weight: normal;
 }
 
-#vkskaxsggs .gt_font_bold {
+#zmpepflspe .gt_font_bold {
   font-weight: bold;
 }
 
-#vkskaxsggs .gt_font_italic {
+#zmpepflspe .gt_font_italic {
   font-style: italic;
 }
 
-#vkskaxsggs .gt_super {
+#zmpepflspe .gt_super {
   font-size: 65%;
 }
 
-#vkskaxsggs .gt_footnote_marks {
+#zmpepflspe .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#vkskaxsggs .gt_asterisk {
+#zmpepflspe .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vkskaxsggs .gt_indent_1 {
+#zmpepflspe .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vkskaxsggs .gt_indent_2 {
+#zmpepflspe .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vkskaxsggs .gt_indent_3 {
+#zmpepflspe .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vkskaxsggs .gt_indent_4 {
+#zmpepflspe .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vkskaxsggs .gt_indent_5 {
+#zmpepflspe .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1259,18 +1313,2406 @@
 </div>
 </div>
 </div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As can be seen in table 2, all the selected valves (Brand A, B, and C) comply with a flow coefficient of a <img src="https://latex.codecogs.com/png.latex?K_%7Bvs%7D%20%5Cgeq"> 293.97 <img src="https://latex.codecogs.com/png.latex?m%5E3/h"> required for the operation.</p>
+</div>
+</div>
+</section>
+<section id="fourth-and-five-steps-calculate-the-position-and-cavitation-regime-for-the-selected-valves-for-the-different-operation-scenarios." class="level1">
+<h1>Fourth and five steps: Calculate the position and cavitation regime for the selected valves for the different operation scenarios.</h1>
+<div class="cell">
+
+</div>
+<section id="results-for-brand-a-valve" class="level2">
+<h2 class="anchored" data-anchor-id="results-for-brand-a-valve">Results for Brand A Valve</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="zpqhwpgpcq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#zpqhwpgpcq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#zpqhwpgpcq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zpqhwpgpcq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#zpqhwpgpcq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#zpqhwpgpcq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#zpqhwpgpcq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zpqhwpgpcq .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#zpqhwpgpcq .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#zpqhwpgpcq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#zpqhwpgpcq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#zpqhwpgpcq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#zpqhwpgpcq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#zpqhwpgpcq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: middle;
+}
+
+#zpqhwpgpcq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#zpqhwpgpcq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#zpqhwpgpcq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D5D5D5;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D5D5D5;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#zpqhwpgpcq .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D5D5D5;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zpqhwpgpcq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#zpqhwpgpcq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#zpqhwpgpcq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zpqhwpgpcq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #5F5F5F;
+}
+
+#zpqhwpgpcq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#zpqhwpgpcq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#zpqhwpgpcq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zpqhwpgpcq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #5F5F5F;
+}
+
+#zpqhwpgpcq .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#zpqhwpgpcq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#zpqhwpgpcq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zpqhwpgpcq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zpqhwpgpcq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zpqhwpgpcq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zpqhwpgpcq .gt_left {
+  text-align: left;
+}
+
+#zpqhwpgpcq .gt_center {
+  text-align: center;
+}
+
+#zpqhwpgpcq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#zpqhwpgpcq .gt_font_normal {
+  font-weight: normal;
+}
+
+#zpqhwpgpcq .gt_font_bold {
+  font-weight: bold;
+}
+
+#zpqhwpgpcq .gt_font_italic {
+  font-style: italic;
+}
+
+#zpqhwpgpcq .gt_super {
+  font-size: 65%;
+}
+
+#zpqhwpgpcq .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#zpqhwpgpcq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#zpqhwpgpcq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#zpqhwpgpcq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#zpqhwpgpcq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#zpqhwpgpcq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#zpqhwpgpcq .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table"><caption>Results for the different operations scenarios.</caption>
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>P<sub>1</sub><br>(bar)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>P<sub>2</sub><br>(bar)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>Flow<br>(m<sup>3</sup>/h)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>K<sub>v</sub><br>(m<sup>3</sup>/h)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>K<sub>v</sub> / K<sub>vs</sub><br>(%)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>Position<br>(%)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>σ<sub>2</sub><br>(-)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"><i>Cavitation<br>Regime</i></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <td colspan="9" class="gt_group_heading">Max.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">01.max</th>
+<td class="gt_row gt_right">4.44</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">293.97</td>
+<td class="gt_row gt_right">33.86</td>
+<td class="gt_row gt_right">50.32</td>
+<td class="gt_row gt_right">1.81</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">02.max</th>
+<td class="gt_row gt_right gt_striped">18.26</td>
+<td class="gt_row gt_right gt_striped">5.24</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">110.02</td>
+<td class="gt_row gt_right gt_striped">12.67</td>
+<td class="gt_row gt_right gt_striped">34.04</td>
+<td class="gt_row gt_right gt_striped">0.46</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">03.max</th>
+<td class="gt_row gt_right">9.46</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">151.81</td>
+<td class="gt_row gt_right">17.49</td>
+<td class="gt_row gt_right">38.41</td>
+<td class="gt_row gt_right">0.49</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">04.max</th>
+<td class="gt_row gt_right gt_striped">20.22</td>
+<td class="gt_row gt_right gt_striped">2.19</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">93.52</td>
+<td class="gt_row gt_right gt_striped">10.77</td>
+<td class="gt_row gt_right gt_striped">32.07</td>
+<td class="gt_row gt_right gt_striped">0.17</td>
+<td class="gt_row gt_left gt_striped">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">05.max</th>
+<td class="gt_row gt_right">19.90</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">94.34</td>
+<td class="gt_row gt_right">10.87</td>
+<td class="gt_row gt_right">32.17</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_left">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">06.max</th>
+<td class="gt_row gt_right gt_striped">19.13</td>
+<td class="gt_row gt_right gt_striped">2.19</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">96.46</td>
+<td class="gt_row gt_right gt_striped">11.11</td>
+<td class="gt_row gt_right gt_striped">32.43</td>
+<td class="gt_row gt_right gt_striped">0.18</td>
+<td class="gt_row gt_left gt_striped">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">07.max</th>
+<td class="gt_row gt_right">18.53</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">98.68</td>
+<td class="gt_row gt_right">11.37</td>
+<td class="gt_row gt_right">32.70</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_left">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">08.max</th>
+<td class="gt_row gt_right gt_striped">17.44</td>
+<td class="gt_row gt_right gt_striped">2.35</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">102.20</td>
+<td class="gt_row gt_right gt_striped">11.77</td>
+<td class="gt_row gt_right gt_striped">33.12</td>
+<td class="gt_row gt_right gt_striped">0.21</td>
+<td class="gt_row gt_left gt_striped">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">09.max</th>
+<td class="gt_row gt_right">17.15</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">103.20</td>
+<td class="gt_row gt_right">11.89</td>
+<td class="gt_row gt_right">33.24</td>
+<td class="gt_row gt_right">0.21</td>
+<td class="gt_row gt_left">Regime 2: Incipient cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">10.max</th>
+<td class="gt_row gt_right gt_striped">18.31</td>
+<td class="gt_row gt_right gt_striped">2.72</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">100.53</td>
+<td class="gt_row gt_right gt_striped">11.58</td>
+<td class="gt_row gt_right gt_striped">32.93</td>
+<td class="gt_row gt_right gt_striped">0.22</td>
+<td class="gt_row gt_left gt_striped">Regime 2: Incipient cavitation.</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="9" class="gt_group_heading">Min.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">01.min</th>
+<td class="gt_row gt_right">4.37</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">173.56</td>
+<td class="gt_row gt_right">19.99</td>
+<td class="gt_row gt_right">40.46</td>
+<td class="gt_row gt_right">1.42</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">02.min</th>
+<td class="gt_row gt_right gt_striped">18.19</td>
+<td class="gt_row gt_right gt_striped">5.08</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">69.76</td>
+<td class="gt_row gt_right gt_striped">8.04</td>
+<td class="gt_row gt_right gt_striped">28.86</td>
+<td class="gt_row gt_right gt_striped">0.45</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">03.min</th>
+<td class="gt_row gt_right">9.34</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">94.90</td>
+<td class="gt_row gt_right">10.93</td>
+<td class="gt_row gt_right">32.24</td>
+<td class="gt_row gt_right">0.43</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">04.min</th>
+<td class="gt_row gt_right gt_striped">20.18</td>
+<td class="gt_row gt_right gt_striped">2.08</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">59.38</td>
+<td class="gt_row gt_right gt_striped">6.84</td>
+<td class="gt_row gt_right gt_striped">27.25</td>
+<td class="gt_row gt_right gt_striped">0.16</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">05.min</th>
+<td class="gt_row gt_right">19.87</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">59.90</td>
+<td class="gt_row gt_right">6.90</td>
+<td class="gt_row gt_right">27.34</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">06.min</th>
+<td class="gt_row gt_right gt_striped">19.10</td>
+<td class="gt_row gt_right gt_striped">2.08</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">61.24</td>
+<td class="gt_row gt_right gt_striped">7.05</td>
+<td class="gt_row gt_right gt_striped">27.55</td>
+<td class="gt_row gt_right gt_striped">0.17</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">07.min</th>
+<td class="gt_row gt_right">18.47</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">62.54</td>
+<td class="gt_row gt_right">7.20</td>
+<td class="gt_row gt_right">27.76</td>
+<td class="gt_row gt_right">0.18</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">08.min</th>
+<td class="gt_row gt_right gt_striped">17.37</td>
+<td class="gt_row gt_right gt_striped">2.15</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">64.75</td>
+<td class="gt_row gt_right gt_striped">7.46</td>
+<td class="gt_row gt_right gt_striped">28.10</td>
+<td class="gt_row gt_right gt_striped">0.19</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">09.min</th>
+<td class="gt_row gt_right">17.08</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">65.38</td>
+<td class="gt_row gt_right">7.53</td>
+<td class="gt_row gt_right">28.20</td>
+<td class="gt_row gt_right">0.20</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">10.min</th>
+<td class="gt_row gt_right gt_striped">18.30</td>
+<td class="gt_row gt_right gt_striped">2.29</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">63.15</td>
+<td class="gt_row gt_right gt_striped">7.27</td>
+<td class="gt_row gt_right gt_striped">27.85</td>
+<td class="gt_row gt_right gt_striped">0.19</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-24_practical_example_001\blog_files\figure-html\unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-24_practical_example_001\blog_files\figure-html\unnamed-chunk-7-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="results-for-brand-b-valve" class="level2">
+<h2 class="anchored" data-anchor-id="results-for-brand-b-valve">Results for Brand B Valve</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="stssukquiz" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#stssukquiz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#stssukquiz .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#stssukquiz .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#stssukquiz .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#stssukquiz .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#stssukquiz .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#stssukquiz .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#stssukquiz .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#stssukquiz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#stssukquiz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#stssukquiz .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#stssukquiz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#stssukquiz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: middle;
+}
+
+#stssukquiz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#stssukquiz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#stssukquiz .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D5D5D5;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D5D5D5;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#stssukquiz .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D5D5D5;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#stssukquiz .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#stssukquiz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#stssukquiz .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#stssukquiz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #5F5F5F;
+}
+
+#stssukquiz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#stssukquiz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#stssukquiz .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#stssukquiz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #5F5F5F;
+}
+
+#stssukquiz .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#stssukquiz .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#stssukquiz .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#stssukquiz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#stssukquiz .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#stssukquiz .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#stssukquiz .gt_left {
+  text-align: left;
+}
+
+#stssukquiz .gt_center {
+  text-align: center;
+}
+
+#stssukquiz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#stssukquiz .gt_font_normal {
+  font-weight: normal;
+}
+
+#stssukquiz .gt_font_bold {
+  font-weight: bold;
+}
+
+#stssukquiz .gt_font_italic {
+  font-style: italic;
+}
+
+#stssukquiz .gt_super {
+  font-size: 65%;
+}
+
+#stssukquiz .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#stssukquiz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#stssukquiz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#stssukquiz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#stssukquiz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#stssukquiz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#stssukquiz .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table"><caption>Results for the different operations scenarios.</caption>
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>P<sub>1</sub><br>(bar)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>P<sub>2</sub><br>(bar)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>Flow<br>(m<sup>3</sup>/h)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>K<sub>v</sub><br>(m<sup>3</sup>/h)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>K<sub>v</sub> / K<sub>vs</sub><br>(%)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>Position<br>(%)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>σ<sub>2</sub><br>(-)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"><i>Cavitation<br>Regime</i></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <td colspan="9" class="gt_group_heading">Max.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">01.max</th>
+<td class="gt_row gt_right">4.44</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">293.97</td>
+<td class="gt_row gt_right">50.70</td>
+<td class="gt_row gt_right">67.23</td>
+<td class="gt_row gt_right">1.81</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">02.max</th>
+<td class="gt_row gt_right gt_striped">18.26</td>
+<td class="gt_row gt_right gt_striped">5.24</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">110.02</td>
+<td class="gt_row gt_right gt_striped">18.98</td>
+<td class="gt_row gt_right gt_striped">46.08</td>
+<td class="gt_row gt_right gt_striped">0.46</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">03.max</th>
+<td class="gt_row gt_right">9.46</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">151.81</td>
+<td class="gt_row gt_right">26.18</td>
+<td class="gt_row gt_right">51.64</td>
+<td class="gt_row gt_right">0.49</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">04.max</th>
+<td class="gt_row gt_right gt_striped">20.22</td>
+<td class="gt_row gt_right gt_striped">2.19</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">93.52</td>
+<td class="gt_row gt_right gt_striped">16.13</td>
+<td class="gt_row gt_right gt_striped">43.59</td>
+<td class="gt_row gt_right gt_striped">0.17</td>
+<td class="gt_row gt_left gt_striped">Regime 2: Incipient cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">05.max</th>
+<td class="gt_row gt_right">19.90</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">94.34</td>
+<td class="gt_row gt_right">16.27</td>
+<td class="gt_row gt_right">43.72</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_left">Regime 2: Incipient cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">06.max</th>
+<td class="gt_row gt_right gt_striped">19.13</td>
+<td class="gt_row gt_right gt_striped">2.19</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">96.46</td>
+<td class="gt_row gt_right gt_striped">16.64</td>
+<td class="gt_row gt_right gt_striped">44.05</td>
+<td class="gt_row gt_right gt_striped">0.18</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">07.max</th>
+<td class="gt_row gt_right">18.53</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">98.68</td>
+<td class="gt_row gt_right">17.02</td>
+<td class="gt_row gt_right">44.40</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">08.max</th>
+<td class="gt_row gt_right gt_striped">17.44</td>
+<td class="gt_row gt_right gt_striped">2.35</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">102.20</td>
+<td class="gt_row gt_right gt_striped">17.63</td>
+<td class="gt_row gt_right gt_striped">44.93</td>
+<td class="gt_row gt_right gt_striped">0.21</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">09.max</th>
+<td class="gt_row gt_right">17.15</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">103.20</td>
+<td class="gt_row gt_right">17.80</td>
+<td class="gt_row gt_right">45.08</td>
+<td class="gt_row gt_right">0.21</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">10.max</th>
+<td class="gt_row gt_right gt_striped">18.31</td>
+<td class="gt_row gt_right gt_striped">2.72</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">100.53</td>
+<td class="gt_row gt_right gt_striped">17.34</td>
+<td class="gt_row gt_right gt_striped">44.68</td>
+<td class="gt_row gt_right gt_striped">0.22</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="9" class="gt_group_heading">Min.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">01.min</th>
+<td class="gt_row gt_right">4.37</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">173.56</td>
+<td class="gt_row gt_right">29.94</td>
+<td class="gt_row gt_right">54.26</td>
+<td class="gt_row gt_right">1.42</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">02.min</th>
+<td class="gt_row gt_right gt_striped">18.19</td>
+<td class="gt_row gt_right gt_striped">5.08</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">69.76</td>
+<td class="gt_row gt_right gt_striped">12.03</td>
+<td class="gt_row gt_right gt_striped">39.54</td>
+<td class="gt_row gt_right gt_striped">0.45</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">03.min</th>
+<td class="gt_row gt_right">9.34</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">94.90</td>
+<td class="gt_row gt_right">16.37</td>
+<td class="gt_row gt_right">43.81</td>
+<td class="gt_row gt_right">0.43</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">04.min</th>
+<td class="gt_row gt_right gt_striped">20.18</td>
+<td class="gt_row gt_right gt_striped">2.08</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">59.38</td>
+<td class="gt_row gt_right gt_striped">10.24</td>
+<td class="gt_row gt_right gt_striped">37.52</td>
+<td class="gt_row gt_right gt_striped">0.16</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">05.min</th>
+<td class="gt_row gt_right">19.87</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">59.90</td>
+<td class="gt_row gt_right">10.33</td>
+<td class="gt_row gt_right">37.62</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">06.min</th>
+<td class="gt_row gt_right gt_striped">19.10</td>
+<td class="gt_row gt_right gt_striped">2.08</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">61.24</td>
+<td class="gt_row gt_right gt_striped">10.56</td>
+<td class="gt_row gt_right gt_striped">37.89</td>
+<td class="gt_row gt_right gt_striped">0.17</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">07.min</th>
+<td class="gt_row gt_right">18.47</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">62.54</td>
+<td class="gt_row gt_right">10.79</td>
+<td class="gt_row gt_right">38.15</td>
+<td class="gt_row gt_right">0.18</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">08.min</th>
+<td class="gt_row gt_right gt_striped">17.37</td>
+<td class="gt_row gt_right gt_striped">2.15</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">64.75</td>
+<td class="gt_row gt_right gt_striped">11.17</td>
+<td class="gt_row gt_right gt_striped">38.59</td>
+<td class="gt_row gt_right gt_striped">0.19</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">09.min</th>
+<td class="gt_row gt_right">17.08</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">65.38</td>
+<td class="gt_row gt_right">11.28</td>
+<td class="gt_row gt_right">38.71</td>
+<td class="gt_row gt_right">0.20</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">10.min</th>
+<td class="gt_row gt_right gt_striped">18.30</td>
+<td class="gt_row gt_right gt_striped">2.29</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">63.15</td>
+<td class="gt_row gt_right gt_striped">10.89</td>
+<td class="gt_row gt_right gt_striped">38.27</td>
+<td class="gt_row gt_right gt_striped">0.19</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-24_practical_example_001\blog_files\figure-html\unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-24_practical_example_001\blog_files\figure-html\unnamed-chunk-9-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="results-for-brand-c-valve" class="level2">
+<h2 class="anchored" data-anchor-id="results-for-brand-c-valve">Results for Brand C Valve</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="abitremhno" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#abitremhno .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#abitremhno .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#abitremhno .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#abitremhno .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#abitremhno .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#abitremhno .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#abitremhno .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#abitremhno .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#abitremhno .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#abitremhno .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#abitremhno .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#abitremhno .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#abitremhno .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: middle;
+}
+
+#abitremhno .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#abitremhno .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#abitremhno .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D5D5D5;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D5D5D5;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#abitremhno .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D5D5D5;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#abitremhno .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#abitremhno .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#abitremhno .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#abitremhno .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #5F5F5F;
+}
+
+#abitremhno .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#abitremhno .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#abitremhno .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#abitremhno .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #5F5F5F;
+}
+
+#abitremhno .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#abitremhno .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#abitremhno .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#abitremhno .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#abitremhno .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#abitremhno .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#abitremhno .gt_left {
+  text-align: left;
+}
+
+#abitremhno .gt_center {
+  text-align: center;
+}
+
+#abitremhno .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#abitremhno .gt_font_normal {
+  font-weight: normal;
+}
+
+#abitremhno .gt_font_bold {
+  font-weight: bold;
+}
+
+#abitremhno .gt_font_italic {
+  font-style: italic;
+}
+
+#abitremhno .gt_super {
+  font-size: 65%;
+}
+
+#abitremhno .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#abitremhno .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#abitremhno .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#abitremhno .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#abitremhno .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#abitremhno .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#abitremhno .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table"><caption>Results for the different operations scenarios.</caption>
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>P<sub>1</sub><br>(bar)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>P<sub>2</sub><br>(bar)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>Flow<br>(m<sup>3</sup>/h)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>K<sub>v</sub><br>(m<sup>3</sup>/h)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>K<sub>v</sub> / K<sub>vs</sub><br>(%)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>Position<br>(%)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col"><i>σ<sub>2</sub><br>(-)</i></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"><i>Cavitation<br>Regime</i></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <td colspan="9" class="gt_group_heading">Max.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">01.max</th>
+<td class="gt_row gt_right">4.44</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">293.97</td>
+<td class="gt_row gt_right">25.35</td>
+<td class="gt_row gt_right">46.28</td>
+<td class="gt_row gt_right">1.81</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">02.max</th>
+<td class="gt_row gt_right gt_striped">18.26</td>
+<td class="gt_row gt_right gt_striped">5.24</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">110.02</td>
+<td class="gt_row gt_right gt_striped">9.49</td>
+<td class="gt_row gt_right gt_striped">31.78</td>
+<td class="gt_row gt_right gt_striped">0.46</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">03.max</th>
+<td class="gt_row gt_right">9.46</td>
+<td class="gt_row gt_right">2.62</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">151.81</td>
+<td class="gt_row gt_right">13.09</td>
+<td class="gt_row gt_right">35.79</td>
+<td class="gt_row gt_right">0.49</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">04.max</th>
+<td class="gt_row gt_right gt_striped">20.22</td>
+<td class="gt_row gt_right gt_striped">2.19</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">93.52</td>
+<td class="gt_row gt_right gt_striped">8.06</td>
+<td class="gt_row gt_right gt_striped">29.96</td>
+<td class="gt_row gt_right gt_striped">0.17</td>
+<td class="gt_row gt_left gt_striped">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">05.max</th>
+<td class="gt_row gt_right">19.90</td>
+<td class="gt_row gt_right">2.19</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">94.34</td>
+<td class="gt_row gt_right">8.14</td>
+<td class="gt_row gt_right">30.05</td>
+<td class="gt_row gt_right">0.17</td>
+<td class="gt_row gt_left">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">06.max</th>
+<td class="gt_row gt_right gt_striped">19.13</td>
+<td class="gt_row gt_right gt_striped">2.19</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">96.46</td>
+<td class="gt_row gt_right gt_striped">8.32</td>
+<td class="gt_row gt_right gt_striped">30.30</td>
+<td class="gt_row gt_right gt_striped">0.18</td>
+<td class="gt_row gt_left gt_striped">Regime 3: Constant cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">07.max</th>
+<td class="gt_row gt_right">18.53</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">98.68</td>
+<td class="gt_row gt_right">8.51</td>
+<td class="gt_row gt_right">30.55</td>
+<td class="gt_row gt_right">0.19</td>
+<td class="gt_row gt_left">Regime 2: Incipient cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">08.max</th>
+<td class="gt_row gt_right gt_striped">17.44</td>
+<td class="gt_row gt_right gt_striped">2.35</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">102.20</td>
+<td class="gt_row gt_right gt_striped">8.81</td>
+<td class="gt_row gt_right gt_striped">30.94</td>
+<td class="gt_row gt_right gt_striped">0.21</td>
+<td class="gt_row gt_left gt_striped">Regime 2: Incipient cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">09.max</th>
+<td class="gt_row gt_right">17.15</td>
+<td class="gt_row gt_right">2.35</td>
+<td class="gt_row gt_right">396</td>
+<td class="gt_row gt_right">103.20</td>
+<td class="gt_row gt_right">8.90</td>
+<td class="gt_row gt_right">31.05</td>
+<td class="gt_row gt_right">0.21</td>
+<td class="gt_row gt_left">Regime 2: Incipient cavitation.</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">10.max</th>
+<td class="gt_row gt_right gt_striped">18.31</td>
+<td class="gt_row gt_right gt_striped">2.72</td>
+<td class="gt_row gt_right gt_striped">396</td>
+<td class="gt_row gt_right gt_striped">100.53</td>
+<td class="gt_row gt_right gt_striped">8.67</td>
+<td class="gt_row gt_right gt_striped">30.75</td>
+<td class="gt_row gt_right gt_striped">0.22</td>
+<td class="gt_row gt_left gt_striped">Regime 2: Incipient cavitation.</td></tr>
+    <tr class="gt_group_heading_row">
+      <td colspan="9" class="gt_group_heading">Min.Condition</td>
+    </tr>
+    <tr class="gt_row_group_first"><th scope="row" class="gt_row gt_left gt_stub">01.min</th>
+<td class="gt_row gt_right">4.37</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">173.56</td>
+<td class="gt_row gt_right">14.97</td>
+<td class="gt_row gt_right">37.64</td>
+<td class="gt_row gt_right">1.42</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">02.min</th>
+<td class="gt_row gt_right gt_striped">18.19</td>
+<td class="gt_row gt_right gt_striped">5.08</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">69.76</td>
+<td class="gt_row gt_right gt_striped">6.02</td>
+<td class="gt_row gt_right gt_striped">26.98</td>
+<td class="gt_row gt_right gt_striped">0.45</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">03.min</th>
+<td class="gt_row gt_right">9.34</td>
+<td class="gt_row gt_right">2.25</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">94.90</td>
+<td class="gt_row gt_right">8.18</td>
+<td class="gt_row gt_right">30.12</td>
+<td class="gt_row gt_right">0.43</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">04.min</th>
+<td class="gt_row gt_right gt_striped">20.18</td>
+<td class="gt_row gt_right gt_striped">2.08</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">59.38</td>
+<td class="gt_row gt_right gt_striped">5.12</td>
+<td class="gt_row gt_right gt_striped">25.48</td>
+<td class="gt_row gt_right gt_striped">0.16</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">05.min</th>
+<td class="gt_row gt_right">19.87</td>
+<td class="gt_row gt_right">2.08</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">59.90</td>
+<td class="gt_row gt_right">5.17</td>
+<td class="gt_row gt_right">25.56</td>
+<td class="gt_row gt_right">0.16</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">06.min</th>
+<td class="gt_row gt_right gt_striped">19.10</td>
+<td class="gt_row gt_right gt_striped">2.08</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">61.24</td>
+<td class="gt_row gt_right gt_striped">5.28</td>
+<td class="gt_row gt_right gt_striped">25.76</td>
+<td class="gt_row gt_right gt_striped">0.17</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">07.min</th>
+<td class="gt_row gt_right">18.47</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">62.54</td>
+<td class="gt_row gt_right">5.39</td>
+<td class="gt_row gt_right">25.95</td>
+<td class="gt_row gt_right">0.18</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">08.min</th>
+<td class="gt_row gt_right gt_striped">17.37</td>
+<td class="gt_row gt_right gt_striped">2.15</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">64.75</td>
+<td class="gt_row gt_right gt_striped">5.58</td>
+<td class="gt_row gt_right gt_striped">26.27</td>
+<td class="gt_row gt_right gt_striped">0.19</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">09.min</th>
+<td class="gt_row gt_right">17.08</td>
+<td class="gt_row gt_right">2.15</td>
+<td class="gt_row gt_right">252</td>
+<td class="gt_row gt_right">65.38</td>
+<td class="gt_row gt_right">5.64</td>
+<td class="gt_row gt_right">26.36</td>
+<td class="gt_row gt_right">0.20</td>
+<td class="gt_row gt_left">Regime 1: Cavitation free</td></tr>
+    <tr><th scope="row" class="gt_row gt_left gt_stub">10.min</th>
+<td class="gt_row gt_right gt_striped">18.30</td>
+<td class="gt_row gt_right gt_striped">2.29</td>
+<td class="gt_row gt_right gt_striped">252</td>
+<td class="gt_row gt_right gt_striped">63.15</td>
+<td class="gt_row gt_right gt_striped">5.45</td>
+<td class="gt_row gt_right gt_striped">26.04</td>
+<td class="gt_row gt_right gt_striped">0.19</td>
+<td class="gt_row gt_left gt_striped">Regime 1: Cavitation free</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-24_practical_example_001\blog_files\figure-html\unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-24_practical_example_001\blog_files\figure-html\unnamed-chunk-11-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="sixth-step-define-criteria-for-valve-selection" class="level1">
+<h1>Sixth step: Define criteria for valve selection:</h1>
+<ol type="1">
+<li>General Criteria for the inherent characteristic of valve:
+<ul>
+<li><strong>Flow Coefficient Range:</strong> Operative Range it is the ratio between the normal maximum operative flow coefficient and the minimum controllable operative flow coefficient <img src="https://latex.codecogs.com/png.latex?k_%7Bv_%7Bmin.%7D%7D%20%5Ciff%20k_%7Bv_%7Bmax.%7D%7D"></li>
+<li><strong>Controllability Range:</strong> The Controllability Range is the range between the maximum and minimum position of the valve <img src="https://latex.codecogs.com/png.latex?PV_%7Bmin.%7D%20%5Ciff%20PV_%7Bmax.%7D"></li>
+<li><strong>Operation Ratio:</strong> The Operating Ratio is the ratio of the Flow Coefficient Range to the Operation Ratio minus one. The optimal value is Zero. An Operating Ratio of Zero means that a 1% opening of the valve will increase the flow coefficient by 1%.<br>
+<img src="https://latex.codecogs.com/png.latex?Ratio%20=%5Cleft%7C%20%5Cfrac%7B(k_%7Bv_%7Bmax.%7D%7D%20-%20%20k_%7Bv_%7Bmin.%7D%7D)%7D%7B(PV_%7Bmax.%7D-%20PV_%7Bmin.%7D)%7D%20-%201%20%5Cright%7C"></li>
+</ul></li>
+<li>System (installed characteristic) and project-dependent criteria:</li>
+</ol>
+<ul>
+<li>Frequency and time with which the valve is in any of the cavitation states.</li>
+<li>…</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div id="bfsyeujtwj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#bfsyeujtwj .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#bfsyeujtwj .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#bfsyeujtwj .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#bfsyeujtwj .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#bfsyeujtwj .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bfsyeujtwj .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#bfsyeujtwj .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#bfsyeujtwj .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#bfsyeujtwj .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#bfsyeujtwj .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#bfsyeujtwj .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#bfsyeujtwj .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#bfsyeujtwj .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#bfsyeujtwj .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#bfsyeujtwj .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#bfsyeujtwj .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#bfsyeujtwj .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bfsyeujtwj .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#bfsyeujtwj .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#bfsyeujtwj .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bfsyeujtwj .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#bfsyeujtwj .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#bfsyeujtwj .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bfsyeujtwj .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bfsyeujtwj .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#bfsyeujtwj .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#bfsyeujtwj .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bfsyeujtwj .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#bfsyeujtwj .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bfsyeujtwj .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#bfsyeujtwj .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bfsyeujtwj .gt_left {
+  text-align: left;
+}
+
+#bfsyeujtwj .gt_center {
+  text-align: center;
+}
+
+#bfsyeujtwj .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#bfsyeujtwj .gt_font_normal {
+  font-weight: normal;
+}
+
+#bfsyeujtwj .gt_font_bold {
+  font-weight: bold;
+}
+
+#bfsyeujtwj .gt_font_italic {
+  font-style: italic;
+}
+
+#bfsyeujtwj .gt_super {
+  font-size: 65%;
+}
+
+#bfsyeujtwj .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#bfsyeujtwj .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#bfsyeujtwj .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#bfsyeujtwj .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#bfsyeujtwj .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#bfsyeujtwj .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#bfsyeujtwj .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table"><caption>Summary Brand Valves</caption>
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">brand</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">min.kv</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">max.kv</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">kv.range</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">min.pv</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">max.pv</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">pv.range</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">op.ratio</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">min.cav</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">max.cav</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">mean.cav</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">A</td>
+<td class="gt_row gt_right">59.38</td>
+<td class="gt_row gt_right">293.97</td>
+<td class="gt_row gt_right">234.59</td>
+<td class="gt_row gt_right">27.25</td>
+<td class="gt_row gt_right">50.32</td>
+<td class="gt_row gt_right">23.06</td>
+<td class="gt_row gt_right">9.17</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">1.6</td></tr>
+    <tr><td class="gt_row gt_left">B</td>
+<td class="gt_row gt_right">59.38</td>
+<td class="gt_row gt_right">293.97</td>
+<td class="gt_row gt_right">234.59</td>
+<td class="gt_row gt_right">37.52</td>
+<td class="gt_row gt_right">67.23</td>
+<td class="gt_row gt_right">29.71</td>
+<td class="gt_row gt_right">6.90</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">2</td>
+<td class="gt_row gt_right">1.1</td></tr>
+    <tr><td class="gt_row gt_left">C</td>
+<td class="gt_row gt_right">59.38</td>
+<td class="gt_row gt_right">293.97</td>
+<td class="gt_row gt_right">234.59</td>
+<td class="gt_row gt_right">25.48</td>
+<td class="gt_row gt_right">46.28</td>
+<td class="gt_row gt_right">20.81</td>
+<td class="gt_row gt_right">10.27</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">1.5</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+
 
 
 </section>
-</section>
 
 
-<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs">
+
+</div></section><section class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>Liquid pressure recovery factor of a control valve without attached fittings (ISA-75.01.01-2007: Flow Equations for Sizing Control Valves).↩︎</p></li>
 <li id="fn2"><p>In the next blogs we will see how these values can be calculated from the documents supplied by the suppliers.↩︎</p></li>
-<li id="fn3"><p>These parameters are similar to those in reality but adjusted for this Example.↩︎</p></li>
+<li id="fn3"><p>This function will be clarified in a future blog.↩︎</p></li>
+<li id="fn4"><p>These parameters are similar to those in reality but adjusted for this Example.↩︎</p></li>
 </ol>
 </section></div> ]]></description>
   <category>hydraulics</category>
@@ -1297,7 +3739,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-17_quantifying_cavitation_potential\stellventil.png" class="img-fluid figure-img"></p>
-<p></p><p></p>
+<p></p><figcaption class="figure-caption">Typical pressure curve in a control valve; [Wagner, Walter. Control and safety fittings]</figcaption><p></p>
 </figure>
 </div>
 <p>Its effect on the system’s cavitation varies with valve type, size, operating pressure, and installation details. To include cavitation in the design process is necessary to determine if cavitation will evaluate its intensity, characterize the flow conditions, and estimate its effect on the system and environment. Possible consequences include noise, vibration, erosion damage, and a decrease in performance.</p>
@@ -1384,7 +3826,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-17_quantifying_cavitation_potential\cavitation_regime.png" class="img-fluid figure-img"></p>
-<p></p><p></p>
+<p></p><figcaption class="figure-caption">Cavitation parameter plot: using an accelerometer values.</figcaption><p></p>
 </figure>
 </div></li>
 </ol>

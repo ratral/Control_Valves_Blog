@@ -4,7 +4,7 @@ project:
 website:
   title: "Water Control Valves Blog."
   site-url: https://ratral.github.io/Control_Valves_Blog/
-  description: "My Notes-Blog"
+  description: "This blog is a compilation of my notes on the selection of control valves."
   navbar:
     background: "green"
     right:
