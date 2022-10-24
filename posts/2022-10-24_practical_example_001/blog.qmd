@@ -66,6 +66,7 @@ base_data <- data$operation |>
   arrange(condition, flow)
 ```
 
+
 # Sizing sample
 
 These blog notes provide a simplified procedure for sizing control valves at standard service conditions. The data required to size a valve, such as nominal size, gauge pressures, and flow rates, are actual values of a project.
@@ -73,6 +74,7 @@ These blog notes provide a simplified procedure for sizing control valves at sta
 Initially, I would like to make a first approximation to the selection process of the control valve. Later, in other blogs, I will analyze the different cases.
 
 ![Operating data (Source: Wagner, Walter. Regel- und Sicherheitsarmaturen.)](control_valve_01.png)
+
 
 # Flowchart of the valve selection process.
 
@@ -217,16 +219,7 @@ For this exercise, we will assume the following:
 4.  $K_v/K_{vs} = \frac{d}{1 +\exp(b\cdot(\log{(vp)}-\log{(e)}))}$
 5.  The cavitation values are established based on the degree of opening, whose function is defined based on the factors of $K_v/K_{vs}$ and $F_L$.[^3]
 
-[^1]: Liquid pressure recovery factor of a control valve without attached fittings (ISA-75.01.01-2007: Flow Equations for Sizing Control Valves).
-
-[^2]: In the next blogs we will see how these values can be calculated from the documents supplied by the suppliers.
-
-[^3]: This function will be clarified in a future blog.
-
-The parameters corresponding to the valves are the following:[^4]
-
-[^4]: These parameters are similar to those in reality but adjusted for this Example.
-
+                                                             
 ```{r}
 #| label: tbl-parameter
 #| tbl-cap: "Valve's Parameter"
@@ -273,6 +266,7 @@ param_valves |>
   ) |> 
 
   opt_stylize(style = 6, color = "gray")
+
 
 ```
 
@@ -384,7 +378,6 @@ plot_sigma <- function(valve_typ, df, b, d, e, fls, dn){
           y        = latex2exp::TeX('Sigma value ($\\sigma$)')) +
     theme_bw() + theme(legend.position = "bottom")
 }
-
 
 ```
 
@@ -534,7 +527,9 @@ summary_brand_valves |>
 ```
 
 
-
+[^1]: Liquid pressure recovery factor of a control valve without attached fittings (ISA-75.01.01-2007: Flow Equations for Sizing Control Valves).
+[^2]: In the next blogs we will see how these values can be calculated from the documents supplied by the suppliers.
+[^3]: These parameters are similar to those in reality but adjusted for this Example.
 
 # References
 
