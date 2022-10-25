@@ -1,14 +1,15 @@
 ---
 title: "Example: Flow coefficient and cavitation value"
-subtitle: "(Draft!!!!)"
+subtitle: ""
 author: "Dr. Raúl Trujillo Álvarez"
-date: "2022-10-24"
+date: "2022-10-25"
 categories: [hydraulics, theory, valves, analysis, example]
 description: ''
 execute: 
   message: false
   warning: false
   echo: false
+  embed-resources: true
 editor_options: 
   chunk_output_type: console
 ---
@@ -84,18 +85,12 @@ flowchart TD
   A --> E
   B --> C(2. Select min. Kv \n that the CV must supply)
   C--> H
-  
   E[Valve DN, PN] --> F[(DB Parameters \n of Control Valves)]
   F --> H{3. Select CVs with \n Kvs > 1.3* Min.Kvs}
-  
-  H-. NO .-> A
-  
-  H-- YES --> I(4. Calc. Kv/Kvs and \n valve position for all \n data operation and Types of valves.)
-  
+  H-.NO.-> A
+  H--YES --> I(4. Calc. Kv/Kvs and \n valve position for all \n data operation and Types of valves.)
   I --> J(5. Calculate the Cavitation and non-cavitation \n regime for every Operation condition)
-  
   J --> K(6. Define criteria for valve selection: \n A. General Criteria \n B. System or project-dependent criteria )
-  
   K --> L(Select valve.)
 ```
 
@@ -318,7 +313,7 @@ get_table_results <- function(df, typ_valve){
     p2    = html("<i>P<sub>2</sub><br>(bar)</i>"),
     flow  = html("<i>Flow<br>(m<sup>3</sup>/h)</i>"),
     kv       = html("<i>K<sub>v</sub><br>(m<sup>3</sup>/h)</i>"),
-    kv_kvs   = html("<i>K<sub>v</sub> / K<sub>vs</sub><br>(%)</i>"),
+    kv_kvs   = html("<i>K<sub>v</sub>/K<sub>vs</sub><br>(%)</i>"),
     position = html("<i>Position<br>(%)</i>"),
     sig_2    = html("<i>&sigma;<sub>2</sub><br>(-)</i>"),
     regime   = html("<i>Cavitation<br>Regime</i>")
@@ -483,19 +478,27 @@ plot_sigma(param_valves$brand[i],
 
 ```
 
-# Sixth step: Define criteria for valve selection:
+# Sixth step: Define selection criteria and valve selection:
+
+## Criteria
 
 1.  General Criteria for the inherent characteristic of valve:
-    - **Flow Coefficient Range:** Operative Range it is the ratio between the normal maximum operative flow coefficient and the minimum controllable operative flow coefficient $k_{v_{min.}} \iff k_{v_{max.}}$
+    - **Flow Coefficient Range:** The Flow Coefficient Range is the maximum and minimum flow coefficient ratio. $k_{v_{min.}} \iff k_{v_{max.}}$.
     - **Controllability Range:** The Controllability Range is the range between the maximum and minimum position of the valve $PV_{min.} \iff PV_{max.}$
-    - **Operation Ratio:** The Operating Ratio is the ratio of the Flow Coefficient Range to the Operation Ratio minus one. The optimal value is Zero. An Operating Ratio of Zero means that a 1% opening of the valve will increase the flow coefficient by 1%.  
-    $$Ratio =\left| \frac{(k_{v_{max.}} -  k_{v_{min.}})}{(PV_{max.}- PV_{min.})} - 1 \right|$$
-    
+    - **Operation Ratio:** The Operating Ratio is the ratio of the Flow Coefficient Range to the Operation Ratio minus one. The optimal value of the  Operating Ratio is Zero; an Operating Ratio of Zero means that a 1% valve opening will increase the flow coefficient by $1\%$.
+  
+  $$
+    Ratio =\left| \frac{(k_{v_{max.}} -  k_{v_{min.}})}{(PV_{max.}- PV_{min.})} - 1 \right|
+  $$
     
 2.  System (installed characteristic) and project-dependent criteria:
   - Frequency and time with which the valve is in any of the cavitation states.
-  - ...
-  
+  - Importance of the valve.
+  - The reliability of the information provided/collected.
+  - The safety factors that were included in the hydraulic calculation.
+
+## Selection
+
 ```{r}
 #| label: summary_brand_valves
 #| tbl-cap: "Summary Brand Valves"
@@ -519,19 +522,67 @@ summary_brand_valves <- full_data |>
          pv.range = (max.pv-min.pv))
 
 summary_brand_valves |> 
-  select(brand,	min.kv,	max.kv, kv.range,	min.pv, max.pv,	pv.range, op.ratio, min.cav,	max.cav,	mean.cav) |> 
+  select(brand,	min.kv,	max.kv, kv.range,	
+         min.pv, max.pv,	pv.range, 
+         min.cav, max.cav,	mean.cav, op.ratio) |>
+  mutate(min.pv = min.pv/100, 
+         max.pv = max.pv/100,	
+         pv.range = pv.range/100) |> 
   mutate(across(where(is.numeric), round, 2)) |> 
-  gt()
-
+  gt() |> 
+  cols_label(
+    brand     = html("<i>Brand</i>"),
+    min.kv    = html("<i>Min.</i>"),
+    max.kv    = html("<i>Max.</i>"),
+    kv.range  = html("<i>&Delta;Kv</i>"),
+    min.pv    = html("<i>Min.</i>"),
+    max.pv    = html("<i>Max.</i>"),
+    pv.range  = html("<i>&Delta;Pos.</i>"),
+    min.cav   = html("<i>Min.</i>"),
+    max.cav   = html("<i>Max.</i>"),
+    mean.cav  = html("<i>Mean</i>"),
+    op.ratio  = html("<i>Op.Radio</i>")
+  ) |> 
+  
+  
+  fmt_percent(
+    columns = c(min.pv, max.pv,	pv.range),
+    decimals = 1
+  ) |> 
+  
+  tab_spanner(
+    label = html("<i>K<sub>v</sub> in m<sup>3</sup>/h</i>"),
+    columns = c(min.kv,	max.kv, kv.range)
+  ) |> 
+  tab_spanner(
+    label = html("<i>Position in %</i>"),
+    columns = c(min.pv, max.pv,	pv.range)
+  ) |> 
+  tab_spanner(
+    label = html("<i>Cav. Regime</i>"),
+    columns = c(min.cav,	max.cav,	mean.cav)
+  )|> 
+  
+  opt_stylize(style = 6, color = "gray")
 
 ```
 
 
+In this example, we will base the selection on the inherent characteristics of the valve. 
+The selection is clear for _**Brand valve B**_ since it has the lowest average cavitation regime and the most inferior radio operations.
+
+
+::: {#refs}
+  - Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.
+  - ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.
+  - British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.
+  - ANSI/ISA, editor. ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.
+  - ANSI/ISA, editor. ANSI/ISA–RP75.23–1995, Considerations for Evaluating Control Valve Cavitation. Instrument Society of America, 1995.
+  - American National Standards Institute, and Instrument Society of America. Flow Equations for Sizing Control Valves: Standard. 1985.
+  - ANSI/ISA. ANSI/ISA-75.11-1985 (R1996) , Inherent Flow Characteristic and Rangeability of Control Valves. 1985.
+
+:::
+
 [^1]: Liquid pressure recovery factor of a control valve without attached fittings (ISA-75.01.01-2007: Flow Equations for Sizing Control Valves).
 [^2]: In the next blogs we will see how these values can be calculated from the documents supplied by the suppliers.
 [^3]: These parameters are similar to those in reality but adjusted for this Example.
-
-# References
-
-::: {#refs}
-:::
