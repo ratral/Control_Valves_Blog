@@ -10,11 +10,11 @@
 <atom:link href="https://ratral.github.io/Control_Valves_Blog//blog.xml" rel="self" type="application/rss+xml"/>
 <description>This blog is a compilation of my notes on the selection of control valves.</description>
 <generator>quarto-0.9.342</generator>
-<lastBuildDate>Tue, 25 Oct 2022 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 30 Oct 2022 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Considerations for Evaluating Control Valve Cavitation</title>
   <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
-  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-26_considerations_evaluating_cavitation/blog.html</link>
+  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-31_02_considerations_evaluating_cavitation/blog.html</link>
   <description><![CDATA[ 
 
 
@@ -22,11 +22,47 @@
 <section id="essential-features-of-the-k_v-value-calculation" class="level1">
 <h1>Essential features of the <img src="https://latex.codecogs.com/png.latex?K_v"> value calculation</h1>
 <p>In many applications, the flow through the control valve is determined by reducers or other accessories (orifice plates) attached to the control valve. When cavitation occurs in a valve, the flow is further limited by the evaporation of the liquid in the valve. Therefore, to determine the flow through the control valve, the following should be analyzed:</p>
-<ul>
+<ol type="1">
 <li>Flow without flow restriction, turbulent flow and no cavitation.</li>
 <li>Flow with flow restriction but without fittings</li>
 <li>Flow with flow restriction and with fittings</li>
-</ul>
+</ol>
+<p>In this blog, only points 3. “Flow with flow restriction and fittings will be considered in the following blog”.</p>
+<section id="flow-with-flow-restriction-cavitation-and-with-fittings" class="level2">
+<h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction (cavitation) and with fittings</h2>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20F_p%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(LP)%7D%20=%20K_v%20%5Ccdot%20F_%7BLP%7D%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<p>The maximum allowable differential pressure for the calculation of control valves with fittings can be calculated as follows:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(LP)%7D=%20%5Cleft(%20%5Cfrac%7BF_%7BLP%7D%7D%7BF_P%7D%5Cright)%5E2%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>hydraulics</category>
+  <category>theory</category>
+  <category>valves</category>
+  <category>analysis</category>
+  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-31_02_considerations_evaluating_cavitation/blog.html</guid>
+  <pubDate>Sun, 30 Oct 2022 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Considerations for Evaluating Control Valve Cavitation</title>
+  <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
+  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-28_01_considerations_evaluating_cavitation/blog.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="essential-features-of-the-k_v-value-calculation" class="level1">
+<h1>Essential features of the <img src="https://latex.codecogs.com/png.latex?K_v"> value calculation</h1>
+<p>In many applications, the flow through the control valve is determined by reducers or other accessories (orifice plates) attached to the control valve. When cavitation occurs in a valve, the flow is further limited by the evaporation of the liquid in the valve. Therefore, to determine the flow through the control valve, the following should be analyzed:</p>
+<ol type="1">
+<li>Flow without flow restriction, turbulent flow and no cavitation.</li>
+<li>Flow with flow restriction but without fittings</li>
+<li>Flow with flow restriction and with fittings</li>
+</ol>
+<p>In this blog, only points 1. and 2. are considered. Flow with flow restriction and fittings will be considered in the following blog.</p>
 <section id="flow-without-flow-restriction-turbulent-flow-and-no-cavitation." class="level2">
 <h2 class="anchored" data-anchor-id="flow-without-flow-restriction-turbulent-flow-and-no-cavitation.">Flow without flow restriction, turbulent flow and no cavitation.</h2>
 <p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
@@ -39,31 +75,45 @@
 </section>
 <section id="flow-with-flow-restriction-cavitation-but-without-fittings" class="level2">
 <h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-but-without-fittings">Flow with flow restriction (Cavitation) but without fittings</h2>
-<p>The vapor pressure of liquids depends on the temperature. If the static pressure on the fluid falls below this vapor pressure, evaporation occurs. The lowest pressure occurs when throttling in the valve occurs in the so-called “vena contracta.” Depending on the design of the throttle point, there is a greater or lesser pressure recovery. Under certain circumstances, evaporation must also be considered when the outflow pressure <img src="https://latex.codecogs.com/png.latex?p_2"> is greater than the vapor pressure of the liquid. Local evaporation, in the vena contracta, initially increases in volume. The cross-section of the choke becomes slimmer, and the calculated flow rate may not be reached if evaporation was not taken into account in the calculation. <span class="citation" data-cites="wagner2008">[@wagner2008]</span>.</p>
-<p>Cavitation occurs if the evaporation is reversed again by an immediately subsequent increase in pressure. When the evaporation is reversed (condensation) and reaches a particular energy potential, it can quickly damage the throttle body and seat of the valve.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(L)%7D%20=%20K_v%20%5Ccdot%20F_L%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> The maximum allowable differential pressure for the calculation of control valves without fittings can be calculated as follows: <img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(L)%7D=F%5E%7B2%7D_%7BL%7D%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
+<p>The vapor pressure of liquids depends on the temperature. If the static pressure on the fluid falls below this vapor pressure, evaporation occurs. The lowest pressure occurs when throttling in the valve occurs in the so-called “vena contracta.” Depending on the design of the throttle point, there is a greater or lesser pressure recovery. Under certain circumstances, evaporation must also be considered when the outflow pressure $P_2$ is greater than the vapor pressure of the liquid. Local evaporation, in the vena contracta, initially increases in volume. The cross-section of the choke becomes slimmer, and the calculated flow rate may not be reached if evaporation is not taken into account in the calculation. Cavitation occurs when the pressure increases and reverses evaporation. When the evaporation is reversed (condensation) and reaches a particular energy potential, it can quickly damage the throttle body and seat of the valve. The continuity of the flow coefficient is interrupted when cavitation occurs, and the dynamic interaction between flow and its restriction is affected. Additionally, cavitation increases the compressibility of the fluid locally and reduces the flow. The density of the water, too, is drastically reduced by the bubble volume in the restriction area as the pressure ratio rises [@wagner2008].</p>
+<p>The critical pressure is reached at the vena contracta at the differential pressure <img src="https://latex.codecogs.com/png.latex?%5CDelta%7BP%7D_%7Bmax%7D">, below the vapor pressure.The maximum allowable differential pressure for the calculation of control valves without fittings can be calculated as follows:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax%7D=F%5E%7B2%7D_%7BL%7D%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
+<p>The flow rate before cavitation starts is:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<p>So:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(L)%7D%20=%20K_v%20%5Ccdot%20F_L%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
 <p>Where:</p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?Q"> is the flow; Unit: <img src="https://latex.codecogs.com/png.latex?m%5E3/s"></li>
 <li><img src="https://latex.codecogs.com/png.latex?F_L"> Liquid pressure recovery factor of a control valve without attached fittings; Unit: Dimensionless</li>
-<li><img src="https://latex.codecogs.com/png.latex?F_R"> Reynolds number factor; Unit: Dimensionless</li>
+<li><img src="https://latex.codecogs.com/png.latex?F_R"> Reynolds number factor; Unit: Dimensionless. For turbulent flow, <img src="https://latex.codecogs.com/png.latex?F_R%20=%201"></li>
 <li><img src="https://latex.codecogs.com/png.latex?F_F"> Liquid critical pressure ratio factor; Unit: Dimensionless</li>
 <li><img src="https://latex.codecogs.com/png.latex?P_v"> Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5Crho_%7B1%7D/%5Crho_%7B0%7D"> Relative density (<img src="https://latex.codecogs.com/png.latex?%5Crho_%7B1%7D/%5Crho_%7B0%7D%20=%201.0"> for water at <img src="https://latex.codecogs.com/png.latex?15%C2%B0C">); Unit: Dimensionless</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20P"> Differential pressure between upstream and downstream pressure taps; Unit: bar</li>
 </ul>
-</section>
-<section id="flow-with-flow-restriction-cavitation-and-with-fittings" class="level2">
-<h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction (cavitation) and with fittings</h2>
-<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20F_p%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(LP)%7D%20=%20K_v%20%5Ccdot%20F_%7BLP%7D%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
-<p>The maximum allowable differential pressure for the calculation of control valves with fittings can be calculated as follows:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(LP)%7D=%20%5Cleft(%20%5Cfrac%7BF_%7BLP%7D%7D%7BF_P%7D%5Cright)%5E2%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
+<p>The above functions can be represented in the following two ways:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-26_considerations_evaluating_cavitation\Flow_with_restriction.png" class="img-fluid figure-img"></p>
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-28_01_considerations_evaluating_cavitation\Flow_with_restriction_01.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-28_01_considerations_evaluating_cavitation\Flow_with_restriction_02.png" class="img-fluid figure-img" alt="The valve-specific factor FL"></p>
+<p></p><p></p>
+</figure>
+</div>
+</section>
+<section id="liquid-pressure-recovery-factor-f_l" class="level2">
+<h2 class="anchored" data-anchor-id="liquid-pressure-recovery-factor-f_l">Liquid pressure recovery factor <img src="https://latex.codecogs.com/png.latex?F_L"></h2>
+<p><img src="https://latex.codecogs.com/png.latex?F_L"> is a number used to describe the ratio between the pressure recovery after the Vena-Contracta and the pressure drop at the Vena-Contracta. in other words; It represents the pressure recovered between the Vena-Contracta and the valve outlet.</p>
+<p>It is also essential to understand that <img src="https://latex.codecogs.com/png.latex?F_L"> is not a cavitation parameter. It is a choked flow parameter, and its only use is to determine the theoretical blocked flow point.</p>
+</section>
+<section id="vertical-parabolic-curve" class="level2">
+<h2 class="anchored" data-anchor-id="vertical-parabolic-curve">Vertical Parabolic Curve</h2>
+<p>To determine the flow rates during the regimes of cavitation incipient, constant, and choke, it is necessary to resort to calculating a parabolic vertical curve.</p>
 
 
 </section>
@@ -74,9 +124,9 @@
   <category>theory</category>
   <category>valves</category>
   <category>analysis</category>
-  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-26_considerations_evaluating_cavitation/blog.html</guid>
-  <pubDate>Tue, 25 Oct 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-26_considerations_evaluating_cavitation/Flow_with_restriction.png" medium="image" type="image/png" height="111" width="144"/>
+  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-28_01_considerations_evaluating_cavitation/blog.html</guid>
+  <pubDate>Thu, 27 Oct 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-28_01_considerations_evaluating_cavitation/Flow_with_restriction_01.png" medium="image" type="image/png" height="105" width="144"/>
 </item>
 <item>
   <title>Example: Flow coefficient and cavitation value</title>

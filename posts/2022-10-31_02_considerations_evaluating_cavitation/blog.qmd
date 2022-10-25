@@ -1,0 +1,41 @@
+---
+title: "Considerations for Evaluating Control Valve Cavitation"
+subtitle: "Flow with flow restriction and with fittings (First draft!!!!)"
+author: "Dr. Raúl Trujillo Álvarez"
+date: "2022-10-31"
+categories: [hydraulics, theory, valves, analysis]
+description: ''
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+# Essential features of the $K_v$ value calculation
+
+In many applications, the flow through the control valve is determined by reducers or other accessories (orifice plates) attached to the control valve. When cavitation occurs in a valve, the flow is further limited by the evaporation of the liquid in the valve. Therefore, to determine the flow through the control valve, the following should be analyzed:
+
+  1. Flow without flow restriction, turbulent flow and no cavitation.
+  2. Flow with flow restriction but without fittings
+  3. Flow with flow restriction and with fittings
+
+In this blog, only points 3. "Flow with flow restriction and fittings will be considered in the following blog".
+
+
+## Flow with flow restriction (cavitation) and with fittings
+
+$$
+Q = K_v \cdot F_R \cdot F_p \cdot \sqrt{\frac{\Delta P}{(\rho_{1}/\rho_{0})}}
+$$
+
+$$
+Q_{max(LP)} = K_v \cdot F_{LP} \cdot F_R \cdot \sqrt{\frac{(P_1-F_F \cdot P_v)}{(\rho_{1}/\rho_{0})}}
+$$
+
+The maximum allowable differential pressure for the calculation of control valves with fittings can be calculated as follows:
+
+$$
+\Delta{P}_{max(LP)}= \left( \frac{F_{LP}}{F_P}\right)^2 \cdot (P_1-F_F \cdot p_v)
+$$
+
