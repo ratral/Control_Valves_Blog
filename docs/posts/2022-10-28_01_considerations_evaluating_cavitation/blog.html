@@ -17,6 +17,25 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -108,10 +127,9 @@ ul.task-list{list-style: none;}
   <li><a href="#essential-features-of-the-k_v-value-calculation" id="toc-essential-features-of-the-k_v-value-calculation" class="nav-link active" data-scroll-target="#essential-features-of-the-k_v-value-calculation">Essential features of the <span class="math inline">\(K_v\)</span> value calculation</a>
   <ul class="collapse">
   <li><a href="#flow-without-flow-restriction-turbulent-flow-and-no-cavitation." id="toc-flow-without-flow-restriction-turbulent-flow-and-no-cavitation." class="nav-link" data-scroll-target="#flow-without-flow-restriction-turbulent-flow-and-no-cavitation.">Flow without flow restriction, turbulent flow and no cavitation.</a></li>
-  <li><a href="#flow-with-flow-restriction-cavitation-but-without-fittings" id="toc-flow-with-flow-restriction-cavitation-but-without-fittings" class="nav-link" data-scroll-target="#flow-with-flow-restriction-cavitation-but-without-fittings">Flow with flow restriction (Cavitation) but without fittings</a></li>
-  <li><a href="#liquid-pressure-recovery-factor-f_l" id="toc-liquid-pressure-recovery-factor-f_l" class="nav-link" data-scroll-target="#liquid-pressure-recovery-factor-f_l">Liquid pressure recovery factor <span class="math inline">\(F_L\)</span></a></li>
-  <li><a href="#vertical-parabolic-curve" id="toc-vertical-parabolic-curve" class="nav-link" data-scroll-target="#vertical-parabolic-curve">Vertical Parabolic Curve</a></li>
+  <li><a href="#flow-with-flow-restriction-cavitation-without-pipe-fittings" id="toc-flow-with-flow-restriction-cavitation-without-pipe-fittings" class="nav-link" data-scroll-target="#flow-with-flow-restriction-cavitation-without-pipe-fittings">Flow with flow restriction (Cavitation) without pipe fittings</a></li>
   </ul></li>
+  <li><a href="#cavitation-levels" id="toc-cavitation-levels" class="nav-link" data-scroll-target="#cavitation-levels">Cavitation Levels</a></li>
   </ul>
 </nav>
     </div>
@@ -121,7 +139,7 @@ ul.task-list{list-style: none;}
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Considerations for Evaluating Control Valve Cavitation</h1>
-<p class="subtitle lead">Flow with flow restriction but without fittings (First draft!!!!)</p>
+<p class="subtitle lead">Flow with flow restriction without pipe fittings</p>
   <div class="quarto-categories">
     <div class="quarto-category">hydraulics</div>
     <div class="quarto-category">theory</div>
@@ -160,25 +178,26 @@ ul.task-list{list-style: none;}
 <p>In many applications, the flow through the control valve is determined by reducers or other accessories (orifice plates) attached to the control valve. When cavitation occurs in a valve, the flow is further limited by the evaporation of the liquid in the valve. Therefore, to determine the flow through the control valve, the following should be analyzed:</p>
 <ol type="1">
 <li>Flow without flow restriction, turbulent flow and no cavitation.</li>
-<li>Flow with flow restriction but without fittings</li>
-<li>Flow with flow restriction and with fittings</li>
+<li>Flow with flow restriction but without pipe fittings</li>
+<li>Flow with flow restriction and with pipe fittings</li>
 </ol>
 <p>In this blog, only points 1. and 2. are considered. Flow with flow restriction and fittings will be considered in the following blog.</p>
 <section id="flow-without-flow-restriction-turbulent-flow-and-no-cavitation." class="level2">
 <h2 class="anchored" data-anchor-id="flow-without-flow-restriction-turbulent-flow-and-no-cavitation.">Flow without flow restriction, turbulent flow and no cavitation.</h2>
 <p><span class="math display">\[
-Q = K_v \cdot \sqrt{\frac{\Delta P}{(\rho_{1}/\rho_{0})}}
+Q = K_v \cdot F_R \cdot \sqrt{\frac{\Delta P}{(\rho_{1}/\rho_{0})}} \approx  K_v \cdot \sqrt{\Delta P}
 \]</span></p>
 <p>Where:</p>
 <ul>
 <li><span class="math inline">\(Q\)</span> is the flow; Unit: <span class="math inline">\(m^3/s\)</span></li>
+<li><span class="math inline">\(F_R\)</span> Reynolds number factor; Unit: Dimensionless. For turbulent flow, <span class="math inline">\(F_R = 1\)</span></li>
 <li><span class="math inline">\(\rho_{1}/\rho_{0}\)</span> Relative density (<span class="math inline">\(\rho_{1}/\rho_{0} = 1.0\)</span> for water at <span class="math inline">\(15°C\)</span>); Unit: Dimensionless</li>
 <li><span class="math inline">\(\Delta P\)</span> Differential pressure between upstream and downstream pressure taps <span class="math inline">\((P_1-P_2)\)</span>; Unit: bar</li>
 </ul>
 </section>
-<section id="flow-with-flow-restriction-cavitation-but-without-fittings" class="level2">
-<h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-but-without-fittings">Flow with flow restriction (Cavitation) but without fittings</h2>
-<p>The vapor pressure of liquids depends on the temperature. If the static pressure on the fluid falls below this vapor pressure, evaporation occurs. The lowest pressure occurs when throttling in the valve occurs in the so-called “vena contracta.” Depending on the design of the throttle point, there is a greater or lesser pressure recovery. Under certain circumstances, evaporation must also be considered when the outflow pressure $P_2$ is greater than the vapor pressure of the liquid. Local evaporation, in the vena contracta, initially increases in volume. The cross-section of the choke becomes slimmer, and the calculated flow rate may not be reached if evaporation is not taken into account in the calculation. Cavitation occurs when the pressure increases and reverses evaporation. When the evaporation is reversed (condensation) and reaches a particular energy potential, it can quickly damage the throttle body and seat of the valve. The continuity of the flow coefficient is interrupted when cavitation occurs, and the dynamic interaction between flow and its restriction is affected. Additionally, cavitation increases the compressibility of the fluid locally and reduces the flow. The density of the water, too, is drastically reduced by the bubble volume in the restriction area as the pressure ratio rises [@wagner2008].</p>
+<section id="flow-with-flow-restriction-cavitation-without-pipe-fittings" class="level2">
+<h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-without-pipe-fittings">Flow with flow restriction (Cavitation) without pipe fittings</h2>
+<p>The vapor pressure of liquids depends on the temperature. If the static pressure on the fluid falls below this vapor pressure, evaporation occurs. The lowest pressure occurs when throttling in the valve occurs in the so-called “vena contracta.” Depending on the design of the throttle point, there is a greater or lesser pressure recovery. Under certain circumstances, evaporation must also be considered when the outflow pressure <span class="math inline">\(P_2\)</span> is greater than the vapor pressure of the liquid. Local evaporation, in the vena contracta, initially increases in volume. The cross-section of the choke becomes slimmer, and the calculated flow rate may not be reached if evaporation is not taken into account in the calculation. Cavitation occurs when the pressure increases and reverses evaporation. When the evaporation is reversed (condensation) and reaches a particular energy potential, it can quickly damage the throttle body and seat of the valve. The continuity of the flow coefficient is interrupted when cavitation occurs, and the dynamic interaction between flow and its restriction is affected. Additionally, cavitation increases the compressibility of the fluid locally and reduces the flow. The density of the water, too, is drastically reduced by the bubble volume in the restriction area as the pressure ratio rises [@wagner2008].</p>
 <p>The critical pressure is reached at the vena contracta at the differential pressure <span class="math inline">\(\Delta{P}_{max}\)</span>, below the vapor pressure.The maximum allowable differential pressure for the calculation of control valves without fittings can be calculated as follows:</p>
 <p><span class="math display">\[
 \Delta{P}_{max}=F^{2}_{L} \cdot (P_1-F_F \cdot p_v)
@@ -202,33 +221,93 @@ Q_{max(L)} = K_v \cdot F_L \cdot F_R \cdot \sqrt{\frac{(P_1-F_F \cdot P_v)}{(\rh
 <li><span class="math inline">\(\Delta P\)</span> Differential pressure between upstream and downstream pressure taps; Unit: bar</li>
 </ul>
 <p>The above functions can be represented in the following two ways:</p>
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-flowrestriction1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Flow_with_restriction_01.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Flow with flow restriction (Cavitation) <span class="citation" data-cites="Wagner">@Wagner</span>, Walter. Regel- und Sicherheitsarmaturen.</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1: Flow with flow restriction (Cavitation) <span class="citation" data-cites="Wagner">@Wagner</span>, Walter. Regel- und Sicherheitsarmaturen.</figcaption><p></p>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-flowrestriction2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="Flow_with_restriction_02.png" class="img-fluid figure-img" alt="The valve-specific factor FL"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Liquid flow as a function of the differential pressure</figcaption><p></p>
+<p><img src="Flow_with_restriction_02.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2: Liquid flow as a function of the differential pressure (Handbook for Control Valve Sizing - Parcol.)</figcaption><p></p>
 </figure>
 </div>
-</section>
-<section id="liquid-pressure-recovery-factor-f_l" class="level2">
-<h2 class="anchored" data-anchor-id="liquid-pressure-recovery-factor-f_l">Liquid pressure recovery factor <span class="math inline">\(F_L\)</span></h2>
-<p><span class="math inline">\(F_L\)</span> is a number used to describe the ratio between the pressure recovery after the Vena-Contracta and the pressure drop at the Vena-Contracta. in other words; It represents the pressure recovered between the Vena-Contracta and the valve outlet.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Liquid pressure recovery factor <span class="math inline">\(F_L\)</span> : is a number used to describe the ratio between the pressure recovery after the Vena-Contracta and the pressure drop at the Vena-Contracta. in other words; It represents the pressure recovered between the Vena-Contracta and the valve outlet.</p>
 <p>It is also essential to understand that <span class="math inline">\(F_L\)</span> is not a cavitation parameter. It is a choked flow parameter, and its only use is to determine the theoretical blocked flow point.</p>
-</section>
-<section id="vertical-parabolic-curve" class="level2">
-<h2 class="anchored" data-anchor-id="vertical-parabolic-curve">Vertical Parabolic Curve</h2>
-<p>To determine the flow rates during the regimes of cavitation incipient, constant, and choke, it is necessary to resort to calculating a parabolic vertical curve.</p>
-
-
+</div>
+</div>
 </section>
 </section>
+<section id="cavitation-levels" class="level1">
+<h1>Cavitation Levels</h1>
+<p>An analytical solution to the problem of cavitation is not easy. Emphasis has, by necessity, been concentrated on laboratory experiments to explore physics, develop instrumentation to measure cavitation, and develop empirical relationships for predicting various cavitation levels. Therefore, based on laboratory and field experience, valve manufacturers should be able to recommend which cavitation level<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> is appropriate for their valve for a specific application <span class="citation" data-cites="Tuli">[@Tuli]</span>.</p>
+<p>If the valve manufacturer’s recommended cavitation levels exceed the maximum<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, the <span class="math inline">\(\sigma_{mv}\)</span> should be the maximum acceptable value and should only be overtaken in emergencies for the short term.</p>
+<p>As seen in <a href="#fig-flowrestriction1">Figure&nbsp;1</a> and <a href="#fig-flowrestriction2">Figure&nbsp;2</a>, the liquid pressure recovery factor <span class="math inline">\(F_L\)</span> acquired experimentally, with a theoretical model or a numerical model (CFD<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>) can be used to quantify flow conditions in locked cavitation (maximum cavitation level).</p>
+<p><span class="math display">\[
+\sigma_{mv} = \frac{1}{F^{2}_{L}} = \frac{(P_1-F_F \cdot p_v)}{\Delta{P}_{max}}
+\]</span></p>
+<p>The Incipient cavitation levels <span class="math inline">\(\sigma_{i}\)</span> and The constant cavitation <span class="math inline">\(\sigma_{c}\)</span> are also defined, where <span class="math inline">\(X_{FZ}\)</span> and <span class="math inline">\(X_{C}\)</span> are the respective coefficients:</p>
+<p><span class="math display">\[
+\sigma_i =  \frac{1}{X_{FZ}^2} = \frac{(P_1 - P_v)}{\Delta P}
+\]</span> <span class="math display">\[
+\sigma_c = \frac{1}{X_{C}^2} = \frac{(P_1 - P_v)}{\Delta P}
+\]</span> <span class="math inline">\(K_C\)</span> specifies where cavitation begins to appear in a flow of water through the valve with such intensity that, under constant upstream conditions, the flow rate deviation from linearity vs.&nbsp;<span class="math inline">\(\sqrt{\Delta P}\)</span> reaches the <strong>$2% $</strong> (see <a href="#fig-flowrestriction2">Figure&nbsp;2</a>). Such an assumption is only adequate when the diagram of the actual flow rate versus <span class="math inline">\(\sqrt{\Delta P}\)</span>, under constant upstream conditions, shows a sharp break point between the linear and horizontal zones. A simple form of calculation of the <span class="math inline">\(K_C\)</span> is the following formula [Handbook for Control Valve Sizing - Parcol]:</p>
+<p><span class="math display">\[
+K_C = 0.80 \cdot F_L^2
+\]</span> then the coefficient of proportionality between <span class="math inline">\(K_{FZ}\)</span> and <span class="math inline">\(F_L^2\)</span> can come down to <span class="math inline">\(0.65\)</span>, so:</p>
+<p><span class="math display">\[
+K_{FZ} = 0.65 \cdot F_L^2
+\]</span> In this way, all cavitation limits can be represented as a function of <span class="math inline">\(F_L\)</span>.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The values of <span class="math inline">\(F_L\)</span>, <span class="math inline">\(K_C\)</span>, and <span class="math inline">\(K_{FZ}\)</span> must be verified with Experimentation, Theoretical Models, and Numerical Models like CFD.</p>
+</div>
+</div>
 
-</main> <!-- /main -->
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" role="doc-bibliography">
+<ul>
+<li>Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.</li>
+<li><a href="https://www.parcol.com/docs/ACA0101_gb.pdf">Handbook for Control Valve Sizing - Parcol</a>. TECHNICAL BULLETIN 1-ITECHNICAL BULLETIN 1-I.</li>
+<li>Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr.&nbsp;1993, https://doi.org/10.2172/10155405.</li>
+<li>ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.</li>
+<li>British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.</li>
+<li>ANSI/ISA, editor. ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.</li>
+<li>ANSI/ISA, editor. ANSI/ISA–RP75.23–1995, Considerations for Evaluating Control Valve Cavitation. Instrument Society of America, 1995.</li>
+<li>American National Standards Institute, and Instrument Society of America. Flow Equations for Sizing Control Valves: Standard. 1985.</li>
+<li>ANSI/ISA. ANSI/ISA-75.11-1985 (R1996) , Inherent Flow Characteristic and Rangeability of Control Valves. 1985.</li>
+</ul>
+</div></section><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1" role="doc-endnote"><p>Manufacturer’s recommended cavitation limit <span class="math inline">\(\sigma_{mr}\)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Maximum noise and vibration level <span class="math inline">\(\sigma_{mv}\)</span><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p><a href="https://en.wikipedia.org/wiki/Computational_fluid_dynamics">Computational Fluid Dynamics</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const disableStylesheet = (stylesheets) => {
