@@ -67,7 +67,7 @@ Where:
 -   $\rho_{1}/\rho_{0}$ Relative density ($\rho_{1}/\rho_{0} = 1.0$ for water at $15°C$); Unit: Dimensionless
 -   $\Delta P$ Differential pressure between upstream and downstream pressure taps; Unit: bar
 
-The above functions can be represented in the following two ways:
+The above functions, for the valve in a position $x\%$ (for example, $100\%$ open), can be represented in the following two ways:
 
 ![Flow with flow restriction (Cavitation) @Wagner, Walter. Regel- und Sicherheitsarmaturen.](Flow_with_restriction_01.png){#fig-flowrestriction1}
 
@@ -81,12 +81,11 @@ It is also essential to understand that $F_L$ is not a cavitation parameter. It 
 
 # Cavitation Levels
 
-An analytical solution to the problem of cavitation is not easy. Emphasis has, by necessity, been concentrated on laboratory experiments to explore physics, develop instrumentation to measure cavitation, and develop empirical relationships for predicting various cavitation levels. Therefore, based on laboratory and field experience, valve manufacturers should be able to recommend which cavitation level[^1] is appropriate for their valve for a specific application [@Tuli]. 
-
-If the valve manufacturer’s recommended cavitation levels exceed the maximum[^2], the $\sigma_{mv}$ should be the maximum acceptable value and should only be overtaken in emergencies for the short term.
-
+An analytical solution to the problem of cavitation is not easy. Emphasis has, by necessity, been concentrated on laboratory experiments to explore physics, develop instrumentation to measure cavitation, and develop empirical relationships for predicting various cavitation levels. Therefore, based on laboratory and field experience, valve manufacturers should be able to recommend which cavitation level[^1] is appropriate for their valve for a specific application [@Tuli].
 
 [^1]: Manufacturer's recommended cavitation limit $\sigma_{mr}$
+
+If the valve manufacturer's recommended cavitation levels exceed the maximum[^2], the $\sigma_{mv}$ should be the maximum acceptable value and should only be overtaken in emergencies for the short term.
 
 [^2]: Maximum noise and vibration level $\sigma_{mv}$
 
@@ -104,26 +103,31 @@ $$
 \sigma_i =  \frac{1}{X_{FZ}^2} = \frac{(P_1 - P_v)}{\Delta P} 
 $$ $$
 \sigma_c = \frac{1}{X_{C}^2} = \frac{(P_1 - P_v)}{\Delta P} 
-$$ $K_C$ specifies where cavitation begins to appear in a flow of water through the valve with such intensity that, under constant upstream conditions, the flow rate deviation from linearity vs. $\sqrt{\Delta P}$ reaches the **\$2% \$** (see @fig-flowrestriction2). Such an assumption is only adequate when the diagram of the actual flow rate versus $\sqrt{\Delta P}$, under constant upstream conditions, shows a sharp break point between the linear and horizontal zones. A simple form of calculation of the $K_C$ is the following formula \[Handbook for Control Valve Sizing - Parcol\]:
+$$ $K_C$ specifies where cavitation begins to appear in a flow of water through the valve with such intensity that, under constant upstream conditions, the flow rate deviation from linearity vs. $\sqrt{\Delta P}$ reaches the $2\%$ (see @fig-flowrestriction2). Such an assumption is only adequate when the diagram of the actual flow rate versus $\sqrt{\Delta P}$, under constant upstream conditions, shows a sharp break point between the linear and horizontal zones. A simple form of calculation of the $K_C$ is the following formula \[Handbook for Control Valve Sizing - Parcol\]:
 
 $$
 K_C = 0.80 \cdot F_L^2
 $$ then the coefficient of proportionality between $K_{FZ}$ and $F_L^2$ can come down to $0.65$, so:
 
+The beginning cavitation coefficient can be extrapolated from the curve in @fig-flowrestriction2. A *first approximation* value would be:
+
 $$
 K_{FZ} = 0.65 \cdot F_L^2
-$$
-In this way, all cavitation limits can be represented as a function of $F_L$. 
+$$ In this way, all cavitation limits can be represented as a function of $F_L$.
 
 ::: callout-important
 The values of $F_L$, $K_C$, and $K_{FZ}$ must be verified with Experimentation, Theoretical Models, and Numerical Models like CFD.
 :::
 
+::: callout-note
+The transition between the zero cavitation zone and choked flow can be represented mathematically as a [Vertical Parabolic curve](https://mathalino.com/reviewer/surveying-and-transportation-engineering/parabolic-curve#:~:text=Vertical%20Parabolic%20Curve&text=which%20is%20interpreted%20as%20rate,rate%20of%20change%20of%20slope.&text=L%20%3D%20length%20of%20parabolic%20curve,corresponds%20to%20the%20plan%20distance.). Vertical curves provide gradual change between two adjacent steep grade lines. The curve used to connect the two adjacent grades is a parabola. We will see these calculations in a future Blog.
+:::
 
 ::: {#refs}
 -   Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.
 -   [Handbook for Control Valve Sizing - Parcol](https://www.parcol.com/docs/ACA0101_gb.pdf). TECHNICAL BULLETIN 1-ITECHNICAL BULLETIN 1-I.
 -   Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr. 1993, https://doi.org/10.2172/10155405.
+- Parabolic Curve | Surveying and Transportation Engineering Review at MATHalino. https://mathalino.com/reviewer/surveying-and-transportation-engineering/parabolic-curve. Accessed 25 Oct. 2022.
 -   ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.
 -   British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.
 -   ANSI/ISA, editor. ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.

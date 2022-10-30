@@ -93,7 +93,7 @@
 <li><img src="https://latex.codecogs.com/png.latex?%5Crho_%7B1%7D/%5Crho_%7B0%7D"> Relative density (<img src="https://latex.codecogs.com/png.latex?%5Crho_%7B1%7D/%5Crho_%7B0%7D%20=%201.0"> for water at <img src="https://latex.codecogs.com/png.latex?15%C2%B0C">); Unit: Dimensionless</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20P"> Differential pressure between upstream and downstream pressure taps; Unit: bar</li>
 </ul>
-<p>The above functions can be represented in the following two ways:</p>
+<p>The above functions, for the valve in a position <img src="https://latex.codecogs.com/png.latex?x%5C%25"> (for example, <img src="https://latex.codecogs.com/png.latex?100%5C%25"> open), can be represented in the following two ways:</p>
 <div id="fig-flowrestriction1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-28_01_considerations_evaluating_cavitation\Flow_with_restriction_01.png" class="img-fluid figure-img"></p>
@@ -129,8 +129,9 @@ Note
 <p>As seen in Figure&nbsp;1 and Figure&nbsp;2, the liquid pressure recovery factor <img src="https://latex.codecogs.com/png.latex?F_L"> acquired experimentally, with a theoretical model or a numerical model (CFD<sup>3</sup>) can be used to quantify flow conditions in locked cavitation (maximum cavitation level).</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_%7Bmv%7D%20=%20%5Cfrac%7B1%7D%7BF%5E%7B2%7D_%7BL%7D%7D%20=%20%5Cfrac%7B(P_1-F_F%20%5Ccdot%20p_v)%7D%7B%5CDelta%7BP%7D_%7Bmax%7D%7D%0A"></p>
 <p>The Incipient cavitation levels <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bi%7D"> and The constant cavitation <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bc%7D"> are also defined, where <img src="https://latex.codecogs.com/png.latex?X_%7BFZ%7D"> and <img src="https://latex.codecogs.com/png.latex?X_%7BC%7D"> are the respective coefficients:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_i%20=%20%20%5Cfrac%7B1%7D%7BX_%7BFZ%7D%5E2%7D%20=%20%5Cfrac%7B(P_1%20-%20P_v)%7D%7B%5CDelta%20P%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_c%20=%20%5Cfrac%7B1%7D%7BX_%7BC%7D%5E2%7D%20=%20%5Cfrac%7B(P_1%20-%20P_v)%7D%7B%5CDelta%20P%7D%0A"> <img src="https://latex.codecogs.com/png.latex?K_C"> specifies where cavitation begins to appear in a flow of water through the valve with such intensity that, under constant upstream conditions, the flow rate deviation from linearity vs.&nbsp;<img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5CDelta%20P%7D"> reaches the <strong>$2% $</strong> (see Figure&nbsp;2). Such an assumption is only adequate when the diagram of the actual flow rate versus <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5CDelta%20P%7D">, under constant upstream conditions, shows a sharp break point between the linear and horizontal zones. A simple form of calculation of the <img src="https://latex.codecogs.com/png.latex?K_C"> is the following formula [Handbook for Control Valve Sizing - Parcol]:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_i%20=%20%20%5Cfrac%7B1%7D%7BX_%7BFZ%7D%5E2%7D%20=%20%5Cfrac%7B(P_1%20-%20P_v)%7D%7B%5CDelta%20P%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_c%20=%20%5Cfrac%7B1%7D%7BX_%7BC%7D%5E2%7D%20=%20%5Cfrac%7B(P_1%20-%20P_v)%7D%7B%5CDelta%20P%7D%0A"> <img src="https://latex.codecogs.com/png.latex?K_C"> specifies where cavitation begins to appear in a flow of water through the valve with such intensity that, under constant upstream conditions, the flow rate deviation from linearity vs.&nbsp;<img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5CDelta%20P%7D"> reaches the <img src="https://latex.codecogs.com/png.latex?2%5C%25"> (see Figure&nbsp;2). Such an assumption is only adequate when the diagram of the actual flow rate versus <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5CDelta%20P%7D">, under constant upstream conditions, shows a sharp break point between the linear and horizontal zones. A simple form of calculation of the <img src="https://latex.codecogs.com/png.latex?K_C"> is the following formula [Handbook for Control Valve Sizing - Parcol]:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AK_C%20=%200.80%20%5Ccdot%20F_L%5E2%0A"> then the coefficient of proportionality between <img src="https://latex.codecogs.com/png.latex?K_%7BFZ%7D"> and <img src="https://latex.codecogs.com/png.latex?F_L%5E2"> can come down to <img src="https://latex.codecogs.com/png.latex?0.65">, so:</p>
+<p>The beginning cavitation coefficient can be extrapolated from the curve in Figure&nbsp;2. A <em>first approximation</em> value would be:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AK_%7BFZ%7D%20=%200.65%20%5Ccdot%20F_L%5E2%0A"> In this way, all cavitation limits can be represented as a function of <img src="https://latex.codecogs.com/png.latex?F_L">.</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -145,6 +146,19 @@ Important
 <p>The values of <img src="https://latex.codecogs.com/png.latex?F_L">, <img src="https://latex.codecogs.com/png.latex?K_C">, and <img src="https://latex.codecogs.com/png.latex?K_%7BFZ%7D"> must be verified with Experimentation, Theoretical Models, and Numerical Models like CFD.</p>
 </div>
 </div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The transition between the zero cavitation zone and choked flow can be represented mathematically as a <a href="https://mathalino.com/reviewer/surveying-and-transportation-engineering/parabolic-curve#:~:text=Vertical%20Parabolic%20Curve&amp;text=which%20is%20interpreted%20as%20rate,rate%20of%20change%20of%20slope.&amp;text=L%20%3D%20length%20of%20parabolic%20curve,corresponds%20to%20the%20plan%20distance.">Vertical Parabolic curve</a>. Vertical curves provide gradual change between two adjacent steep grade lines. The curve used to connect the two adjacent grades is a parabola. We will see these calculations in a future Blog.</p>
+</div>
+</div>
 
 
 
@@ -156,6 +170,7 @@ Important
 <li>Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.</li>
 <li><a href="https://www.parcol.com/docs/ACA0101_gb.pdf">Handbook for Control Valve Sizing - Parcol</a>. TECHNICAL BULLETIN 1-ITECHNICAL BULLETIN 1-I.</li>
 <li>Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr.&nbsp;1993, https://doi.org/10.2172/10155405.</li>
+<li>Parabolic Curve | Surveying and Transportation Engineering Review at MATHalino. https://mathalino.com/reviewer/surveying-and-transportation-engineering/parabolic-curve. Accessed 25 Oct.&nbsp;2022.</li>
 <li>ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.</li>
 <li>British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.</li>
 <li>ANSI/ISA, editor. ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.</li>

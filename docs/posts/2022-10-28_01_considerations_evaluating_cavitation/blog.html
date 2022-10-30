@@ -220,7 +220,7 @@ Q_{max(L)} = K_v \cdot F_L \cdot F_R \cdot \sqrt{\frac{(P_1-F_F \cdot P_v)}{(\rh
 <li><span class="math inline">\(\rho_{1}/\rho_{0}\)</span> Relative density (<span class="math inline">\(\rho_{1}/\rho_{0} = 1.0\)</span> for water at <span class="math inline">\(15°C\)</span>); Unit: Dimensionless</li>
 <li><span class="math inline">\(\Delta P\)</span> Differential pressure between upstream and downstream pressure taps; Unit: bar</li>
 </ul>
-<p>The above functions can be represented in the following two ways:</p>
+<p>The above functions, for the valve in a position <span class="math inline">\(x\%\)</span> (for example, <span class="math inline">\(100\%\)</span> open), can be represented in the following two ways:</p>
 <div id="fig-flowrestriction1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="Flow_with_restriction_01.png" class="img-fluid figure-img"></p>
@@ -262,10 +262,11 @@ Note
 \sigma_i =  \frac{1}{X_{FZ}^2} = \frac{(P_1 - P_v)}{\Delta P}
 \]</span> <span class="math display">\[
 \sigma_c = \frac{1}{X_{C}^2} = \frac{(P_1 - P_v)}{\Delta P}
-\]</span> <span class="math inline">\(K_C\)</span> specifies where cavitation begins to appear in a flow of water through the valve with such intensity that, under constant upstream conditions, the flow rate deviation from linearity vs.&nbsp;<span class="math inline">\(\sqrt{\Delta P}\)</span> reaches the <strong>$2% $</strong> (see <a href="#fig-flowrestriction2">Figure&nbsp;2</a>). Such an assumption is only adequate when the diagram of the actual flow rate versus <span class="math inline">\(\sqrt{\Delta P}\)</span>, under constant upstream conditions, shows a sharp break point between the linear and horizontal zones. A simple form of calculation of the <span class="math inline">\(K_C\)</span> is the following formula [Handbook for Control Valve Sizing - Parcol]:</p>
+\]</span> <span class="math inline">\(K_C\)</span> specifies where cavitation begins to appear in a flow of water through the valve with such intensity that, under constant upstream conditions, the flow rate deviation from linearity vs.&nbsp;<span class="math inline">\(\sqrt{\Delta P}\)</span> reaches the <span class="math inline">\(2\%\)</span> (see <a href="#fig-flowrestriction2">Figure&nbsp;2</a>). Such an assumption is only adequate when the diagram of the actual flow rate versus <span class="math inline">\(\sqrt{\Delta P}\)</span>, under constant upstream conditions, shows a sharp break point between the linear and horizontal zones. A simple form of calculation of the <span class="math inline">\(K_C\)</span> is the following formula [Handbook for Control Valve Sizing - Parcol]:</p>
 <p><span class="math display">\[
 K_C = 0.80 \cdot F_L^2
 \]</span> then the coefficient of proportionality between <span class="math inline">\(K_{FZ}\)</span> and <span class="math inline">\(F_L^2\)</span> can come down to <span class="math inline">\(0.65\)</span>, so:</p>
+<p>The beginning cavitation coefficient can be extrapolated from the curve in <a href="#fig-flowrestriction2">Figure&nbsp;2</a>. A <em>first approximation</em> value would be:</p>
 <p><span class="math display">\[
 K_{FZ} = 0.65 \cdot F_L^2
 \]</span> In this way, all cavitation limits can be represented as a function of <span class="math inline">\(F_L\)</span>.</p>
@@ -282,6 +283,19 @@ Important
 <p>The values of <span class="math inline">\(F_L\)</span>, <span class="math inline">\(K_C\)</span>, and <span class="math inline">\(K_{FZ}\)</span> must be verified with Experimentation, Theoretical Models, and Numerical Models like CFD.</p>
 </div>
 </div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The transition between the zero cavitation zone and choked flow can be represented mathematically as a <a href="https://mathalino.com/reviewer/surveying-and-transportation-engineering/parabolic-curve#:~:text=Vertical%20Parabolic%20Curve&amp;text=which%20is%20interpreted%20as%20rate,rate%20of%20change%20of%20slope.&amp;text=L%20%3D%20length%20of%20parabolic%20curve,corresponds%20to%20the%20plan%20distance.">Vertical Parabolic curve</a>. Vertical curves provide gradual change between two adjacent steep grade lines. The curve used to connect the two adjacent grades is a parabola. We will see these calculations in a future Blog.</p>
+</div>
+</div>
 
 
 
@@ -293,6 +307,7 @@ Important
 <li>Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.</li>
 <li><a href="https://www.parcol.com/docs/ACA0101_gb.pdf">Handbook for Control Valve Sizing - Parcol</a>. TECHNICAL BULLETIN 1-ITECHNICAL BULLETIN 1-I.</li>
 <li>Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr.&nbsp;1993, https://doi.org/10.2172/10155405.</li>
+<li>Parabolic Curve | Surveying and Transportation Engineering Review at MATHalino. https://mathalino.com/reviewer/surveying-and-transportation-engineering/parabolic-curve. Accessed 25 Oct.&nbsp;2022.</li>
 <li>ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.</li>
 <li>British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.</li>
 <li>ANSI/ISA, editor. ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.</li>
