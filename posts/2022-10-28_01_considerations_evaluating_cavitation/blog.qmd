@@ -60,7 +60,7 @@ $$
 Where:
 
 -   $Q$ is the flow; Unit: $m^3/s$
--   $F_L$ Liquid pressure recovery factor of a control valve without attached fittings; Unit: Dimensionless
+-   $F_L$ Liquid pressure recovery factor of a control valve without attached fittings. The value $F_L$ provided by the manufacturer refers to the value when the control valve is fully open. Unit: Dimensionless
 -   $F_R$ Reynolds number factor; Unit: Dimensionless. For turbulent flow, $F_R = 1$
 -   $F_F$ Liquid critical pressure ratio factor; Unit: Dimensionless [^4]
 -   $P_v$ Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar
