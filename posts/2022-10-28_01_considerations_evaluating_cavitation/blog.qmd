@@ -62,7 +62,7 @@ Where:
 -   $Q$ is the flow; Unit: $m^3/s$
 -   $F_L$ Liquid pressure recovery factor of a control valve without attached fittings; Unit: Dimensionless
 -   $F_R$ Reynolds number factor; Unit: Dimensionless. For turbulent flow, $F_R = 1$
--   $F_F$ Liquid critical pressure ratio factor; Unit: Dimensionless
+-   $F_F$ Liquid critical pressure ratio factor; Unit: Dimensionless [^4]
 -   $P_v$ Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar
 -   $\rho_{1}/\rho_{0}$ Relative density ($\rho_{1}/\rho_{0} = 1.0$ for water at $15°C$); Unit: Dimensionless
 -   $\Delta P$ Differential pressure between upstream and downstream pressure taps; Unit: bar
@@ -83,15 +83,9 @@ It is also essential to understand that $F_L$ is not a cavitation parameter. It 
 
 An analytical solution to the problem of cavitation is not easy. Emphasis has, by necessity, been concentrated on laboratory experiments to explore physics, develop instrumentation to measure cavitation, and develop empirical relationships for predicting various cavitation levels. Therefore, based on laboratory and field experience, valve manufacturers should be able to recommend which cavitation level[^1] is appropriate for their valve for a specific application [@Tuli].
 
-[^1]: Manufacturer's recommended cavitation limit $\sigma_{mr}$
-
 If the valve manufacturer's recommended cavitation levels exceed the maximum[^2], the $\sigma_{mv}$ should be the maximum acceptable value and should only be overtaken in emergencies for the short term.
 
-[^2]: Maximum noise and vibration level $\sigma_{mv}$
-
 As seen in @fig-flowrestriction1 and @fig-flowrestriction2, the liquid pressure recovery factor $F_L$ acquired experimentally, with a theoretical model or a numerical model (CFD[^3]) can be used to quantify flow conditions in locked cavitation (maximum cavitation level).
-
-[^3]: [Computational Fluid Dynamics](https://en.wikipedia.org/wiki/Computational_fluid_dynamics)
 
 $$
 \sigma_{mv} = \frac{1}{F^{2}_{L}} = \frac{(P_1-F_F \cdot p_v)}{\Delta{P}_{max}}
@@ -135,3 +129,8 @@ The transition between the zero cavitation zone and choked flow can be represent
 -   American National Standards Institute, and Instrument Society of America. Flow Equations for Sizing Control Valves: Standard. 1985.
 -   ANSI/ISA. ANSI/ISA-75.11-1985 (R1996) , Inherent Flow Characteristic and Rangeability of Control Valves. 1985.
 :::
+
+[^1]: Manufacturer's recommended cavitation limit $\sigma_{mr}$
+[^2]: Maximum noise and vibration level $\sigma_{mv}$
+[^3]: [Computational Fluid Dynamics](https://en.wikipedia.org/wiki/Computational_fluid_dynamics)
+[^4]: Liquid critical pressure ratio factor, abbreviated as $F_F$, a dimensionless number, is the ratio between pressure in vena contracta and the pressure at the maximum effective choke pressure drop across the valve. $F_F = 0.96 - 0.28 \cdot \sqrt{\frac{P_v}{221.2}}$

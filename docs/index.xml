@@ -88,7 +88,7 @@
 <li><img src="https://latex.codecogs.com/png.latex?Q"> is the flow; Unit: <img src="https://latex.codecogs.com/png.latex?m%5E3/s"></li>
 <li><img src="https://latex.codecogs.com/png.latex?F_L"> Liquid pressure recovery factor of a control valve without attached fittings; Unit: Dimensionless</li>
 <li><img src="https://latex.codecogs.com/png.latex?F_R"> Reynolds number factor; Unit: Dimensionless. For turbulent flow, <img src="https://latex.codecogs.com/png.latex?F_R%20=%201"></li>
-<li><img src="https://latex.codecogs.com/png.latex?F_F"> Liquid critical pressure ratio factor; Unit: Dimensionless</li>
+<li><img src="https://latex.codecogs.com/png.latex?F_F"> Liquid critical pressure ratio factor; Unit: Dimensionless <sup>1</sup></li>
 <li><img src="https://latex.codecogs.com/png.latex?P_v"> Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5Crho_%7B1%7D/%5Crho_%7B0%7D"> Relative density (<img src="https://latex.codecogs.com/png.latex?%5Crho_%7B1%7D/%5Crho_%7B0%7D%20=%201.0"> for water at <img src="https://latex.codecogs.com/png.latex?15%C2%B0C">); Unit: Dimensionless</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5CDelta%20P"> Differential pressure between upstream and downstream pressure taps; Unit: bar</li>
@@ -124,9 +124,9 @@ Note
 </section>
 <section id="cavitation-levels" class="level1">
 <h1>Cavitation Levels</h1>
-<p>An analytical solution to the problem of cavitation is not easy. Emphasis has, by necessity, been concentrated on laboratory experiments to explore physics, develop instrumentation to measure cavitation, and develop empirical relationships for predicting various cavitation levels. Therefore, based on laboratory and field experience, valve manufacturers should be able to recommend which cavitation level<sup>1</sup> is appropriate for their valve for a specific application <span class="citation" data-cites="Tuli">[@Tuli]</span>.</p>
-<p>If the valve manufacturer’s recommended cavitation levels exceed the maximum<sup>2</sup>, the <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmv%7D"> should be the maximum acceptable value and should only be overtaken in emergencies for the short term.</p>
-<p>As seen in Figure&nbsp;1 and Figure&nbsp;2, the liquid pressure recovery factor <img src="https://latex.codecogs.com/png.latex?F_L"> acquired experimentally, with a theoretical model or a numerical model (CFD<sup>3</sup>) can be used to quantify flow conditions in locked cavitation (maximum cavitation level).</p>
+<p>An analytical solution to the problem of cavitation is not easy. Emphasis has, by necessity, been concentrated on laboratory experiments to explore physics, develop instrumentation to measure cavitation, and develop empirical relationships for predicting various cavitation levels. Therefore, based on laboratory and field experience, valve manufacturers should be able to recommend which cavitation level<sup>2</sup> is appropriate for their valve for a specific application <span class="citation" data-cites="Tuli">[@Tuli]</span>.</p>
+<p>If the valve manufacturer’s recommended cavitation levels exceed the maximum<sup>3</sup>, the <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmv%7D"> should be the maximum acceptable value and should only be overtaken in emergencies for the short term.</p>
+<p>As seen in Figure&nbsp;1 and Figure&nbsp;2, the liquid pressure recovery factor <img src="https://latex.codecogs.com/png.latex?F_L"> acquired experimentally, with a theoretical model or a numerical model (CFD<sup>4</sup>) can be used to quantify flow conditions in locked cavitation (maximum cavitation level).</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_%7Bmv%7D%20=%20%5Cfrac%7B1%7D%7BF%5E%7B2%7D_%7BL%7D%7D%20=%20%5Cfrac%7B(P_1-F_F%20%5Ccdot%20p_v)%7D%7B%5CDelta%7BP%7D_%7Bmax%7D%7D%0A"></p>
 <p>The Incipient cavitation levels <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bi%7D"> and The constant cavitation <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bc%7D"> are also defined, where <img src="https://latex.codecogs.com/png.latex?X_%7BFZ%7D"> and <img src="https://latex.codecogs.com/png.latex?X_%7BC%7D"> are the respective coefficients:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_i%20=%20%20%5Cfrac%7B1%7D%7BX_%7BFZ%7D%5E2%7D%20=%20%5Cfrac%7B(P_1%20-%20P_v)%7D%7B%5CDelta%20P%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_c%20=%20%5Cfrac%7B1%7D%7BX_%7BC%7D%5E2%7D%20=%20%5Cfrac%7B(P_1%20-%20P_v)%7D%7B%5CDelta%20P%7D%0A"> <img src="https://latex.codecogs.com/png.latex?K_C"> specifies where cavitation begins to appear in a flow of water through the valve with such intensity that, under constant upstream conditions, the flow rate deviation from linearity vs.&nbsp;<img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5CDelta%20P%7D"> reaches the <img src="https://latex.codecogs.com/png.latex?2%5C%25"> (see Figure&nbsp;2). Such an assumption is only adequate when the diagram of the actual flow rate versus <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5CDelta%20P%7D">, under constant upstream conditions, shows a sharp break point between the linear and horizontal zones. A simple form of calculation of the <img src="https://latex.codecogs.com/png.latex?K_C"> is the following formula [Handbook for Control Valve Sizing - Parcol]:</p>
@@ -181,9 +181,10 @@ Note
 </div></section><section class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Manufacturer’s recommended cavitation limit <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmr%7D">↩︎</p></li>
-<li id="fn2"><p>Maximum noise and vibration level <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmv%7D">↩︎</p></li>
-<li id="fn3"><p><a href="https://en.wikipedia.org/wiki/Computational_fluid_dynamics">Computational Fluid Dynamics</a>↩︎</p></li>
+<li id="fn1"><p>Liquid critical pressure ratio factor, abbreviated as <img src="https://latex.codecogs.com/png.latex?F_F">, a dimensionless number, is the ratio between pressure in vena contracta and the pressure at the maximum effective choke pressure drop across the valve. <img src="https://latex.codecogs.com/png.latex?F_F%20=%200.96%20-%200.28%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7BP_v%7D%7B221.2%7D%7D">↩︎</p></li>
+<li id="fn2"><p>Manufacturer’s recommended cavitation limit <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmr%7D">↩︎</p></li>
+<li id="fn3"><p>Maximum noise and vibration level <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmv%7D">↩︎</p></li>
+<li id="fn4"><p><a href="https://en.wikipedia.org/wiki/Computational_fluid_dynamics">Computational Fluid Dynamics</a>↩︎</p></li>
 </ol>
 </section></div> ]]></description>
   <category>hydraulics</category>

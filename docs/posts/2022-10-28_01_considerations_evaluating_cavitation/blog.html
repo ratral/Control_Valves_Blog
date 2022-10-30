@@ -215,7 +215,7 @@ Q_{max(L)} = K_v \cdot F_L \cdot F_R \cdot \sqrt{\frac{(P_1-F_F \cdot P_v)}{(\rh
 <li><span class="math inline">\(Q\)</span> is the flow; Unit: <span class="math inline">\(m^3/s\)</span></li>
 <li><span class="math inline">\(F_L\)</span> Liquid pressure recovery factor of a control valve without attached fittings; Unit: Dimensionless</li>
 <li><span class="math inline">\(F_R\)</span> Reynolds number factor; Unit: Dimensionless. For turbulent flow, <span class="math inline">\(F_R = 1\)</span></li>
-<li><span class="math inline">\(F_F\)</span> Liquid critical pressure ratio factor; Unit: Dimensionless</li>
+<li><span class="math inline">\(F_F\)</span> Liquid critical pressure ratio factor; Unit: Dimensionless <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
 <li><span class="math inline">\(P_v\)</span> Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar</li>
 <li><span class="math inline">\(\rho_{1}/\rho_{0}\)</span> Relative density (<span class="math inline">\(\rho_{1}/\rho_{0} = 1.0\)</span> for water at <span class="math inline">\(15°C\)</span>); Unit: Dimensionless</li>
 <li><span class="math inline">\(\Delta P\)</span> Differential pressure between upstream and downstream pressure taps; Unit: bar</li>
@@ -251,9 +251,9 @@ Note
 </section>
 <section id="cavitation-levels" class="level1">
 <h1>Cavitation Levels</h1>
-<p>An analytical solution to the problem of cavitation is not easy. Emphasis has, by necessity, been concentrated on laboratory experiments to explore physics, develop instrumentation to measure cavitation, and develop empirical relationships for predicting various cavitation levels. Therefore, based on laboratory and field experience, valve manufacturers should be able to recommend which cavitation level<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> is appropriate for their valve for a specific application <span class="citation" data-cites="Tuli">[@Tuli]</span>.</p>
-<p>If the valve manufacturer’s recommended cavitation levels exceed the maximum<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, the <span class="math inline">\(\sigma_{mv}\)</span> should be the maximum acceptable value and should only be overtaken in emergencies for the short term.</p>
-<p>As seen in <a href="#fig-flowrestriction1">Figure&nbsp;1</a> and <a href="#fig-flowrestriction2">Figure&nbsp;2</a>, the liquid pressure recovery factor <span class="math inline">\(F_L\)</span> acquired experimentally, with a theoretical model or a numerical model (CFD<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>) can be used to quantify flow conditions in locked cavitation (maximum cavitation level).</p>
+<p>An analytical solution to the problem of cavitation is not easy. Emphasis has, by necessity, been concentrated on laboratory experiments to explore physics, develop instrumentation to measure cavitation, and develop empirical relationships for predicting various cavitation levels. Therefore, based on laboratory and field experience, valve manufacturers should be able to recommend which cavitation level<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> is appropriate for their valve for a specific application <span class="citation" data-cites="Tuli">[@Tuli]</span>.</p>
+<p>If the valve manufacturer’s recommended cavitation levels exceed the maximum<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, the <span class="math inline">\(\sigma_{mv}\)</span> should be the maximum acceptable value and should only be overtaken in emergencies for the short term.</p>
+<p>As seen in <a href="#fig-flowrestriction1">Figure&nbsp;1</a> and <a href="#fig-flowrestriction2">Figure&nbsp;2</a>, the liquid pressure recovery factor <span class="math inline">\(F_L\)</span> acquired experimentally, with a theoretical model or a numerical model (CFD<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>) can be used to quantify flow conditions in locked cavitation (maximum cavitation level).</p>
 <p><span class="math display">\[
 \sigma_{mv} = \frac{1}{F^{2}_{L}} = \frac{(P_1-F_F \cdot p_v)}{\Delta{P}_{max}}
 \]</span></p>
@@ -318,9 +318,10 @@ Note
 </div></section><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1" role="doc-endnote"><p>Manufacturer’s recommended cavitation limit <span class="math inline">\(\sigma_{mr}\)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>Maximum noise and vibration level <span class="math inline">\(\sigma_{mv}\)</span><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3" role="doc-endnote"><p><a href="https://en.wikipedia.org/wiki/Computational_fluid_dynamics">Computational Fluid Dynamics</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>Liquid critical pressure ratio factor, abbreviated as <span class="math inline">\(F_F\)</span>, a dimensionless number, is the ratio between pressure in vena contracta and the pressure at the maximum effective choke pressure drop across the valve. <span class="math inline">\(F_F = 0.96 - 0.28 \cdot \sqrt{\frac{P_v}{221.2}}\)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Manufacturer’s recommended cavitation limit <span class="math inline">\(\sigma_{mr}\)</span><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>Maximum noise and vibration level <span class="math inline">\(\sigma_{mv}\)</span><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p><a href="https://en.wikipedia.org/wiki/Computational_fluid_dynamics">Computational Fluid Dynamics</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
