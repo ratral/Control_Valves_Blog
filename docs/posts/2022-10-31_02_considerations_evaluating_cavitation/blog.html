@@ -9,7 +9,7 @@
 <meta name="author" content="Dr.&nbsp;Raúl Trujillo Álvarez">
 <meta name="dcterms.date" content="2022-10-31">
 
-<title>Water Control Valves Blog. - Considerations for Evaluating Control Valve Cavitation</title>
+<title>Notes about Water Control Valves - Considerations for Evaluating Control Valve Cavitation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,6 +17,25 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -67,7 +86,7 @@ ul.task-list{list-style: none;}
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Water Control Valves Blog.</span>
+    <span class="navbar-title">Notes about Water Control Valves</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -84,6 +103,11 @@ ul.task-list{list-style: none;}
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/Dr_Raul"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/dr-raul-trujillo/"><i class="bi bi-linkedin" role="img">
 </i> 
  </a>
   </li>  
@@ -107,7 +131,10 @@ ul.task-list{list-style: none;}
   <ul>
   <li><a href="#essential-features-of-the-k_v-value-calculation" id="toc-essential-features-of-the-k_v-value-calculation" class="nav-link active" data-scroll-target="#essential-features-of-the-k_v-value-calculation">Essential features of the <span class="math inline">\(K_v\)</span> value calculation</a>
   <ul class="collapse">
-  <li><a href="#flow-with-flow-restriction-cavitation-and-with-fittings" id="toc-flow-with-flow-restriction-cavitation-and-with-fittings" class="nav-link" data-scroll-target="#flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction (cavitation) and with fittings</a></li>
+  <li><a href="#flow-with-flow-restriction-cavitation-and-with-fittings" id="toc-flow-with-flow-restriction-cavitation-and-with-fittings" class="nav-link" data-scroll-target="#flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction cavitation and with fittings</a></li>
+  <li><a href="#piping-geometry-factor-f_p" id="toc-piping-geometry-factor-f_p" class="nav-link" data-scroll-target="#piping-geometry-factor-f_p">Piping geometry factor <span class="math inline">\(F_P\)</span></a></li>
+  <li><a href="#combined-liquid-pressure-recovery-factor-f_lp" id="toc-combined-liquid-pressure-recovery-factor-f_lp" class="nav-link" data-scroll-target="#combined-liquid-pressure-recovery-factor-f_lp">Combined liquid pressure recovery factor <span class="math inline">\(F_{LP}\)</span></a></li>
+  <li><a href="#liquid-critical-pressure-ratio-factor-f_f" id="toc-liquid-critical-pressure-ratio-factor-f_f" class="nav-link" data-scroll-target="#liquid-critical-pressure-ratio-factor-f_f">Liquid critical pressure ratio factor <span class="math inline">\(F_F\)</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -118,7 +145,7 @@ ul.task-list{list-style: none;}
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Considerations for Evaluating Control Valve Cavitation</h1>
-<p class="subtitle lead">Flow with flow restriction and with fittings (First draft!!!!)</p>
+<p class="subtitle lead">Flow with flow restriction and with fittings (second draft!!!!)</p>
   <div class="quarto-categories">
     <div class="quarto-category">hydraulics</div>
     <div class="quarto-category">theory</div>
@@ -162,22 +189,98 @@ ul.task-list{list-style: none;}
 </ol>
 <p>In this blog, only points 3. “Flow with flow restriction and fittings will be considered in the following blog”.</p>
 <section id="flow-with-flow-restriction-cavitation-and-with-fittings" class="level2">
-<h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction (cavitation) and with fittings</h2>
+<h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction cavitation and with fittings</h2>
+<p>Flow coefficients for a given valve type are determined under standard installation conditions. Therefore, the coefficient <span class="math inline">\(F_P\)</span> must be considered in realistic installation conditions. The coefficient <span class="math inline">\(F_P\)</span> considers, for example, a reducer, an expander, or an orifice plate, elements that affect the value of <span class="math inline">\(K_v\)</span> of a control valve. A calculation can only be carried out for pressure and velocity changes caused by reducers and expanders directly connected to the valve. Other effects, such as the ones caused by a change in velocity profile at the valve inlet due to reducers or other fittings like a short radius bend close to the valve, can only be evaluated by specific tests.</p>
 <p><span class="math display">\[
-Q = K_v \cdot F_R \cdot F_p \cdot \sqrt{\frac{\Delta P}{(\rho_{1}/\rho_{0})}}
+q = K_v \cdot F_R \cdot F_p \cdot \sqrt{\frac{\Delta P}{(\rho_{1}/\rho_{0})}}
 \]</span> <span class="math display">\[
-Q_{max(LP)} = K_v \cdot F_{LP} \cdot F_R \cdot \sqrt{\frac{(P_1-F_F \cdot P_v)}{(\rho_{1}/\rho_{0})}}
+q_{max(LP)} = K_v \cdot F_{LP} \cdot F_R \cdot \sqrt{\frac{(P_1-F_F \cdot P_v)}{(\rho_{1}/\rho_{0})}}
 \]</span></p>
 <p>The maximum allowable differential pressure for the calculation of control valves with fittings can be calculated as follows:</p>
 <p><span class="math display">\[
 \Delta{P}_{max(LP)}= \left( \frac{F_{LP}}{F_P}\right)^2 \cdot (P_1-F_F \cdot p_v)
 \]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="maximum_flow_with_without_fittings.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Maximum Flow without an with pipe fittings</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="effect_of_reducer.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Effect of pipe fittings of flow <span class="math inline">\(q\)</span> versus <span class="math inline">\(\sqrt{\Delta P}\)</span></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="piping-geometry-factor-f_p" class="level2">
+<h2 class="anchored" data-anchor-id="piping-geometry-factor-f_p">Piping geometry factor <span class="math inline">\(F_P\)</span></h2>
+<p>The piping geometry factor <span class="math inline">\(F_P\)</span> must account for fittings attached upstream and downstream to a control valve body. The <span class="math inline">\(F_P\)</span> factor is the flow rate ratio through a control valve installed with attached fittings to the flow rate that would result if the control valve was installed without attached fittings and tested under identical conditions [Wagner, Walter. Regel- und Sicherheitsarmaturen. 2008].</p>
+<p><span class="math display">\[
+F_P = \frac{1}{\sqrt{1 + \frac{\sum{\zeta} \; \cdot \left(\frac{K_v}{d^2}\right)}{0.0016}}}
+\]</span> In this equation, the factor <span class="math inline">\(\sum{\zeta}\)</span> is the algebraic sum of all the effective resistance coefficients of all the accessories connected to the control valve. <span class="math display">\[
+\sum{\zeta} = (\zeta_1 + \zeta_2) + (\zeta_{B_1}-\zeta_{B_2})
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\zeta_1\)</span> Resistance coefficient of the valve in the inlet</li>
+<li><span class="math inline">\(\zeta_2\)</span> Resistance coefficient of the valve in the outlet</li>
+<li><span class="math inline">\(\zeta_{B_1}\)</span> Bernoulli pressure number in the valve inlet</li>
+<li><span class="math inline">\(\zeta_{B_2}\)</span> Bernoulli pressure number in the valve outlet</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="valve_with_fittings.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Valve with fittings [Wagner]</figcaption><p></p>
+</figure>
+</div>
+<p>If the inlet and outlet fittings’ diameters are the same, <span class="math inline">\(\zeta_{B_1}\)</span> and <span class="math inline">\(\zeta_{B_2}\)</span>, become equal and fall out of the equation. In cases where the pipe diameters in front of and behind the control valve are different, the <span class="math inline">\(\zeta_{B_1}\)</span> and <span class="math inline">\(\zeta_{B_2}\)</span> are calculated as follows:</p>
+<p><span class="math display">\[
+\zeta_{B_1} = 1- \left(\frac{d}{D_1}\right)^2 \; ; \; \zeta_{B_2} = 1- \left(\frac{d}{D_2}\right)^4
+\]</span> If the inlet and outlet ports are short, commercially available concentric reducers and diffusers, then the coefficients <span class="math inline">\(\zeta_1\)</span> and <span class="math inline">\(\zeta_2\)</span> can be calculated roughly as follows: <span class="math display">\[
+\zeta_1 = (1/2) \cdot \left(1- \left(\frac{d}{D_1}\right)^2\right)^2
+\\
+\\
+\zeta_2 = \left(1- \left(\frac{d}{D_2}\right)^2\right)^2
+\]</span></p>
+<p>Then for inlet reduction and outlet expansion with the same pipe size <span class="math inline">\((D_1=D_2=D)\)</span>:</p>
+<p><span class="math display">\[
+\sum{\zeta} = 1.5 \cdot  \left(1- \left(\frac{d}{D}\right)^2\right)^2
+\]</span></p>
+</section>
+<section id="combined-liquid-pressure-recovery-factor-f_lp" class="level2">
+<h2 class="anchored" data-anchor-id="combined-liquid-pressure-recovery-factor-f_lp">Combined liquid pressure recovery factor <span class="math inline">\(F_{LP}\)</span></h2>
+<p>When a valve is installed with reducers or other attached fittings, the valve-fitting combination’s liquid pressure recovery is not the same as that for the valve alone. For calculations involving choked flow, it is convenient to treat the piping geometry factor <span class="math inline">\(F_p\)</span> and the <span class="math inline">\(F_L\)</span> factor for the valve-fitting combination as a single factor. The factor <span class="math inline">\(F_{LP}\)</span> is determined in the same way as <span class="math inline">\(F_L\)</span>, with laboratory test results.</p>
+<p><span class="math display">\[
+F_{LP} = \frac{F_L}{\sqrt{1+\frac{F_L^2}{0.0016}\cdot \sum{\zeta_1}\cdot \left( \frac{K_v}{d^2} \right)^2}}
+\]</span> Here <span class="math inline">\(\sum{\zeta_1} = \zeta_1 + \zeta_{B_1}\)</span>, and <span class="math inline">\(\zeta_{B_1}\)</span> is the Bernoulli pressure factor for the fitting upstream of the valve, determined between the upstream pressure test point in the pipeline and the inlet of the control valve.</p>
+</section>
+<section id="liquid-critical-pressure-ratio-factor-f_f" class="level2">
+<h2 class="anchored" data-anchor-id="liquid-critical-pressure-ratio-factor-f_f">Liquid critical pressure ratio factor <span class="math inline">\(F_F\)</span></h2>
+<p><span class="math inline">\(F_F\)</span> is the liquid critical pressure ratio factor. This factor is the ratio of the apparent Vena-Contracta pressure at choked flow conditions to the liquid’s vapor pressure at inlet temperature. At vapor pressures near zero, this factor is 0.96. Values of <span class="math inline">\(F_F\)</span> may be determined approximated from the following equation:</p>
+<p><span class="math display">\[
+F_F = 0.96-0.28 \cdot \sqrt{P_v/P_c}
+\]</span> Where: <span class="math inline">\(p_c\)</span> is the thermodynamic critical pressure. For water, this value is <span class="math inline">\(p_c = 221.2\)</span> bar and <span class="math inline">\(p_v\)</span> vapor pressure of the liquid.</p>
+
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" role="doc-bibliography">
+<ul>
+<li>Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.</li>
+<li><a href="https://www.parcol.com/docs/ACA0101_gb.pdf">Handbook for Control Valve Sizing - Parcol</a>. TECHNICAL BULLETIN 1-ITECHNICAL BULLETIN 1-I.</li>
+<li>Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr.&nbsp;1993, https://doi.org/10.2172/10155405.</li>
+<li>Parabolic Curve | Surveying and Transportation Engineering Review at MATHalino. https://mathalino.com/reviewer/surveying-and-transportation-engineering/parabolic-curve. Accessed 25 Oct.&nbsp;2022.</li>
+<li>ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.</li>
+<li>British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.</li>
+<li>ANSI/ISA, editor. ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.</li>
+<li>ANSI/ISA, editor. ANSI/ISA–RP75.23–1995, Considerations for Evaluating Control Valve Cavitation. Instrument Society of America, 1995.</li>
+<li>American National Standards Institute, and Instrument Society of America. Flow Equations for Sizing Control Valves: Standard. 1985.</li>
+<li>ANSI/ISA. ANSI/ISA-75.11-1985 (R1996) , Inherent Flow Characteristic and Rangeability of Control Valves. 1985.</li>
+</ul>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const disableStylesheet = (stylesheets) => {

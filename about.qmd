@@ -13,7 +13,17 @@ about:
     - icon: github
       text: Github
       href: https://github.com/ratral
-
+    - icon: linkedin
+      text: linkedin
+      href: https://www.linkedin.com/in/dr-raul-trujillo/
 ---
 
-About this blog
+With this blog :
+
+-   I want to publish the notes I take for my projects.
+-   I will take note of the challenges and questions I regularly face in my professional activity.
+-   I want to confront my notes with the possible audience and my future self.
+-   Through creating blogs, I want to clarify my ideas about the published topics.
+-    In other words, this blog will be a tool for understanding me :-) .
+
+I will indeed have mistakes in developing the Themes (I'll try not to, but to err is human and a part of intellectual development); Probably, I will not cite or mention the sources at some points in the Blogs by mistake; so I apologize in advance and ask your help correcting them. I can only promise you that I will support the issues with all the literature sources I can find and have available.

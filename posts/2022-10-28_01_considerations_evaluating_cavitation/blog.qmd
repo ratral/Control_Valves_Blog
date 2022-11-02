@@ -106,8 +106,10 @@ $$ then the coefficient of proportionality between $K_{FZ}$ and $F_L^2$ can come
 The beginning cavitation coefficient can be extrapolated from the curve in @fig-flowrestriction2. A *first approximation* value would be:
 
 $$
-K_{FZ} = 0.65 \cdot F_L^2
-$$ In this way, all cavitation limits can be represented as a function of $F_L$.
+K_{FZ} = 0.592 \cdot F_L^2
+$$ 
+
+In this way, all cavitation limits can be represented as a function of $F_L$.
 
 ::: callout-important
 The values of $F_L$, $K_C$, and $K_{FZ}$ must be verified with Experimentation, Theoretical Models, and Numerical Models like CFD.

@@ -9,7 +9,7 @@
 <meta name="author" content="Dr.&nbsp;Raúl Trujillo Álvarez">
 <meta name="dcterms.date" content="2022-10-28">
 
-<title>Water Control Valves Blog. - Considerations for Evaluating Control Valve Cavitation</title>
+<title>Notes about Water Control Valves - Considerations for Evaluating Control Valve Cavitation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,7 +86,7 @@ div.csl-indent {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Water Control Valves Blog.</span>
+    <span class="navbar-title">Notes about Water Control Valves</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -103,6 +103,11 @@ div.csl-indent {
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/Dr_Raul"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/dr-raul-trujillo/"><i class="bi bi-linkedin" role="img">
 </i> 
  </a>
   </li>  
@@ -213,7 +218,7 @@ Q_{max(L)} = K_v \cdot F_L \cdot F_R \cdot \sqrt{\frac{(P_1-F_F \cdot P_v)}{(\rh
 <p>Where:</p>
 <ul>
 <li><span class="math inline">\(Q\)</span> is the flow; Unit: <span class="math inline">\(m^3/s\)</span></li>
-<li><span class="math inline">\(F_L\)</span> Liquid pressure recovery factor of a control valve without attached fittings; Unit: Dimensionless</li>
+<li><span class="math inline">\(F_L\)</span> Liquid pressure recovery factor of a control valve without attached fittings. The value <span class="math inline">\(F_L\)</span> provided by the manufacturer refers to the value when the control valve is fully open. Unit: Dimensionless</li>
 <li><span class="math inline">\(F_R\)</span> Reynolds number factor; Unit: Dimensionless. For turbulent flow, <span class="math inline">\(F_R = 1\)</span></li>
 <li><span class="math inline">\(F_F\)</span> Liquid critical pressure ratio factor; Unit: Dimensionless <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
 <li><span class="math inline">\(P_v\)</span> Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar</li>
@@ -268,8 +273,9 @@ K_C = 0.80 \cdot F_L^2
 \]</span> then the coefficient of proportionality between <span class="math inline">\(K_{FZ}\)</span> and <span class="math inline">\(F_L^2\)</span> can come down to <span class="math inline">\(0.65\)</span>, so:</p>
 <p>The beginning cavitation coefficient can be extrapolated from the curve in <a href="#fig-flowrestriction2">Figure&nbsp;2</a>. A <em>first approximation</em> value would be:</p>
 <p><span class="math display">\[
-K_{FZ} = 0.65 \cdot F_L^2
-\]</span> In this way, all cavitation limits can be represented as a function of <span class="math inline">\(F_L\)</span>.</p>
+K_{FZ} = 0.592 \cdot F_L^2
+\]</span></p>
+<p>In this way, all cavitation limits can be represented as a function of <span class="math inline">\(F_L\)</span>.</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

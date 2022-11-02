@@ -5,7 +5,7 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Water Control Valves Blog.</title>
+<title>Notes about Water Control Valves</title>
 <link>https://ratral.github.io/Control_Valves_Blog//index.html</link>
 <atom:link href="https://ratral.github.io/Control_Valves_Blog//index.xml" rel="self" type="application/rss+xml"/>
 <description>This blog is a compilation of my notes on the selection of control valves.</description>
@@ -29,22 +29,82 @@
 </ol>
 <p>In this blog, only points 3. “Flow with flow restriction and fittings will be considered in the following blog”.</p>
 <section id="flow-with-flow-restriction-cavitation-and-with-fittings" class="level2">
-<h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction (cavitation) and with fittings</h2>
-<p><img src="https://latex.codecogs.com/png.latex?%0AQ%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20F_p%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0AQ_%7Bmax(LP)%7D%20=%20K_v%20%5Ccdot%20F_%7BLP%7D%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
+<h2 class="anchored" data-anchor-id="flow-with-flow-restriction-cavitation-and-with-fittings">Flow with flow restriction cavitation and with fittings</h2>
+<p>Flow coefficients for a given valve type are determined under standard installation conditions. Therefore, the coefficient <img src="https://latex.codecogs.com/png.latex?F_P"> must be considered in realistic installation conditions. The coefficient <img src="https://latex.codecogs.com/png.latex?F_P"> considers, for example, a reducer, an expander, or an orifice plate, elements that affect the value of <img src="https://latex.codecogs.com/png.latex?K_v"> of a control valve. A calculation can only be carried out for pressure and velocity changes caused by reducers and expanders directly connected to the valve. Other effects, such as the ones caused by a change in velocity profile at the valve inlet due to reducers or other fittings like a short radius bend close to the valve, can only be evaluated by specific tests.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Aq%20=%20K_v%20%5Ccdot%20F_R%20%5Ccdot%20F_p%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B%5CDelta%20P%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0Aq_%7Bmax(LP)%7D%20=%20K_v%20%5Ccdot%20F_%7BLP%7D%20%5Ccdot%20F_R%20%5Ccdot%20%5Csqrt%7B%5Cfrac%7B(P_1-F_F%20%5Ccdot%20P_v)%7D%7B(%5Crho_%7B1%7D/%5Crho_%7B0%7D)%7D%7D%0A"></p>
 <p>The maximum allowable differential pressure for the calculation of control valves with fittings can be calculated as follows:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%7BP%7D_%7Bmax(LP)%7D=%20%5Cleft(%20%5Cfrac%7BF_%7BLP%7D%7D%7BF_P%7D%5Cright)%5E2%20%5Ccdot%20(P_1-F_F%20%5Ccdot%20p_v)%0A"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-31_02_considerations_evaluating_cavitation\maximum_flow_with_without_fittings.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-31_02_considerations_evaluating_cavitation\effect_of_reducer.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+</section>
+<section id="piping-geometry-factor-f_p" class="level2">
+<h2 class="anchored" data-anchor-id="piping-geometry-factor-f_p">Piping geometry factor <img src="https://latex.codecogs.com/png.latex?F_P"></h2>
+<p>The piping geometry factor <img src="https://latex.codecogs.com/png.latex?F_P"> must account for fittings attached upstream and downstream to a control valve body. The <img src="https://latex.codecogs.com/png.latex?F_P"> factor is the flow rate ratio through a control valve installed with attached fittings to the flow rate that would result if the control valve was installed without attached fittings and tested under identical conditions [Wagner, Walter. Regel- und Sicherheitsarmaturen. 2008].</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AF_P%20=%20%5Cfrac%7B1%7D%7B%5Csqrt%7B1%20+%20%5Cfrac%7B%5Csum%7B%5Czeta%7D%20%5C;%20%5Ccdot%20%5Cleft(%5Cfrac%7BK_v%7D%7Bd%5E2%7D%5Cright)%7D%7B0.0016%7D%7D%7D%0A"> In this equation, the factor <img src="https://latex.codecogs.com/png.latex?%5Csum%7B%5Czeta%7D"> is the algebraic sum of all the effective resistance coefficients of all the accessories connected to the control valve. <img src="https://latex.codecogs.com/png.latex?%0A%5Csum%7B%5Czeta%7D%20=%20(%5Czeta_1%20+%20%5Czeta_2)%20+%20(%5Czeta_%7BB_1%7D-%5Czeta_%7BB_2%7D)%0A"></p>
+<p>Where:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Czeta_1"> Resistance coefficient of the valve in the inlet</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Czeta_2"> Resistance coefficient of the valve in the outlet</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Czeta_%7BB_1%7D"> Bernoulli pressure number in the valve inlet</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Czeta_%7BB_2%7D"> Bernoulli pressure number in the valve outlet</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-31_02_considerations_evaluating_cavitation\valve_with_fittings.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+<p>If the inlet and outlet fittings’ diameters are the same, <img src="https://latex.codecogs.com/png.latex?%5Czeta_%7BB_1%7D"> and <img src="https://latex.codecogs.com/png.latex?%5Czeta_%7BB_2%7D">, become equal and fall out of the equation. In cases where the pipe diameters in front of and behind the control valve are different, the <img src="https://latex.codecogs.com/png.latex?%5Czeta_%7BB_1%7D"> and <img src="https://latex.codecogs.com/png.latex?%5Czeta_%7BB_2%7D"> are calculated as follows:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Czeta_%7BB_1%7D%20=%201-%20%5Cleft(%5Cfrac%7Bd%7D%7BD_1%7D%5Cright)%5E2%20%5C;%20;%20%5C;%20%5Czeta_%7BB_2%7D%20=%201-%20%5Cleft(%5Cfrac%7Bd%7D%7BD_2%7D%5Cright)%5E4%0A"> If the inlet and outlet ports are short, commercially available concentric reducers and diffusers, then the coefficients <img src="https://latex.codecogs.com/png.latex?%5Czeta_1"> and <img src="https://latex.codecogs.com/png.latex?%5Czeta_2"> can be calculated roughly as follows: <img src="https://latex.codecogs.com/png.latex?%0A%5Czeta_1%20=%20(1/2)%20%5Ccdot%20%5Cleft(1-%20%5Cleft(%5Cfrac%7Bd%7D%7BD_1%7D%5Cright)%5E2%5Cright)%5E2%0A%5C%5C%0A%5C%5C%0A%5Czeta_2%20=%20%5Cleft(1-%20%5Cleft(%5Cfrac%7Bd%7D%7BD_2%7D%5Cright)%5E2%5Cright)%5E2%0A"></p>
+<p>Then for inlet reduction and outlet expansion with the same pipe size <img src="https://latex.codecogs.com/png.latex?(D_1=D_2=D)">:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Csum%7B%5Czeta%7D%20=%201.5%20%5Ccdot%20%20%5Cleft(1-%20%5Cleft(%5Cfrac%7Bd%7D%7BD%7D%5Cright)%5E2%5Cright)%5E2%0A"></p>
+</section>
+<section id="combined-liquid-pressure-recovery-factor-f_lp" class="level2">
+<h2 class="anchored" data-anchor-id="combined-liquid-pressure-recovery-factor-f_lp">Combined liquid pressure recovery factor <img src="https://latex.codecogs.com/png.latex?F_%7BLP%7D"></h2>
+<p>When a valve is installed with reducers or other attached fittings, the valve-fitting combination’s liquid pressure recovery is not the same as that for the valve alone. For calculations involving choked flow, it is convenient to treat the piping geometry factor <img src="https://latex.codecogs.com/png.latex?F_p"> and the <img src="https://latex.codecogs.com/png.latex?F_L"> factor for the valve-fitting combination as a single factor. The factor <img src="https://latex.codecogs.com/png.latex?F_%7BLP%7D"> is determined in the same way as <img src="https://latex.codecogs.com/png.latex?F_L">, with laboratory test results.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AF_%7BLP%7D%20=%20%5Cfrac%7BF_L%7D%7B%5Csqrt%7B1+%5Cfrac%7BF_L%5E2%7D%7B0.0016%7D%5Ccdot%20%5Csum%7B%5Czeta_1%7D%5Ccdot%20%5Cleft(%20%5Cfrac%7BK_v%7D%7Bd%5E2%7D%20%5Cright)%5E2%7D%7D%0A"> Here <img src="https://latex.codecogs.com/png.latex?%5Csum%7B%5Czeta_1%7D%20=%20%5Czeta_1%20+%20%5Czeta_%7BB_1%7D">, and <img src="https://latex.codecogs.com/png.latex?%5Czeta_%7BB_1%7D"> is the Bernoulli pressure factor for the fitting upstream of the valve, determined between the upstream pressure test point in the pipeline and the inlet of the control valve.</p>
+</section>
+<section id="liquid-critical-pressure-ratio-factor-f_f" class="level2">
+<h2 class="anchored" data-anchor-id="liquid-critical-pressure-ratio-factor-f_f">Liquid critical pressure ratio factor <img src="https://latex.codecogs.com/png.latex?F_F"></h2>
+<p><img src="https://latex.codecogs.com/png.latex?F_F"> is the liquid critical pressure ratio factor. This factor is the ratio of the apparent Vena-Contracta pressure at choked flow conditions to the liquid’s vapor pressure at inlet temperature. At vapor pressures near zero, this factor is 0.96. Values of <img src="https://latex.codecogs.com/png.latex?F_F"> may be determined approximated from the following equation:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AF_F%20=%200.96-0.28%20%5Ccdot%20%5Csqrt%7BP_v/P_c%7D%0A"> Where: <img src="https://latex.codecogs.com/png.latex?p_c"> is the thermodynamic critical pressure. For water, this value is <img src="https://latex.codecogs.com/png.latex?p_c%20=%20221.2"> bar and <img src="https://latex.codecogs.com/png.latex?p_v"> vapor pressure of the liquid.</p>
+
 
 
 </section>
 </section>
 
- ]]></description>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs">
+<ul>
+<li>Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.</li>
+<li><a href="https://www.parcol.com/docs/ACA0101_gb.pdf">Handbook for Control Valve Sizing - Parcol</a>. TECHNICAL BULLETIN 1-ITECHNICAL BULLETIN 1-I.</li>
+<li>Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr.&nbsp;1993, https://doi.org/10.2172/10155405.</li>
+<li>Parabolic Curve | Surveying and Transportation Engineering Review at MATHalino. https://mathalino.com/reviewer/surveying-and-transportation-engineering/parabolic-curve. Accessed 25 Oct.&nbsp;2022.</li>
+<li>ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.</li>
+<li>British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.</li>
+<li>ANSI/ISA, editor. ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.</li>
+<li>ANSI/ISA, editor. ANSI/ISA–RP75.23–1995, Considerations for Evaluating Control Valve Cavitation. Instrument Society of America, 1995.</li>
+<li>American National Standards Institute, and Instrument Society of America. Flow Equations for Sizing Control Valves: Standard. 1985.</li>
+<li>ANSI/ISA. ANSI/ISA-75.11-1985 (R1996) , Inherent Flow Characteristic and Rangeability of Control Valves. 1985.</li>
+</ul>
+</div></section></div> ]]></description>
   <category>hydraulics</category>
   <category>theory</category>
   <category>valves</category>
   <category>analysis</category>
   <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-31_02_considerations_evaluating_cavitation/blog.html</guid>
   <pubDate>Sun, 30 Oct 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-31_02_considerations_evaluating_cavitation/maximum_flow_with_without_fittings.png" medium="image" type="image/png" height="222" width="144"/>
 </item>
 <item>
   <title>Considerations for Evaluating Control Valve Cavitation</title>
@@ -86,7 +146,7 @@
 <p>Where:</p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?Q"> is the flow; Unit: <img src="https://latex.codecogs.com/png.latex?m%5E3/s"></li>
-<li><img src="https://latex.codecogs.com/png.latex?F_L"> Liquid pressure recovery factor of a control valve without attached fittings; Unit: Dimensionless</li>
+<li><img src="https://latex.codecogs.com/png.latex?F_L"> Liquid pressure recovery factor of a control valve without attached fittings. The value <img src="https://latex.codecogs.com/png.latex?F_L"> provided by the manufacturer refers to the value when the control valve is fully open. Unit: Dimensionless</li>
 <li><img src="https://latex.codecogs.com/png.latex?F_R"> Reynolds number factor; Unit: Dimensionless. For turbulent flow, <img src="https://latex.codecogs.com/png.latex?F_R%20=%201"></li>
 <li><img src="https://latex.codecogs.com/png.latex?F_F"> Liquid critical pressure ratio factor; Unit: Dimensionless <sup>1</sup></li>
 <li><img src="https://latex.codecogs.com/png.latex?P_v"> Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar</li>
@@ -132,7 +192,8 @@ Note
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_i%20=%20%20%5Cfrac%7B1%7D%7BX_%7BFZ%7D%5E2%7D%20=%20%5Cfrac%7B(P_1%20-%20P_v)%7D%7B%5CDelta%20P%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_c%20=%20%5Cfrac%7B1%7D%7BX_%7BC%7D%5E2%7D%20=%20%5Cfrac%7B(P_1%20-%20P_v)%7D%7B%5CDelta%20P%7D%0A"> <img src="https://latex.codecogs.com/png.latex?K_C"> specifies where cavitation begins to appear in a flow of water through the valve with such intensity that, under constant upstream conditions, the flow rate deviation from linearity vs.&nbsp;<img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5CDelta%20P%7D"> reaches the <img src="https://latex.codecogs.com/png.latex?2%5C%25"> (see Figure&nbsp;2). Such an assumption is only adequate when the diagram of the actual flow rate versus <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5CDelta%20P%7D">, under constant upstream conditions, shows a sharp break point between the linear and horizontal zones. A simple form of calculation of the <img src="https://latex.codecogs.com/png.latex?K_C"> is the following formula [Handbook for Control Valve Sizing - Parcol]:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AK_C%20=%200.80%20%5Ccdot%20F_L%5E2%0A"> then the coefficient of proportionality between <img src="https://latex.codecogs.com/png.latex?K_%7BFZ%7D"> and <img src="https://latex.codecogs.com/png.latex?F_L%5E2"> can come down to <img src="https://latex.codecogs.com/png.latex?0.65">, so:</p>
 <p>The beginning cavitation coefficient can be extrapolated from the curve in Figure&nbsp;2. A <em>first approximation</em> value would be:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AK_%7BFZ%7D%20=%200.65%20%5Ccdot%20F_L%5E2%0A"> In this way, all cavitation limits can be represented as a function of <img src="https://latex.codecogs.com/png.latex?F_L">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AK_%7BFZ%7D%20=%200.592%20%5Ccdot%20F_L%5E2%0A"></p>
+<p>In this way, all cavitation limits can be represented as a function of <img src="https://latex.codecogs.com/png.latex?F_L">.</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
