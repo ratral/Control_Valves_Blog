@@ -136,6 +136,7 @@ div.csl-indent {
   <li><a href="#combined-liquid-pressure-recovery-factor-f_lp" id="toc-combined-liquid-pressure-recovery-factor-f_lp" class="nav-link" data-scroll-target="#combined-liquid-pressure-recovery-factor-f_lp">Combined liquid pressure recovery factor <span class="math inline">\(F_{LP}\)</span></a></li>
   <li><a href="#liquid-critical-pressure-ratio-factor-f_f" id="toc-liquid-critical-pressure-ratio-factor-f_f" class="nav-link" data-scroll-target="#liquid-critical-pressure-ratio-factor-f_f">Liquid critical pressure ratio factor <span class="math inline">\(F_F\)</span></a></li>
   </ul></li>
+  <li><a href="#cavitation-levels-incipient-cavitation" id="toc-cavitation-levels-incipient-cavitation" class="nav-link" data-scroll-target="#cavitation-levels-incipient-cavitation">Cavitation Levels; Incipient Cavitation</a></li>
   </ul>
 </nav>
     </div>
@@ -199,7 +200,7 @@ q_{max(LP)} = K_v \cdot F_{LP} \cdot F_R \cdot \sqrt{\frac{(P_1-F_F \cdot P_v)}{
 <p>The maximum allowable differential pressure for the calculation of control valves with fittings can be calculated as follows:</p>
 <p><span class="math display">\[
 \Delta{P}_{max(LP)}= \left( \frac{F_{LP}}{F_P}\right)^2 \cdot (P_1-F_F \cdot p_v)
-\]</span></p>
+\]</span> - <span class="math inline">\(Q\)</span> is the flow; Unit: <span class="math inline">\(m^3/s\)</span> - <span class="math inline">\(F_L\)</span> Liquid pressure recovery factor of a control valve without attached fittings. The value <span class="math inline">\(F_L\)</span> provided by the manufacturer refers to the value when the control valve is fully open. Unit: Dimensionless - <span class="math inline">\(F_R\)</span> Reynolds number factor; Unit: Dimensionless. For turbulent flow, <span class="math inline">\(F_R = 1\)</span> - <span class="math inline">\(F_F\)</span> Liquid critical pressure ratio factor; Unit: Dimensionless - <span class="math inline">\(P_v\)</span> Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar - <span class="math inline">\(F_P\)</span> Piping geometry factor : Dimensionless - <span class="math inline">\(F_{LP}\)</span> Combined liquid pressure recovery factor : Dimensionless - <span class="math inline">\(\rho_{1}/\rho_{0}\)</span> Relative density (<span class="math inline">\(\rho_{1}/\rho_{0} = 1.0\)</span> for water at <span class="math inline">\(15°C\)</span>); Unit: Dimensionless - <span class="math inline">\(\Delta P\)</span> Differential pressure between upstream and downstream pressure taps; Unit: bar</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="maximum_flow_with_without_fittings.png" class="img-fluid figure-img"></p>
@@ -261,10 +262,21 @@ F_{LP} = \frac{F_L}{\sqrt{1+\frac{F_L^2}{0.0016}\cdot \sum{\zeta_1}\cdot \left( 
 <p><span class="math display">\[
 F_F = 0.96-0.28 \cdot \sqrt{P_v/P_c}
 \]</span> Where: <span class="math inline">\(p_c\)</span> is the thermodynamic critical pressure. For water, this value is <span class="math inline">\(p_c = 221.2\)</span> bar and <span class="math inline">\(p_v\)</span> vapor pressure of the liquid.</p>
-
-
-
 </section>
+</section>
+<section id="cavitation-levels-incipient-cavitation" class="level1">
+<h1>Cavitation Levels; Incipient Cavitation</h1>
+<p>Incipient Cavitation. This is the pressure ratio at which the first bubbles are formed (detection by acoustic measurement).</p>
+<p><span class="math inline">\(X_{FZ} = \frac{\Delta P}{P_1 - P_v}\)</span></p>
+<p>Or:</p>
+<p><span class="math inline">\(\Delta P_i = X_{FZ} \cdot (P_1 -P_v)\)</span></p>
+<p><span class="math inline">\(X_{Fz}\)</span> can be estimated to a reasonable degree of accuracy using the following equation [<em>Baumann, Hans D. Control Valve Primer: A User’s Guide. 4th ed, ISA, 2009.</em>]:</p>
+<p><span class="math display">\[
+X_{Fz} = \frac{0.90}{\sqrt{1+ 3.172 \cdot F_d \cdot \sqrt{K_v / F_{LP}}}} \approx \frac{0.90}{\sqrt{1 + 1.3 \cdot \sqrt{K_v / F_{LP}}}}
+\]</span> - <span class="math inline">\(F_d\)</span> Valve style modifier. These values are travel-related and should be stated by the manufacturer [<em>ANSI/ISA-75.01.01-2007 (60534-2-1 Mod) : Annex A(informative) — Derivation of valve style modifier <span class="math inline">\(F_d\)</span> Table 2 — Typical values of valve style modifier <span class="math inline">\(F_d = 0.41\)</span>, liquid pressure recovery factor <span class="math inline">\(F_L\)</span>, and pressure differential ratio factor <span class="math inline">\(x_T\)</span> at full rated travel</em>]</p>
+
+
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" role="doc-bibliography">
