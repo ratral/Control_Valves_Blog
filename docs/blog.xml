@@ -10,7 +10,96 @@
 <atom:link href="https://ratral.github.io/Control_Valves_Blog//blog.xml" rel="self" type="application/rss+xml"/>
 <description>This blog is a compilation of my notes on the selection of control valves.</description>
 <generator>quarto-0.9.342</generator>
-<lastBuildDate>Sun, 30 Oct 2022 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 10 Nov 2022 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>How can we compare the cavitation levels of different valves?</title>
+  <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
+  <link>https://ratral.github.io/Control_Valves_Blog//posts/2022-11-11_compare_cavitation_levels_different_valves/blog.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="evaluating-the-cavitation-limits-of-the-valve" class="level1">
+<h1>Evaluating the Cavitation Limits of the valve</h1>
+<p>Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage and can reduce the valve’s capacity in advanced stages. The acceptable cavitation level for a valve in a given system varies with valve type, valve function, details of the piping layout, and operation duration.It is necessary to identify and provide experimental data for several cavitation intensity levels to have adequate information for analysis and design. There are defined six different cavitation design limits. The methods used to determine each limit experimentally are defined, and suggestions when each limit might be appropriate. These limits are [<span class="citation" data-cites="tullis1993">@tullis1993</span> and ISA-RP75.23-1995]:</p>
+<ol type="1">
+<li><p>Incipient cavitation <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bi%7D"></p>
+<ul>
+<li>Onset of cavitation</li>
+<li>Detect using high-frequency vibration measurement</li>
+<li>Very local phenomenon</li>
+<li>Transient: random “ticks” sound</li>
+<li>Low-level cavitation: usually not damaging</li>
+<li>Occurs before the loss of flow capacity</li>
+</ul></li>
+<li><p>Critical (or constant) cavitation <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bc%7D"></p>
+<ul>
+<li>More regular cavitation events</li>
+<li>Lower frequency sound and vibration sensed: “rumbling” sound</li>
+<li>Some surface damage may occur: dependent upon valve and trim styles and materials.</li>
+</ul></li>
+<li><p>Maximum noise and vibration level <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmv%7D"></p>
+<ul>
+<li>Highest vibration amplitude: sounds like “marbles” or “gravel.”</li>
+<li>Vigorous, large-scale cavitation</li>
+<li>Very high damage potential</li>
+</ul></li>
+<li><p>Choked flow <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bch%7D"></p>
+<ul>
+<li>“Choking” cavitation is a most severe level of cavitation.</li>
+<li>The maximum noise, vibration, and material damage levels occur at or just before this condition.</li>
+<li>Under “fully choked” flow conditions, an additional decrease in the downstream pressure will not increase the flow rate through the valve at a given inlet pressure. In other words, it is a limiting flow condition in which vapor formation is enough to limit the valve’s flow rate to some maximum value.</li>
+<li>The choking “process” occurs over a range of pressure drops due to the compressibility changes accompanying vapor formation.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-17_quantifying_cavitation_potential\cavitation_regime.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div></li>
+</ol>
+</section>
+<section id="calculation-of-the-cavitation-levels" class="level1">
+<h1>Calculation of the Cavitation Levels</h1>
+<p>How can cavitation levels be calculated?</p>
+<section id="incipient-cavitation" class="level2">
+<h2 class="anchored" data-anchor-id="incipient-cavitation">Incipient Cavitation</h2>
+<p>Incipient Cavitation. This is the pressure ratio at which the first bubbles are formed (detection by acoustic measurement).</p>
+<p><img src="https://latex.codecogs.com/png.latex?X_%7BFZ%7D%20=%20%5Cfrac%7B%5CDelta%20P%7D%7BP_1%20-%20P_v%7D"></p>
+<p>Or:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20P_i%20=%20X_%7BFZ%7D%20%5Ccdot%20(P_1%20-P_v)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?X_%7BFz%7D"> can be estimated to a reasonable degree of accuracy using the following equation [<em>Baumann, Hans D. Control Valve Primer: A User’s Guide. 4th ed, ISA, 2009.</em>]:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AX_%7BFz%7D%20=%20%5Cfrac%7B0.90%7D%7B%5Csqrt%7B1+%203.172%20%5Ccdot%20F_d%20%5Ccdot%20%5Csqrt%7BK_v%20/%20F_%7BL%7D%7D%7D%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?F_d"> Valve style modifier. These values are travel-related and should be stated by the manufacturer [ANSI/ISA-75.01.01-2007 (60534-2-1 Mod) : Annex A(informative) — Derivation of valve style modifier* <img src="https://latex.codecogs.com/png.latex?F_d"> Table 2 — Typical values of valve style modifier <img src="https://latex.codecogs.com/png.latex?F_d%20=%200.41">, liquid pressure recovery factor <img src="https://latex.codecogs.com/png.latex?F_L">, and pressure differential ratio factor <img src="https://latex.codecogs.com/png.latex?x_T"> at full rated travel]</p>
+</section>
+</section>
+<section id="comparison-of-the-cavitation-levels-of-the-different-types-of-valves." class="level1">
+<h1>Comparison of the cavitation levels of the different types of valves.</h1>
+<p>From the <em>ANSI/ISA-75.01.01-2007 (60534-2-1 Mod)]</em> Table 2 -Typical values of valve style modifier <img src="https://latex.codecogs.com/png.latex?F_d">, liquid pressure recovery factor <img src="https://latex.codecogs.com/png.latex?F_L">, and pressure differential ratio factor <img src="https://latex.codecogs.com/png.latex?x_T"> at full rated travel.- We will take the mean values (median) of <img src="https://latex.codecogs.com/png.latex?F_d"> and <img src="https://latex.codecogs.com/png.latex?F_L"> for globe valves Single port, Double port, Angle and Small flow trim.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-11-11_compare_cavitation_levels_different_valves\Table%202%20ISA-75-01-01-2007.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+<ul>
+<li><p><img src="https://latex.codecogs.com/png.latex?F_%7BL_%7B%5C,globe%7D%7D%20=%200.90"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?F_%7Bd_%7B%5C,globe%7D%7D%20=%200.41"></p></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>hydraulics</category>
+  <category>theory</category>
+  <category>Control</category>
+  <category>valves</category>
+  <category>analysis</category>
+  <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-11-11_compare_cavitation_levels_different_valves/blog.html</guid>
+  <pubDate>Thu, 10 Nov 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-17_quantifying_cavitation_potential/cavitation_regime.png" medium="image" type="image/png" height="140" width="144"/>
+</item>
 <item>
   <title>Considerations for Evaluating Control Valve Cavitation</title>
   <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
@@ -80,14 +169,9 @@
 <p><img src="https://latex.codecogs.com/png.latex?%0AF_F%20=%200.96-0.28%20%5Ccdot%20%5Csqrt%7BP_v/P_c%7D%0A"> Where: <img src="https://latex.codecogs.com/png.latex?p_c"> is the thermodynamic critical pressure. For water, this value is <img src="https://latex.codecogs.com/png.latex?p_c%20=%20221.2"> bar and <img src="https://latex.codecogs.com/png.latex?p_v"> vapor pressure of the liquid.</p>
 </section>
 </section>
-<section id="cavitation-levels-incipient-cavitation" class="level1">
-<h1>Cavitation Levels; Incipient Cavitation</h1>
-<p>Incipient Cavitation. This is the pressure ratio at which the first bubbles are formed (detection by acoustic measurement).</p>
-<p><img src="https://latex.codecogs.com/png.latex?X_%7BFZ%7D%20=%20%5Cfrac%7B%5CDelta%20P%7D%7BP_1%20-%20P_v%7D"></p>
-<p>Or:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20P_i%20=%20X_%7BFZ%7D%20%5Ccdot%20(P_1%20-P_v)"></p>
-<p><img src="https://latex.codecogs.com/png.latex?X_%7BFz%7D"> can be estimated to a reasonable degree of accuracy using the following equation [<em>Baumann, Hans D. Control Valve Primer: A User’s Guide. 4th ed, ISA, 2009.</em>]:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AX_%7BFz%7D%20=%20%5Cfrac%7B0.90%7D%7B%5Csqrt%7B1+%203.172%20%5Ccdot%20F_d%20%5Ccdot%20%5Csqrt%7BK_v%20/%20F_%7BLP%7D%7D%7D%7D%20%5Capprox%20%5Cfrac%7B0.90%7D%7B%5Csqrt%7B1%20+%201.3%20%5Ccdot%20%5Csqrt%7BK_v%20/%20F_%7BLP%7D%7D%7D%7D%0A"> - <img src="https://latex.codecogs.com/png.latex?F_d"> Valve style modifier. These values are travel-related and should be stated by the manufacturer [<em>ANSI/ISA-75.01.01-2007 (60534-2-1 Mod) : Annex A(informative) — Derivation of valve style modifier <img src="https://latex.codecogs.com/png.latex?F_d"> Table 2 — Typical values of valve style modifier <img src="https://latex.codecogs.com/png.latex?F_d%20=%200.41">, liquid pressure recovery factor <img src="https://latex.codecogs.com/png.latex?F_L">, and pressure differential ratio factor <img src="https://latex.codecogs.com/png.latex?x_T"> at full rated travel</em>]</p>
+<section id="what-can-you-do-with-the-information-from-evaluating-control-valve-cavitation" class="level1">
+<h1>What can you do with the information from Evaluating Control Valve Cavitation?</h1>
+<p>Let’s start by comparing the cavitation levels of different types of control valves and other brands of plunger control valves. But in the next blog. :-)</p>
 
 
 
@@ -109,6 +193,7 @@
 </div></section></div> ]]></description>
   <category>hydraulics</category>
   <category>theory</category>
+  <category>Control</category>
   <category>valves</category>
   <category>analysis</category>
   <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-10-31_02_considerations_evaluating_cavitation/blog.html</guid>

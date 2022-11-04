@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.342">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr.&nbsp;Raúl Trujillo Álvarez">
+<meta name="dcterms.date" content="2022-11-11">
+
+<title>Notes about Water Control Valves - How can we compare the cavitation levels of different valves?</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link class="quarto-color-scheme" href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="../../site_libs/bootstrap/bootstrap-dark.min.css">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Notes about Water Control Valves</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Dr.&nbsp;Raúl Trujillo Álvarez</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ratral"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/Dr_Raul"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/dr-raul-trujillo/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#evaluating-the-cavitation-limits-of-the-valve" id="toc-evaluating-the-cavitation-limits-of-the-valve" class="nav-link active" data-scroll-target="#evaluating-the-cavitation-limits-of-the-valve">Evaluating the Cavitation Limits of the valve</a></li>
+  <li><a href="#calculation-of-the-cavitation-levels" id="toc-calculation-of-the-cavitation-levels" class="nav-link" data-scroll-target="#calculation-of-the-cavitation-levels">Calculation of the Cavitation Levels</a>
+  <ul class="collapse">
+  <li><a href="#incipient-cavitation" id="toc-incipient-cavitation" class="nav-link" data-scroll-target="#incipient-cavitation">Incipient Cavitation</a></li>
+  </ul></li>
+  <li><a href="#comparison-of-the-cavitation-levels-of-the-different-types-of-valves." id="toc-comparison-of-the-cavitation-levels-of-the-different-types-of-valves." class="nav-link" data-scroll-target="#comparison-of-the-cavitation-levels-of-the-different-types-of-valves.">Comparison of the cavitation levels of the different types of valves.</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How can we compare the cavitation levels of different valves?</h1>
+<p class="subtitle lead">(First draft!!!!)</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">hydraulics</div>
+    <div class="quarto-category">theory</div>
+    <div class="quarto-category">Control</div>
+    <div class="quarto-category">valves</div>
+    <div class="quarto-category">analysis</div>
+  </div>
+  </div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dr.&nbsp;Raúl Trujillo Álvarez </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 11, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="evaluating-the-cavitation-limits-of-the-valve" class="level1">
+<h1>Evaluating the Cavitation Limits of the valve</h1>
+<p>Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage and can reduce the valve’s capacity in advanced stages. The acceptable cavitation level for a valve in a given system varies with valve type, valve function, details of the piping layout, and operation duration.It is necessary to identify and provide experimental data for several cavitation intensity levels to have adequate information for analysis and design. There are defined six different cavitation design limits. The methods used to determine each limit experimentally are defined, and suggestions when each limit might be appropriate. These limits are [<span class="citation" data-cites="tullis1993">@tullis1993</span> and ISA-RP75.23-1995]:</p>
+<ol type="1">
+<li><p>Incipient cavitation <span class="math inline">\(\sigma_{i}\)</span></p>
+<ul>
+<li>Onset of cavitation</li>
+<li>Detect using high-frequency vibration measurement</li>
+<li>Very local phenomenon</li>
+<li>Transient: random “ticks” sound</li>
+<li>Low-level cavitation: usually not damaging</li>
+<li>Occurs before the loss of flow capacity</li>
+</ul></li>
+<li><p>Critical (or constant) cavitation <span class="math inline">\(\sigma_{c}\)</span></p>
+<ul>
+<li>More regular cavitation events</li>
+<li>Lower frequency sound and vibration sensed: “rumbling” sound</li>
+<li>Some surface damage may occur: dependent upon valve and trim styles and materials.</li>
+</ul></li>
+<li><p>Maximum noise and vibration level <span class="math inline">\(\sigma_{mv}\)</span></p>
+<ul>
+<li>Highest vibration amplitude: sounds like “marbles” or “gravel.”</li>
+<li>Vigorous, large-scale cavitation</li>
+<li>Very high damage potential</li>
+</ul></li>
+<li><p>Choked flow <span class="math inline">\(\sigma_{ch}\)</span></p>
+<ul>
+<li>“Choking” cavitation is a most severe level of cavitation.</li>
+<li>The maximum noise, vibration, and material damage levels occur at or just before this condition.</li>
+<li>Under “fully choked” flow conditions, an additional decrease in the downstream pressure will not increase the flow rate through the valve at a given inlet pressure. In other words, it is a limiting flow condition in which vapor formation is enough to limit the valve’s flow rate to some maximum value.</li>
+<li>The choking “process” occurs over a range of pressure drops due to the compressibility changes accompanying vapor formation.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../posts/2022-10-17_quantifying_cavitation_potential/cavitation_regime.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Cavitation parameter plot: using an accelerometer values.</figcaption><p></p>
+</figure>
+</div></li>
+</ol>
+</section>
+<section id="calculation-of-the-cavitation-levels" class="level1">
+<h1>Calculation of the Cavitation Levels</h1>
+<p>How can cavitation levels be calculated?</p>
+<section id="incipient-cavitation" class="level2">
+<h2 class="anchored" data-anchor-id="incipient-cavitation">Incipient Cavitation</h2>
+<p>Incipient Cavitation. This is the pressure ratio at which the first bubbles are formed (detection by acoustic measurement).</p>
+<p><span class="math inline">\(X_{FZ} = \frac{\Delta P}{P_1 - P_v}\)</span></p>
+<p>Or:</p>
+<p><span class="math inline">\(\Delta P_i = X_{FZ} \cdot (P_1 -P_v)\)</span></p>
+<p><span class="math inline">\(X_{Fz}\)</span> can be estimated to a reasonable degree of accuracy using the following equation [<em>Baumann, Hans D. Control Valve Primer: A User’s Guide. 4th ed, ISA, 2009.</em>]:</p>
+<p><span class="math display">\[
+X_{Fz} = \frac{0.90}{\sqrt{1+ 3.172 \cdot F_d \cdot \sqrt{K_v / F_{L}}}}
+\]</span></p>
+<p><span class="math inline">\(F_d\)</span> Valve style modifier. These values are travel-related and should be stated by the manufacturer [ANSI/ISA-75.01.01-2007 (60534-2-1 Mod) : Annex A(informative) — Derivation of valve style modifier* <span class="math inline">\(F_d\)</span> Table 2 — Typical values of valve style modifier <span class="math inline">\(F_d = 0.41\)</span>, liquid pressure recovery factor <span class="math inline">\(F_L\)</span>, and pressure differential ratio factor <span class="math inline">\(x_T\)</span> at full rated travel]</p>
+</section>
+</section>
+<section id="comparison-of-the-cavitation-levels-of-the-different-types-of-valves." class="level1">
+<h1>Comparison of the cavitation levels of the different types of valves.</h1>
+<p>From the <em>ANSI/ISA-75.01.01-2007 (60534-2-1 Mod)]</em> Table 2 -Typical values of valve style modifier <span class="math inline">\(F_d\)</span>, liquid pressure recovery factor <span class="math inline">\(F_L\)</span>, and pressure differential ratio factor <span class="math inline">\(x_T\)</span> at full rated travel.- We will take the mean values (median) of <span class="math inline">\(F_d\)</span> and <span class="math inline">\(F_L\)</span> for globe valves Single port, Double port, Angle and Small flow trim.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Table%202%20ISA-75-01-01-2007.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Table 2 — ISA-75.01.01-2007 (IEC 60534-2-1 Mod)</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li><p><span class="math inline">\(F_{L_{\,globe}} = 0.90\)</span></p></li>
+<li><p><span class="math inline">\(F_{d_{\,globe}} = 0.41\)</span></p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="ratral/blogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

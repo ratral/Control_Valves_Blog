@@ -1,0 +1,79 @@
+---
+title: "How can we compare the cavitation levels of different valves?"
+subtitle: "(First draft!!!!)"
+author: "Dr. Raúl Trujillo Álvarez"
+date: "2022-11-11"
+categories: [hydraulics, theory, Control, valves, analysis]
+description: ''
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+# Evaluating the Cavitation Limits of the valve
+
+Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage and can reduce the valve's capacity in advanced stages. The acceptable cavitation level for a valve in a given system varies with valve type, valve function, details of the piping layout, and operation duration.It is necessary to identify and provide experimental data for several cavitation intensity levels to have adequate information for analysis and design. There are defined six different cavitation design limits. The methods used to determine each limit experimentally are defined, and suggestions when each limit might be appropriate. These limits are \[@tullis1993 and ISA-RP75.23-1995\]:
+
+1.  Incipient cavitation $\sigma_{i}$
+
+    -   Onset of cavitation
+    -   Detect using high-frequency vibration measurement
+    -   Very local phenomenon
+    -   Transient: random "ticks" sound
+    -   Low-level cavitation: usually not damaging
+    -   Occurs before the loss of flow capacity
+
+2.  Critical (or constant) cavitation $\sigma_{c}$
+
+    -   More regular cavitation events
+    -   Lower frequency sound and vibration sensed: "rumbling" sound
+    -   Some surface damage may occur: dependent upon valve and trim styles and materials.
+
+3.  Maximum noise and vibration level $\sigma_{mv}$
+
+    -   Highest vibration amplitude: sounds like "marbles" or "gravel."
+    -   Vigorous, large-scale cavitation
+    -   Very high damage potential
+
+4.  Choked flow $\sigma_{ch}$
+
+    -   "Choking" cavitation is a most severe level of cavitation.
+    -   The maximum noise, vibration, and material damage levels occur at or just before this condition.
+    -   Under "fully choked" flow conditions, an additional decrease in the downstream pressure will not increase the flow rate through the valve at a given inlet pressure. In other words, it is a limiting flow condition in which vapor formation is enough to limit the valve's flow rate to some maximum value.
+    -   The choking "process" occurs over a range of pressure drops due to the compressibility changes accompanying vapor formation.
+
+    ![Cavitation parameter plot: using an accelerometer values.](/posts/2022-10-17_quantifying_cavitation_potential/cavitation_regime.png)
+
+# Calculation of the Cavitation Levels
+
+How can cavitation levels be calculated?
+
+## Incipient Cavitation
+
+Incipient Cavitation. This is the pressure ratio at which the first bubbles are formed (detection by acoustic measurement).
+
+$X_{FZ} = \frac{\Delta P}{P_1 - P_v}$
+
+Or:
+
+$\Delta P_i = X_{FZ} \cdot (P_1 -P_v)$
+
+$X_{Fz}$ can be estimated to a reasonable degree of accuracy using the following equation \[*Baumann, Hans D. Control Valve Primer: A User's Guide. 4th ed, ISA, 2009.*\]:
+
+$$
+X_{Fz} = \frac{0.90}{\sqrt{1+ 3.172 \cdot F_d \cdot \sqrt{K_v / F_{L}}}}
+$$
+
+$F_d$ Valve style modifier. These values are travel-related and should be stated by the manufacturer \[ANSI/ISA-75.01.01-2007 (60534-2-1 Mod) : Annex A(informative) --- Derivation of valve style modifier\* $F_d$ Table 2 --- Typical values of valve style modifier $F_d = 0.41$, liquid pressure recovery factor $F_L$, and pressure differential ratio factor $x_T$ at full rated travel\]
+
+# Comparison of the cavitation levels of the different types of valves.
+
+From the *ANSI/ISA-75.01.01-2007 (60534-2-1 Mod)\]* Table 2 -Typical values of valve style modifier $F_d$, liquid pressure recovery factor $F_L$, and pressure differential ratio factor $x_T$ at full rated travel.- We will take the mean values (median) of $F_d$ and $F_L$ for globe valves Single port, Double port, Angle and Small flow trim.
+
+![Table 2 --- ISA-75.01.01-2007 (IEC 60534-2-1 Mod)](Table%202%20ISA-75-01-01-2007.png)
+
+-   $F_{L_{\,globe}} = 0.90$
+
+-   $F_{d_{\,globe}} = 0.41$

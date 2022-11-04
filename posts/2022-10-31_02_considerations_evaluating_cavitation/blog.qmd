@@ -1,9 +1,9 @@
 ---
 title: "Considerations for Evaluating Control Valve Cavitation"
-subtitle: "Flow with flow restriction and with fittings (second draft!!!!)"
+subtitle: "Flow with flow restriction and with fittings"
 author: "Dr. Raúl Trujillo Álvarez"
 date: "2022-10-31"
-categories: [hydraulics, theory, valves, analysis]
+categories: [hydraulics, theory, Control, valves, analysis]
 description: ''
 execute: 
   message: false
@@ -38,20 +38,7 @@ The maximum allowable differential pressure for the calculation of control valve
 
 $$
 \Delta{P}_{max(LP)}= \left( \frac{F_{LP}}{F_P}\right)^2 \cdot (P_1-F_F \cdot p_v)
-$$
--   $Q$ is the flow; Unit: $m^3/s$
--   $F_L$ Liquid pressure recovery factor of a control valve without attached fittings. The value $F_L$ provided by the manufacturer refers to the value when the control valve is fully open. Unit: Dimensionless
--   $F_R$ Reynolds number factor; Unit: Dimensionless. For turbulent flow, $F_R = 1$
--   $F_F$ Liquid critical pressure ratio factor; Unit: Dimensionless
--   $P_v$ Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar
--   $F_P$ Piping geometry factor : Dimensionless
--   $F_{LP}$ Combined liquid pressure recovery factor : Dimensionless
--   $\rho_{1}/\rho_{0}$ Relative density ($\rho_{1}/\rho_{0} = 1.0$ for water at $15°C$); Unit: Dimensionless
--   $\Delta P$ Differential pressure between upstream and downstream pressure taps; Unit: bar
-
-
-
-
+$$ - $Q$ is the flow; Unit: $m^3/s$ - $F_L$ Liquid pressure recovery factor of a control valve without attached fittings. The value $F_L$ provided by the manufacturer refers to the value when the control valve is fully open. Unit: Dimensionless - $F_R$ Reynolds number factor; Unit: Dimensionless. For turbulent flow, $F_R = 1$ - $F_F$ Liquid critical pressure ratio factor; Unit: Dimensionless - $P_v$ Absolute vapor pressure of the liquid at inlet temperature ; Unit: bar - $F_P$ Piping geometry factor : Dimensionless - $F_{LP}$ Combined liquid pressure recovery factor : Dimensionless - $\rho_{1}/\rho_{0}$ Relative density ($\rho_{1}/\rho_{0} = 1.0$ for water at $15°C$); Unit: Dimensionless - $\Delta P$ Differential pressure between upstream and downstream pressure taps; Unit: bar
 
 ![Maximum Flow without an with pipe fittings](maximum_flow_with_without_fittings.png)
 
@@ -76,11 +63,9 @@ Where:
 -   $\zeta_{B_1}$ Bernoulli pressure number in the valve inlet
 -   $\zeta_{B_2}$ Bernoulli pressure number in the valve outlet
 
-
 ![Valve with fittings \[Wagner\]](valve_with_fittings.png)
 
 If the inlet and outlet fittings' diameters are the same, $\zeta_{B_1}$ and $\zeta_{B_2}$, become equal and fall out of the equation. In cases where the pipe diameters in front of and behind the control valve are different, the $\zeta_{B_1}$ and $\zeta_{B_2}$ are calculated as follows:
-
 
 $$
 \zeta_{B_1} = 1- \left(\frac{d}{D_1}\right)^2 \; ; \; \zeta_{B_2} = 1- \left(\frac{d}{D_2}\right)^4
@@ -99,50 +84,31 @@ $$
 \sum{\zeta} = 1.5 \cdot  \left(1- \left(\frac{d}{D}\right)^2\right)^2
 $$
 
-
 ## Combined liquid pressure recovery factor $F_{LP}$
 
-When a valve is installed with reducers or other attached fittings, the valve-fitting combination's liquid pressure recovery is not the same as that for the valve alone. For calculations involving choked flow, it is convenient to treat the piping geometry factor $F_p$  and the $F_L$  factor for the valve-fitting combination as a single factor. The factor $F_{LP}$ is determined in the same way as $F_L$, with laboratory test results.
+When a valve is installed with reducers or other attached fittings, the valve-fitting combination's liquid pressure recovery is not the same as that for the valve alone. For calculations involving choked flow, it is convenient to treat the piping geometry factor $F_p$ and the $F_L$ factor for the valve-fitting combination as a single factor. The factor $F_{LP}$ is determined in the same way as $F_L$, with laboratory test results.
 
 $$
 F_{LP} = \frac{F_L}{\sqrt{1+\frac{F_L^2}{0.0016}\cdot \sum{\zeta_1}\cdot \left( \frac{K_v}{d^2} \right)^2}}
-$$
-Here $\sum{\zeta_1} = \zeta_1 + \zeta_{B_1}$, and $\zeta_{B_1}$ is the Bernoulli pressure factor for the fitting upstream of the valve, determined between the upstream pressure test point in the pipeline and the inlet of the control valve.
+$$ Here $\sum{\zeta_1} = \zeta_1 + \zeta_{B_1}$, and $\zeta_{B_1}$ is the Bernoulli pressure factor for the fitting upstream of the valve, determined between the upstream pressure test point in the pipeline and the inlet of the control valve.
 
 ## Liquid critical pressure ratio factor $F_F$
 
-$F_F$ is the liquid critical pressure ratio factor. This factor is the ratio of the apparent Vena-Contracta pressure at choked flow conditions to the liquid's vapor pressure at inlet temperature. At vapor pressures near zero, this factor is 0.96. Values of $F_F$  may be determined approximated from the following equation:
+$F_F$ is the liquid critical pressure ratio factor. This factor is the ratio of the apparent Vena-Contracta pressure at choked flow conditions to the liquid's vapor pressure at inlet temperature. At vapor pressures near zero, this factor is 0.96. Values of $F_F$ may be determined approximated from the following equation:
 
 $$
 F_F = 0.96-0.28 \cdot \sqrt{P_v/P_c}
-$$
-Where: $p_c$  is the thermodynamic critical pressure. For water, this value is $p_c  = 221.2$  bar and  $p_v$  vapor pressure of the liquid.
+$$ Where: $p_c$ is the thermodynamic critical pressure. For water, this value is $p_c = 221.2$ bar and $p_v$ vapor pressure of the liquid.
 
-# Cavitation Levels; Incipient Cavitation
+# What can you do with the information from Evaluating Control Valve Cavitation?
 
-Incipient Cavitation. This is the pressure ratio at which the first bubbles are formed (detection by acoustic measurement). 
-
-$X_{FZ} = \frac{\Delta P}{P_1 - P_v}$
-
-Or: 
-
-$\Delta P_i = X_{FZ} \cdot (P_1 -P_v)$
-
-
-$X_{Fz}$  can be estimated to a reasonable degree of accuracy using the following equation [_Baumann, Hans D. Control Valve Primer: A User’s Guide. 4th ed, ISA, 2009._]:
-
-$$
-X_{Fz} = \frac{0.90}{\sqrt{1+ 3.172 \cdot F_d \cdot \sqrt{K_v / F_{LP}}}} \approx \frac{0.90}{\sqrt{1 + 3.172 \cdot 0.109 \cdot \sqrt{K_v / F_{LP}}}}
-$$
-- 	$F_d$  Valve style modifier. These values are travel-related and should be stated by the manufacturer 
-[_ANSI/ISA-75.01.01-2007 (60534-2-1 Mod) : Annex A(informative) — Derivation of valve style modifier $F_d$ Table 2 — Typical values of valve style modifier $F_d = 0.41$, liquid pressure recovery factor $F_L$, and pressure differential ratio factor $x_T$ at full rated travel_]
-
+Let's start by comparing the cavitation levels of different types of control valves and other brands of plunger control valves. But in the next blog. :-)
 
 ::: {#refs}
 -   Wagner, Walter. Regel- und Sicherheitsarmaturen. 1. Aufl. dieser Ausg, Vogel, 2008.
 -   [Handbook for Control Valve Sizing - Parcol](https://www.parcol.com/docs/ACA0101_gb.pdf). TECHNICAL BULLETIN 1-ITECHNICAL BULLETIN 1-I.
 -   Tullis, J. P. Cavitation Guide for Control Valves. NUREG/CR-6031, Nuclear Regulatory Commission, Washington, DC (United States). Div. of Engineering; Tullis Engineering Consultants, Logan, UT (United States), 1 Apr. 1993, https://doi.org/10.2172/10155405.
-- Parabolic Curve | Surveying and Transportation Engineering Review at MATHalino. https://mathalino.com/reviewer/surveying-and-transportation-engineering/parabolic-curve. Accessed 25 Oct. 2022.
+-   Parabolic Curve \| Surveying and Transportation Engineering Review at MATHalino. https://mathalino.com/reviewer/surveying-and-transportation-engineering/parabolic-curve. Accessed 25 Oct. 2022.
 -   ANSI/ISA, editor. ANSI/ISA-75.01.01-2007, Flow Equations for Sizing Control Valves. ISA, 2007.
 -   British Standard, editor. BS EN 60534-1:2005. Control Valve Terminology and General Considerations. 2005.
 -   ANSI/ISA, editor. ANSI/ISA-RP75.21, Process Data Presentation for Control Valves. Instrument Society of America, 1996.
@@ -150,5 +116,3 @@ $$
 -   American National Standards Institute, and Instrument Society of America. Flow Equations for Sizing Control Valves: Standard. 1985.
 -   ANSI/ISA. ANSI/ISA-75.11-1985 (R1996) , Inherent Flow Characteristic and Rangeability of Control Valves. 1985.
 :::
-
-
