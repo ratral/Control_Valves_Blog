@@ -66,7 +66,7 @@ $$
 X_{Fz} = \frac{0.90}{\sqrt{1+ 3.172 \cdot F_d \cdot \sqrt{K_v / F_{L}}}}
 $$
 
-$F_d$ Valve style modifier. These values are travel-related and should be stated by the manufacturer \[ANSI/ISA-75.01.01-2007 (60534-2-1 Mod) : Annex A(informative) --- Derivation of valve style modifier\* $F_d$ Table 2 --- Typical values of valve style modifier $F_d = 0.41$, liquid pressure recovery factor $F_L$, and pressure differential ratio factor $x_T$ at full rated travel\]
+The valve style modifier $F_d$ converts the geometry of the orifice(s) to an equivalent circular single flow passage. These values are travel-related and should be stated by the manufacturer [ANSI/ISA-75.01.01-2012 (60534-2-1 MOD) : D.2 Typical control valve coefficients; Table D.2 – Typical values of valve style modifier $F_d$, liquid pressure recovery factor $F_L$ and pressure differential ratio factor $x_T$ at full rated trave]
 
 # Comparison of the cavitation levels of the different types of valves.
 
