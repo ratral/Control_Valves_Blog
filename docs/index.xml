@@ -21,57 +21,68 @@
 
 <section id="evaluating-the-cavitation-limits-of-the-valve" class="level1">
 <h1>Evaluating the Cavitation Limits of the valve</h1>
-<p>Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage and can reduce the valve’s capacity in advanced stages. The acceptable cavitation level for a valve in a given system varies with valve type, valve function, details of the piping layout, and operation duration.It is necessary to identify and provide experimental data for several cavitation intensity levels to have adequate information for analysis and design. There are defined six different cavitation design limits. The methods used to determine each limit experimentally are defined, and suggestions when each limit might be appropriate. These limits are [<span class="citation" data-cites="tullis1993">@tullis1993</span> and ISA-RP75.23-1995]:</p>
-<ol type="1">
-<li><p>Incipient cavitation <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bi%7D"></p>
-<ul>
-<li>Onset of cavitation</li>
-<li>Detect using high-frequency vibration measurement</li>
-<li>Very local phenomenon</li>
-<li>Transient: random “ticks” sound</li>
-<li>Low-level cavitation: usually not damaging</li>
-<li>Occurs before the loss of flow capacity</li>
-</ul></li>
-<li><p>Critical (or constant) cavitation <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bc%7D"></p>
-<ul>
-<li>More regular cavitation events</li>
-<li>Lower frequency sound and vibration sensed: “rumbling” sound</li>
-<li>Some surface damage may occur: dependent upon valve and trim styles and materials.</li>
-</ul></li>
-<li><p>Maximum noise and vibration level <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmv%7D"></p>
-<ul>
-<li>Highest vibration amplitude: sounds like “marbles” or “gravel.”</li>
-<li>Vigorous, large-scale cavitation</li>
-<li>Very high damage potential</li>
-</ul></li>
-<li><p>Choked flow <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bch%7D"></p>
-<ul>
-<li>“Choking” cavitation is a most severe level of cavitation.</li>
-<li>The maximum noise, vibration, and material damage levels occur at or just before this condition.</li>
-<li>Under “fully choked” flow conditions, an additional decrease in the downstream pressure will not increase the flow rate through the valve at a given inlet pressure. In other words, it is a limiting flow condition in which vapor formation is enough to limit the valve’s flow rate to some maximum value.</li>
-<li>The choking “process” occurs over a range of pressure drops due to the compressibility changes accompanying vapor formation.</li>
-</ul>
+<p>Cavitation causes noise, pressure fluctuations, vibrations, and erosion damage and can reduce the valve’s capacity in advanced stages. The acceptable cavitation level for a valve in a given system varies with valve type, valve function, details of the piping layout, and operation duration.It is necessary to identify and provide experimental data for several cavitation intensity levels to have adequate information for analysis and design. There are defined six different cavitation design limits. The methods used to determine each limit experimentally are defined, and suggestions when each limit might be appropriate. These limits are [Tullis and ISA-RP75.23-1995]:</p>
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-28_01_considerations_evaluating_cavitation\Flow_with_restriction_02.png" class="img-fluid"></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-10-17_quantifying_cavitation_potential\cavitation_regime.png" class="img-fluid figure-img"></p>
+<p><img src="https://ratral.github.io/Control_Valves_Blog//posts\2022-11-11_compare_cavitation_levels_different_valves\Cavitation_Limits.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
-</div></li>
-</ol>
-</section>
-<section id="calculation-of-the-cavitation-levels" class="level1">
-<h1>Calculation of the Cavitation Levels</h1>
-<p>How can cavitation levels be calculated?</p>
-<section id="incipient-cavitation" class="level2">
-<h2 class="anchored" data-anchor-id="incipient-cavitation">Incipient Cavitation</h2>
-<p>Incipient Cavitation. This is the pressure ratio at which the first bubbles are formed (detection by acoustic measurement).</p>
-<p><img src="https://latex.codecogs.com/png.latex?X_%7BFZ%7D%20=%20%5Cfrac%7B%5CDelta%20P%7D%7BP_1%20-%20P_v%7D"></p>
-<p>Or:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20P_i%20=%20X_%7BFZ%7D%20%5Ccdot%20(P_1%20-P_v)"></p>
-<p><img src="https://latex.codecogs.com/png.latex?X_%7BFz%7D"> can be estimated to a reasonable degree of accuracy using the following equation [<em>Baumann, Hans D. Control Valve Primer: A User’s Guide. 4th ed, ISA, 2009.</em>]:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AX_%7BFz%7D%20=%20%5Cfrac%7B0.90%7D%7B%5Csqrt%7B1+%203.172%20%5Ccdot%20F_d%20%5Ccdot%20%5Csqrt%7BK_v%20/%20F_%7BL%7D%7D%7D%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?F_d"> Valve style modifier. These values are travel-related and should be stated by the manufacturer [ANSI/ISA-75.01.01-2007 (60534-2-1 Mod) : Annex A(informative) — Derivation of valve style modifier* <img src="https://latex.codecogs.com/png.latex?F_d"> Table 2 — Typical values of valve style modifier <img src="https://latex.codecogs.com/png.latex?F_d%20=%200.41">, liquid pressure recovery factor <img src="https://latex.codecogs.com/png.latex?F_L">, and pressure differential ratio factor <img src="https://latex.codecogs.com/png.latex?x_T"> at full rated travel]</p>
-</section>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 70%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cavitation</th>
+<th>Description</th>
+<th>Calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Incipient</td>
+<td>The first level of cavitation is incipient cavitation, <img src="https://latex.codecogs.com/png.latex?%5Csigma_i">. This level is associated with the flow conditions for which cavitation can first be detected. A typical means of establishing this condition is measuring increased Sound Level or vibration. Incipient cavitation is intermittent and usually results from a few isolated collapses of vapor pockets very near the source of the flow separation. Incipient cavitation is exceptionally mild and often cannot be heard over the flow noise and vibration of other components in a piping system. End of Regime <img src="https://latex.codecogs.com/png.latex?I"> and beginning of Regime <img src="https://latex.codecogs.com/png.latex?II">.</td>
+<td><p>Usually the beginning of cavitation is identified by the coefficient of incipient cavitation <img src="https://latex.codecogs.com/png.latex?X_%7BFZ%7D">:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_i=%5Cfrac%7B1%7D%7BX_%7BFZ%7D%7D=%5Cfrac%7BP_1-P_v%7D%7B%5CDelta%20P%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AX_%7BFZ%7D%20=%200.592%5Ccdot%20F_L%5E2%0A"></p>
+<p>From [<span class="citation" data-cites="Baumann">@Baumann</span>, Hands D.; Control Valve Primer] <img src="https://latex.codecogs.com/png.latex?F_%7BFZ%7D"> can be as low as <img src="https://latex.codecogs.com/png.latex?0.10"> in some valves. However, incipient cavitation can be ignored for practical purposes (it does not produce excessive noise except for huge valves and does not produce damage).</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AX_%7BFZ%7D%20=%20%5Cfrac%7B0.9%7D%7B%5Csqrt%7B1+3.2%5Ccdot%20F_d%20%5Ccdot%5Csqrt%7B%5Cfrac%7BK_v%7D%7BF_L%7D%7D%7D%7D%0A"></p></td>
+</tr>
+<tr class="even">
+<td>Constant</td>
+<td>Constant cavitation, <img src="https://latex.codecogs.com/png.latex?%5Csigma_c">, is one of the earliest cavitation levels in which the intensity has noticeably increased above the incipient level. At this point, the cavitation involves a sufficiently large volume of vapor to produce a uniform and constant level of cavitation that is readily detected. The collapse region is beginning to move downstream from the point of cavitation inception within the valve. The observable effects of constant cavitation are light vibration and mild noise levels. <em>Usually, there is <strong>no</strong> undesirable damage associated with this level of cavitation</em>. However, cavitation increases above this level as the flow rate increases at a steady and moderate rate. end of Regime <img src="https://latex.codecogs.com/png.latex?II"> and beginning of Regime <img src="https://latex.codecogs.com/png.latex?III"></td>
+<td><p>In order to detect the beginning of the constant bubble formation, i.e.&nbsp;the constant cavitation, the coefficient <img src="https://latex.codecogs.com/png.latex?K_C"> is defined as:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_c=%5Cfrac%7B1%7D%7BK_%7BC%7D%7D=%5Cfrac%7BP_1-P_v%7D%7B%5CDelta%20P%7D%0A"></p>
+<p>It identifies where cavitation begins to appear in a flow of water through the valve with such intensity that, under constant upstream conditions, the flow rate deviation from linearity versus <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5CDelta%20P%7D"> exceeds <img src="https://latex.codecogs.com/png.latex?2%5C%25">. A simple slide rule uses the formula:[Handbook for control valve sizing Koso Parcol]</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AK_C%20=%200.8%20%5Ccdot%20F_L%5E2%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?F_d"> ; is the valve style modifier, this converts the geometry of the orifice(s) to an equivalent circular single flow passage [ANSI/ISA-75.01.01-2012].</p></td>
+</tr>
+<tr class="odd">
+<td>Incipient damage</td>
+<td>Incipient damage, <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bid%7D">, is the level of cavitation in which an increase in cavitation intensity first produces any detectable damage to either the valve or the downstream piping. This level is much more challenging to detect. It cannot be determined from an acceleration or vibration curve as other points might be. A suggested method is to measure the pitting rate of damage on samples of soft materials. Many control valves can operate at this level in moderate pressure drops if minor trim erosion is tolerable. For smaller valve sizes, stainless steel or hardened materials often provide enough resistance for economical operation without additional design enhancements. Unique materials, multi-stage, or tortuous-path designs are usually required to operate at this limit in high-pressure drop applications.</td>
+<td>The factor <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bid%7D"> will be determined by the manufacturer and estimated from tests and the valve materials.</td>
+</tr>
+<tr class="even">
+<td>Maximum vibration</td>
+<td>Maximum vibration cavitation, <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmv%7D">, is a level of cavitation corresponding to the “peak” of the characterizing vibration curve. Maximum vibration, noise, material damage, and flow rate are all observed to occur very close to the same value of <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmv%7D">. These points represent a severe level of cavitation that is to avoid. End of Regime <img src="https://latex.codecogs.com/png.latex?III"> and beginning of Regime <img src="https://latex.codecogs.com/png.latex?IV"></td>
+<td>The factor <img src="https://latex.codecogs.com/png.latex?F_L"> may be determined from tests in accordance with ANSI/ISA-75.02, Control Valve Capacity Test Procedures 2008.</td>
+</tr>
+<tr class="odd">
+<td>Choking</td>
+<td>“Choking” cavitation, <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bch%7D">, is the most severe cavitation. Under “fully choked” flow conditions, an additional decrease in the downstream pressure will not increase the flow rate through the valve at a given inlet pressure (maximum flow). The maximum noise, vibration, and material damage have been observed to occur at or just before this condition by .The maximum noise, vibration, and material damage have been observed to occur at or just before this condition at the maximum sigma <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmv%7D"> .</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>manufacturer’s recommended</td>
+<td>Manufacturer’s recommended cavitation limit: An operational limit expressed as a cavitation coefficient <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmr%7D"> supplied by the valve manufacturer for a given valve type, size, opening, and reference upstream pressure. Application of the limit may require scale effect and influence factors if the service conditions and valve size are different than the reference pressure and size.</td>
+<td>The factor <img src="https://latex.codecogs.com/png.latex?%5Csigma_%7Bmr%7D"> will be determined by the manufacturer and estimated from tests and the valve materials.</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="comparison-of-the-cavitation-levels-of-the-different-types-of-valves." class="level1">
 <h1>Comparison of the cavitation levels of the different types of valves.</h1>
@@ -98,7 +109,7 @@
   <category>analysis</category>
   <guid>https://ratral.github.io/Control_Valves_Blog//posts/2022-11-11_compare_cavitation_levels_different_valves/blog.html</guid>
   <pubDate>Thu, 10 Nov 2022 23:00:00 GMT</pubDate>
-  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-17_quantifying_cavitation_potential/cavitation_regime.png" medium="image" type="image/png" height="140" width="144"/>
+  <media:content url="https://ratral.github.io/Control_Valves_Blog///posts/2022-10-28_01_considerations_evaluating_cavitation/Flow_with_restriction_02.png" medium="image" type="image/png" height="89" width="144"/>
 </item>
 <item>
   <title>Considerations for Evaluating Control Valve Cavitation</title>
