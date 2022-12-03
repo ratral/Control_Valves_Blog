@@ -1,0 +1,46 @@
+---
+title: "The original copies and the Alpacas"
+date: "2022-12-03"
+categories: [knowledge, valves, plunger_valves]
+description: ''
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+I would like this blog with three different anecdotes, one from Vietnam "The original copy", another from Bolivia "The smell of the Alpacas" and one from Mexico "Ay Cabron".
+
+## Vietnam: "The original copy"
+On a business trip to Vietnam for about 12 Years ago, I asked one of my Vietnamese colleagues where I could buy some Blue Jeans, Levis. With a discreet smile, my colleague asked if I wanted the originals, the original copy, or the copy; since this has a substantial effect on the price. 
+
+A bit disoriented, I asked him please to clarify the difference between the original Blu jeans, the original copy and the copy. My colleague explained to me with great patience and with that look that says, __"where does this guy come from? or the naivety of some Germans is contagious?"_:
+
+- The original:  These products come from factories in Vietnam (the same exists in Latam countries under the name Maquila) that have the concession to produce Blue Jeans for the brand owner. These factories profit by making Blue Jeans for the brand owner. These factories take raw materials, assemble, manufacture, process, and export the finished product, essentially tax and duty-free.
+- The original copies: They are copies authorized by the factory (maquila) that produces them. They are sold under another brand name, or the manufacturer sells its products under the same brand name at reduced prices in the country of production with and without the brand owner's authorization.
+- The Copy: is generally made with the same original materials and models but in parallel production centers with much lower quality controls.
+
+## Bolivia: "The smell of the Alpacas"
+On a business trip to Bolivia this year (2022), I told my colleagues that I wanted to buy an Alpaca scarf for my wife, but wanted to buy directly from the artisans and not in a Boutique from a shopping center.  
+Before continuing, I have to clarify that I have no idea about textiles and don't know how to differentiate between them; the worst thing is that I did not investigate the characteristics of Alpaca scarfs before making the purchase. I only wanted to look good in front of my wife and show of my negotiating skills.
+
+For this, my colleagues kindly took me to the craft market in the former center of La Paz, Bolivia. In the market we quickly found the place and the scarf that, in my opinion, was the perfect one for my wife (you can never know :). 
+
+Next, I asked the kind artisan how she could know if she was selling me a scarf made of Alpaca wool. She with a smile that says, "Ay dios mío, another tourist...". 
+
+She took a small bottle out of her giant skirt and placed two drops at the corner of the scarf, telling me to sniff. With the expression of a connoisseur, I smelled the corner of the scarf and remained thoughtful without accepting my ignorance. She again, with her "Ay dios mío..." smile, looked at me and said: "if you see, it smells like Alpaca." With an intelligent expression, I replied that it smelled like Alpaca, but what would it smell like if it didn't? She responded no longer with "Ay dios mío..." but with an expression of a "pobre diablo...": Well, it would smell like Llama. 
+
+Then I proceeded to pay without haggling over the price and took a photo with this lady who taught me a fundamental lesson.
+Here I have to clarify that I have never smelled and should not smell a Llama, much less an Alpaca, so I wouldn't know how to differentiate between the Alpaca and even a wet dog.....
+
+## Mexico: "Ay Cabron"
+
+A few months ago, a customer called me to say that he probably would not buy our annular flow valve from us because he had four offers from Italian suppliers with better prices. But that something had him quite puzzled. The four Italian Brands had different prices but had identical specifications and hydraulic curves of flow and cavitation. 
+Then this Engineer asked me, "What would I recommend to him?" 
+Very kindly, with my "Ay Cabron..." smile, I replied that he should smell them, suddenly they smell like a wet dog!.
+
+:::{.callout-note}
+For all of this, I stick to my line of work and I'm in permanently learning.
+:::
+
