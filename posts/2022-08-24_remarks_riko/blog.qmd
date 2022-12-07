@@ -1,7 +1,7 @@
 ---
-title: "Remarks about RIKO plunger valves"
+title: "Remarks about  plunger valves"
 date: "2022-08-24"
-categories: [backgrounds, knowledge, valves, RIKO_valves]
+categories: [backgrounds, knowledge, valves, valves]
 description: ''
 execute: 
   message: false
@@ -10,9 +10,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Remarks about RIKO plunger valves
+# Remarks about  plunger valves
 
-Riko Plunger valves are mainly used where volume flows, or pressure has to be reduced and regulated without vibrations, noises, or significant changes in the pipeline system. RIKO valves are control devices that cause pressure loss in pipeline systems by throttling to modify the flow or pressure so that the desired values are obtained, depending on the degree of opening adjustment.
+ Plunger valves are mainly used where volume flows, or pressure has to be reduced and regulated without vibrations, noises, or significant changes in the pipeline system.  valves are control devices that cause pressure loss in pipeline systems by throttling to modify the flow or pressure so that the desired values are obtained, depending on the degree of opening adjustment.
 
 The following advantages are obtained from the plunger valves :
 

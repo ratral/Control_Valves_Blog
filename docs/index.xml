@@ -4324,16 +4324,16 @@ Other important cavitation limits are:
   <pubDate>Tue, 11 Oct 2022 22:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Remarks about RIKO plunger valves</title>
+  <title>Remarks about plunger valves</title>
   <dc:creator>Dr. Raúl Trujillo Álvarez</dc:creator>
   <link>https://ratral.github.io/Control_Valves_Blog/posts/2022-08-24_remarks_riko/blog.html</link>
   <description><![CDATA[ 
 
 
 
-<section id="remarks-about-riko-plunger-valves" class="level1">
-<h1>Remarks about RIKO plunger valves</h1>
-<p>Riko Plunger valves are mainly used where volume flows, or pressure has to be reduced and regulated without vibrations, noises, or significant changes in the pipeline system. RIKO valves are control devices that cause pressure loss in pipeline systems by throttling to modify the flow or pressure so that the desired values are obtained, depending on the degree of opening adjustment.</p>
+<section id="remarks-about-plunger-valves" class="level1">
+<h1>Remarks about plunger valves</h1>
+<p>Plunger valves are mainly used where volume flows, or pressure has to be reduced and regulated without vibrations, noises, or significant changes in the pipeline system. valves are control devices that cause pressure loss in pipeline systems by throttling to modify the flow or pressure so that the desired values are obtained, depending on the degree of opening adjustment.</p>
 <p>The following advantages are obtained from the plunger valves :</p>
 <ul>
 <li>universal use wide controllable range;</li>
@@ -4387,7 +4387,7 @@ Other important cavitation limits are:
   <category>backgrounds</category>
   <category>knowledge</category>
   <category>valves</category>
-  <category>RIKO_valves</category>
+  <category>valves</category>
   <guid>https://ratral.github.io/Control_Valves_Blog/posts/2022-08-24_remarks_riko/blog.html</guid>
   <pubDate>Tue, 23 Aug 2022 22:00:00 GMT</pubDate>
 </item>
